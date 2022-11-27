@@ -39,20 +39,20 @@ export default function App() {
 
           <div className="App ">
             <Routes>
-              <Route exact path={process.env.PUBLIC_URL + '/'} id="home" element={<Home />}></Route>
-              <Route path={process.env.PUBLIC_URL + '/aboutme'}id="contact" element={<AboutMe />}></Route>
+              <Route exact path="/" id="home" element={<Home />}></Route>
+              <Route path="/aboutme" id="contact" element={<AboutMe />}></Route>
               <Route
-                path={process.env.PUBLIC_URL + '/projects'}
+                path="/projects"
                 id="projects"
                 element={<Projects />}
               ></Route>
               <Route
-                path={process.env.PUBLIC_URL + '/contact'}
+                path="/contact"
                 id="projects"
                 element={<Contact />}
               ></Route>
               <Route
-                path={process.env.PUBLIC_URL +"/projects/projview"}
+                path="/projects/projview"
                 id="projects"
                 element={<ProjView />}
               ></Route>

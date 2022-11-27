@@ -23,17 +23,17 @@ const Navbar = () => {
                 </a>
               </li>
               <li >
-                <a className="nav-link is-active exact" href="/aboutme">
+                <a className="nav-link is-active exact" href="/#/aboutme">
                   About Me
                 </a>
               </li>
               <li >
-                <a className="nav-link is-active exact" href="/projects">
+                <a className="nav-link is-active exact" href="/#/projects">
                   My Works
                 </a>
               </li>
               <li >
-                <a className="nav-link is-active exact" href="/contact">
+                <a className="nav-link is-active exact" href="/#/contact">
                   Contact
                 </a>
               </li>

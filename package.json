@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.8.0",
   "private": false,
-  "homepage": "https://github.com/mirosh-kavinda/mirosh-kavinda.github.io",
+  "homepage": "https://mirosh.me/",
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
     "@testing-library/jest-dom": "^5.16.4",
@@ -23,7 +23,7 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b main -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
