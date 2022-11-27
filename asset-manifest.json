@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mirosh-kavinda/mirosh-kavinda.github.io/static/css/main.b7786f39.css",
-    "main.js": "/mirosh-kavinda/mirosh-kavinda.github.io/static/js/main.3b561113.js",
+    "main.js": "/mirosh-kavinda/mirosh-kavinda.github.io/static/js/main.2e95a059.js",
     "static/media/TravelSite-0010.png": "/mirosh-kavinda/mirosh-kavinda.github.io/static/media/TravelSite-0010.44481655da4d322541fe.png",
     "static/media/TravelSite-0017.png": "/mirosh-kavinda/mirosh-kavinda.github.io/static/media/TravelSite-0017.e2ebc758305acdc71859.png",
     "static/media/TravelSite-0018.png": "/mirosh-kavinda/mirosh-kavinda.github.io/static/media/TravelSite-0018.65c6580f46eab20118b9.png",
@@ -60,10 +60,10 @@
     "static/media/Slide25.PNG": "/mirosh-kavinda/mirosh-kavinda.github.io/static/media/Slide25.7641c68bd0010eb07993.PNG",
     "index.html": "/mirosh-kavinda/mirosh-kavinda.github.io/index.html",
     "main.b7786f39.css.map": "/mirosh-kavinda/mirosh-kavinda.github.io/static/css/main.b7786f39.css.map",
-    "main.3b561113.js.map": "/mirosh-kavinda/mirosh-kavinda.github.io/static/js/main.3b561113.js.map"
+    "main.2e95a059.js.map": "/mirosh-kavinda/mirosh-kavinda.github.io/static/js/main.2e95a059.js.map"
   },
   "entrypoints": [
     "static/css/main.b7786f39.css",
-    "static/js/main.3b561113.js"
+    "static/js/main.2e95a059.js"
   ]
 }
