@@ -1,0 +1,35 @@
+.back-to-top {
+  position: fixed;
+  bottom: 10px;
+
+  right: 10%;
+  font-size: 18px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+.socialmedia:hover,.back-to-top:hover {
+  color: #e3874f;
+}
+.widget-app-container {
+  top: 10px;
+}
+.footer {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  background: #373737;
+  box-shadow: 0 5px 5px #ccc;
+  height: 70px;
+}
+.footer-head {
+  position: absolute;
+  left: 40px;
+  right: 62.34%;
+  top: 30.17%;
+  bottom: 38.79%;
+}
+.socialmedia
+{
+  color: white;}

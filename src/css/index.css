@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+body,
+html {
+  font-family: "Open Sans", sans-serif;
+  background-color: black;
+  color: white;
+  cursor: none;
+
+  /* or 250% */
+}
+
+img:hover,
+a:hover {
+  border-bottom: #e3874f;
+  color: #e48951 !important;
+  cursor: none;
+}
+
+h6 {
+  letter-spacing: 0.31rem;
+}
+
+.nav-link {
+  color: rgb(162, 159, 159);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.App {
+  margin: 1%;
+  z-index: 100;
+
+}
+.contact {
+  justify-content: center;
+  align-items: center;
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #ffffff,
+    #ece9e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #ffffff,
+    #ece9e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 30px;
+  z-index: 1000;
+  margin: 8%;
+  border-radius: 40px;
+}
+
+
+/* home page styles */
+.home {
+
+  height: 1000px; /* Magic here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.header {
+  position: absolute;
+  top:146px;
+  font-size: 18px;
+  letter-spacing: 0.8em;  
+
+}
+
+.para {
+  position: absolute;
+  width: 475px;
+  height: 90px;
+  font-weight: 100;
+  margin-top: 10px;
+  font-style: normal;
+  letter-spacing: 0.29em;
+  font-size: 18px;
+  background-color: transparent;
+}
+
+.proj {
+  position: absolute;
+  left: 0px;
+  top: 800px;
+}
+
+.aboutme{
+    position: absolute;
+    top: 2300px;
+    height: 500px;
+}
+
+.active{
+  color: #e48951 !important;
+
+}
