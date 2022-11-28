@@ -1,44 +1,48 @@
 import React from "react";
 import brandImg from "./brand.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <>
       <nav className="navbar navbar-dark bg-black navbar-expand-lg fixed-top">
         <div className="container-md">
-          <a className="navbar-brand  " href="/">
+          <Link className="navbar-brand  " to="/">
             <img src={brandImg} alt="brand logo" />
-          </a>
-          
+          </Link>
+
           <div>
-          <div className="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul className="navbar-nav  ">
-              <li >
-                <a
-                  className="nav-link is-active exact"
-                  aria-current="page"
-                  href="/"
-                >
-                  Home
-                </a>
-              </li>
-              <li >
-                <a className="nav-link is-active exact" href="/#/aboutme">
-                  About Me
-                </a>
-              </li>
-              <li >
-                <a className="nav-link is-active exact" href="/#/projects">
-                  My Works
-                </a>
-              </li>
-              <li >
-                <a className="nav-link is-active exact" href="/#/contact">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
+            <div
+              className="collapse navbar-collapse "
+              id="navbarSupportedContent"
+            >
+              <ul className="navbar-nav  ">
+                <li>
+                  <Link
+                    className="nav-link is-active exact"
+                    aria-current="page"
+                    to="/"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-link is-active exact" to="/aboutme">
+                    About Me
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-link is-active exact" to="/projects">
+                    My Works
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-link is-active exact" to="/contact">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
           <button
             className="navbar-toggler"
@@ -53,7 +57,6 @@ const Navbar = () => {
           </button>
         </div>
       </nav>
-
     </>
   );
 };
