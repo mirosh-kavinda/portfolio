@@ -6,8 +6,6 @@ html {
   background-color: black;
   color: white;
   cursor: none;
-
-  /* or 250% */
 }
 
 img:hover,
@@ -30,9 +28,8 @@ h6 {
 }
 
 .App {
-  margin: 1%;
+  width: cover;
   z-index: 100;
-
 }
 .contact {
   justify-content: center;
@@ -54,27 +51,22 @@ h6 {
   border-radius: 40px;
 }
 
-
 /* home page styles */
 .home {
-
   height: 1000px; /* Magic here */
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 .header {
   position: absolute;
-  top:146px;
+  top: 146px;
   font-size: 18px;
-  letter-spacing: 0.8em;  
-
+  letter-spacing: 0.8em;
 }
 
 .para {
   position: absolute;
-  width: 475px;
   height: 90px;
   font-weight: 100;
   margin-top: 10px;
@@ -90,13 +82,31 @@ h6 {
   top: 800px;
 }
 
-.aboutme{
-    position: absolute;
-    top: 2300px;
-    height: 500px;
+.aboutme {
+  position: absolute;
+  top: 2300px;
+  height: 500px;
+  width: cover;
 }
 
-.active{
+.active {
   color: #e48951 !important;
-
+}
+@media only screen and (max-width: 668px) {
+  .proj {
+    left: 0px;
+    top: 700px;
+  }
+  .aboutme {
+    position: absolute;
+    top: 2000px;
+    height: 600px;
+  }
+  .header {
+    position: absolute;
+    top: 166px;
+    font-size: 18px;
+    letter-spacing: 0.2em;
+  }
+  
 }

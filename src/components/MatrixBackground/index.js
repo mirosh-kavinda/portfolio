@@ -8,7 +8,7 @@ import "./matrix.css";
 const VALID_CHARS = `abcdefghijklmnopqrstuvwxyz0123456789$+-*/=%"'#&_(),.;:?!\\|{}<>[]^~`;
 const STREAM_MUTATION_ODDS = 0.02;
 
-const MIN_STREAM_SIZE = 15;
+const MIN_STREAM_SIZE = 25;
 const MAX_STREAM_SIZE = 50;
 
 const MIN_INTERVAL_DELAY = 50;

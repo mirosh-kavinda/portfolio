@@ -34,10 +34,9 @@ export default function App() {
         </div>
       ) : (
         <div>
-          <DotRing />
+          <DotRing  />
           <Navbar />
-
-          <div className="App ">
+          <div className="App">
             <Routes>
               <Route exact path="/" id="home" element={<Home />}></Route>
               <Route path="/aboutme" id="contact" element={<AboutMe />}></Route>

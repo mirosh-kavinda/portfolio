@@ -33,3 +33,10 @@
 .socialmedia
 {
   color: white;}
+
+  @media only screen and (max-width: 668px) {
+    .footer-head {
+    display: none;
+    }
+   
+  }

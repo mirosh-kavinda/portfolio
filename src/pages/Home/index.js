@@ -9,14 +9,13 @@ class Home extends React.Component {
       <>
         <MatrixBackGround />
         <div className="home ">
-          <div className="header mt-5 mx-5">
+          <div className="header mt-5 mx-3">
             <h1>Hi i’m Mirosh Kavnda </h1>
             <h4>Full stack Developer</h4>
             <p className="para">
               ( based in Sri lanka )
               <br />I Care Both UX and UI of your webpages
             </p>
-     
           </div>
           <div className="mouse"></div>
 
