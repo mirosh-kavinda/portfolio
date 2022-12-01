@@ -4,7 +4,7 @@
 
   right: 10%;
   font-size: 18px;
-  cursor: pointer;
+  cursor: none;
   color: rgb(255, 255, 255);
 }
 
@@ -21,7 +21,7 @@
   width: 100%;
   background: #373737;
   box-shadow: 0 5px 5px #ccc;
-  height: 70px;
+  height: 80px;
 }
 .footer-head {
   position: absolute;

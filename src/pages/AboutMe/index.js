@@ -5,27 +5,26 @@ class Contact extends React.Component {
   render() {
     return (
       <>
-        <div className=" mt-5 m-5 p-1" style={{zIndex:-99999}}>
+        <div className=" mt-5 m-5 p-1" style={{ zIndex: -99999 }}>
           <h1 className="mt-5 d-flex justify-content-center">
             HI I'm Mirosh Kavinda 👋
           </h1>
-          <div className="mt-5 p-4 row  ">
-            <div className=" col-md-6 col-sm-12 ">
+          <h5 className="mt-3 d-flex justify-content-center">
+            (A Frontend Developer 💻|Software Engineering Undergraduate)
+          </h5>
+          <div className="mt-5 p-4 row  d-flex justify-content-center ">
+            <div className=" col-md-4 col-sm-12 ">
               <ul>
-                <li>
-                  A Frontend Developer 💻|Software Engineering Undergraduate{" "}
-                </li>
-                <li>Currently learning Flutter & Angular </li>
-                <li> Aspiring Full Stack Blockchain Dev</li>
+                <li>🌱 I’m currently learning flutter </li>
+                <li>💬 Ask me about anything related to UX|UI design</li>
                 <li> Focusing on #100DaysOfCode</li>
               </ul>
             </div>
-            <div className=" col-md-2 col-sm-12">
-              <img alt="this is logo" src={image} height={"320px"} />
+            <div className=" col-md-4 col-sm-12">
+              <img alt="this is logo" src={image} height={"220px"} />
             </div>
           </div>
-
-          <div className=" mx-5">
+          <div className=" mx-5 vh-4">
             <h3>
               Tech Stack :
               <hr />
@@ -103,7 +102,6 @@ class Contact extends React.Component {
               </span>
             </h3>
           </div>
-      
         </div>
       </>
     );

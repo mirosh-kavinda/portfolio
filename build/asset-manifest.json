@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.dd6a9a9a.css",
-    "main.js": "/static/js/main.56cb3ffd.js",
+    "main.css": "/static/css/main.4f87c272.css",
+    "main.js": "/static/js/main.3a2233a5.js",
     "static/media/TravelSite-0010.png": "/static/media/TravelSite-0010.44481655da4d322541fe.png",
     "static/media/TravelSite-0017.png": "/static/media/TravelSite-0017.e2ebc758305acdc71859.png",
     "static/media/TravelSite-0018.png": "/static/media/TravelSite-0018.65c6580f46eab20118b9.png",
@@ -51,19 +51,22 @@
     "static/media/Slide6.PNG": "/static/media/Slide6.95711e79d89f29749a4c.PNG",
     "static/media/Slide27.PNG": "/static/media/Slide27.b93ca9e67e89dbfcd446.PNG",
     "static/media/logo.jpg": "/static/media/logo.32faa8760e4177340e97.jpg",
+    "static/media/3.png": "/static/media/3.f1f62b06ff10820cc001.png",
     "static/media/Slide3.PNG": "/static/media/Slide3.b3a96de766323e519ad0.PNG",
     "static/media/Slide4.PNG": "/static/media/Slide4.0f1ec8d4ae142794fc05.PNG",
     "static/media/TravelSite-0020.png": "/static/media/TravelSite-0020.3368d9c22282c01ef000.png",
+    "static/media/2.png": "/static/media/2.57642242ae212e98e9b1.png",
+    "static/media/1.png": "/static/media/1.5a0fefb88ac1e1059566.png",
     "static/media/Slide28.PNG": "/static/media/Slide28.1b1e9381209a56404c14.PNG",
     "static/media/TravelSite-0024.png": "/static/media/TravelSite-0024.83072a81688adb0b74a8.png",
     "static/media/Slide5.PNG": "/static/media/Slide5.6ca6e8d271cd947defef.PNG",
     "static/media/Slide25.PNG": "/static/media/Slide25.7641c68bd0010eb07993.PNG",
     "index.html": "/index.html",
-    "main.dd6a9a9a.css.map": "/static/css/main.dd6a9a9a.css.map",
-    "main.56cb3ffd.js.map": "/static/js/main.56cb3ffd.js.map"
+    "main.4f87c272.css.map": "/static/css/main.4f87c272.css.map",
+    "main.3a2233a5.js.map": "/static/js/main.3a2233a5.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd6a9a9a.css",
-    "static/js/main.56cb3ffd.js"
+    "static/css/main.4f87c272.css",
+    "static/js/main.3a2233a5.js"
   ]
 }

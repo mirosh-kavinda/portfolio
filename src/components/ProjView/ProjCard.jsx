@@ -28,22 +28,27 @@ const ProjCard = ({ projectName, category, id, image }) => {
   }
 
   return (
-    <Link
-      to="/projects/projview"
-      state={{ projId: id, projName: projectName, projDir: image }}
-      className=" d-flex justify-content-center col-sm-6 col-md-4 col-lg-4 mt-5"
-      style={{ textDecoration: "none", color: "white", cursor: "pointer" }}
-    >
+    <div className="card bg-dark " width="18rem">
       <img
         alt="robots"
+        className="card-img-top"
         src={image1}
-        style={{ width: "150px", height: "150px" }}
+        style={{ width: "cover", height: "150px" }}
       />
+
       <div className="card-body">
-        <h5>{projectName}</h5>
-        <h5>{category}</h5>
+        <h5 className="card-title">{projectName}</h5>
+        <p className="card-text">{category}</p>
+        <Link
+          to="/projects/projview"
+          state={{ projId: id, projName: projectName, projDir: image }}
+          className=" d-flex justify-content-center col-sm-6 col-md-4 col-lg-4 mt-5"
+          style={{ textDecoration: "none", color: "white", cursor: "pointer" }}
+        >
+          View
+        </Link>
       </div>
-    </Link>
+    </div>
   );
 };
 

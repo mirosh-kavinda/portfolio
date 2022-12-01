@@ -55,10 +55,10 @@ $link-color: $accent;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 5px;
 }
-
+h2{display: none;}
 .portfolio-item {
   background: $accent;
-  color: $light-gray;
+  color: white;
   font-weight: $font-bold;
   display: flex;
   justify-content: center;
@@ -99,8 +99,8 @@ $link-color: $accent;
     
   &:hover {
    
-    h2{display: none;}
-
+    h2{display: block;}
+    opacity: 1;
   }
  
 }
@@ -115,7 +115,7 @@ $link-color: $accent;
     content: '';
     display: block;
     background: $black;
-    opacity: 0.8;
+    opacity: 0.1;
     position: absolute;
     top: 0;
     right: 0;
@@ -126,9 +126,9 @@ $link-color: $accent;
   }
   
   &:hover::before {
-    opacity: 0.1;
+    
     transition: transform .5s ease;
- 
+    opacity: 0.91;
   }
 
 }

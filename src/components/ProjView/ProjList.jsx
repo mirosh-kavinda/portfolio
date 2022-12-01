@@ -3,15 +3,15 @@ import React from "react";
 import ProjCard from "./ProjCard";
 
 const CardList = ({ projects, projcat }) => {
-  
-  console.log(projcat);
   return (
     <div className="container ">
-      <div className="row e-3">
+      <div className="row justity-content-center ">
         {projects.map((user, i) => {
-          
           return (
-            <>
+            <div
+              className="md-auto mx-2 col-sm-12 col-md-4 col-lg-3"
+              key={Math.random()}
+            >
               {projcat === projects[i].category ? (
                 <ProjCard
                   projcat={projects[i].category}
@@ -22,7 +22,7 @@ const CardList = ({ projects, projcat }) => {
               ) : (
                 ""
               )}
-            </>
+            </div>
           );
         })}
       </div>

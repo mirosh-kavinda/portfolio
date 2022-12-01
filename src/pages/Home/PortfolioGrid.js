@@ -52,7 +52,7 @@ const portfolioGrid = () => {
       </div>
       <Link
         to="/projects"
-        className="  d-flex justify-content-center  align-items-center btn bg-dark nav-link mt-3 m-1 "
+        className="  d-flex justify-content-center  align-items-center btn bg-dark nav-link mt-1"
       >
         <h3>See more </h3>
       </Link>

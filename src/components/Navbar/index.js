@@ -1,14 +1,15 @@
 import React from "react";
 import brandImg from "./brand.png";
 import { Link } from "react-router-dom";
+import "../../css/index.css";
 
 const Navbar = () => {
   return (
     <>
       <nav className="navbar navbar-dark bg-black navbar-expand-lg fixed-top">
         <div className="container-md">
-          <Link className="navbar-brand  " to="/">
-            <img src={brandImg} alt="brand logo" />
+          <Link className="navbar-brand nav-link is-active p-2 " to="/">
+            <img src={brandImg} alt="brand logo " />
           </Link>
 
           <div>
@@ -18,13 +19,13 @@ const Navbar = () => {
             >
               <ul className="navbar-nav  ">
                 <li>
-                  <Link
+                  {/* <Link
                     className="nav-link is-active exact"
                     aria-current="page"
                     to="/"
                   >
                     Home
-                  </Link>
+                  </Link> */}
                 </li>
                 <li>
                   <Link className="nav-link is-active exact" to="/aboutme">

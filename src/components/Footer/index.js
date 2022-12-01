@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./index.css";
+import "../../css/footer.css";
 import {
   AiOutlineBehance,
   AiOutlineYoutube,
@@ -36,7 +36,7 @@ const Footer = () => {
         {showButton && (
           <div className=" footer">
             <div className="row ">
-              <div className=" mt-3 col-md-auto align-self-center mx-4">
+              <div className=" mt-3 col-md-auto flex align-items-center mx-4">
                 <a href="https://www.instagram.com/mirosh_kavinda/">
                   <AiOutlineBehance className="mx-2 socialmedia" size={30} />
                 </a>
@@ -50,18 +50,18 @@ const Footer = () => {
                   <AiOutlineLinkedin className="mx-2 socialmedia" size={30} />
                 </a>
               </div>
-              <p className="footer-head  nav-link ">
+              <p className="footer-head  mt-4 col-md-auto mx-4 ">
                 <AiOutlineCopyright /> 2022 Alright reserved for @mirosh_kavinda
               </p>
             </div>
           </div>
         )}
-        {showButton && (
-          <p onClick={scrollToTop} className="  back-to-top col  ">
-            Back to Top
-          </p>
-        )}
       </div>
+      {showButton && (
+        <p onClick={scrollToTop} className="  back-to-top col  ">
+          Back to Top
+        </p>
+      )}
     </>
   );
 };

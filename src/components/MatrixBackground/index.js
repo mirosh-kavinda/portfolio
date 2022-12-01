@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useRef, useState } from "react";
 import useInterval from "@use-it/interval";
-import "./matrix.css";
-
+import "../../css/matrix.css";
 
 // Constants
 const VALID_CHARS = `abcdefghijklmnopqrstuvwxyz0123456789$+-*/=%"'#&_(),.;:?!\\|{}<>[]^~`;
@@ -80,7 +79,6 @@ const RainStream = (props) => {
   }, intervalDelay);
 
   return (
-    
     <div
       style={{
         fontFamily: "matrixFont",
@@ -94,15 +92,20 @@ const RainStream = (props) => {
         marginRight: -15,
         textShadow: "0px 0px 8px rgba(32, 194, 14, 0.1)",
         fontSize: 40,
+        zIndex: 0,
       }}
     >
       {stream.map((char, index) => (
         <a
+          key={Math.random()}
           style={{
             marginTop: -12,
             // Reduce opacity for last chars
             opacity: index < 6 ? 0.1 + index * 0.15 : 1,
-            color: index === stream.length - 1 ? "#fff" : undefined,
+            color:
+              index === stream.length - 1
+                ? "rgba(255, 255, 255, 0.3)"
+                : undefined,
             textShadow:
               index === stream.length - 1
                 ? "0px 0px 20px rgba(255, 255, 255, 1)"
@@ -132,6 +135,7 @@ const MatrixRain = (props) => {
 
   return (
     <div
+      key={Math.random()}
       style={{
         position: "fixed",
         top: 0,
@@ -147,7 +151,7 @@ const MatrixRain = (props) => {
       ref={containerRef}
     >
       {new Array(streamCount).fill().map((_) => (
-        <RainStream height={containerSize?.height} />
+        <RainStream key={Math.random()} height={containerSize?.height} />
       ))}
     </div>
   );

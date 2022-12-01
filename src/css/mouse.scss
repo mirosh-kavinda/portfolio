@@ -53,7 +53,8 @@ $animDuration: 5s;
   border-radius: 100px;
 }
 &:after {
-  background-color: $colorOutline;
+  background-color:white;
+  // background-color: $colorOutline;
   width: $sizeTrackball;
   height: $sizeTrackball;
   border-radius: 100%;
@@ -67,8 +68,10 @@ $animDuration: 5s;
   height: $sizeTrackball;
   border-radius: 100%;
   z-index: 1000;
+  
  }
 .mouse:hover{
+  
   animation: 
   colorSlide $animDuration linear infinite,
   nudgeMouse $animDuration ease-out infinite;
@@ -78,12 +81,14 @@ $animDuration: 5s;
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
   margin: auto;
+ 
 }
 &:before {
   width: $widthMouse - $borderMouse;
   height: $heightMouse - $borderMouse;
   background-color: $colorBg;
   border-radius: 100px;
+  
 }
 &:after {
   background-color: $colorOutline;

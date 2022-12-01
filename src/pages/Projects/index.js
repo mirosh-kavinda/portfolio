@@ -5,55 +5,83 @@ import ProjList from "../../components/ProjView/ProjList";
 const Projects = () => {
   return (
     <>
-      <div className=" mt-5 p-3 ">
-        <ul className=" mt-4 nav justify-content-center col-lg-12 col-sm-12">
-          <li className="nav-item">
-            <a
-              className="nav-link"
-              data-bs-toggle="collapse"
-              href="#collapseExample1"
-              aria-expanded="false"
-            >
-              Case Studies
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              className="nav-link"
-              aria-current="page"
-              data-bs-toggle="collapse"
-              href="#collapseExample2"
-            >
-              Developments
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              className="nav-link"
-              data-bs-toggle="collapse"
-              href="#collapseExample3"
-            >
-              Blogs
-            </a>
-          </li>
-        </ul>
-
-
-{/* collapsing elements content  */}
-        <div className="collapse" id="collapseExample3">
-          <div className="card card-body bg-dark row">
-            <div className="row">
-              <h3 className="col-6">Blogs : </h3>
-              <a
-                data-bs-toggle="collapse"
-                href="#collapseExample3"
-                className="d-flex justify-content-end col-6 test-xl"
-              >
-                Close 
-              </a>
-              <hr />
-            </div>
-            <ul className=" ">
+      <nav className="mt-5 p-4">
+        <div
+          className="nav  justify-content-center"
+          id="nav-tab"
+          role="tablist"
+        >
+          <a
+            href="#4"
+            className="nav-link active"
+            id="nav-home-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-home"
+            role="tab"
+            aria-controls="nav-home"
+            aria-selected="true"
+          >
+            Case Studies
+          </a>
+          <a
+            href="#4"
+            className="nav-link"
+            id="nav-profile-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-profile"
+            role="tab"
+            aria-controls="nav-profile"
+            aria-selected="false"
+          >
+            Developments
+          </a>
+          <a
+            href="#4"
+            className="nav-link"
+            id="nav-contact-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-contact"
+            role="tab"
+            aria-controls="nav-contact"
+            aria-selected="false"
+          >
+            Blogs
+          </a>
+        </div>
+      </nav>
+      <div className="tab-content mt-5 gap-4" id="nav-tabContent">
+        <div
+          className="tab-pane fade show active"
+          id="nav-home"
+          role="tabpanel"
+          aria-labelledby="nav-home-tab"
+        >
+          <ProjList
+            projects={ProjectData}
+            projcat={"casestudy"}
+            key={Math.random()}
+          />
+        </div>
+        <div
+          className="tab-pane fade"
+          id="nav-profile"
+          role="tabpanel"
+          aria-labelledby="nav-profile-tab"
+        >
+          <ProjList
+            projects={ProjectData}
+            projcat={"dev"}
+            key={Math.random()}
+          />
+        </div>
+        <div
+          className="tab-pane fade"
+          id="nav-contact"
+          role="tabpanel"
+          aria-labelledby="nav-contact-tab"
+        >
+          <div className="bg-dark m-3 p-3 ">
+            <ul>
               <li>
                 <a className="nav-link" href="#1">
                   SearchEngine Optimization
@@ -71,44 +99,7 @@ const Projects = () => {
               </li>
             </ul>
           </div>
-        </div> 
-
-        <div className="collapsing" id="collapseExample2">
-          <div className="card card-body bg-dark row">
-            <div className="row">
-              <h3 className="col-6">Developments : </h3>
-              <a
-                data-bs-toggle="collapse"
-                href="#collapseExample2"
-                className="d-flex justify-content-end col-6 test-xl"
-              >
-                Close 
-              </a>
-              <hr />
-            </div>
-
-            <ProjList projects={ProjectData} projcat={"dev"} />
-          </div>
         </div>
-
-        <div className="collapse.show" id="collapseExample1">
-          <div className="card card-body bg-dark row">
-            <div className="row">
-              <h3 className="col-6">Case Studies : </h3>
-              <a
-                data-bs-toggle="collapse"
-                href="#collapseExample1"
-                className="d-flex justify-content-end col-6 test-xl"
-              >
-                Close 
-              </a>
-              <hr />
-            </div>
-
-            <ProjList projects={ProjectData} projcat={"casestudy"} />
-          </div>
-        </div>
-
       </div>
     </>
   );

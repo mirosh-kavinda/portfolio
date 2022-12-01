@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function importAll(r) {
   return r.keys().map(r);
@@ -8,7 +8,7 @@ function importAll(r) {
 const ProjView = () => {
   const location = useLocation();
   const { projId, projName } = location.state;
-
+  const navigate = useNavigate();
   let images;
 
   switch (projId) {
@@ -49,11 +49,17 @@ const ProjView = () => {
 
   return (
     <>
-      <div className="container  gap-5 ">
-        <h1 className="d-flex justify-content-center mt-5 p-4">{projName}</h1>
+      <div className="container mt-5 pt-4 ">
+        <a  href="#1"onClick={() => navigate(-1)} className=" nav-link mt-3">
+          Back
+        </a>
+
+        <h1 className="d-flex justify-content-center mt-5 ">{projName}</h1>
+
         {images.map((image) => {
           return (
             <img
+              key={Math.random()}
               className=" img-fluid  mb-1 "
               src={image}
               width="100%"

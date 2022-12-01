@@ -1,36 +1,69 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
 
 body,
 html {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   background-color: black;
   color: white;
   cursor: none;
 }
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* cursor styles  */
+.ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 29px;
+  height: 29px;
+  border: 2px solid rgba(255, 255, 255, 0.808);
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  -webkit-transition-duration: 100ms;
+  transition-duration: 100ms;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  will-change: width, height, transform, border;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+
+
+.dot {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  pointer-events: none;
+}
+
+.navbar-brand:hover {
+  border: 1px solid #e3874f;
+}
 
 img:hover,
-a:hover {
+a:hover,
+.nav-link :hover {
   border-bottom: #e3874f;
   color: #e48951 !important;
   cursor: none;
 }
 
-h6 {
-  letter-spacing: 0.31rem;
-}
-
 .nav-link {
   color: rgb(162, 159, 159);
+  font-size: larger;
+  cursor: pointer;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
-
-.App {
-  width: cover;
-  z-index: 100;
-}
 .contact {
   justify-content: center;
   align-items: center;
@@ -53,60 +86,79 @@ h6 {
 
 /* home page styles */
 .home {
-  height: 1000px; /* Magic here */
-  display: flex;
+  position: relative;
+
+  height: 70vh;
   justify-content: center;
   align-items: center;
+z-index: 1000;
+  background-blend-mode: multiply;
+
 }
 .header {
-  position: absolute;
-  top: 146px;
+  position: relative;
   font-size: 18px;
   letter-spacing: 0.8em;
+  font-weight: 900;
+  box-shadow: #ffffff;
 }
 
 .para {
-  position: absolute;
   height: 90px;
-  font-weight: 100;
-  margin-top: 10px;
+  font-weight: 500;
   font-style: normal;
   letter-spacing: 0.29em;
   font-size: 18px;
   background-color: transparent;
+  text-shadow: 10px solid #ffffff;
 }
-
+.mouse {
+  left: 50%;
+}
 .proj {
-  position: absolute;
+  position: relative;
   left: 0px;
-  top: 800px;
+  margin-top: 10%;
 }
 
 .aboutme {
-  position: absolute;
-  top: 2300px;
-  height: 500px;
+  position: relative;
+  height: 700px;
   width: cover;
 }
 
 .active {
   color: #e48951 !important;
 }
-@media only screen and (max-width: 668px) {
+
+
+@media only screen and (max-width: 768px) {
+  .ring , .dot,.mouse{
+    display: none;
+  }
+
   .proj {
-    left: 0px;
-    top: 700px;
+    margin-top: 40%;
   }
   .aboutme {
-    position: absolute;
-    top: 2000px;
-    height: 600px;
+    height: 800px;
   }
   .header {
-    position: absolute;
-    top: 166px;
     font-size: 18px;
     letter-spacing: 0.2em;
   }
-  
+  .imageav {
+    height: 250px;
+    width: 250px;
+  }
+  .home {
+    height: 50vh;
+  }
+
+}
+
+@media only screen and (max-width: 992px) {
+  .home {
+    height: 90vh;
+  }
 }
