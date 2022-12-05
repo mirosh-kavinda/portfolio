@@ -101,6 +101,32 @@ class Contact extends React.Component {
                 />
               </span>
             </h3>
+            <h3 className="mt-5">
+              {" "}
+              My Stats On Git hub :
+              <span>
+                <div align="flex justify-content-center row  ">
+                  <iframe
+                    title="#"
+                    src="http://github-readme-streak-stats.herokuapp.com?user=mirosh-kavinda&theme=dark&background=000000"
+                    style={{ border: "0" }}
+                    allowfullscreen="true"
+                    loading="lazy"
+                    className="col-md-6 mt-3"
+                  ></iframe>
+                  <vr />
+                  <iframe
+                    title="#"
+                    src="https://github-readme-stats.vercel.app/api/top-langs/?username=mirosh-kavinda&layout=compact&theme=vision-friendly-dark"
+                    style={{ border: "0" }}
+                    allowfullscreen="true"
+                    loading="lazy"
+                    className="col-md-6 mt-3"
+                  ></iframe>
+                </div>
+              </span>
+            </h3>
+            <br />
           </div>
         </div>
       </>

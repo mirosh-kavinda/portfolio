@@ -36,7 +36,7 @@ const Footer = () => {
         {showButton && (
           <div className=" footer">
             <div className="row ">
-              <div className=" mt-3 col-md-auto flex align-items-center mx-4">
+              <div className=" mt-3  flex align-items-center mx-4">
                 <a href="https://www.instagram.com/mirosh_kavinda/">
                   <AiOutlineBehance className="mx-2 socialmedia" size={30} />
                 </a>
