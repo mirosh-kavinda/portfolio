@@ -3,6 +3,7 @@ import PortfolioGrid from "./PortfolioGrid";
 import "../../css/mouse.scss";
 import MatrixBackGround from "../../components/MatrixBackground";
 import Aboutme from "./Aboutme";
+import fileSaver from "file-saver";
 import {
   AiOutlineBehance,
   AiOutlineYoutube,
@@ -10,8 +11,16 @@ import {
   AiOutlineLinkedin,
   AiOutlineGithub,
 } from "react-icons/ai";
+
 class Home extends React.Component {
   render() {
+    const saveFile = () => {
+      fileSaver.saveAs(
+        "https://drive.google.com/uc?export=download&id=1g6ZF-jLVGU2czmd6SyGLByMZ07gy9uyN",
+        "Mirosh_CV.pdf"
+      );
+    };
+
     return (
       <>
         <MatrixBackGround />
@@ -54,7 +63,8 @@ class Home extends React.Component {
 
             <button
               to="/projects"
-              className="  d-flex justify-content-center mt-4 align-items-center btn bg-dark nav-link p-2 col-sm-12 col-md-6"
+              className="  d-flex justify-content-center mt-4 align-items-center btn download bg-dark nav-link p-2 col-sm-12 col-md-6"
+              onClick={saveFile}
             >
               Download CV
             </button>

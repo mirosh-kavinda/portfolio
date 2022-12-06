@@ -9,7 +9,7 @@ const CardList = ({ projects, projcat }) => {
         {projects.map((user, i) => {
           return (
             <div
-              className="md-auto mx-2 col-sm-12 col-md-4 col-lg-3"
+              className="md-auto  col-sm-12 col-md-4"
               key={Math.random()}
             >
               {projcat === projects[i].category ? (

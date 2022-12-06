@@ -1,6 +1,6 @@
 import React from "react";
 import image from "../../images/logo.jpg";
-
+import { AiOutlineGithub } from "react-icons/ai";
 class Contact extends React.Component {
   render() {
     return (
@@ -126,6 +126,17 @@ class Contact extends React.Component {
                 </div>
               </span>
             </h3>
+
+            <a
+              href="https://github.com/mirosh-kavinda"
+              className="  d-flex justify-content-center mt-4  btn download  bg-dark nav-link  col-sm-12 col-md-3 "
+            >
+              View More
+              <span>
+                <AiOutlineGithub className="mx-2 socialmedia" size={30} />
+              </span>
+            </a>
+            <br />
             <br />
           </div>
         </div>

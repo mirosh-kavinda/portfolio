@@ -50,9 +50,9 @@ const ProjView = () => {
   return (
     <>
       <div className="container mt-5 pt-4 ">
-        <a  href="#1"onClick={() => navigate(-1)} className=" nav-link mt-3">
+        <div onClick={() => navigate(-1)} className=" nav-link mt-3">
           Back
-        </a>
+        </div>
 
         <h1 className="d-flex justify-content-center mt-5 ">{projName}</h1>
 

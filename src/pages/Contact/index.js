@@ -144,7 +144,7 @@ const ContactForm = () => {
             </button>
           </form>
         </div>
-        <div className="col-sm-12 col-md-6 mt-5 text-center p-2">
+        <div className="col-sm-12 col-md-6 mt-5 text-center p-2 border bg-dark w-10">
           <iframe
             title="#"
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d191064.69954824232!2d80.0526597900972!3d6.877822914457401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2slk!4v1670221500449!5m2!1sen!2slk"
