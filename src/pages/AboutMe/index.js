@@ -108,7 +108,7 @@ class Contact extends React.Component {
                 <div align="flex justify-content-center row  ">
                   <iframe
                     title="#"
-                    src="http://github-readme-streak-stats.herokuapp.com?user=mirosh-kavinda&theme=dark&background=000000"
+                    src="https://github-readme-streak-stats.herokuapp.com?user=mirosh-kavinda&theme=dark&background=000000"
                     style={{ border: "0" }}
                     allowfullscreen="true"
                     loading="lazy"
