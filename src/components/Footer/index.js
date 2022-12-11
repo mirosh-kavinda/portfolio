@@ -7,6 +7,7 @@ import {
   AiOutlineLinkedin,
   AiOutlineCopyright,
 } from "react-icons/ai";
+import { BsArrowUpSquare } from "react-icons/bs";
 const Footer = () => {
   const [showButton, setShowButton] = useState(false);
   useEffect(
@@ -35,8 +36,8 @@ const Footer = () => {
       <div>
         {showButton && (
           <div className=" footer">
-            <div className="row ">
-              <div className=" mt-3  flex align-items-center mx-4">
+            <div className="row d-flex align-items-center ">
+              <div className=" mt-3   col-md-4 col-sm-4">
                 <a href="https://www.instagram.com/mirosh_kavinda/">
                   <AiOutlineBehance className="mx-2 socialmedia" size={30} />
                 </a>
@@ -49,19 +50,21 @@ const Footer = () => {
                 <a href="https://www.linkedin.com/in/mirosh-kavinda-988042159/">
                   <AiOutlineLinkedin className="mx-2 socialmedia" size={30} />
                 </a>
+                <p
+                  onClick={scrollToTop}
+                  className="  back-to-top nav-link col-md-1 "
+                >
+                  <BsArrowUpSquare className="mx-2 socialmedia" size={40} />
+                </p>
               </div>
-              <p className="footer-head  mt-4 col-md-auto mx-4 ">
-                <AiOutlineCopyright /> 2022 Alright reserved for @mirosh_kavinda
+              <p className=" nav-link  footer-head col-md-5 col-sm-2  ">
+                <AiOutlineCopyright />
+                2022 Alright reserved for @mirosh_kavinda
               </p>
             </div>
           </div>
         )}
       </div>
-      {showButton && (
-        <p onClick={scrollToTop} className="  back-to-top col  ">
-          Back to Top
-        </p>
-      )}
     </>
   );
 };

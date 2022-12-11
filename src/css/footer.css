@@ -1,14 +1,14 @@
 .back-to-top {
   position: fixed;
   bottom: 10px;
-
-  right: 10%;
+  right: 1%;
   font-size: 18px;
   cursor: none;
   color: rgb(255, 255, 255);
 }
 
-.socialmedia:hover,.back-to-top:hover {
+.socialmedia:hover,
+.back-to-top:hover {
   color: #e3874f;
 }
 .widget-app-container {
@@ -21,22 +21,24 @@
   width: 100%;
   background: #373737;
   box-shadow: 0 5px 5px #ccc;
-  height: 80px;
+  height: 70px;
 }
 .footer-head {
-  position: absolute;
-  left: 40px;
-  right: 62.34%;
-  top: 30.17%;
-  bottom: 38.79%;
+  margin-top: 5px;
+  font-size: x-large;
 }
-.socialmedia
-{
-  color: white;}
+.socialmedia {
+  color: white;
+}
 
-  @media only screen and (max-width: 668px) {
-    .footer-head {
-    display: none;
-    }
-   
+@media only screen and (max-width: 470px) {
+  .footer-head {
+    font-size: smaller;
   }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-head {
+    font-size: small;
+  }
+}

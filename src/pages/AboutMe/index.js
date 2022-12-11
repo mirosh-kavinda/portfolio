@@ -1,34 +1,32 @@
 import React from "react";
 import image from "../../images/logo.jpg";
 import { AiOutlineGithub } from "react-icons/ai";
+import Aboutme from "../../components/Aboutme/Aboutme";
 class Contact extends React.Component {
   render() {
     return (
       <>
-        <div className=" mt-5 m-5 p-1" style={{ zIndex: -99999 }}>
+        <div className=" mt-5 m-1 p-1" style={{ zIndex: -99999 }}>
           <h1 className="mt-5 d-flex justify-content-center">
             HI I'm Mirosh Kavinda 👋
           </h1>
-          <h5 className="mt-3 d-flex justify-content-center">
+          <h6 className="mt-3 d-flex justify-content-center">
             (A Frontend Developer 💻|Software Engineering Undergraduate)
-          </h5>
-          <div className="mt-5 p-4 row  d-flex justify-content-center ">
-            <div className=" col-md-4 col-sm-12 ">
-              <ul>
-                <li>🌱 I’m currently learning flutter </li>
-                <li>💬 Ask me about anything related to UX|UI design</li>
-                <li> Focusing on #100DaysOfCode</li>
-              </ul>
-            </div>
-            <div className=" col-md-4 col-sm-12">
+          </h6>
+          <div className="  row  d-flex justify-content-center ">
+            <div className=" col-md-2 col-sm-12 mt-5 d-flex justify-content-center">
               <img alt="this is logo" src={image} height={"220px"} />
             </div>
+            <div className=" col-md-8 col-sm-12 ">
+              <Aboutme />
+            </div>
           </div>
-          <div className=" mx-5 vh-4">
+          <br />
+          <div className=" mx-2 vh-4" align="center ">
             <h3>
-              Tech Stack :
+              Tech Stack
               <hr />
-              <span align="center">
+              <span>
                 <img
                   alt="#1"
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
@@ -101,18 +99,19 @@ class Contact extends React.Component {
                 />
               </span>
             </h3>
-            <h3 className="mt-5">
+            <h3 className="mt-5" align="center ">
               {" "}
-              My Stats On Git hub :
+              My Stats On Git hub
+              <hr />
               <span>
-                <div align="flex justify-content-center row  ">
+                <div >
                   <iframe
                     title="#"
                     src="https://github-readme-streak-stats.herokuapp.com?user=mirosh-kavinda&theme=dark&background=000000"
                     style={{ border: "0" }}
                     allowfullscreen="true"
                     loading="lazy"
-                    className="col-md-6 mt-3"
+                    className=" col-md-3 mt-3"
                   ></iframe>
                   <vr />
                   <iframe
@@ -121,23 +120,24 @@ class Contact extends React.Component {
                     style={{ border: "0" }}
                     allowfullscreen="true"
                     loading="lazy"
-                    className="col-md-6 mt-3"
+                    className="col-md-3 mt-3"
                   ></iframe>
+               
                 </div>
               </span>
             </h3>
-
-            <a
-              href="https://github.com/mirosh-kavinda"
-              className="  d-flex justify-content-center mt-4  btn download  bg-dark nav-link  col-sm-12 col-md-3 "
-            >
-              View More
-              <span>
-                <AiOutlineGithub className="mx-2 socialmedia" size={30} />
-              </span>
-            </a>
-            <br />
-            <br />
+            <p  
+                    href="https://github.com/mirosh-kavinda"
+                    className="  mt-4  btn download  bg-dark nav-link  col-sm-12 col-md-3 "
+                  >
+                    View More
+                    <span>
+                      <AiOutlineGithub className="mx-2 socialmedia" size={30} />
+                    </span>
+                  </p>
+                  <br/>
+                  <br/>
+                  <br/>
           </div>
         </div>
       </>

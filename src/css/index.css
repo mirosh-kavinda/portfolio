@@ -6,10 +6,14 @@ html {
   background-color: black;
   color: white;
   cursor: none;
+  scrollbar-width: none;  /* Firefox */
+ 
 }
 ::-webkit-scrollbar {
   display: none;
+  overflow: hidden;
 }
+
 
 /* cursor styles  */
 .ring {
@@ -29,7 +33,11 @@ html {
   z-index: 10000;
   pointer-events: none;
 }
-
+.imageav
+{
+  width: 300px;
+  height: 300px;
+}
 .dot {
   position: fixed;
   top: 50%;
@@ -50,25 +58,23 @@ html {
 .nav-link {
   color: rgb(193, 193, 193);
   font-size: larger;
-  cursor:none ;
+  cursor: none;
 }
 
-
 img:hover,
-a:hover  {
+a:hover {
   border-bottom: #e3874f;
   color: #e48951 !important;
   cursor: none;
 }
 
-
-.contact {
+/* .contact {
   justify-content: center;
   align-items: center;
   padding: 10px;
   z-index: 1000;
   border-radius: 40px;
-}
+} */
 
 /* home page styles */
 .home {
@@ -80,11 +86,13 @@ a:hover  {
   background-blend-mode: multiply;
 }
 .header {
-  position: relative;
-  font-size: 18px;
+
+  font-size: 22px;
   letter-spacing: 0.8em;
   font-weight: 900;
-  box-shadow: #ffffff;
+  background-color: rgba(0, 0, 0, 0.708);
+  padding: 10px;
+  
 }
 
 .para {
@@ -102,7 +110,7 @@ a:hover  {
 .proj {
   position: relative;
   left: 0px;
-  margin-top: 10%;
+  margin-top: 20%;
 }
 
 .aboutme {
@@ -115,35 +123,3 @@ a:hover  {
   color: #e48951 !important;
 }
 
-
-@media only screen and (max-width: 768px) {
-  .ring,
-  .dot,
-  .mouse {
-    display: none;
-  }
-
-  .proj {
-    margin-top: 40%;
-  }
-  .aboutme {
-    height: 800px;
-  }
-  .header {
-    font-size: 18px;
-    letter-spacing: 0.2em;
-  }
-  .imageav {
-    height: 250px;
-    width: 250px;
-  }
-  .home {
-    height: 50vh;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .home {
-    height: 90vh;
-  }
-}

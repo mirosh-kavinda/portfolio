@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.min.css";
+import "react-toastify/dist/ReactToastify.min.css";
 
 const ContactForm = () => {
   const {
@@ -14,7 +14,7 @@ const ContactForm = () => {
   // Function that displays a success toast on bottom right of the page when form submission is successful
   const toastifySuccess = () => {
     toast("Form sent!", {
-      position: "bottom-right",
+      position: "bottom-left",
       autoClose: 5000,
       hideProgressBar: true,
       closeOnClick: true,
@@ -52,8 +52,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="container contact bg-dark mt-5">
-      <div className="row  p-3 mt-5">
+    <div className=" contact bg-dark mt-5">
+      <div className="row  p-1 mt-5">
         <div className="col-sm-12 col-md-6 mt-5 text-center">
           <h1>Contact Me</h1>
           <form onSubmit={handleSubmit(onSubmit)} noValidate>
@@ -154,9 +154,14 @@ const ContactForm = () => {
             allowfullscreen="false"
             loading="lazy"
           ></iframe>
+          <br />
         </div>
+
         <ToastContainer />
       </div>
+      <br />
+      <br />
+      <br />
     </div>
   );
 };

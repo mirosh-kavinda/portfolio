@@ -1,0 +1,101 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .ring {
+    display: none;
+  }
+  .dot {
+    display: none;
+  }
+  .header {
+    font-size: 12px;
+    letter-spacing: 0.4em;
+  }
+  .imageav {
+    width: 250px;
+    height: 250px;
+    justify-content: cetner;
+  }
+  .mouse {
+    display: none;
+  }
+  .home {
+    height: 90vh;
+  }
+  .badgeimg{
+    height:100px;
+    width: 100px;
+  }
+
+  .one {
+  height: 20vh;  
+  } 
+  
+ 
+  
+  .proj{
+    margin-top: 10;
+  }
+  .aboutme{
+    margin-top: 8%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .home {
+    height: 80vh;
+  }
+  .imageav {
+    width: 250px;
+    height: 250px;
+  }
+  .mouse {
+    margin-top: 25vh;
+  }
+  .badgeimg{
+    height:150px;
+    width: 150px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .home {
+    height: 80vh;
+  }
+ 
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .home {
+    height: 90vh;
+  }
+
+  .mouse {
+    margin-top: 10vh;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .ring {
+    width: 34px;
+    height: 34px;
+  }
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+  .home {
+    height: 80vh;
+  }
+  .imageav {
+    width: 500px;
+    height: 500px;
+  }
+  .mouse {
+    margin-top: 20vh;
+  }
+
+}

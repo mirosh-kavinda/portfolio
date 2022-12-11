@@ -1,9 +1,10 @@
 import React from "react";
-import PortfolioGrid from "./PortfolioGrid";
+import PortfolioGrid from "../../components/Portfolio/PortfolioGrid";
 import "../../css/mouse.scss";
 import MatrixBackGround from "../../components/MatrixBackground";
-import Aboutme from "./Aboutme";
+import Aboutme from "../../components/Aboutme/Aboutme";
 import fileSaver from "file-saver";
+import { Link } from "react-router-dom";
 import {
   AiOutlineBehance,
   AiOutlineYoutube,
@@ -11,6 +12,7 @@ import {
   AiOutlineLinkedin,
   AiOutlineGithub,
 } from "react-icons/ai";
+import Badges from "../../components/Aboutme/Badges";
 
 class Home extends React.Component {
   render() {
@@ -24,26 +26,26 @@ class Home extends React.Component {
     return (
       <>
         <MatrixBackGround />
-        <div className="home row mt-5 m-5 p-5">
-          <div className="col-sm-12 col-md-5 imageav">
+        <div className="home row mt-5  p-5">
+          <div className="col-sm-12 col-md-5 ">
             <img
               src={
                 "https://avatars.githubusercontent.com/u/74175084?s=400&u=ad95ac6678bbdab94f754a427330a1f7f1ed516e&v=4"
               }
               alt="landing"
-              className="rounded-circle img-fluid ms-4"
+              className=" rounded-circle img-fluid ms- imageav"
             />
           </div>
 
-          <div className=" col-sm-12 col-md-6 ">
+          <div className="  col-sm-12 col-md-7 header ">
             <h1>Hi i’m Mirosh Kavnda </h1>
-            <h4>Full stack Developer</h4>
+            <p>Full stack Developer</p>
             <p className="para">
               ( based in Sri lanka )
               <br />I Care Both UX and UI of your webpages
             </p>
 
-            <div className=" bg-dark p-1 col-sm-12 col-md-9 d-flex justify-content-center">
+            <div className=" mt-3 bg-dark p-1 col-sm-12 col-md-9 d-flex justify-content-center">
               <a href="https://www.instagram.com/mirosh_kavinda/">
                 <AiOutlineBehance className="mx-2 socialmedia" size={30} />
               </a>
@@ -74,8 +76,26 @@ class Home extends React.Component {
         <div className="proj  ">
           <PortfolioGrid />
         </div>
-        <div className="aboutme">
+        <br />
+
+        <div className="aboutme  ">
           <Aboutme />
+          <div className="row  gap-1 flex justify-content-center  ">
+            <Link
+              to="/contact"
+              className=" nav-link bg-dark col-sm-6 col-md-4  nav-link  btn   mt-2    "
+            >
+              <h5>Contact Me</h5>
+            </Link>
+
+            <Link
+              to="/aboutme"
+              className=" align-item-center nav-link bg-dark col-sm-6 col-md-4 d-flex justify-content-center nav-link  btn download  mt-2  "
+            >
+              <h5>More About me</h5>
+            </Link>
+          </div>
+          <Badges />
         </div>
       </>
     );

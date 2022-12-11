@@ -5,7 +5,8 @@ import ProjList from "../../components/ProjView/ProjList";
 const Projects = () => {
   return (
     <>
-      <nav className="mt-5 p-4">
+      <br />
+      <nav className="mt-5 ">
         <div
           className="nav  justify-content-center"
           id="nav-tab"
@@ -61,6 +62,9 @@ const Projects = () => {
             projcat={"casestudy"}
             key={Math.random()}
           />
+          <br />
+          <br />
+          <br />
         </div>
         <div
           className="tab-pane fade"
@@ -73,6 +77,9 @@ const Projects = () => {
             projcat={"dev"}
             key={Math.random()}
           />
+          <br />
+          <br />
+          <br />
         </div>
         <div
           className="tab-pane fade"

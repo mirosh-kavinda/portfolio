@@ -13,12 +13,16 @@ const CardList = ({ projects, projcat }) => {
               key={Math.random()}
             >
               {projcat === projects[i].category ? (
+                <div>
+             
                 <ProjCard
                   projcat={projects[i].category}
                   projectName={projects[i].projectName}
                   id={projects[i].id}
                   image={projects[i].image}
                 />
+                <br />
+                </div>
               ) : (
                 ""
               )}
