@@ -14,28 +14,39 @@ export default function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 2000);
   }, []);
 
   return (
     <>
       {loading ? (
-        <div
-          className="d-flex justify-content-center align-content-center"
-          style={{ marginTop: "40vh", height: "200px" }}
-        >
+        <>
           <div
-            className="spinner-border "
-            style={{ width: "4rem", height: "4rem" }}
-            role="status"
+            align="center"
+            class="alert message alert-warning alert-dismissible fade show"
+            role="alert"
           >
-            <span className="sr-only "></span>
+            <h4>This site is still under developing, but you can get a sense of who
+            I am  </h4>
           </div>
-        </div>
+          <div
+            className="d-flex justify-content-center align-content-center"
+            style={{ marginTop: "40vh", height: "200px" }}
+          >
+            <div
+              className="spinner-border "
+              style={{ width: "4rem", height: "4rem" }}
+              role="status"
+            >
+              <span className="sr-only "></span>
+            </div>
+          </div>
+        </>
       ) : (
         <div>
-          <DotRing  />
+          <DotRing />
           <Navbar />
+
           <div className="App">
             <Routes>
               <Route exact path="/" id="home" element={<Home />}></Route>

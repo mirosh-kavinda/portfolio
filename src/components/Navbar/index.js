@@ -3,6 +3,7 @@ import brandImg from "./brand.png";
 import { Link } from "react-router-dom";
 import "../../css/index.css";
 
+
 const Navbar = () => {
   return (
     <>
@@ -58,8 +59,11 @@ const Navbar = () => {
           </button>
         </div>
       </nav>
+     
     </>
   );
 };
 
 export default Navbar;
+
+

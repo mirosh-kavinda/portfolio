@@ -58,7 +58,7 @@ class Home extends React.Component {
               <a href="https://www.linkedin.com/in/mirosh-kavinda-988042159/">
                 <AiOutlineLinkedin className="mx-2 socialmedia" size={30} />
               </a>
-              <a href="https://www.linkedin.com/in/mirosh-kavinda-988042159/">
+              <a href="https://github.com/mirosh-kavinda">
                 <AiOutlineGithub className="mx-2 socialmedia" size={30} />
               </a>
             </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../../images/logo.jpg";
+import image from "../../images/logo.gif";
 import { AiOutlineGithub } from "react-icons/ai";
 import Aboutme from "../../components/Aboutme/Aboutme";
 class Contact extends React.Component {
@@ -8,14 +8,14 @@ class Contact extends React.Component {
       <>
         <div className=" mt-5 m-1 p-1" style={{ zIndex: -99999 }}>
           <h1 className="mt-5 d-flex justify-content-center">
-            HI I'm Mirosh Kavinda 👋
+        I'm Mirosh Kavinda 👋
           </h1>
           <h6 className="mt-3 d-flex justify-content-center">
-            (A Frontend Developer 💻|Software Engineering Undergraduate)
+          (A full-stack Developer|💻 Undergraduate)
           </h6>
           <div className="  row  d-flex justify-content-center ">
             <div className=" col-md-2 col-sm-12 mt-5 d-flex justify-content-center">
-              <img alt="this is logo" src={image} height={"220px"} />
+              <img alt="this is logo" src={image} height={"260px"} />
             </div>
             <div className=" col-md-8 col-sm-12 ">
               <Aboutme />
@@ -104,7 +104,7 @@ class Contact extends React.Component {
               My Stats On Git hub
               <hr />
               <span>
-                <div >
+                <div>
                   <iframe
                     title="#"
                     src="https://github-readme-streak-stats.herokuapp.com?user=mirosh-kavinda&theme=dark&background=000000"
@@ -122,22 +122,21 @@ class Contact extends React.Component {
                     loading="lazy"
                     className="col-md-3 mt-3"
                   ></iframe>
-               
                 </div>
               </span>
             </h3>
-            <p  
-                    href="https://github.com/mirosh-kavinda"
-                    className="  mt-4  btn download  bg-dark nav-link  col-sm-12 col-md-3 "
-                  >
-                    View More
-                    <span>
-                      <AiOutlineGithub className="mx-2 socialmedia" size={30} />
-                    </span>
-                  </p>
-                  <br/>
-                  <br/>
-                  <br/>
+            <p
+              href="https://github.com/mirosh-kavinda"
+              className="  mt-4  btn download  bg-dark nav-link  col-sm-12 col-md-3 "
+            >
+              View More
+              <span>
+                <AiOutlineGithub className="mx-2 socialmedia" size={30} />
+              </span>
+            </p>
+            <br />
+            <br />
+            <br />
           </div>
         </div>
       </>
