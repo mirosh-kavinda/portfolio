@@ -7,17 +7,18 @@ export const ProjectData = [
     category : "casestudy",
     image:"../../images/projects/image1.png",
   },
+
   {
     id: "2",
-    projectName: "Unity Fitness Application Design",
-    category : "casestudy",
-    image:"../../images/projects/image2.png",
-  },
-  {
-    id: "3",
     projectName: "Travel Mate application Design ",
     category : "casestudy",
     image:'../../images/projects/image3.png',
+  },
+  {
+    id: "3",
+    projectName: "Unity Fitness Application Design",
+    category : "casestudy",
+    image:"../../images/projects/image2.png",
   },
   {
     id: "4",
@@ -27,16 +28,17 @@ export const ProjectData = [
   },
   {
     id: "5",
-    projectName: "crafira",
+    projectName: "happyfunc",
     category : "dev",
     image:'../../images/projects/image1.png',
   },
   {
     id: "6",
-    projectName: "happyfunc",
+    projectName: "crafira",
     category : "dev",
     image:'../../images/projects/image1.png',
   },
+ 
   // {
   //   id: "7",
   //   projectName: "Memphis Tutor",

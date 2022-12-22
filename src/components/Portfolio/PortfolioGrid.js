@@ -9,45 +9,62 @@ const portfolioGrid = () => {
       <div className="portfolio mt-3">
         <Link
           to="/projects/projview"
-          state={{ projId: "1", projName: "Charity Application Design" }}
+          state={{
+            projId: "1",
+            projName: "Charity Application Design",
+            projCat: "casestudy",
+          }}
           className="img-hover-zoom portfolio-item medium one"
         >
-          <h2>Charity Application</h2>
+          <h2>CharityLife</h2>
+          <br />
         </Link>
         <Link
           to="/projects/projview"
-          state={{ projId: "3", projName: "Travel mate application Design" }}
+          state={{
+            projId: "3",
+            projName: "Travel mate application Design",
+            projCat: "casestudy",
+          }}
           className="img-hover-zoom portfolio-item large two"
         >
-          <h2>Travel mate application</h2>
+          <h2>TravelMate</h2>
         </Link>
         <Link
           to="/projects/projview"
-          state={{ projId: "2", projName: "Fitness application Design" }}
+          state={{
+            projId: "2",
+            projName: "Fitness application Design",
+            projCat: "casestudy",
+          }}
           className="img-hover-zoom portfolio-item medium three"
         >
-          <h2>Fitness application</h2>
+          <h2>FitPro</h2>
         </Link>
         <Link
           to="/projects/projview"
-          state={{ projId: " 4", projName: "Memphis Tutor Tutoring App" }}
+          state={{
+            projId: " 4",
+            projName: "Memphis Tutor Tutoring App",
+            projCat: "dev",
+          }}
           className="img-hover-zoom portfolio-item tall four wide"
         >
           <h2>MemphisTutor</h2>
         </Link>
         <Link
           to="/projects/projview"
-          state={{ projId: "5", projName: " Crafira web site " }}
+          state={{ projId: "5", projName: " Med Map ", projCat: "dev" }}
           className="img-hover-zoom portfolio-item tall five"
         >
-          <h2>Crafira</h2>
+          <h2>Med Map</h2>
         </Link>
         <Link
           to="/projects/projview"
-          state={{ projId: "6", projName: "Med Map mobile application" }}
+          state={{ projId: "6", projName: " Crafira", projCat: "dev" }}
           className="img-hover-zoom portfolio-item wide six"
         >
-          <h1>Med Map</h1>
+          <h2>Crafira</h2>
         </Link>
       </div>
       <Link

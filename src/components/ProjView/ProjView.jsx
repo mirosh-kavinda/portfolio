@@ -7,10 +7,11 @@ function importAll(r) {
 
 const ProjView = () => {
   const location = useLocation();
-  const { projId, projName } = location.state;
+  const { projId, projName, projCat } = location.state;
   const navigate = useNavigate();
   let images;
 
+  // image sorting to import all for casestudies
   switch (projId) {
     case "1":
       images = importAll(
@@ -19,30 +20,14 @@ const ProjView = () => {
       break;
     case "2":
       images = importAll(
-        require.context("../../images/projects/2/", false, /\.(PNG|jpe?g|png)$/)
+        require.context("../../images/projects/3/", false, /\.(PNG|jpe?g|png)$/)
       );
       break;
     case "3":
       images = importAll(
-        require.context("../../images/projects/3/", false, /\.(PNG|jpe?g|png)$/)
+        require.context("../../images/projects/2/", false, /\.(PNG|jpe?g|png)$/)
       );
       break;
-    case "4":
-      images = importAll(
-        require.context("../../images/projects/3/", false, /\.(PNG|jpe?g|png)$/)
-      );
-      break;
-    case "5":
-      images = importAll(
-        require.context("../../images/projects/3/", false, /\.(PNG|jpe?g|png)$/)
-      );
-      break;
-    case "6":
-      images = importAll(
-        require.context("../../images/projects/3/", false, /\.(PNG|jpe?g|png)$/)
-      );
-      break;
-
     default:
       break;
   }
@@ -56,17 +41,19 @@ const ProjView = () => {
 
         <h1 className="d-flex justify-content-center mt-5 ">{projName}</h1>
 
-        {images.map((image) => {
-          return (
-            <img
-              key={Math.random()}
-              className=" img-fluid  mb-1 "
-              src={image}
-              width="100%"
-              alt="Responsive "
-            />
-          );
-        })}
+        {projCat === "casestudy" &&
+          images.map((image) => {
+            return (
+              <img
+                key={Math.random()}
+                className=" img-fluid  mb-1 "
+                src={image}
+                width="100%"
+                alt="Responsive "
+              />
+            );
+          })}
+        {projCat === "dev" && <h1>Hello This page under developing .... </h1>}
       </div>
     </>
   );

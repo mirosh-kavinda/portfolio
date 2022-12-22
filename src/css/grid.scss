@@ -106,10 +106,11 @@ h2{display: none;}
 }
 
 .one{background-image: url('../images/projects/1.png');height:50vh;}
-.two{background-image: url('../images/projects/2.png');}
-.three{background-image: url('../images/projects/3.png');}
-.four{background-image: url('../images/projects/4.png');}
-.five{background-image: url('../images/projects/3.png');}
+.two{background-image: url('../images/projects/2.png');width: cover;}
+.three{background-image: url('../images/projects/3.png');width: cover;}
+.four{background-image: url('../images/projects/4.png');width: cover;}
+.five{background-image: url('../images/projects/5.png');width: cover;}
+.six{background-image: url('../images/projects/6.png');width: cover; }
 .two,.one,.three,.four ,.five,.six{
   &::before {
     content: '';

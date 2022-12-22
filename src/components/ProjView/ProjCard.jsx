@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-const ProjCard = ({ projectName, category, id, image }) => {
+const ProjCard = ({ projectName, projcat, id, image }) => {
   return (
     <div className="card bg-dark " width="15rem">
       <img
@@ -14,10 +14,10 @@ const ProjCard = ({ projectName, category, id, image }) => {
 
       <div className="card-body">
         <h5 className="card-title">{projectName}</h5>
-        <p className="card-text">{category}</p>
+        <p className="card-text">This is in {projcat}</p>
         <Link
           to="/projects/projview"
-          state={{ projId: id, projName: projectName, projDir: image }}
+          state={{ projId: id, projName: projectName, projDir: image ,  projCat:projcat }}
           className=" d-flex justify-content-center col-sm-6 col-md-4 col-lg-4 mt-5"
           style={{ textDecoration: "none", color: "white", cursor: "pointer" }}
         >
