@@ -22,7 +22,7 @@ const portfolioGrid = () => {
         <Link
           to="/projects/projview"
           state={{
-            projId: "3",
+            projId: "2",
             projName: "Travel mate application Design",
             projCat: "casestudy",
           }}
@@ -33,7 +33,7 @@ const portfolioGrid = () => {
         <Link
           to="/projects/projview"
           state={{
-            projId: "2",
+            projId: "3",
             projName: "Fitness application Design",
             projCat: "casestudy",
           }}

@@ -53,8 +53,19 @@ const ProjView = () => {
               />
             );
           })}
-        {projCat === "dev" && <h1>Hello This page under developing .... </h1>}
+        {projCat === "dev" && 
+        <div align="center">
+         <img
+                key={Math.random()}
+                className=" img-fluid  mb-5 vw100 "
+                src={require(`../../images/projects/projDev/${projId}.gif`)}
+                alt="Responsive "
+                style={{ width: "cover", height: "550px" }}
+                
+              />
+        </div>}
       </div>
+      
     </>
   );
 };

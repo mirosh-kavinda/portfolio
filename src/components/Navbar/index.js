@@ -29,6 +29,11 @@ const Navbar = () => {
                   </Link> */}
                 </li>
                 <li>
+                  <Link className="nav-link is-active exact" to="/">
+                    Home
+                  </Link>
+                </li>
+                <li>
                   <Link className="nav-link is-active exact" to="/aboutme">
                     About Me
                   </Link>

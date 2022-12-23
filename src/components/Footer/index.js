@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../../css/footer.css";
 import {
-  AiOutlineBehance,
   AiOutlineYoutube,
   AiOutlineTwitter,
   AiOutlineLinkedin,
@@ -38,9 +37,7 @@ const Footer = () => {
           <div className=" footer">
             <div className="row d-flex align-items-center ">
               <div className=" mt-3   col-md-4 col-sm-4">
-                <a href="https://www.instagram.com/mirosh_kavinda/">
-                  <AiOutlineBehance className="mx-2 socialmedia" size={30} />
-                </a>
+              
                 <a href="https://www.youtube.com/channel/UCyh9fiUradbIUVCde2N6oYg">
                   <AiOutlineYoutube className="mx-2 socialmedia" size={30} />
                 </a>

@@ -105,12 +105,12 @@ h2{display: none;}
  
 }
 
-.one{background-image: url('../images/projects/1.png');height:50vh;}
-.two{background-image: url('../images/projects/2.png');width: cover;}
-.three{background-image: url('../images/projects/3.png');width: cover;}
-.four{background-image: url('../images/projects/4.png');width: cover;}
-.five{background-image: url('../images/projects/5.png');width: cover;}
-.six{background-image: url('../images/projects/6.png');width: cover; }
+.one{background-image: url('../images/projects/ProjCardView/1.png');height:50vh;}
+.two{background-image: url('../images/projects/ProjCardView/2.png');width: cover;}
+.three{background-image: url('../images/projects/ProjCardView/3.png');width: cover;}
+.four{background-image: url('../images/projects/ProjCardView/4.png');width: cover;}
+.five{background-image: url('../images/projects/ProjCardView/5.png');width: cover;}
+.six{background-image: url('../images/projects/ProjCardView/6.png');width: cover; }
 .two,.one,.three,.four ,.five,.six{
   &::before {
     content: '';

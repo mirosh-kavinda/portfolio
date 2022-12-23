@@ -8,7 +8,7 @@ const ProjCard = ({ projectName, projcat, id, image }) => {
       <img
         alt="robots"
         className="card-img-top"
-        src={require(`../../images/projects/${id}.png`)}
+        src={require(`../../images/projects/ProjCardView/${id}.png`)}
         style={{ width: "cover", height: "250px" }}
       />
 
