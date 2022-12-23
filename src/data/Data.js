@@ -22,7 +22,7 @@ export const ProjectData = [
   },
   {
     id: "4",
-    projectName: "Memphis Tutor",
+    projectName: "MemphisTutor",
     category : "dev",
     image:'../../images/projects/image1.png',
   },
@@ -34,7 +34,7 @@ export const ProjectData = [
   },
   {
     id: "6",
-    projectName: "crafira",
+    projectName: "Crafira",
     category : "dev",
     image:'../../images/projects/image1.png',
   },

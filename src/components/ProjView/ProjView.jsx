@@ -1,6 +1,7 @@
-import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-
+import React, { useState, useEffect } from "react";
+import Markdown from "markdown-to-jsx";
+// import './styles.css';
 function importAll(r) {
   return r.keys().map(r);
 }
@@ -10,6 +11,19 @@ const ProjView = () => {
   const { projId, projName, projCat } = location.state;
   const navigate = useNavigate();
   let images;
+
+  const file_name = `${projName}.md`;
+  const [post, setPost] = useState("");
+  useEffect(() => {
+    import(`../../content/${file_name}`)
+      .then((res) => {
+        fetch(res.default)
+          .then((res) => res.text())
+          .then((res) => setPost(res))
+          .catch((err) => console.log(err));
+      })
+      .catch((err) => console.log(err));
+  });
 
   // image sorting to import all for casestudies
   switch (projId) {
@@ -53,19 +67,14 @@ const ProjView = () => {
               />
             );
           })}
-        {projCat === "dev" && 
-        <div align="center">
-         <img
-                key={Math.random()}
-                className=" img-fluid  mb-5 vw100 "
-                src={require(`../../images/projects/projDev/${projId}.gif`)}
-                alt="Responsive "
-                style={{ width: "cover", height: "550px" }}
-                
-              />
-        </div>}
+          
+        {projCat === "dev" && (
+         
+    
+            <Markdown>{post}</Markdown>
+        
+        )}
       </div>
-      
     </>
   );
 };

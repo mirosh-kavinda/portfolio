@@ -54,14 +54,14 @@ const portfolioGrid = () => {
         </Link>
         <Link
           to="/projects/projview"
-          state={{ projId: "5", projName: " Med Map ", projCat: "dev" }}
+          state={{ projId: "5", projName: "MedMap", projCat: "dev" }}
           className="img-hover-zoom portfolio-item tall five"
         >
           <h2>Med Map</h2>
         </Link>
         <Link
           to="/projects/projview"
-          state={{ projId: "6", projName: " Crafira", projCat: "dev" }}
+          state={{ projId: "6", projName: "Crafira", projCat: "dev" }}
           className="img-hover-zoom portfolio-item wide six"
         >
           <h2>Crafira</h2>
