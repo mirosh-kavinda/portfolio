@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[995],{6995:function(p,e,o){p.exports=o.p+"static/media/HappyFunc.b5ac790f0d0e16a1024d.md"}}]);
