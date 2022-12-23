@@ -10,7 +10,7 @@ export const ProjectData = [
 
   {
     id: "2",
-    projectName: "Travel Mate application Design ",
+    projectName: "TravelMate application Design ",
     category : "casestudy",
     image:'../../images/projects/image3.png',
   },

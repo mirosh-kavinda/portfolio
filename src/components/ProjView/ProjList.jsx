@@ -4,7 +4,7 @@ import ProjCard from "./ProjCard";
 
 const CardList = ({ projects, projcat }) => {
   return (
-    <div className="container ">
+    <div className="container " data-aos="fade-up">
       <div className="row justity-content-center ">
         {projects.map((user, i) => {
           return (

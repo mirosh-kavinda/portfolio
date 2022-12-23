@@ -21,22 +21,16 @@
   .home {
     height: 90vh;
   }
-  .badgeimg{
-    height:100px;
+  .badgeimg {
+    height: 100px;
     width: 100px;
   }
 
-  .one {
-  height: 20vh;  
-  } 
-  
- 
-  
-  .proj{
-    margin-top: 10;
+  .proj {
+    margin-top: 3%;
   }
-  .aboutme{
-    margin-top: 8%;
+  .aboutme {
+    margin-top: -40%;
   }
 }
 
@@ -52,8 +46,8 @@
   .mouse {
     margin-top: 25vh;
   }
-  .badgeimg{
-    height:150px;
+  .badgeimg {
+    height: 150px;
     width: 150px;
   }
 }
@@ -63,7 +57,6 @@
   .home {
     height: 80vh;
   }
- 
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -97,5 +90,4 @@
   .mouse {
     margin-top: 20vh;
   }
-
 }

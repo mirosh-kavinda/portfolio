@@ -34,11 +34,12 @@ $link-color: $accent;
 // ===================
 
 .main-content {
-  padding: 1%;
+  padding: 6%;
   flex:1;
   min-height: 100vh;
   width: 100vw;
-  left: 0px;
+
+  align-items: center;
 
 }
 
@@ -105,12 +106,12 @@ h2{display: none;}
  
 }
 
-.one{background-image: url('../images/projects/ProjCardView/1.png');height:50vh;}
-.two{background-image: url('../images/projects/ProjCardView/2.png');width: cover;}
-.three{background-image: url('../images/projects/ProjCardView/3.png');width: cover;}
-.four{background-image: url('../images/projects/ProjCardView/4.png');width: cover;}
-.five{background-image: url('../images/projects/ProjCardView/5.png');width: cover;}
-.six{background-image: url('../images/projects/ProjCardView/6.png');width: cover; }
+.one{align:'center';background-image: url('../images/projects/ProjCardView/1.png');height:50vh; background-size: 77%; background-position:center;background-repeat:no-repeat;background-color:#663399;}
+.two{background-image: url('../images/projects/ProjCardView/2.png');width: cover;background-size: 90%; background-position:center;background-repeat:no-repeat;background-color:#464646}
+.three{background-image: url('../images/projects/ProjCardView/3.png');width: cover;background-size: 78%; background-position:center;background-repeat:no-repeat;background-color:#716767}
+.four{background-image: url('../images/projects/ProjCardView/4.png');width: cover;background-size: 50%; background-position:center;background-repeat:no-repeat;background-color:#663399}
+.five{background-image: url('../images/projects/ProjCardView/5.png');width: cover;background-size: 100%; background-position:center;background-repeat:no-repeat;background-color:#27332E}
+.six{background-image: url('../images/projects/ProjCardView/6.png');width: cover; background-size: 60%; background-position:center;background-repeat:no-repeat;background-color:#448590    }
 .two,.one,.three,.four ,.five,.six{
   &::before {
     content: '';
@@ -133,4 +134,38 @@ h2{display: none;}
   }
 
 }
+@media only screen and (max-width: 600px) {
 
+  .one{
+    height: 15vh !important;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .one{
+    height: 25vh !important;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+  .one{
+    height: 30vh !important;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .one{
+    height: 35vh !important;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .one{
+    height: 40vh !important;
+  }
+}

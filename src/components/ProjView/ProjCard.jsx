@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const ProjCard = ({ projectName, projcat, id, image }) => {
   return (
-    <div className="card bg-dark " width="15rem">
+    <div className="card bg-dark " width="15rem" data-aos="fade-up">
       <img
         alt="robots"
         className="card-img-top"

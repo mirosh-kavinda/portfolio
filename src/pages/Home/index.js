@@ -6,7 +6,6 @@ import Aboutme from "../../components/Aboutme/Aboutme";
 import fileSaver from "file-saver";
 import { Link } from "react-router-dom";
 import {
-  AiOutlineBehance,
   AiOutlineYoutube,
   AiOutlineTwitter,
   AiOutlineLinkedin,
@@ -26,7 +25,7 @@ class Home extends React.Component {
     return (
       <>
         <MatrixBackGround />
-        <div className="home row mt-5  p-5">
+        <div className="home row mt-5  p-5" data-aos="fade-up">
           <div className="col-sm-12 col-md-5 ">
             <img
               src={
@@ -38,17 +37,15 @@ class Home extends React.Component {
           </div>
 
           <div className="  col-sm-12 col-md-7 header ">
-            <h1>Hi i’m Mirosh Kavnda </h1>
-            <p>Full stack Developer</p>
-            <p className="para">
+            <h1  data-aos="fade-down">Hi i’m Mirosh Kavnda </h1>
+            <p  data-aos="fade-down">Full stack Developer</p>
+            <p className="para"  data-aos="fade-up">
               ( based in Sri lanka )
               <br />I Care Both UX and UI of your webpages
             </p>
 
-            <div className=" mt-3 bg-dark p-1 col-sm-12 col-md-9 d-flex justify-content-center">
-              <a href="https://www.instagram.com/mirosh_kavinda/">
-                <AiOutlineBehance className="mx-2 socialmedia" size={30} />
-              </a>
+            <div className=" mt-3 bg-dark p-1 col-sm-12 col-md-3 d-flex justify-content-center"  data-aos="fade-up">
+           
               <a href="https://www.youtube.com/channel/UCyh9fiUradbIUVCde2N6oYg">
                 <AiOutlineYoutube className="mx-2 socialmedia" size={30} />
               </a>
@@ -74,12 +71,12 @@ class Home extends React.Component {
           </div>
         </div>
         <div className="proj  ">
-          <PortfolioGrid />
+          <PortfolioGrid  data-aos="fade-down"/ >
         </div>
         <br />
 
         <div className="aboutme  ">
-          <Aboutme />
+          <Aboutme  data-aos="fade-down" />
           <div className="row  gap-1 flex justify-content-center  ">
             <Link
               to="/contact"

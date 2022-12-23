@@ -6,12 +6,16 @@ class Contact extends React.Component {
   render() {
     return (
       <>
-        <div className=" mt-5 m-1 p-1" style={{ zIndex: -99999 }}>
+        <div
+          className=" mt-5 m-1 p-1"
+          style={{ zIndex: -99999 }}
+          data-aos="fade-up"
+        >
           <h1 className="mt-5 d-flex justify-content-center">
-        I'm Mirosh Kavinda 👋
+            I'm Mirosh Kavinda 👋
           </h1>
           <h6 className="mt-3 d-flex justify-content-center">
-          (A full-stack Developer|💻 Undergraduate)
+            (A full-stack Developer|💻 Undergraduate)
           </h6>
           <div className="  row  d-flex justify-content-center ">
             <div className=" col-md-2 col-sm-12 mt-5 d-flex justify-content-center">

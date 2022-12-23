@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
-
+import React ,{useEffect} from 'react';
 const ContactForm = () => {
   const {
     register,
@@ -50,9 +50,11 @@ const ContactForm = () => {
       console.log(e);
     }
   };
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className=" contact bg-dark mt-5">
+    <div className=" contact bg-dark mt-5" data-aos="fade-up">
       <div className="row  p-1 mt-5">
         <div className="col-sm-12 col-md-6 mt-5 text-center">
           <h1>Contact Me</h1>

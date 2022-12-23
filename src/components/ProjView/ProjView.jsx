@@ -48,7 +48,7 @@ const ProjView = () => {
 
   return (
     <>
-      <div className="container mt-5 pt-4 ">
+      <div className="container mt-5 pt-4 " data-aos="fade-up">
         <div onClick={() => navigate(-1)} className=" nav-link mt-3">
           Back
         </div>
@@ -59,6 +59,7 @@ const ProjView = () => {
           images.map((image) => {
             return (
               <img
+                data-aos="fade-up"
                 key={Math.random()}
                 className=" img-fluid  mb-1 "
                 src={image}
