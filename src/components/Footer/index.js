@@ -36,7 +36,7 @@ const Footer = () => {
         {showButton && (
           <div className=" footer">
             <div className="row d-flex align-items-center ">
-              <div className=" mt-3   col-md-4 col-sm-4">
+              <div className=" col-md-4 col-sm-4">
               
                 <a href="https://www.youtube.com/channel/UCyh9fiUradbIUVCde2N6oYg">
                   <AiOutlineYoutube className="mx-2 socialmedia" size={30} />
@@ -51,10 +51,10 @@ const Footer = () => {
                   onClick={scrollToTop}
                   className="  back-to-top nav-link col-md-1 "
                 >
-                  <BsArrowUpSquare className="mx-2 socialmedia" size={40} />
+                  <BsArrowUpSquare className="mx-2 socialmedia" size={35} />
                 </p>
               </div>
-              <p className=" nav-link  footer-head col-md-5 col-sm-2  ">
+              <p className=" footer-head col-md-5 col-sm-3  ">
                 <AiOutlineCopyright />
                 2022 Alright reserved for @mirosh_kavinda
               </p>
