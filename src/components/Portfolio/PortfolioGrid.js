@@ -8,6 +8,7 @@ const portfolioGrid = () => {
       <h1 className="  d-flex justify-content-center mb-5 ">Recent Works</h1>
       <div className="portfolio mt-3">
         <Link
+          data-aos="fade-right"
           to="/projects/projview"
           state={{
             projId: "1",
@@ -20,6 +21,7 @@ const portfolioGrid = () => {
           <br />
         </Link>
         <Link
+          data-aos="fade-left"
           to="/projects/projview"
           state={{
             projId: "2",
@@ -31,6 +33,7 @@ const portfolioGrid = () => {
           <h2>TravelMate</h2>
         </Link>
         <Link
+          data-aos="fade-right"
           to="/projects/projview"
           state={{
             projId: "3",
@@ -42,6 +45,7 @@ const portfolioGrid = () => {
           <h2>FitPro</h2>
         </Link>
         <Link
+          data-aos="fade-left"
           to="/projects/projview"
           state={{
             projId: " 4",
@@ -53,6 +57,7 @@ const portfolioGrid = () => {
           <h2>MemphisTutor</h2>
         </Link>
         <Link
+          data-aos="fade-right"
           to="/projects/projview"
           state={{ projId: "5", projName: "MedMap", projCat: "dev" }}
           className="img-hover-zoom portfolio-item tall five"
@@ -60,6 +65,7 @@ const portfolioGrid = () => {
           <h2>Med Map</h2>
         </Link>
         <Link
+          data-aos="fade-left"
           to="/projects/projview"
           state={{ projId: "6", projName: "Crafira", projCat: "dev" }}
           className="img-hover-zoom portfolio-item wide six"
@@ -68,6 +74,7 @@ const portfolioGrid = () => {
         </Link>
       </div>
       <Link
+        data-aos="fade-down"
         to="/projects"
         className="  d-flex justify-content-center  align-items-center btn bg-dark nav-link mt-1"
       >

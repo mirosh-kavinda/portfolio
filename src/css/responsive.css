@@ -27,7 +27,7 @@
   }
 
   .proj {
-    margin-top: 3%;
+    margin-top: 2%;
   }
   .aboutme {
     margin-top: -40%;
@@ -56,6 +56,10 @@
 @media only screen and (min-width: 768px) {
   .home {
     height: 80vh;
+  }
+
+  .proj {
+    margin-top: 2%;
   }
 }
 
@@ -88,6 +92,6 @@
     height: 500px;
   }
   .mouse {
-    margin-top: 20vh;
+    margin-top: 15vh;
   }
 }

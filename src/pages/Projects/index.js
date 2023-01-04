@@ -55,6 +55,7 @@ const Projects = () => {
           className="tab-pane fade show active"
           id="nav-home"
           role="tabpanel"
+          data-aos="fade-up"
           aria-labelledby="nav-home-tab"
         >
           <ProjList
@@ -70,6 +71,7 @@ const Projects = () => {
           className="tab-pane fade"
           id="nav-profile"
           role="tabpanel"
+          data-aos="fade-up"
           aria-labelledby="nav-profile-tab"
         >
           <ProjList
@@ -86,6 +88,7 @@ const Projects = () => {
           id="nav-contact"
           role="tabpanel"
           aria-labelledby="nav-contact-tab"
+          data-aos="fade-up"
         >
           <div className="bg-dark m-3 p-3 ">
             <ul>

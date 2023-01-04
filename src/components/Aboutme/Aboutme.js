@@ -2,8 +2,8 @@ const Aboutme = () => {
   return (
     <>
       <br />
-      <div className=" bg-dark mt-5 p-4 container col-12">
-        <h1 className="ms-5 ">Who Am I ? </h1>
+      <div className=" bg-dark mt-5 p-4 container col-12" >
+        <h1 className="ms-5 " >Who Am I ? </h1>
         <p className="mt-4">
           Mirosh kavinda is a Software Engineering undergraduate at the Cinec
           Campus . . He describes himself as outgoing, dedicated, and
