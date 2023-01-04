@@ -25,9 +25,8 @@ class Home extends React.Component {
     return (
       <>
         <MatrixBackGround />
-
         <div className="home row mt-5  p-5">
-          <div className="col-sm-12 col-md-5 " data-aos="fade-down">
+          <div className="col-sm-12 col-md-5 ">
             <img
               src={
                 "https://avatars.githubusercontent.com/u/74175084?s=400&u=ad95ac6678bbdab94f754a427330a1f7f1ed516e&v=4"
@@ -37,7 +36,7 @@ class Home extends React.Component {
             />
           </div>
 
-          <div className="  col-sm-12 col-md-7 header " data-aos="fade-down">
+          <div className="  col-sm-12 col-md-7 header "  >
             <h1 data-aos="fade-down">Hi i’m Mirosh Kavnda </h1>
             <p data-aos="fade-down">Full stack Developer</p>
             <p data-aos="fade-down" className="para">
@@ -74,7 +73,7 @@ class Home extends React.Component {
             <div className="mouse" id="mouse"></div>
           </div>
         </div>
-        <div className="proj" c>
+        <div className="proj" >
           <PortfolioGrid />
         </div>
         <br />

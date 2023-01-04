@@ -7,7 +7,7 @@ html {
   color: white;
   cursor: none;
   scrollbar-width: none;  /* Firefox */
- 
+  overflow-x: hidden
 }
 ::-webkit-scrollbar {
   display: none;
@@ -73,13 +73,7 @@ a:hover {
   cursor: none;
 }
 
-/* .contact {
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  z-index: 1000;
-  border-radius: 40px;
-} */
+
 
 /* home page styles */
 .home {
