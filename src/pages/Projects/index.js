@@ -91,23 +91,16 @@ const Projects = () => {
           data-aos="fade-up"
         >
           <div className="bg-dark m-3 p-3 ">
-            <ul>
-              <li>
-                <a className="nav-link" href="#1">
-                  SearchEngine Optimization
-                </a>{" "}
-              </li>
-              <li>
-                <a className="nav-link" href="#1">
-                  Apache J-meter
-                </a>{" "}
-              </li>
-              <li>
-                <a className="nav-link" href="#1">
-                  How to testing using selenium tool
-                </a>{" "}
-              </li>
-            </ul>
+            {ProjectData.map((user, i) => {
+              return (
+                <div
+                  className="md-auto  col-sm-12 col-md-4"
+                  key={Math.random()}
+                >
+                  {user.category === "blog" && user.projectName}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

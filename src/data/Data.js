@@ -45,38 +45,24 @@ export const ProjectData = [
     category : "dev",
     image:'../../images/projects/image1.png',
   },
-  // {
-  //   id: "8",
-  //   projectName: "Memphis Tutor",
-  //   category : "dev",
-  //   image:'../../images/projects/image1.png',
-  // },
-  // {
-  //   id: "9",
-  //   projectName: "Memphis Tutor",
-  //   category : "dev",
-  //   image:'../../images/projects/image1.png',
-  // },
-  // {
+  {
+    id: "8",
+    projectName: " SearchEngine Optimization",
+    category : "blog",
+    
+  },
+  {
+    id: "9",
+    projectName: "Apache J-meter",
+    category : "blog"
+   
+  },
+  {
+    id: "10",
+    projectName: "How to testing using selenium tool",
+    category : "blog",
+   
+  },
 
-  //   id: "10",
-  //   projectName: "Memphis Tutor",
-  //   category : "dev",
-  //   image:'../../images/projects/image1.png',
-  // },
-  // {
-
-  //   id: "11",
-  //   projectName: "Memphis Tutor",
-  //   category : "dev",
-  //   image:'../../images/projects/image1.png',
-  // },
-  // {
-
-  //   id: "12",
-  //   projectName: "Memphis Tutor",
-  //   category : "dev",
-  //   image:'../../images/projects/image1.png',
-  // },
   
 ];

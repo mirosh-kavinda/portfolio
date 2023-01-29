@@ -29,17 +29,17 @@ const ProjView = () => {
   switch (projId) {
     case "1":
       images = importAll(
-        require.context("../../images/projects/1/", false, /\.(PNG|jpe?g|png)$/)
+        require.context("../../images/projects/1/", true, /\.(PNG|jpe?g|png)$/)
       );
       break;
     case "2":
       images = importAll(
-        require.context("../../images/projects/3/", false, /\.(PNG|jpe?g|png)$/)
+        require.context("../../images/projects/3/",true, /\.(PNG|jpe?g|png)$/)
       );
       break;
     case "3":
       images = importAll(
-        require.context("../../images/projects/2/", false, /\.(PNG|jpe?g|png)$/)
+        require.context("../../images/projects/2/", true, /\.(PNG|jpe?g|png)$/)
       );
       break;
     default:
@@ -60,7 +60,7 @@ const ProjView = () => {
             return (
               <img
                 data-aos="fade-up"
-                key={Math.random()}
+                
                 className=" img-fluid  mb-1 "
                 src={image}
                 width="100%"
