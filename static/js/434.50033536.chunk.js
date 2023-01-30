@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[434],{5434:function(e,o,t){e.exports=t.p+"static/media/MemphisTutor.eb3b01e870f5a23a9003.md"}}]);
