@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+<h2 class='center'>Version 1.2 </h2>
+<h3 class='center'>! </h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p>This platform for small business owners who hadn't chance to compete with global and local market</p>
+#### High Fidelty MockUp: https://www.figma.com/file/Nk0v6Zf5KHicFH8Z3flpjS/shoppingCart?node-id=0%3A1 <br>
+#### Git hub Link : https://github.com/mirosh-kavinda/studishack.git
 
-## Available Scripts
+<h1 style="align-items: 'center'">Demo</h1>
 
-In the project directory, you can run:
+<div align="center">
+ 
+<img src="https://user-images.githubusercontent.com/74175084/199441078-c35b39a0-ffdc-4571-9ec2-96ce39ada5ab.gif"style="vertical-align: top;" />
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+</div>
+## To run website you need to follow below mentioned steps
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1 .You need to install XAMPP software (we are using Apache and MYSQL )
 
-### `npm test`
+### 2 .After installation,place CRAFIRA project folder inside htdocs folder on XAMPP installed directory ,
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+        "C:\xampp\htdocs"
 
-### `npm run build`
+### 3. Rename the root folder name as 'CRAFIRA'
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 4. Start the Apache and MYSQL servers on XAMPP dashboard.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 5. Click on Admin button on MySQL row.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 6. After pop up the Php my admin dashboard withing webbrowser
 
-### `npm run eject`
+### 7. create new database as "crafira"
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 8. Select newly created database and go to import tab on tool bar
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 8. Import our "crafira.sql " data base file from CRAFIRA "database" folder in CRAFIRA project directory.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 9. Open New tab on Browser and type following and enter:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+        localhost/CRAFIRA/index.php
 
-## Learn More
+### I shared the database file with this(which exported from MySQL)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+        CRAFIRA/Database_setup/crafira_db.sql
+        //Inside the folder I added three videoes to setup database
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Files in the architecture.
 
-### Code Splitting
+    _CRAFIRA
+        _assets
+                _....
+        _css
+                _....
+        _Database_setup
+                _....
+        _images
+                _....
+        _js
+                _....
+        _pages
+                _....
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Supported Browsers:
 
-### Making a Progressive Web App
+- Chrome 35+
+- Firefox 31+
+- Safari 9+
+- Opera
+- Edge
+- IE 11+
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Copyright and license
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Code Copyright 2022. Code released under the MIT license.
+MSE GROUP (Academic)
+<br>
+<br>
+Collabrators : <br>
+Mirosh kavinda <br>
+Sachith Navodya <br>
+Eshadi Kalhara <br>
