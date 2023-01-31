@@ -14,6 +14,7 @@ const portfolioGrid = () => {
             projId: "1",
             projName: "Charity Application Design",
             projCat: "casestudy",
+            
           }}
           className="img-hover-zoom portfolio-item medium one"
         >
@@ -37,8 +38,9 @@ const portfolioGrid = () => {
           to="/projects/projview"
           state={{
             projId: "3",
-            projName: "Fitness application Design",
+            projName: "Unity Fitness Application Design",
             projCat: "casestudy",
+
           }}
           className="img-hover-zoom portfolio-item medium three"
         >
@@ -48,13 +50,13 @@ const portfolioGrid = () => {
           data-aos="fade-left"
           to="/projects/projview"
           state={{
-            projId: " 4",
-            projName: "Memphis Tutor Tutoring App",
+            projId: "4",
+            projName: "StudyShack",
             projCat: "dev",
           }}
           className="img-hover-zoom portfolio-item tall four wide"
         >
-          <h2>MemphisTutor</h2>
+          <h2>StudyShack</h2>
         </Link>
         <Link
           data-aos="fade-right"

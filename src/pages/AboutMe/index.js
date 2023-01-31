@@ -129,7 +129,7 @@ class Contact extends React.Component {
                 </div>
               </span>
             </h3>
-            <p
+            <a
               href="https://github.com/mirosh-kavinda"
               className="  mt-4  btn download  bg-dark nav-link  col-sm-12 col-md-3 "
             >
@@ -137,7 +137,7 @@ class Contact extends React.Component {
               <span>
                 <AiOutlineGithub className="mx-2 socialmedia" size={30} />
               </span>
-            </p>
+            </a>
             <br />
             <br />
             <br />

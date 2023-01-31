@@ -71,10 +71,15 @@ const ProjView = () => {
           
         {projCat === "dev" && (
          
-    
             <Markdown>{post}</Markdown>
         
         )}
+      {projCat === "blog1" && (
+         
+         <Markdown>{post}</Markdown>
+     
+     )}
+  
       </div>
     </>
   );

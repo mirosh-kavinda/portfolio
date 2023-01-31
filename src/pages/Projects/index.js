@@ -83,27 +83,27 @@ const Projects = () => {
           <br />
           <br />
         </div>
+
         <div
           className="tab-pane fade"
           id="nav-contact"
           role="tabpanel"
-          aria-labelledby="nav-contact-tab"
           data-aos="fade-up"
+          aria-labelledby="nav-profile-tab"
         >
-          <div className="bg-dark m-3 p-3 ">
-            {ProjectData.map((user, i) => {
-              return (
-                <div
-                  className="md-auto  col-sm-12 col-md-4"
-                  key={Math.random()}
-                >
-                  {user.category === "blog" && user.projectName}
-                </div>
-              );
-            })}
-          </div>
+          <ProjList
+            projects={ProjectData}
+            projcat={"blog"}
+            key={Math.random()}
+          />
+          <br />
+          <br />
+          <br />
         </div>
+       
+        );
       </div>
+    
     </>
   );
 };

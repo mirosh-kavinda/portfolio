@@ -21,6 +21,7 @@ const CardList = ({ projects, projcat }) => {
                   projectName={projects[i].projectName}
                   id={projects[i].id}
                   image={projects[i].image}
+                  projdesc={projects[i].description}
                 />
                 <br />
                 </div>
