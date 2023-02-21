@@ -1,7 +1,7 @@
 import React from "react";
 import { ProjectData } from "../../data/Data";
 import ProjList from "../../components/ProjView/ProjList";
-
+import Blog from '../../components/Blog/Blog';
 const Projects = () => {
   return (
     <>
@@ -91,11 +91,8 @@ const Projects = () => {
           data-aos="fade-up"
           aria-labelledby="nav-profile-tab"
         >
-          <ProjList
-            projects={ProjectData}
-            projcat={"blog"}
-            key={Math.random()}
-          />
+      
+          <Blog/>
           <br />
           <br />
           <br />
