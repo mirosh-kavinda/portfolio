@@ -10,32 +10,19 @@ import Contact from "./pages/Contact";
 import ProjView from "./components/ProjView/ProjView";
 import "aos/dist/aos.css";
 import useAnimations from "./hooks/useAnimations";
-
+import Spinner from "./components/Spinner/Spinner";
 export default function App() {
   const { loading } = useAnimations();
-
   return (
     <>
       {loading ? (
-        <>
-          <div
-            className="d-flex justify-content-center align-content-center"
-            style={{ marginTop: "40vh", height: "200px" }}
-          >
-            <div
-              className="spinner-border "
-              style={{ width: "4rem", height: "4rem" }}
-              role="status"
-            >
-              <span className="sr-only "></span>
-            </div>
-          </div>
-        </>
+        <Spinner />
       ) : (
         <div>
+          f
           <DotRing />
           <Navbar />
-          <div className="App">
+          <div className="App ">
             <Routes>
               <Route exact path="/" id="home" element={<Home />}></Route>
               <Route path="/aboutme" id="contact" element={<AboutMe />}></Route>
@@ -55,6 +42,7 @@ export default function App() {
                 element={<ProjView />}
               ></Route>
             </Routes>
+
           </div>
           <Footer className="footer" />
         </div>

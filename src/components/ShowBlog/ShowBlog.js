@@ -1,7 +1,7 @@
 import React from "react";
 import c from "./ShowBlog.module.css";
 import ToText from "../../utils/ToText";
-
+import moment from "moment";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 
 function withRouter(Component) {
@@ -18,7 +18,7 @@ function withRouter(Component) {
 function ShowBlog(props, p) {
   return (
     <div className={`col-md-4 col-sm-6 col-xs-12 `}>
-      <div className="card bg-dark" >
+      <div className="card bg-dark">
         <div
           className={c.cardpost__image}
           style={{ backgroundImage: `url(${props.thumbnail})` }}
@@ -32,16 +32,27 @@ function ShowBlog(props, p) {
           <p className={c.cardText}>{`${ToText(
             props.description.substring(0, 1000)
           )}...`}</p>
-          <br />
+          <span className="text-red">
+            published : {moment(props.pubDate).format("MMM DD, YYYY hh:mm")}
+          </span>
+          <hr />
+
           <Link
-          to={props.link}
-          className=" d-flex justify-content-center col-sm-6 col-md-4 col-lg-4 "
-          style={{ textDecoration: "none", color: "white", cursor: "pointer" }}
-        >
-          Read More
-        </Link>
+            to={props.link}
+            style={{
+              border:"1px solid white",
+              padding:"3px",
+              textDecoration: "none",
+              color: "white",
+              borderRadius:"20%",
+              cursor: "pointer",
+            }}
+          >
+            Read More
+          </Link>
         </div>
       </div>
+      <br />
     </div>
   );
 }

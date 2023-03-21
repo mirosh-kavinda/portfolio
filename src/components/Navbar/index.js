@@ -43,11 +43,7 @@ const Navbar = () => {
                     My Works
                   </Link>
                 </li>
-                <li>
-                  <Link className="nav-link is-active exact" to="/contact">
-                    Contact
-                  </Link>
-                </li>
+              
               </ul>
             </div>
           </div>

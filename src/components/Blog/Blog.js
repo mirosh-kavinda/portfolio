@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import Axios from "axios";
 import ShowBlog from "../ShowBlog/ShowBlog";
-
-
+import Spinner from "../Spinner/Spinner";
 
 export class Blog extends Component {
   constructor(props) {
@@ -16,7 +15,7 @@ export class Blog extends Component {
       },
       item: [],
       isloading: true,
-      error: null
+      error: null,
     };
   }
   mediumURL =
@@ -30,35 +29,27 @@ export class Blog extends Component {
         const avatar = data.data.feed.image;
         const profileLink = data.data.feed.link;
         const res = data.data.items; //This is an array with the content. No feed, no info about author etc..
-        const posts = res.filter(item => item.categories.length > 0);
+        const posts = res.filter((item) => item.categories.length > 0);
         const title = data.data.feed.title;
 
-        this.setState(
-          (pre) => ({
-            profile: {
-              ...pre.profile,
-              ptitle: title,
-              profileurl: profileLink,
-              avtar: avatar,
-
-            },
-            item: posts,
-            isloading: false
-          }),
-          
-       
-        );
-     
+        this.setState((pre) => ({
+          profile: {
+            ...pre.profile,
+            ptitle: title,
+            profileurl: profileLink,
+            avtar: avatar,
+          },
+          item: posts,
+          isloading: false,
+        }));
       })
-      
+
       .catch((e) => {
-        this.setState({ error: e.toJSON() })
+        this.setState({ error: e.toJSON() });
         console.log(e);
       });
-
   }
   render() {
-   
     let post;
 
     if (this.state.item) {
@@ -66,9 +57,13 @@ export class Blog extends Component {
         <ShowBlog key={index} {...post} {...this.state.profile} {...index} />
       ))
     }
-   
+    if (this.state.isloading) {
+      post = <Spinner />
+    }
     if (this.state.error) {
-      let error = this.state.error.code ? this.state.error.code : this.state.error.name;
+      let error = this.state.error.code
+        ? this.state.error.code
+        : this.state.error.name;
       let errorMsg = this.state.error.message;
       post = (
         <>
@@ -79,10 +74,7 @@ export class Blog extends Component {
     }
     return (
       <div className="container">
-        <div className="row">
-          {post}
-        </div>
-
+        <div className="row">{post}</div>
       </div>
     );
   }

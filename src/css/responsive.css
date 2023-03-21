@@ -7,7 +7,7 @@
     display: none;
   }
   .header {
-    font-size: 12px;
+    font-size: 18px;
     letter-spacing: 0.4em;
   }
   .imageav {
@@ -19,7 +19,7 @@
     display: none;
   }
   .home {
-    height: 90vh;
+    height: 100vh;
   }
   .badgeimg {
     height: 100px;
@@ -85,7 +85,7 @@
     height: 12px;
   }
   .home {
-    height: 80vh;
+    height: 100vh;
   }
   .imageav {
     width: 500px;

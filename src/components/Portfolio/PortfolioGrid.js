@@ -14,7 +14,6 @@ const portfolioGrid = () => {
             projId: "1",
             projName: "Charity Application Design",
             projCat: "casestudy",
-            
           }}
           className="img-hover-zoom portfolio-item medium one"
         >
@@ -40,7 +39,6 @@ const portfolioGrid = () => {
             projId: "3",
             projName: "Unity Fitness Application Design",
             projCat: "casestudy",
-
           }}
           className="img-hover-zoom portfolio-item medium three"
         >
@@ -76,7 +74,7 @@ const portfolioGrid = () => {
         </Link>
       </div>
       <Link
-        data-aos="fade-down"
+      
         to="/projects"
         className="  d-flex justify-content-center  align-items-center btn bg-dark nav-link mt-1"
       >

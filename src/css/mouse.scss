@@ -30,6 +30,8 @@ $animDuration: 5s;
 
 
 .mouse {
+  left: 50%;
+  
   @include bgGradient;
   position: absolute;
   width: $widthMouse;

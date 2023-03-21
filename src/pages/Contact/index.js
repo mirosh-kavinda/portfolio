@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import React from "react";
+import image from "../../images/logo.gif";
 const ContactForm = () => {
   const {
     register,
@@ -51,13 +52,14 @@ const ContactForm = () => {
   };
 
   return (
-    <div className=" contact bg-dark mt-5" data-aos="fade-up">
-      <div className="row  p-2 mt-5">
+    <div className="row text-center container">
+      <h1> Contact Me</h1>
+
+      <div className="row text-center mt-5 mb-5">
         <br />
-        <div className="col-sm-12 col-md-6 mt-5 text-center">
-          <h1> Reach To Me</h1>
+        <div className="col ">
           <form onSubmit={handleSubmit(onSubmit)} noValidate>
-            <div className="form-row mb-2 mx-4 col-6">
+            <div className="form-row mt-5 mb-2 mx-4 ">
               <input
                 type="text"
                 name="name"
@@ -78,7 +80,7 @@ const ContactForm = () => {
                 <span className="errorMessage">{errors.name.message}</span>
               )}
             </div>
-            <div className="form-row mb-2 mx-4 col-6">
+            <div className="form-row mb-2 mx-4 ">
               <input
                 type="email"
                 name="email"
@@ -96,7 +98,7 @@ const ContactForm = () => {
                 </span>
               )}
             </div>
-            <div className="form-row mb-2 mx-4">
+            <div className="form-row mb-2 mx-4 ">
               <input
                 type="text"
                 name="subject"
@@ -140,19 +142,12 @@ const ContactForm = () => {
             </div>
           </form>
         </div>
-        <div className="col-sm-12 col-md-6 mt-5 ">
-          <iframe
-            title="#"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190.1746045538311!2d79.9650315873348!3d6.915805766648182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae257da4f1a05cd%3A0x832672af3a673fbb!2z4La04Lea4La74Lac4LeE4LeP4Lac4LeP4LeAIOC2tuC3neC2qeC3iuC2uA!5e1!3m2!1sen!2slk!4v1671855970176!5m2!1sen!2slk"
-            width="90%"
-            height="100%"
-            style={{ border: "0" }}
-            allowfullscreen="false"
-            loading="lazy"
-          ></iframe>
-        </div>
-        <ToastContainer />
+        <div className="col-md-3">    <img alt="this is logo" src={image} height={"260px"} /></div>
+    
       </div>
+
+      <ToastContainer />
+
       <br />
       <br />
       <br />
