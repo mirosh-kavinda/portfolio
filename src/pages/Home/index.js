@@ -98,9 +98,11 @@ class Home extends React.Component {
 
         <div className="proj">
           <PortfolioGrid />
+          <hr class="my-4 mx-5" />
+       
         </div>
-        <br />
-        <div className="aboutme  mx-4">
+       
+        <div className="aboutme  ">
           <Aboutme />
 
           <Link
@@ -113,7 +115,11 @@ class Home extends React.Component {
           <div>
             <Badges />
           </div>
+          <hr class="my-5" />
+          <div>
           <ContactForm className="contactme" />
+          </div>
+      
         </div>
       </>
     );

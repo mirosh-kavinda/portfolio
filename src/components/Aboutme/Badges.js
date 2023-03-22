@@ -6,7 +6,7 @@ const Badges = () => {
         <h3 >
           Badges That I earned :
           <hr />
-          <span>
+          <span className="mt-3">
             <img
               alt="badgeimg1"
               
