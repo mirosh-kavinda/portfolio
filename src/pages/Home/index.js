@@ -24,18 +24,18 @@ class Home extends React.Component {
 
     return (
       <>
-        <div id="home" class="home">
-          <div class="mask rgba-black-strong header">
-            <div class="containerd-flex justify-content-center align-items-center context">
-              <div class="row smooth-scroll ">
-                <div class="col-md-12 white-text text-center">
+        <div id="home" className="home">
+          <div className="mask rgba-black-strong header">
+            <div className="containerd-flex justify-content-center align-items-center context">
+              <div className="row smooth-scroll ">
+                <div className="col-md-12 white-text text-center">
                   <div
-                    class="wow fadeInDown mt-5"
+                    className="wow fadeInDown mt-5"
                     data-wow-delay="0.2s jusify-center mt-5 "
                   >
                     <h1
                       data-aos="fade-down"
-                      className="display-1 font-weight-bold mb-2 mt-5"
+                      className="display-1 font-weight-bold mb-2 mt-2"
                     >
                       Hi i’m Mirosh Kavinda
                     </h1>
@@ -98,10 +98,9 @@ class Home extends React.Component {
 
         <div className="proj">
           <PortfolioGrid />
-          <hr class="my-4 mx-5" />
-       
+          <hr className="my-4 mx-5" />
         </div>
-       
+
         <div className="aboutme  ">
           <Aboutme />
 
@@ -115,11 +114,10 @@ class Home extends React.Component {
           <div>
             <Badges />
           </div>
-          <hr class="my-5" />
+          <hr className="my-5" />
           <div>
-          <ContactForm className="contactme" />
+            <ContactForm className="contactme" />
           </div>
-      
         </div>
       </>
     );

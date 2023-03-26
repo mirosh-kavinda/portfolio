@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/index";
 import Footer from "./components/Footer/index";
@@ -11,8 +11,15 @@ import ProjView from "./components/ProjView/ProjView";
 import "aos/dist/aos.css";
 import useAnimations from "./hooks/useAnimations";
 import Spinner from "./components/Spinner/Spinner";
+
 export default function App() {
   const { loading } = useAnimations();
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <>
       {loading ? (
@@ -42,7 +49,6 @@ export default function App() {
                 element={<ProjView />}
               ></Route>
             </Routes>
-
           </div>
           <Footer className="footer" />
         </div>

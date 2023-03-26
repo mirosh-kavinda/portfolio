@@ -2,7 +2,9 @@ import React from "react";
 
 import { AiOutlineGithub } from "react-icons/ai";
 import Aboutme from "../../components/Aboutme/Aboutme";
+import History from "../../components/Aboutme/History";
 class Contact extends React.Component {
+   
   render() {
     return (
       <>
@@ -13,14 +15,13 @@ class Contact extends React.Component {
           (A full-stack Developer|💻 Undergraduate)
         </h6>
         <div className="  row  d-flex justify-content-center ">
-       
-          <div className=" col-md-8 col-sm-12 ">
+          <div className=" col-md-10 col-sm-12 ">
             <Aboutme />
           </div>
         </div>
         <br />
-        <div className=" mx-2 vh-4" align="center ">
-          <h3>
+        <div className=" mx-2 vh-4">
+          <h3 align="center">
             Tech Stack
             <hr />
             <span>
@@ -96,19 +97,21 @@ class Contact extends React.Component {
               />
             </span>
           </h3>
-          <h3 className="mt-5" align="center ">
-            {" "}
+          <br />
+          <br />
+          <History />
+          <h3 className="mt-5 text-center">
             My Stats On Git hub
             <hr />
             <span>
-              <div>
+              <div className="">
                 <iframe
                   title="#"
                   src="https://github-readme-streak-stats.herokuapp.com?user=mirosh-kavinda&theme=dark&background=000000"
-                  style={{ border: "0" }}
+                  style={{ border: "0", overflow: "hidden" }}
                   allowfullscreen="true"
                   loading="lazy"
-                  className=" col-md-3 mt-3"
+                  className=" col-md-6 col-sm-12 "
                 ></iframe>
                 <vr />
                 <iframe
@@ -117,14 +120,15 @@ class Contact extends React.Component {
                   style={{ border: "0" }}
                   allowfullscreen="true"
                   loading="lazy"
-                  className="col-md-3 mt-3"
+                  className="col-md-6 col-sm-12 "
                 ></iframe>
               </div>
             </span>
           </h3>
           <a
             href="https://github.com/mirosh-kavinda"
-            className="  mt-4  btn download  bg-dark nav-link  col-sm-12 col-md-3 "
+            className="  mt-4  btn download  bg-dark nav-link  col-sm-10 col-md-2 "
+            
           >
             View More
             <span>

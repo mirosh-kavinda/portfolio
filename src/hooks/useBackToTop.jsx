@@ -5,16 +5,17 @@ export default function useBackToTop() {
   useEffect(
     () => {
       window.addEventListener("scroll", () => {
-        if (window.pageYOffset > 50) {
+        if (window.pageYOffset > 10) {
           setShowButton(true);
           document.getElementById("mouse").style.display = "none";
         } else {
           setShowButton(false);
+      
         }
       });
     },
     [],
-    []
+    [0]
   );
 
   // This function will scroll the window to the top

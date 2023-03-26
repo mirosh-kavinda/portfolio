@@ -66,16 +66,16 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .home {
-    height: 90vh;
+    height: 40vh;
   }
 
   .mouse {
-    margin-top: 10vh;
+    margin-top: 33vh;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1260px) {
   .ring {
     width: 34px;
     height: 34px;
@@ -93,5 +93,10 @@
   }
   .mouse {
     margin-top: 15vh;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .mouse {
+
   }
 }

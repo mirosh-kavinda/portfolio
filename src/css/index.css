@@ -8,6 +8,7 @@ html {
   cursor: none;
   scrollbar-width: none; /* Firefox */
   overflow-x: hidden;
+
 }
 ::-webkit-scrollbar {
   display: none;
@@ -102,6 +103,7 @@ a:hover {
  
 }
 
+
 .para {
 
   font-weight: 500;
@@ -131,6 +133,7 @@ a:hover {
 .heading {
   margin-top: 50%;
   padding: auto;
+  text-size-adjust: 100px;
 }
 .aboutme {
   position: relative;
