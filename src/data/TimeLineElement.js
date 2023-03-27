@@ -1,61 +1,42 @@
 let timelineElements = [
+ 
+
     {
       id: 1,
-      title: "Frontend Developer",
-      location: "Dragontail, Ascana",
-      description:
-        "Converting data to a graphical interface, through the use of HTML, CSS, and JavaScript, so that users can view and interact with that data.",
-      buttonText: "View Frontend Projects",
-      date: "August 2016 - present",
-      icon: "work",
-    },
-    {
-      id: 2,
-      title: "Backend Developer",
-      location: "Skystead, Craonia",
-      description:
-        "Working hand-in-hand with front-end developers by providing the outward facing web application elements server-side logic. Creating the logic to make the web app function properly, and accomplishing this through the use of server-side scripting languages.",
-      buttonText: "View Backend Projects",
-      date: "June 2013 - August 2016",
-      icon: "work",
-    },
-    {
-      id: 3,
-      title: "Quality Assurance Engineer",
-      location: "South Warren, Geshington",
-      description:
-        "Assessing the quality of specifications and technical design documents in order to ensure timely, relevant and meaningful feedback.",
-      buttonText: "Company Website",
-      date: "September 2011 - June 2013",
-      icon: "work",
+      title: "BSc (Hons) - Software Engineering Undergraduate",
+      location: "Cinec Campus Malambe.",
+      description: "Currently reading for my Bachelors of Science Degree in Software Engineering at Cinec Campus malambe. Current GPA - 3.81  ",
+      buttonText: "Full time",
+      date: "sep 2020 - present",
+      icon: "school",
     },
     {
       id: 4,
-      title: "Oak Ridge College",
-      location: "South Warren, Geshington",
+      title: "Google UX Design Professional Certificate",
+      location: "Coursera(Online)",
       description:
-        "Online Course in Magical Beasts and Wonders of the World - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque sagittis tellus, non ultrices lacus tempus vel.",
-      buttonText: "Course Certificate",
-      date: "September 2011",
+        "1).I 've done All Peer review course assesment with good grades 2). Completed 3 User Experience Case studies ,and  those are charity application ,travel application , and fitness applications . I used figma and adobe Xd as design tools",
+      buttonText: "Professional Certificate",
+      date: "Dec 2022 ",
       icon: "school",
     },
     {
       id: 5,
-      title: "Hawking College",
-      location: "Skystead, Craonia",
+      title: "Google IT Automation with Python Professional Certificate",
+      location: "Coursera(Online)",
       description:
-        "College - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque sagittis tellus, non ultrices lacus tempus vel.",
-      buttonText: "College Projects",
-      date: "2007 - 2011",
+        "All Peer review course assesment with good credits.",
+      buttonText: "Professional Certificate",
+      date: "Nov 2021 - jan 2022",
       icon: "school",
     },
     {
       id: 6,
-      title: "Marble Hills Grammar School",
-      location: "Dragontail, Ascana",
-      description:
-        "Highschool - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque sagittis tellus, non ultrices lacus tempus vel.",
-      date: "2003 - 2007",
+      title: "The Complete Web Developer in 2021",
+      location: "Udemy (Online) ",
+      description:"All Peer review course assesment with good grades.Done number of pet projects using React library(portfolio website The Complete Web Developer in 2021",
+      buttonText: "Certificate",
+      date: "Oct 2020 - july 2021",
       icon: "school",
     },
   ];
