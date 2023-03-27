@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d71ac47a.css",
-    "main.js": "/static/js/main.8e0cf338.js",
+    "main.css": "/static/css/main.07b58e91.css",
+    "main.js": "/static/js/main.42420782.js",
     "static/js/128.750fef73.chunk.js": "/static/js/128.750fef73.chunk.js",
     "static/js/995.991e9221.chunk.js": "/static/js/995.991e9221.chunk.js",
     "static/js/362.2d4668a8.chunk.js": "/static/js/362.2d4668a8.chunk.js",
@@ -63,15 +63,17 @@
     "static/media/Slide5.PNG": "/static/media/Slide5.6ca6e8d271cd947defef.PNG",
     "static/media/Slide25.PNG": "/static/media/Slide25.7641c68bd0010eb07993.PNG",
     "static/media/Crafira.md": "/static/media/Crafira.8be9475a8c3cdf8e1c24.md",
-    "static/media/MedMap.md": "/static/media/MedMap.138993b44f16313d3cf5.md",
+    "static/media/school.svg": "/static/media/school.a41655f6d5350015803153c7410cef6a.svg",
     "index.html": "/index.html",
+    "static/media/MedMap.md": "/static/media/MedMap.138993b44f16313d3cf5.md",
     "static/media/StudyShack.md": "/static/media/StudyShack.65147207ea2cd1350962.md",
+    "static/media/work.svg": "/static/media/work.3710b62484ed638074240e99317c6c60.svg",
     "static/media/HappyFunc.md": "/static/media/HappyFunc.b5ac790f0d0e16a1024d.md",
-    "main.d71ac47a.css.map": "/static/css/main.d71ac47a.css.map",
-    "main.8e0cf338.js.map": "/static/js/main.8e0cf338.js.map"
+    "main.07b58e91.css.map": "/static/css/main.07b58e91.css.map",
+    "main.42420782.js.map": "/static/js/main.42420782.js.map"
   },
   "entrypoints": [
-    "static/css/main.d71ac47a.css",
-    "static/js/main.8e0cf338.js"
+    "static/css/main.07b58e91.css",
+    "static/js/main.42420782.js"
   ]
 }
