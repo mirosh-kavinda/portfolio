@@ -24,7 +24,7 @@ class Home extends React.Component {
 
     return (
       <>
-        <div className="home">
+        <div className="home" id="home">
           <div className="header">
             <div className="containerd-flex justify-content-center align-items-center context">
               <div className="col-md-12 white-text text-center "   id="heading">
@@ -50,35 +50,35 @@ class Home extends React.Component {
                 data-aos="fade-down"
                 data-wow-delay="0.2s"
               >
-                <a href="https://www.youtube.com/channel/UCyh9fiUradbIUVCde2N6oYg ">
+                <a className="bg-dark rounded py-3 mx-3  "href="https://www.youtube.com/channel/UCyh9fiUradbIUVCde2N6oYg ">
                   <AiOutlineYoutube
-                    className="mx-2  bg-dark rounded link text-white "
-                    size={40}
+                    className="mx-2 rounded  link "
+                    size={50}
                   />
                 </a>
-                <a href="https://www.twitter.com/mirosh_kavinda/">
+                <a className="bg-dark rounded py-3 mx-3 "href="https://www.twitter.com/mirosh_kavinda/">
                   <AiOutlineTwitter
-                    className="mx-2 bg-dark rounded link text-white "
-                    size={40}
+                    className="mx-2 rounded link "
+                    size={50}
                   />
                 </a>
-                <a href="https://www.linkedin.com/in/mirosh-kavinda-988042159/">
+                <a className="bg-dark rounded py-3 mx-3 "href="https://www.linkedin.com/in/mirosh-kavinda-988042159/">
                   <AiOutlineLinkedin
-                    className="mx-2 bg-dark rounded link text-white "
-                    size={40}
+                    className="mx-2 rounded link "
+                    size={50}
                   />
                 </a>
-                <a href="https://github.com/mirosh-kavinda">
+                <a className="bg-dark rounded py-3 mx-3 "href="https://github.com/mirosh-kavinda">
                   <AiOutlineGithub
-                    className="mx-2 bg-dark rounded link text-white "
-                    size={40}
+                    className="mx-2 rounded link "
+                    size={50}
                   />
                 </a>
 
                 <button
                   data-aos="fade-down"
                   to="/projects"
-                  className="  d-flex justify-content-center mt-3 btn  link bg-dark text-white col-sm-4 col-md-2"
+                  className="  d-flex justify-content-center mt-3 btn  link bg-dark col-sm-4 col-md-2"
                   onClick={saveFile}
                 >
                   Download CV

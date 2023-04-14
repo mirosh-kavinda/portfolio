@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.9b5a4927.css",
-    "main.js": "/static/js/main.c014c6a8.js",
-    "static/js/128.750fef73.chunk.js": "/static/js/128.750fef73.chunk.js",
-    "static/js/995.991e9221.chunk.js": "/static/js/995.991e9221.chunk.js",
-    "static/js/362.2d4668a8.chunk.js": "/static/js/362.2d4668a8.chunk.js",
-    "static/js/76.d0620e5c.chunk.js": "/static/js/76.d0620e5c.chunk.js",
+    "main.css": "/static/css/main.58442787.css",
+    "main.js": "/static/js/main.0e5490d0.js",
+    "static/js/128.5f525285.chunk.js": "/static/js/128.5f525285.chunk.js",
+    "static/js/995.d2498b95.chunk.js": "/static/js/995.d2498b95.chunk.js",
+    "static/js/362.0766797c.chunk.js": "/static/js/362.0766797c.chunk.js",
+    "static/js/76.a26c54c2.chunk.js": "/static/js/76.a26c54c2.chunk.js",
     "static/media/logo.gif": "/static/media/logo.a63bd424a3fdc5c775ac.gif",
     "static/media/11.png": "/static/media/11.44481655da4d322541fe.png",
     "static/media/18.png": "/static/media/18.e2ebc758305acdc71859.png",
@@ -62,18 +62,18 @@
     "static/media/Slide1.PNG": "/static/media/Slide1.44cb945c5f9f66531e9e.PNG",
     "static/media/Slide5.PNG": "/static/media/Slide5.6ca6e8d271cd947defef.PNG",
     "static/media/Slide25.PNG": "/static/media/Slide25.7641c68bd0010eb07993.PNG",
-    "static/media/Crafira.md": "/static/media/Crafira.8be9475a8c3cdf8e1c24.md",
+    "static/media/Crafira.md": "/static/media/Crafira.8a7ff912ac73b94045f7.md",
+    "static/media/StudyShack.md": "/static/media/StudyShack.0c09fad9187de2bf5522.md",
     "index.html": "/index.html",
     "static/media/school.svg": "/static/media/school.a41655f6d5350015803153c7410cef6a.svg",
-    "static/media/MedMap.md": "/static/media/MedMap.138993b44f16313d3cf5.md",
-    "static/media/StudyShack.md": "/static/media/StudyShack.65147207ea2cd1350962.md",
+    "static/media/MedMap.md": "/static/media/MedMap.72c2d77aeea70de72a92.md",
     "static/media/work.svg": "/static/media/work.3710b62484ed638074240e99317c6c60.svg",
-    "static/media/HappyFunc.md": "/static/media/HappyFunc.b5ac790f0d0e16a1024d.md",
-    "main.9b5a4927.css.map": "/static/css/main.9b5a4927.css.map",
-    "main.c014c6a8.js.map": "/static/js/main.c014c6a8.js.map"
+    "static/media/HappyFunc.md": "/static/media/HappyFunc.474d445475ad79b9c30e.md",
+    "main.58442787.css.map": "/static/css/main.58442787.css.map",
+    "main.0e5490d0.js.map": "/static/js/main.0e5490d0.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b5a4927.css",
-    "static/js/main.c014c6a8.js"
+    "static/css/main.58442787.css",
+    "static/js/main.0e5490d0.js"
   ]
 }

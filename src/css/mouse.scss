@@ -31,15 +31,12 @@ $animDuration: 5s;
 
 .mouse {
   left: 50%;
-  
   @include bgGradient;
   position: absolute;
   width: $widthMouse;
   height: $heightMouse;
   border-radius: 100px;
   background-size: 100% 200%;
-  
-  
   animation: 
   colorSlide $animDuration linear infinite,
   nudgeMouse $animDuration ease-out infinite;

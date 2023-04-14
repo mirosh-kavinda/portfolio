@@ -1,13 +1,13 @@
 .back-to-top {
   position: fixed;
-  bottom: -10px;
+  bottom: 0px;
   right: 1%;
   font-size: 15px;
   cursor: none;
   color: rgb(255, 255, 255);
 }
 
-.socialmedia:hover,
+
 .back-to-top:hover {
   color: #e3874f;
 }
@@ -21,7 +21,7 @@
   width: 100%;
   background: #373737;
   box-shadow: 0 5px 5px #ccc;
-  height: 50px;
+  height: 60px;
 }
 .footer-head {
   margin-top: 4px;

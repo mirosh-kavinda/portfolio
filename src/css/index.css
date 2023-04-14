@@ -8,6 +8,7 @@ html {
   cursor: none;
   scrollbar-width: none; /* Firefox */
   overflow-x: hidden;
+  scroll-behavior: smooth;
 
 }
 ::-webkit-scrollbar {
@@ -40,9 +41,7 @@ html {
  margin-top:10%;
  justify-content: center;
 }
-h1{
- text-size-adjust: 300px;
-}
+
 .imageav {
   width: 300px;
   height: 300px;
@@ -71,7 +70,7 @@ h1{
   height: 30%;
   z-index: 1000000;
 }
-.nav-link {
+.nav-link ,.link{
   color: rgb(193, 193, 193);
   font-size: larger;
   cursor: none;
@@ -86,20 +85,21 @@ a:hover {
 
 /* home page styles */
 .home {
-  position: relative;
+position: relative;
   background: url(../images/landing.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: auto;
   background-repeat: no-repeat;
-  z-index: 1000;
+
   background-blend-mode: screen;
- 
   display: flex;
   justify-content: center;
   text-align: center;
-
+}
+.pro{
+  position: relative;
 }
 .header {
 
@@ -120,27 +120,11 @@ a:hover {
   text-shadow: 10px solid #ffffff;
 }
 
-/* .proj {
-  position: relative;
-  left: 0px;
-  margin-top: 20%;
-}
-
-
-.contactme {
-  position: relative;
-  height: 700px;
-  width: cover;
-} */
 .active {
   color: #e48951 !important;
 }
 
-.heading {
-  margin-top: 50%;
-  padding: auto;
-  text-size-adjust: 100px;
-}
+
 .aboutme {
   position: relative;
   height: 700px;

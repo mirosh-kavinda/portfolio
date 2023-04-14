@@ -7,6 +7,9 @@
   .footer-head {
     font-size: smaller;
   }
+  .footer{
+    height: 300px;
+  }
   .ring {
     display: none;
   }
@@ -38,9 +41,7 @@ margin-top: 10%;
     width: 100px;
   }
 
-  .proj {
-    margin-top: 3%;
-  }
+
   .aboutme {
     margin-top: -40%;
   }
@@ -79,9 +80,7 @@ margin-top: 10%;
   .footer-head {
     font-size: small;
   }
-  .proj {
-    margin-top: 2%;
-  }
+
   .dot,.ring{
     display: none;
   }

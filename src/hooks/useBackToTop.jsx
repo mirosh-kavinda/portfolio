@@ -5,25 +5,25 @@ export default function useBackToTop() {
   useEffect(
     () => {
       window.addEventListener("scroll", () => {
-        if (window.pageYOffset > 10) {
+        if (window.pageYOffset >0) {
           setShowButton(true);
           document.getElementById("mouse").style.display = "none";
         } else {
           setShowButton(false);
-      
+        
         }
       });
     },
     [],
-    [0]
+    [10]
   );
 
   // This function will scroll the window to the top
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // for smoothly scrolling
-    });
+  
+    document.getElementById("home").scrollIntoView();
+   
+   
   };
 
   return { showButton, scrollToTop };

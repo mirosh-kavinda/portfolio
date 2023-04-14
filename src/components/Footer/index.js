@@ -18,19 +18,19 @@ const Footer = () => {
             <div className="row d-flex align-items-center ">
               <div className=" col-md-4 col-sm-4">
                 <a href="https://www.youtube.com/channel/UCyh9fiUradbIUVCde2N6oYg">
-                  <AiOutlineYoutube className="mx-2 socialmedia" size={30} />
+                  <AiOutlineYoutube className="mx-2 link" size={30} />
                 </a>
                 <a href="https://www.twitter.com/mirosh_kavinda/">
-                  <AiOutlineTwitter className="mx-2 socialmedia" size={30} />
+                  <AiOutlineTwitter className="mx-2 link" size={30} />
                 </a>
                 <a href="https://www.linkedin.com/in/mirosh-kavinda-988042159/">
-                  <AiOutlineLinkedin className="mx-2 socialmedia" size={30} />
+                  <AiOutlineLinkedin className="mx-2 link" size={30} />
                 </a>
                 <p
                   onClick={scrollToTop}
                   className="  back-to-top nav-link col-md-1 "
                 >
-                  <BsArrowUpSquare className="mx-2 socialmedia" size={35} />
+                  <BsArrowUpSquare className="mx-2 link" size={35} />
                 </p>
               </div>
               <p className=" footer-head col-md-5 col-sm-3  ">
