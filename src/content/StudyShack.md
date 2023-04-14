@@ -1,30 +1,40 @@
+# Study Shack 
+    This is a minimulistic Tutoring web application.
+    This contains three user levels , such that Admin , Teachers, and Students . 
+    
 
-<h2 class='center'>Version 1.2 </h2>
+#Links
+Git Hub Link : https://github.com/mirosh-kavinda/studyshack.git 
+Published Link : https://studyshack.herokuapp.com/	
 
-<p>Personalized online Tutoring Web application: Tutors work with students one-on-one and can tailor their teaching methods to the student's learning style.</p>
-#### High Fidelty MockUp: https://www.figma.com/file/JMEip9LHVeAqJUmo6u6Co4/Student-System?node-id=704%3A1097&t=fQGJrZxBOU4vZVgp-1 <br>
-#### Git hub Link : https://github.com/mirosh-kavinda/StudyShack.git
+## To run website you need to follow below mentioned steps
 
-<h1 style="align-items: 'center'">Demo</h1>
+### 1 .You need to install XAMPP software (we are using Apache and MYSQL )
+### 2 .After installation,place CRAFIRA project folder inside htdocs folder on  XAMPP installed directory , 
+        "C:\xampp\htdocs"
+### 3. Rename the root folder name as 'studyShack'
+### 4. Start the Apache and MYSQL servers on XAMPP dashboard.
+### 5. Click on Admin button on MySQL row.
+### 6. After pop up the Php my admin dashboard withing webbrowser
+### 7. create new database as "studyshack" 
+### 8. Select newly created database and go to import tab on tool bar
+### 8. Import our "studyshack.sql " data base sql file from Studyshack "database" folder in Studyshack project directory.
+### 9. Open New tab on Browser and type following and enter:
+        https://localhost/studyShack/index.php
 
+### I shared the database file with this(which exported from MySQL)
+        studyShack/Database_setup/studyshack.sql
+        //Inside the folder I added three videoes to setup database 
+        
+## Supported Browsers:
+- Chrome 35+
+- Firefox 31+
+- Safari 9+
+- Opera
+- Edge
+- IE 11+
 
-## Directories
-
-    _StudyShack
-        _public
-                _....
-        _src
-                _components
-                        _....
-                _css
-                        _....
-                _data
-                        _....
-                _images
-                        _....
-                _pages
-                        _....
-               
-
-
-
+<br>
+<br>
+<br>
+<br>

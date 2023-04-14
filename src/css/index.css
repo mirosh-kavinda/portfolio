@@ -15,6 +15,9 @@ html {
   overflow: hidden;
 }
 
+
+
+
 /* cursor styles  */
 .ring {
   position: fixed;
@@ -57,8 +60,10 @@ h1{
   pointer-events: none;
 }
 
-.navbar-brand:hover {
+.navbar-brand:hover ,.link:hover{
   border: 1px solid #e3874f;
+  color: #e3874f;
+
 }
 .message {
   position: relative;
@@ -94,11 +99,12 @@ a:hover {
   display: flex;
   justify-content: center;
   text-align: center;
+
 }
 .header {
 
   width: 100vw;
-    height: 100vh;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.708);
  
 }

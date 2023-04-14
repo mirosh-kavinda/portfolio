@@ -24,73 +24,66 @@ class Home extends React.Component {
 
     return (
       <>
-        <div id="home" className="home">
-          <div className="mask rgba-black-strong header">
+        <div className="home">
+          <div className="header">
             <div className="containerd-flex justify-content-center align-items-center context">
-              <div className="row smooth-scroll ">
-                <div className="col-md-12 white-text text-center">
-                  <div
-                    className="wow fadeInDown mt-5"
-                    data-wow-delay="0.2s jusify-center mt-5 "
-                  >
-                    <h1
-                      data-aos="fade-down"
-                      className="display-1 font-weight-bold mb-2 mt-2"
-                    >
-                      Hi i’m Mirosh Kavinda
-                    </h1>
-                    <h3 data-aos="fade-down" className="display-5">
-                      Full stack Developer
-                    </h3>
-                    <h6 data-aos="fade-down" className="para">
-                      ( based in Sri lanka )
-                      <br />I Care Both UX and UI of your webpages
-                    </h6>
+              <div className="col-md-12 white-text text-center "   id="heading">
+                <p
+           
+                  data-aos="fade-down"
+                  className="display-1 font-weight-bold mb-2  "
+                >
+                  Hi i’m Mirosh Kavinda
+                </p>
+                <p data-aos="fade-down" className="display-3">
+                  Full stack Developer
+                </p>
+                <p data-aos="fade-down" className="para">
+                  ( based in Sri lanka )
+                  <br />I Care Both UX and UI of your webpages
+                </p>
+              </div>
 
-                    <div align="center">
-                      <div
-                        data-aos="fade-down"
-                        className="  bg-dark col-md-3 p-2 col-sm-6 mx-5 mt-4 rounded "
-                      >
-                        <a href="https://www.youtube.com/channel/UCyh9fiUradbIUVCde2N6oYg ">
-                          <AiOutlineYoutube
-                            className="mx-2 socialmedia"
-                            size={40}
-                          />
-                        </a>
-                        <a href="https://www.twitter.com/mirosh_kavinda/">
-                          <AiOutlineTwitter
-                            className="mx-2 socialmedia"
-                            size={40}
-                          />
-                        </a>
-                        <a href="https://www.linkedin.com/in/mirosh-kavinda-988042159/">
-                          <AiOutlineLinkedin
-                            className="mx-2 socialmedia"
-                            size={40}
-                          />
-                        </a>
-                        <a href="https://github.com/mirosh-kavinda">
-                          <AiOutlineGithub
-                            className="mx-2 socialmedia"
-                            size={40}
-                          />
-                        </a>
-                      </div>
+              <div
+                align="center"
+                className="mt-5"
+                data-aos="fade-down"
+                data-wow-delay="0.2s"
+              >
+                <a href="https://www.youtube.com/channel/UCyh9fiUradbIUVCde2N6oYg ">
+                  <AiOutlineYoutube
+                    className="mx-2  bg-dark rounded link text-white "
+                    size={40}
+                  />
+                </a>
+                <a href="https://www.twitter.com/mirosh_kavinda/">
+                  <AiOutlineTwitter
+                    className="mx-2 bg-dark rounded link text-white "
+                    size={40}
+                  />
+                </a>
+                <a href="https://www.linkedin.com/in/mirosh-kavinda-988042159/">
+                  <AiOutlineLinkedin
+                    className="mx-2 bg-dark rounded link text-white "
+                    size={40}
+                  />
+                </a>
+                <a href="https://github.com/mirosh-kavinda">
+                  <AiOutlineGithub
+                    className="mx-2 bg-dark rounded link text-white "
+                    size={40}
+                  />
+                </a>
 
-                      <button
-                        data-aos="fade-down"
-                        to="/projects"
-                        className="  d-flex justify-content-center mt-3 align-items-center btn download bg-dark nav-link p-2 col-sm-9 col-md-2"
-                        onClick={saveFile}
-                      >
-                        Download CV
-                      </button>
-                    </div>
-
-                    <div className="mouse" id="mouse"></div>
-                  </div>
-                </div>
+                <button
+                  data-aos="fade-down"
+                  to="/projects"
+                  className="  d-flex justify-content-center mt-3 btn  link bg-dark text-white col-sm-4 col-md-2"
+                  onClick={saveFile}
+                >
+                  Download CV
+                </button>
+                <div className="mouse" id="mouse"></div>
               </div>
             </div>
           </div>
@@ -98,9 +91,9 @@ class Home extends React.Component {
 
         <div className="proj">
           <PortfolioGrid />
-          <hr className="my-4 mx-5" />
+         
         </div>
-
+        <hr className="my-4 mx-5" />
         <div className="aboutme  ">
           <Aboutme />
 

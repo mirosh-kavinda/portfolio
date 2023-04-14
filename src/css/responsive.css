@@ -1,26 +1,38 @@
+.home{
+  height: 100vh;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .footer-head {
+    font-size: smaller;
+  }
   .ring {
     display: none;
   }
   .dot {
     display: none;
   }
-  .header {
-    font-size: 18px;
-    letter-spacing: 0.4em;
+  #heading{
+    margin-top: 29%;
+    font-size: 8px;
+    letter-spacing: 0em;
   }
+
+  .header {
+    justify-content: center;
+   
+  }
+ .header.home
   .imageav {
     width: 250px;
     height: 250px;
     justify-content: cetner;
   }
   .mouse {
-    display: none;
+margin-top: 10%;
   }
-  .home {
-    height: 100vh;
-  }
+
   .badgeimg {
     height: 100px;
     width: 100px;
@@ -32,45 +44,62 @@
   .aboutme {
     margin-top: -40%;
   }
+  .dot,.ring{
+    display: none;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .home {
-    height: 80vh;
-  }
+
   .imageav {
     width: 250px;
     height: 250px;
   }
   .mouse {
-    margin-top: 25vh;
+    margin-top: 8%;
   }
   .badgeimg {
     height: 150px;
     width: 150px;
   }
+  #heading{
+    margin-top: 18%;
+    font-size: 8px;
+    letter-spacing: 0.1em;
+  }
+  .dot,.ring{
+    display: none;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .home {
-    height: 80vh;
+ 
+  .footer-head {
+    font-size: small;
   }
-
   .proj {
     margin-top: 2%;
   }
+  .dot,.ring{
+    display: none;
+  }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .home {
-    height: 40vh;
+  .dot,.ring{
+    display: block;
   }
-
+  #heading{
+    margin-top: 14%;
+    font-size: 8px;
+    letter-spacing: 0.3em;
+  }
   .mouse {
-    margin-top: 33vh;
+    margin-top: 5%;
   }
 }
 
@@ -79,24 +108,30 @@
   .ring {
     width: 34px;
     height: 34px;
+    display: block;
   }
   .dot {
     width: 12px;
     height: 12px;
+    display: block;
   }
-  .home {
-    height: 100vh;
+  #heading{
+    margin-top: 10%;
+    font-size: 16px;
+    letter-spacing:0.5em;
   }
   .imageav {
     width: 500px;
     height: 500px;
   }
   .mouse {
-    margin-top: 15vh;
+    margin-top: 5%;
   }
 }
 @media only screen and (min-width: 1600px) {
-  .mouse {
 
-  }
 }
+
+
+
+

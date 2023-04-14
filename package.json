@@ -25,9 +25,10 @@
     "react-router": "^6.8.1",
     "react-router-dom": "^6.8.1",
     "react-toastify": "^9.1.1",
+    "react-vertical-timeline-component": "^3.3.1",
     "sass": "^1.56.1",
     "save-dev": "^0.0.1-security",
-    "react-vertical-timeline-component": "^3.3.1"
+    "typewriting": "^1.2.8"
   },
   "scripts": {
     "start": "react-scripts start",

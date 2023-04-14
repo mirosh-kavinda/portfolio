@@ -3,13 +3,13 @@ import "../../css/grid.scss";
 import { Link } from "react-router-dom";
 
 const portfolioGrid = () => {
-  
   return (
     <div className="main-content ">
-      <h1 className="  d-flex justify-content-center mb-3 ">Recent Works</h1>
-      <div className="portfolio p-5 ">
+      <h1 className=" mb-3 d-flex justify-content-center mt-5">
+        Recent Works
+      </h1>
+      <div className="portfolio pt-5 ">
         <Link
-         
           to="/projects/projview"
           state={{
             projId: "1",
@@ -22,10 +22,8 @@ const portfolioGrid = () => {
           <br />
         </Link>
         <Link
-          
           to="/projects/projview"
           state={{
-
             projId: "2",
             projName: "Travel mate application Design",
             projCat: "casestudy",
@@ -35,7 +33,6 @@ const portfolioGrid = () => {
           <h2>TravelMate</h2>
         </Link>
         <Link
-        
           to="/projects/projview"
           state={{
             projId: "3",
@@ -47,7 +44,6 @@ const portfolioGrid = () => {
           <h2>FitPro</h2>
         </Link>
         <Link
-        
           to="/projects/projview"
           state={{
             projId: "4",
@@ -59,7 +55,6 @@ const portfolioGrid = () => {
           <h2>StudyShack</h2>
         </Link>
         <Link
-        
           to="/projects/projview"
           state={{ projId: "5", projName: "MedMap", projCat: "dev" }}
           className="img-hover-zoom portfolio-item tall five"
@@ -67,21 +62,16 @@ const portfolioGrid = () => {
           <h2>Med Map</h2>
         </Link>
         <Link
-        
           to="/projects/projview"
           state={{ projId: "6", projName: "Crafira", projCat: "dev" }}
           className="img-hover-zoom portfolio-item wide six"
         >
           <h2>Crafira</h2>
-        </Link>
-        <Link
-      
-      to="/projects"
-      className="  btn bg-dark nav-link  mt-3 p-2"
-    >
-     See more
-    </Link>
+        </Link> 
       </div>
+      <Link to="/projects" className="  btn bg-dark nav-link  mt-3 m-4   ">
+        See more
+      </Link>
 
     </div>
   );
