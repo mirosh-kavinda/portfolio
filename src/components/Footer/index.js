@@ -35,8 +35,9 @@ const Footer = () => {
               </div>
               <p className=" footer-head col-md-5 col-sm-3  ">
                 <AiOutlineCopyright />
-                2022 Alright reserved for @mirosh_kavinda
+                2023 Alright reserved for @mirosh_kavinda  || <a href="https://github.com/mirosh-kavinda/portfolio"> Code </a>
               </p>
+           
             </div>
           </div>
         )}

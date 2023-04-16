@@ -15,6 +15,12 @@ html {
   display: none;
   overflow: hidden;
 }
+#heading{
+  margin-top: 25%;
+  font-size: 8px;
+  letter-spacing: 0em;
+}
+
 
 
 
@@ -39,7 +45,7 @@ html {
 }
 .context{
  margin-top:10%;
- justify-content: center;
+
 }
 
 .imageav {
@@ -95,8 +101,8 @@ position: relative;
 
   background-blend-mode: screen;
   display: flex;
-  justify-content: center;
-  text-align: center;
+
+
 }
 .pro{
   position: relative;
@@ -109,12 +115,14 @@ position: relative;
  
 }
 
+.brieftype{
+  margin-top: 200px;
+}
 
 .para {
 
   font-weight: 500;
   font-style: normal;
-
   font-size: 28px;
   background-color: transparent;
   text-shadow: 10px solid #ffffff;

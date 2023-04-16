@@ -2,6 +2,8 @@
   height: 100vh;
 }
 
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .footer-head {
@@ -16,16 +18,7 @@
   .dot {
     display: none;
   }
-  #heading{
-    margin-top: 29%;
-    font-size: 8px;
-    letter-spacing: 0em;
-  }
 
-  .header {
-    justify-content: center;
-   
-  }
  .header.home
   .imageav {
     width: 250px;
@@ -33,7 +26,7 @@
     justify-content: cetner;
   }
   .mouse {
-margin-top: 10%;
+margin-top: 20%;
   }
 
   .badgeimg {
@@ -43,11 +36,15 @@ margin-top: 10%;
 
 
   .aboutme {
-    margin-top: -40%;
+    margin-top: 20%;
+  }
+  .badges{
+    margin-top: 30%;
   }
   .dot,.ring{
     display: none;
   }
+  
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -92,6 +89,12 @@ margin-top: 10%;
   .dot,.ring{
     display: block;
   }
+  #brief{
+    margin-top: 10%;
+    font-size: 8px;
+    letter-spacing: 0em;
+  }
+  
   #heading{
     margin-top: 14%;
     font-size: 8px;

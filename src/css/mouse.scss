@@ -199,6 +199,8 @@ $animDuration: 5s;
   90% { transform: translateY(0); }
 }
 
+
+
 @keyframes nudgeText {
   0% { transform: translateY(0); }
   20% { transform: translateY($posText); }

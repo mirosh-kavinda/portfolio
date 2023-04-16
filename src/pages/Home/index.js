@@ -12,6 +12,7 @@ import {
 } from "react-icons/ai";
 import ContactForm from "../Contact";
 import Badges from "../../components/Aboutme/Badges";
+import BriefType from "../../components/Aboutme/BriefType";
 
 class Home extends React.Component {
   render() {
@@ -25,77 +26,87 @@ class Home extends React.Component {
     return (
       <>
         <div className="home" id="home">
-          <div className="header">
-            <div className="containerd-flex justify-content-center align-items-center context">
-              <div className="col-md-12 white-text text-center "   id="heading">
-                <p
-           
-                  data-aos="fade-down"
-                  className="display-1 font-weight-bold mb-2  "
-                >
-                  Hi i’m Mirosh Kavinda
-                </p>
-                <p data-aos="fade-down" className="display-3">
-                  Full stack Developer
-                </p>
-                <p data-aos="fade-down" className="para">
-                  ( based in Sri lanka )
-                  <br />I Care Both UX and UI of your webpages
-                </p>
-              </div>
-
+          <div className="header ">
+            <div className="row ">
               <div
-                align="center"
-                className="mt-5"
-                data-aos="fade-down"
-                data-wow-delay="0.2s"
+                className="col-md-7 white-text text-start ms-5 text-start"
+                id="heading"
               >
-                <a className="bg-dark rounded py-3 mx-3  "href="https://www.youtube.com/channel/UCyh9fiUradbIUVCde2N6oYg ">
-                  <AiOutlineYoutube
-                    className="mx-2 rounded  link "
-                    size={50}
-                  />
-                </a>
-                <a className="bg-dark rounded py-3 mx-3 "href="https://www.twitter.com/mirosh_kavinda/">
-                  <AiOutlineTwitter
-                    className="mx-2 rounded link "
-                    size={50}
-                  />
-                </a>
-                <a className="bg-dark rounded py-3 mx-3 "href="https://www.linkedin.com/in/mirosh-kavinda-988042159/">
-                  <AiOutlineLinkedin
-                    className="mx-2 rounded link "
-                    size={50}
-                  />
-                </a>
-                <a className="bg-dark rounded py-3 mx-3 "href="https://github.com/mirosh-kavinda">
-                  <AiOutlineGithub
-                    className="mx-2 rounded link "
-                    size={50}
-                  />
-                </a>
-
-                <button
+                <p
                   data-aos="fade-down"
-                  to="/projects"
-                  className="  d-flex justify-content-center mt-3 btn  link bg-dark col-sm-4 col-md-2"
-                  onClick={saveFile}
+                  className="para font-weight-bold   "
                 >
-                  Download CV
-                </button>
-                <div className="mouse" id="mouse"></div>
+                  {" "}
+                  Hello My name is
+                </p>
+                <p
+                  data-aos="fade-down"
+                  className="display-1 font-weight-bold     "
+                >
+                  Mirosh Kavinda
+                </p>
+                <h5 data-aos="fade-down" className="mb-3">
+                  Full Stack Developer | Software Engineer
+                </h5>
+                <h6  data-aos="fade-down"className="col-9">
+                  I design and develop services for customers of all sizes,
+                  specializing in creating stylish, modern websites, web
+                  services and online stores.
+                </h6>
+              </div>
+              <div  data-aos="fade-down"className=" col-sm-12 col-md-4  p-3" id="brief" >
+                <BriefType />
               </div>
             </div>
+
+            <div
+              align="start"
+              className="mt-5 ms-5"
+              data-aos="fade-down"
+              data-wow-delay="0.2s"
+            >
+              Follow me :
+              <a href="https://www.youtube.com/channel/UCyh9fiUradbIUVCde2N6oYg ">
+                <AiOutlineYoutube
+                  className="mx-2  bg-dark rounded link text-white "
+                  size={40}
+                />
+              </a>
+              <a href="https://www.twitter.com/mirosh_kavinda/">
+                <AiOutlineTwitter
+                  className="mx-2 bg-dark rounded link text-white "
+                  size={40}
+                />
+              </a>
+              <a href="https://www.linkedin.com/in/mirosh-kavinda-988042159/">
+                <AiOutlineLinkedin
+                  className="mx-2 bg-dark rounded link text-white "
+                  size={40}
+                />
+              </a>
+              <a href="https://github.com/mirosh-kavinda">
+                <AiOutlineGithub
+                  className="mx-2 bg-dark rounded link text-white "
+                  size={40}
+                />
+              </a>
+              <button
+                data-aos="fade-down"
+                to="/projects"
+                className="  d-flex justify-content-center mt-3 btn  link bg-dark text-white col-sm-4 col-md-2"
+                onClick={saveFile}
+              >
+                Download CV
+              </button>
+              
+              <div className="mouse" id="mouse"></div>
+            </div>
+            
           </div>
         </div>
 
-        <div className="proj">
-          <PortfolioGrid />
-         
-        </div>
-        <hr className="my-4 mx-5" />
-        <div className="aboutme  ">
-          <Aboutme />
+        <div className="aboutme ">
+           <Aboutme />
 
           <Link
             to="/aboutme"
@@ -103,15 +114,21 @@ class Home extends React.Component {
           >
             <h5>More About me</h5>
           </Link>
+          </div>
 
-          <div>
+          <div className="badges">
             <Badges />
           </div>
-          <hr className="my-5" />
+
+          <div className="proj ">
+            <PortfolioGrid />
+          </div>
+          <hr className=" mx-5" />
+
           <div>
             <ContactForm className="contactme" />
           </div>
-        </div>
+    
       </>
     );
   }

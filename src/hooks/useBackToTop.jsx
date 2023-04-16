@@ -18,11 +18,18 @@ export default function useBackToTop() {
     [10]
   );
 
+
   // This function will scroll the window to the top
   const scrollToTop = () => {
-  
-    document.getElementById("home").scrollIntoView();
-   
+    var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    if (currentScroll > 0) {
+        
+         window.scroll ({
+          top:"0",
+          behavior:"smooth"
+         }
+        );
+    }
    
   };
 
