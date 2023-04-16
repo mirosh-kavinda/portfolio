@@ -7,10 +7,10 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .footer-head {
-    font-size: smaller;
+    font-size: small;
   }
   .footer{
-    height: 300px;
+    height: 400px;
   }
   .ring {
     display: none;
@@ -19,32 +19,30 @@
     display: none;
   }
 
- .header.home
-  .imageav {
-    width: 250px;
-    height: 250px;
-    justify-content: cetner;
-  }
   .mouse {
-margin-top: 20%;
+margin-top: 7%;
   }
 
   .badgeimg {
     height: 100px;
     width: 100px;
   }
-
-
+  
   .aboutme {
-    margin-top: 20%;
+    margin-top: 0%;
   }
   .badges{
-    margin-top: 30%;
+    margin-top: 69%;
   }
   .dot,.ring{
     display: none;
   }
-  
+  .proj{
+    margin-top: 0;}
+    .badgeimg {
+      height: 80px;
+      width: 80px;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -117,7 +115,8 @@ margin-top: 20%;
     height: 12px;
     display: block;
   }
-  #heading{
+
+      #heading{
     margin-top: 10%;
     font-size: 16px;
     letter-spacing:0.5em;
