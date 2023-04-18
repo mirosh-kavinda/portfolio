@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.d815fc41.css",
-    "main.js": "/static/js/main.e9021974.js",
+    "main.css": "/static/css/main.c9e6cf26.css",
+    "main.js": "/static/js/main.925cac6f.js",
     "static/js/128.150b5fa3.chunk.js": "/static/js/128.150b5fa3.chunk.js",
     "static/js/995.d2498b95.chunk.js": "/static/js/995.d2498b95.chunk.js",
     "static/js/362.0766797c.chunk.js": "/static/js/362.0766797c.chunk.js",
     "static/js/76.1db1e102.chunk.js": "/static/js/76.1db1e102.chunk.js",
-    "static/media/logo.gif": "/static/media/logo.a63bd424a3fdc5c775ac.gif",
     "static/media/11.png": "/static/media/11.44481655da4d322541fe.png",
     "static/media/18.png": "/static/media/18.e2ebc758305acdc71859.png",
     "static/media/19.png": "/static/media/19.65c6580f46eab20118b9.png",
@@ -69,11 +68,11 @@
     "static/media/MedMap.md": "/static/media/MedMap.72c2d77aeea70de72a92.md",
     "static/media/work.svg": "/static/media/work.3710b62484ed638074240e99317c6c60.svg",
     "static/media/HappyFunc.md": "/static/media/HappyFunc.474d445475ad79b9c30e.md",
-    "main.d815fc41.css.map": "/static/css/main.d815fc41.css.map",
-    "main.e9021974.js.map": "/static/js/main.e9021974.js.map"
+    "main.c9e6cf26.css.map": "/static/css/main.c9e6cf26.css.map",
+    "main.925cac6f.js.map": "/static/js/main.925cac6f.js.map"
   },
   "entrypoints": [
-    "static/css/main.d815fc41.css",
-    "static/js/main.e9021974.js"
+    "static/css/main.c9e6cf26.css",
+    "static/js/main.925cac6f.js"
   ]
 }
