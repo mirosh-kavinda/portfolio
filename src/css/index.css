@@ -64,10 +64,14 @@ html {
   z-index: 10000;
   pointer-events: none;
 }
+.link{
 
+  text-decoration: none;
+}
 .navbar-brand:hover ,.link:hover{
   border: 1px solid #e3874f;
   color: #e3874f;
+  text-decoration: none;
 
 }
 .message {
@@ -104,7 +108,7 @@ position: relative;
 
 
 }
-.pro{
+.proj{
   position: relative;
 }
 .header {

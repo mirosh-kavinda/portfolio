@@ -3,7 +3,8 @@ import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import React from "react";
-import image from "../../images/logo.gif";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { CiLocationOn } from "react-icons/ci";
 const ContactForm = () => {
   const {
     register,
@@ -52,12 +53,11 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="row text-center container">
+    <div className=" text-center container">
       <h1> Contact Me</h1>
-
-      <div className="row text-center mt-5 mb-5">
+      <div className=" row text-center mt-3 ">
         <br />
-        <div className="col ">
+        <div className="col-md-8 col-sm-12 ">
           <form onSubmit={handleSubmit(onSubmit)} noValidate>
             <div className="form-row mt-5 mb-2 mx-4 ">
               <input
@@ -134,7 +134,7 @@ const ContactForm = () => {
                 <span className="errorMessage">Please enter a message</span>
               )}
               <button
-                className="d-flex justify-content-center mt-4 align-items-center btn download bg-dark nav-link p-2 col-sm-12 col-md-12"
+                className="d-flex justify-content-center mt-4 align-items-center btn  bg-dark link p-2 col-sm-12 col-md-12"
                 type="submit"
               >
                 Submit
@@ -142,8 +142,37 @@ const ContactForm = () => {
             </div>
           </form>
         </div>
-        <div className="col-md-3">    <img alt="this is logo" src={image} height={"260px"} /></div>
-    
+        <div className="col-md-4 col-sm-12 mt-5 ">
+          <a href="mirosh.me "className="card-body link  d-flex align-items-center c-detail bg-dark rounded p-2 ">
+              <CiLocationOn
+                className=" text-orange col-4 "
+                size={50}
+              />
+     
+            <div className="col-8">
+              
+              <p className="" >
+               No : 81/5, 
+               5th cross Road, 
+               Weragampita,
+               Matara.
+              </p>
+            </div>
+          </a>
+          <a href="https://wa.me/94713531809"className="card-body d-flex align-items-center link c-detail bg-dark rounded p-2">
+           
+              <BsFillTelephoneFill
+                className="  col-4 "
+                size={40}
+        />
+            <div className="col-8">
+              <p className="">
+               +94713531809
+               <br/>(Whatsapp )
+              </p>
+            </div>
+          </a>
+        </div>
       </div>
 
       <ToastContainer />

@@ -1,15 +1,13 @@
-.home{
+.home {
   height: 100vh;
 }
-
-
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .footer-head {
     font-size: small;
   }
-  .footer{
+  .footer {
     height: 400px;
   }
   .ring {
@@ -20,34 +18,35 @@
   }
 
   .mouse {
-margin-top: 7%;
+    margin-top: 7%;
   }
 
   .badgeimg {
     height: 100px;
     width: 100px;
   }
-  
+
   .aboutme {
     margin-top: 0%;
   }
-  .badges{
+  .badges {
     margin-top: 69%;
   }
-  .dot,.ring{
+  .dot,
+  .ring {
     display: none;
   }
-  .proj{
-    margin-top: 0;}
-    .badgeimg {
-      height: 80px;
-      width: 80px;
-    }
+  .proj {
+    margin-top: 0;
+  }
+  .badgeimg {
+    height: 80px;
+    width: 80px;
+  } 
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-
   .imageav {
     width: 250px;
     height: 250px;
@@ -59,41 +58,42 @@ margin-top: 7%;
     height: 150px;
     width: 150px;
   }
-  #heading{
+  #heading {
     margin-top: 18%;
     font-size: 8px;
     letter-spacing: 0.1em;
   }
-  .dot,.ring{
+  .dot,
+  .ring {
     display: none;
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
- 
   .footer-head {
     font-size: small;
   }
 
-  .dot,.ring{
+  .dot,
+  .ring {
     display: none;
   }
-
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .dot,.ring{
+  .dot,
+  .ring {
     display: block;
   }
-  #brief{
+  #brief {
     margin-top: 10%;
     font-size: 8px;
     letter-spacing: 0em;
   }
-  
-  #heading{
+
+  #heading {
     margin-top: 14%;
     font-size: 8px;
     letter-spacing: 0.3em;
@@ -116,10 +116,10 @@ margin-top: 7%;
     display: block;
   }
 
-      #heading{
+  #heading {
     margin-top: 10%;
     font-size: 16px;
-    letter-spacing:0.5em;
+    letter-spacing: 0.5em;
   }
   .imageav {
     width: 500px;
@@ -128,11 +128,9 @@ margin-top: 7%;
   .mouse {
     margin-top: 5%;
   }
+  .badges {
+    margin-top: -10%;
+  }
 }
 @media only screen and (min-width: 1600px) {
-
 }
-
-
-
-
