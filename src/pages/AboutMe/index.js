@@ -1,26 +1,52 @@
-import React from "react";
 
+import image from "../../images/prof2.jpg";
 import { AiOutlineGithub } from "react-icons/ai";
-import Aboutme from "../../components/Aboutme/Aboutme";
+
 import History from "../../components/Aboutme/History";
-class Contact extends React.Component {
-   
-  render() {
-    return (
-      <>
-        <h1 className="mt-5 d-flex justify-content-center">
-          I'm Mirosh Kavinda 👋
+
+
+export default function AboutMe() {
+
+    return(<>
+       <h1 className="mt-5 d-flex justify-content-center">
+          Who Am I ?
         </h1>
-        <h6 className="mt-3 d-flex justify-content-center">
-          (A full-stack Developer|💻 Undergraduate)
-        </h6>
+  
         <div className="  row  d-flex justify-content-center ">
-          <div className=" col-md-10 col-sm-12 ">
-            <Aboutme />
+          <div className=" col-md-10 col-sm-12  ">
+            <div className="row">
+              <br />
+              <div className="  mt-5  col-sm-12 col-md-8">
+                
+                <p className="mt-4">
+                 Mirosh kavinda is a Software Engineering undergraduate at the
+                  Cinec Campus . . He describes himself as outgoing, dedicated,
+                  and open-minded. He is the vice president of Tech Strike Club
+                  in Cinec Campus at the same time associate member of Rotaract
+                  Club of cinec Campus. And also he is a member of UI/UX
+                  community of Sri Lanka. He is interested in Web and Mobile
+                  Applications Development, DevOps, Cloud Architecture . He gets
+                  across to people and adjust to changes with ease and he loves
+                  volunteering and helping other people through technology.
+                </p>
+              </div>
+              <div className=" mt-5 p-4  container col-sm-12 col-md-3">
+                <img
+                  alt="this is logo"
+                  src={image}
+                  height={"260px"}
+                  className="ms-5"
+                />
+              </div>
+            </div>
           </div>
         </div>
         <br />
         <div className=" mx-2 vh-4">
+         
+          <br />
+          <br />
+          <History />
           <h3 align="center">
             Tech Stack
             <hr />
@@ -97,9 +123,6 @@ class Contact extends React.Component {
               />
             </span>
           </h3>
-          <br />
-          <br />
-          <History />
           <h3 className="mt-5 text-center">
             My Stats On Git hub
             <hr />
@@ -128,7 +151,6 @@ class Contact extends React.Component {
           <a
             href="https://github.com/mirosh-kavinda"
             className="  mt-4  btn download  bg-dark nav-link  col-sm-10 col-md-2 "
-            
           >
             View More
             <span>
@@ -138,10 +160,5 @@ class Contact extends React.Component {
           <br />
           <br />
           <br />
-        </div>
-      </>
-    );
-  }
+        </div></>);
 }
-
-export default Contact;

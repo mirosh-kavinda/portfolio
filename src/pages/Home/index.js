@@ -3,14 +3,14 @@ import PortfolioGrid from "../../components/Portfolio/PortfolioGrid";
 import "../../css/mouse.scss";
 import Aboutme from "../../components/Aboutme/Aboutme";
 import fileSaver from "file-saver";
-import { Link } from "react-router-dom";
+
 import {
   AiOutlineYoutube,
   AiOutlineTwitter,
   AiOutlineLinkedin,
   AiOutlineGithub,
 } from "react-icons/ai";
-import ContactForm from "../Contact";
+import ContactForm from "../../components/Contact";
 import Badges from "../../components/Aboutme/Badges";
 import BriefType from "../../components/Aboutme/BriefType";
 
@@ -108,12 +108,7 @@ class Home extends React.Component {
         <div className="aboutme ">
            <Aboutme />
 
-          <Link
-            to="/aboutme"
-            className=" align-item-center nav-link bg-dark col-sm-6 col-md-2 p-1 ms-3  nav-link  btn download  mt-2  "
-          >
-            <h5>More About me</h5>
-          </Link>
+    
           </div>
 
           <div className="badges">

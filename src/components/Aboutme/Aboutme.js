@@ -1,25 +1,46 @@
+import React from "react";
+import { Link } from "react-router-dom";
 import image from "../../images/prof.jpg";
+
 const Aboutme = () => {
   return (
-    <div div className="row">
-      <br />
-      <div className=" bg-dark mt-5 p-4 col-sm-12 col-md-8">
-        <h1 className="ms-5  ">Who Am I ? </h1>
-        <p className="mt-4">
-          Mirosh kavinda is a Software Engineering undergraduate at the Cinec
-          Campus . . He describes himself as outgoing, dedicated, and
-          open-minded. He is the vice president of Tech Strike Club in Cinec
-          Campus at the same time associate member of Rotaract Club of cinec
-          Campus. And also he is a member of UI/UX community of Sri Lanka. He is
-          interested in Web and Mobile Applications Development, DevOps, Cloud
-          Architecture . He gets across to people and adjust to changes with
-          ease and he loves volunteering and helping other people through
-          technology.
-        </p>
+    <div className="row">
+ 
+<div className="col-md-7">
+<p className="mt-4">
+                  <strong>Mirosh kavinda </strong>is a Software Engineering undergraduate at the
+                  Cinec Campus . . He describes himself as outgoing, dedicated,
+                  and open-minded. <br/>He is the vice president of Tech Strike Club
+                  in Cinec Campus at the same time associate member of Rotaract
+                  Club of cinec Campus.
+                  
+                </p>
+<table className="">
+        <tr className="mt-3">
+          <td className="px-2"> <strong>Name</strong>: Mirosh Kavinda</td>
+          <td className="px-2"><strong>Birthday</strong>: 29th April</td>
+        </tr>
+        <tr className="mt-4">
+          <td className="px-2"><strong>Age: </strong> 24 y/o</td>
+          <td className="px-2"><strong>Address:</strong> Matara, Sri Lanka</td>
+        </tr>
+        <tr className="mt-3">
+          <td className="px-2"><strong>Campus :</strong> Cinec Campus, Malabe.</td>
+          <td className="px-2"><strong>Email:</strong>  kavindahgm@gmail.com</td>
+        </tr>
+     
+      </table>
+</div>
+    
+      <div className=" image-fluid col-sm-12 col-md-3  " align="center">
+        <img alt="this is logo" src={image} height={"260px"} className="mt-4" />
       </div>
-      <div className=" mt-5 p-4  container col-sm-12 col-md-3">
-        <img alt="this is logo" src={image} height={"260px"} className="ms-5" />
-      </div>
+      <Link
+            to="/aboutme"
+            className=" align-item-center nav-link bg-dark col-sm-6 link  btn download  mt-2  "
+          >
+            <h5>More About me</h5>
+          </Link>
     </div>
   );
 };
