@@ -5,6 +5,8 @@
   "homepage": "https://mirosh.me/",
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
+    "@react-three/drei": "^9.65.4",
+    "@react-three/fiber": "^8.12.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
@@ -28,7 +30,8 @@
     "react-toastify": "^9.1.1",
     "react-vertical-timeline-component": "^3.3.1",
     "sass": "^1.56.1",
-    "save-dev": "^0.0.1-security"
+    "save-dev": "^0.0.1-security",
+    "three": "^0.151.3"
   },
   "scripts": {
     "start": "react-scripts start",

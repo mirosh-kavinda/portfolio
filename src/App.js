@@ -6,7 +6,6 @@ import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
 import Projects from "./pages/Projects";
 import DotRing from "./components/DotRing";
-import Contact from "./pages/Contact";
 import ProjView from "./components/ProjView/ProjView";
 import "aos/dist/aos.css";
 import useAnimations from "./hooks/useAnimations";
@@ -38,11 +37,7 @@ export default function App() {
                 id="projects"
                 element={<Projects />}
               ></Route>
-              <Route
-                path="/contact"
-                id="projects"
-                element={<Contact />}
-              ></Route>
+
               <Route
                 path="/projects/projview"
                 id="projects"
@@ -50,7 +45,6 @@ export default function App() {
               ></Route>
             </Routes>
           </div>
-   
           <Footer className="footer" />
         </div>
       )}
