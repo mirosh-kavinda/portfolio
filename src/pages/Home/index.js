@@ -18,7 +18,7 @@ class Home extends React.Component {
   render() {
     const saveFile = () => {
       fileSaver.saveAs(
-        "https://drive.google.com/uc?export=download&id=1g6ZF-jLVGU2czmd6SyGLByMZ07gy9uyN",
+        "https://drive.google.com/uc?export=download&id=1YycjgJJgDX1I1rphVL3r0pLD8ZnkZNT1",
         "Mirosh_CV.pdf"
       );
     };

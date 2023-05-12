@@ -6,7 +6,7 @@ import { init } from 'ityped'
 export default class BriefType extends Component {
     componentDidMount(){
       const myElement = document.querySelector('#myElement')
-      init(myElement, { showCursor: false,loop:true,
+      init(myElement, { showCursor: false,loop:false,
         strings: ['Proficiency in web development technologies', 'Familiarity with database technologies' ,"Strong problem-solving and debugging skills", "Proficiency in UI/UX design principles","Experience with testing and debugging" ]})
     }
 
