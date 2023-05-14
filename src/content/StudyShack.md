@@ -4,7 +4,7 @@
 #Links <br>
 Git Hub Link : https://github.com/mirosh-kavinda/studyshack.git <br>
 userFlow : https://www.figma.com/file/L57mZAV3rmYNT9Fxv94AnK/studyshack?node-id=0%3A1&t=38YWlbR1TUDtMr3a-1<br>
-Published Link : https://studyshack.herokuapp.com/	
+	
 
 <img class="img-fluid"src='https://user-images.githubusercontent.com/74175084/232343268-5918e28c-429b-4b21-aaab-918814efa90e.png'style={{width="1000px"}}/>
 <br>

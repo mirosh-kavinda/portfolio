@@ -27,10 +27,13 @@ class Home extends React.Component {
   render() {
     const saveFile = () => {
       fileSaver.saveAs(
+       
         "https://drive.google.com/uc?export=download&id=1iIohv8Jwf2cGhf4yIcNphxz-1PQYe7f-",
         "Mirosh_kavinda_resume.pdf"
       );
     };
+
+ 
 
     return (
       <>
@@ -138,9 +141,9 @@ class Home extends React.Component {
         <div className="proj ">
           <PortfolioGrid />
         </div>
-        <hr className=" mx-5" />
+ 
 
-        <div>
+        <div className="mt-5">
           <ContactForm className="contactme" />
         </div>
       </>

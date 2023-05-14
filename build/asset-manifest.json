@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.43a24229.css",
-    "main.js": "/static/js/main.16b545fc.js",
+    "main.css": "/static/css/main.9a4fa6b7.css",
+    "main.js": "/static/js/main.c08f648a.js",
     "static/js/128.150b5fa3.chunk.js": "/static/js/128.150b5fa3.chunk.js",
     "static/js/995.d2498b95.chunk.js": "/static/js/995.d2498b95.chunk.js",
     "static/js/362.0766797c.chunk.js": "/static/js/362.0766797c.chunk.js",
-    "static/js/76.1db1e102.chunk.js": "/static/js/76.1db1e102.chunk.js",
-    "static/media/11.png": "/static/media/11.44481655da4d322541fe.png",
+    "static/js/524.ef4b17df.chunk.js": "/static/js/524.ef4b17df.chunk.js",
+    "static/js/76.707fddfd.chunk.js": "/static/js/76.707fddfd.chunk.js",
+    "static/media/11.png": "/static/media/11.994c660d42f74191a1cd.png",
     "static/media/18.png": "/static/media/18.e2ebc758305acdc71859.png",
     "static/media/19.png": "/static/media/19.65c6580f46eab20118b9.png",
     "static/media/17.png": "/static/media/17.9505f7b8c5e185bd4cfc.png",
+    "static/media/landing-large.jpg": "/static/media/landing-large.2c257a43ad1d821e795b.jpg",
     "static/media/2.png": "/static/media/2.57642242ae212e98e9b1.png",
     "static/media/16.png": "/static/media/16.bf743bde462b973ff33d.png",
     "static/media/Slide10.PNG": "/static/media/Slide10.4121ba94f37955d9f5f0.PNG",
@@ -62,18 +64,19 @@
     "static/media/Slide1.PNG": "/static/media/Slide1.44cb945c5f9f66531e9e.PNG",
     "static/media/Slide5.PNG": "/static/media/Slide5.6ca6e8d271cd947defef.PNG",
     "static/media/Slide25.PNG": "/static/media/Slide25.7641c68bd0010eb07993.PNG",
+    "static/media/SpiritualRead.md": "/static/media/SpiritualRead.e32bb3d958d5ea87bab7.md",
     "static/media/Crafira.md": "/static/media/Crafira.23e540a7320fc0cac425.md",
-    "static/media/StudyShack.md": "/static/media/StudyShack.9be5219eea142f4dc76d.md",
+    "static/media/StudyShack.md": "/static/media/StudyShack.8badb0b25b50a6b6b632.md",
     "index.html": "/index.html",
     "static/media/school.svg": "/static/media/school.a41655f6d5350015803153c7410cef6a.svg",
     "static/media/MedMap.md": "/static/media/MedMap.72c2d77aeea70de72a92.md",
     "static/media/work.svg": "/static/media/work.3710b62484ed638074240e99317c6c60.svg",
     "static/media/HappyFunc.md": "/static/media/HappyFunc.474d445475ad79b9c30e.md",
-    "main.43a24229.css.map": "/static/css/main.43a24229.css.map",
-    "main.16b545fc.js.map": "/static/js/main.16b545fc.js.map"
+    "main.9a4fa6b7.css.map": "/static/css/main.9a4fa6b7.css.map",
+    "main.c08f648a.js.map": "/static/js/main.c08f648a.js.map"
   },
   "entrypoints": [
-    "static/css/main.43a24229.css",
-    "static/js/main.16b545fc.js"
+    "static/css/main.9a4fa6b7.css",
+    "static/js/main.c08f648a.js"
   ]
 }
