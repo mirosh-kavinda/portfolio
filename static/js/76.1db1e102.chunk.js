@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[76],{5076:function(e,t,o){e.exports=o.p+"static/media/StudyShack.9be5219eea142f4dc76d.md"}}]);
