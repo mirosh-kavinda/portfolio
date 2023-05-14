@@ -28,7 +28,7 @@ class Home extends React.Component {
     const saveFile = () => {
       fileSaver.saveAs(
        
-        "https://drive.google.com/uc?export=download&id=1iIohv8Jwf2cGhf4yIcNphxz-1PQYe7f-",
+        // "https://drive.google.com/uc?export=download&id=1iIohv8Jwf2cGhf4yIcNphxz-1PQYe7f-",
         "Mirosh_kavinda_resume.pdf"
       );
     };
@@ -85,7 +85,7 @@ class Home extends React.Component {
               size={40}
             />
           </a>
-          <a href="https://medium.com/@kavindahgm">
+          <a href="https://clubhouse.com/@miroshkavinda">
             <MdOutlineWavingHand
               className="mx-2   bg-dark rounded link text-white "
               size={40}

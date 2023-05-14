@@ -9,7 +9,11 @@
   .footer {
     height: 400px;
   }
+.graph{
+  height: 100;
+  
 
+}
   .header{
     width: 100vw;
     height: 100vh;

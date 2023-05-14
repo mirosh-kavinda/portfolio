@@ -8,6 +8,19 @@ let timelineElements = [
       description: "Currently reading for my Bachelors of Science Degree in Software Engineering at Cinec Campus malambe. Current GPA - 3.81  ",
       buttonText: "Full time",
       date: "sep 2020 - present",
+      
+      icon: "school",
+    },
+      
+    {
+      id: 3,
+      title: "Java Programming  Solving Problems with Software",
+      location: "Coursera(Online)",
+      description:
+        "1).I 've done All all quicklab sessions 2).this is the 4th course of specialization",
+      buttonText: "Professional Certificate",
+      date: "Dec 2022 ",
+      link: "https://www.coursera.org/account/accomplishments/certificate/QG7R7WSST9X5",
       icon: "school",
     },
     {
@@ -18,6 +31,7 @@ let timelineElements = [
         "1).I 've done All Peer review course assesment with good grades 2). Completed 3 User Experience Case studies ,and  those are charity application ,travel application , and fitness applications . I used figma and adobe Xd as design tools",
       buttonText: "Professional Certificate",
       date: "Dec 2022 ",
+      link: "https://www.coursera.org/account/accomplishments/specialization/certificate/YW66GW2XJAVL",
       icon: "school",
     },
     {
@@ -28,6 +42,7 @@ let timelineElements = [
         "All Peer review course assesment with good credits.",
       buttonText: "Professional Certificate",
       date: "Nov 2021 - jan 2022",
+      link: "https://www.coursera.org/account/accomplishments/specialization/certificate/KDEDD93YH4KC",
       icon: "school",
     },
     {
@@ -37,6 +52,7 @@ let timelineElements = [
       description:"All Peer review course assesment with good grades.Done number of pet projects using React library(portfolio website The Complete Web Developer in 2021",
       buttonText: "Certificate",
       date: "Oct 2020 - july 2021",
+      link: "https://www.udemy.com/certificate/UC-3968ea15-d787-4b9f-8a79-e6d76f598df8/",
       icon: "school",
     },
   ];

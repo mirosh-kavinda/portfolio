@@ -50,7 +50,7 @@ function History() {
                   className={`nav-link button ${
                     isWorkIcon ? "workButton" : "schoolButton"
                   }`}
-                  href="/"
+                  href={element.link}
                 >
                   {element.buttonText}
                 </a>
