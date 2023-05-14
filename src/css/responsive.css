@@ -1,6 +1,5 @@
-.home {
-  height: 100vh;
-}
+
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -9,6 +8,13 @@
   }
   .footer {
     height: 400px;
+  }
+
+  .header{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.708);
+    
   }
   .ring {
     display: none;
@@ -43,6 +49,9 @@
     height: 80px;
     width: 80px;
   } 
+  .home {
+    background: url(../images/landing.jpg) no-repeat center center fixed;
+  }
   
 }
 
@@ -52,6 +61,12 @@
     width: 250px;
     height: 250px;
   }
+  .home {
+   
+      background: url(../images/landing.jpg) no-repeat center center fixed;
+
+  }
+
   .mouse {
     margin-top: 8%;
   }
@@ -61,8 +76,8 @@
   }
   #heading {
     margin-top: 18%;
-    font-size: 8px;
-    letter-spacing: 0.1em;
+    font-size: 12px;
+    letter-spacing: 0.01em;
   }
   .dot,
   .ring {
@@ -75,7 +90,9 @@
   .footer-head {
     font-size: small;
   }
-
+  .home {
+    background: url(../images/landing-large.jpg) no-repeat center center fixed;
+  }
   .dot,
   .ring {
     display: none;
@@ -96,8 +113,8 @@
 
   #heading {
     margin-top: 14%;
-    font-size: 8px;
-    letter-spacing: 0.3em;
+    font-size: 14px;
+    letter-spacing: 0.1em;
   }
   .mouse {
     margin-top: 5%;
@@ -119,9 +136,11 @@
 
   #heading {
     margin-top: 10%;
-    font-size: 16px;
-    letter-spacing: 0.5em;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+
   }
+  
   .imageav {
     width: 500px;
     height: 500px;

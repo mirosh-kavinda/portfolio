@@ -9,7 +9,16 @@ import {
   AiOutlineTwitter,
   AiOutlineLinkedin,
   AiOutlineGithub,
+  
 } from "react-icons/ai";
+import {
+  BsMedium
+  
+} from "react-icons/bs";
+import {
+  MdOutlineWavingHand
+  
+} from "react-icons/md";
 import ContactForm from "../../components/Contact";
 import Badges from "../../components/Aboutme/Badges";
 import BriefType from "../../components/Aboutme/BriefType";
@@ -18,8 +27,8 @@ class Home extends React.Component {
   render() {
     const saveFile = () => {
       fileSaver.saveAs(
-        "https://drive.google.com/uc?export=download&id=1YycjgJJgDX1I1rphVL3r0pLD8ZnkZNT1",
-        "Mirosh_CV.pdf"
+        "https://drive.google.com/uc?export=download&id=1iIohv8Jwf2cGhf4yIcNphxz-1PQYe7f-",
+        "Mirosh_kavinda_resume.pdf"
       );
     };
 
@@ -32,10 +41,7 @@ class Home extends React.Component {
                 className="col-md-7 white-text text-start ms-5 text-start"
                 id="heading"
               >
-                <p
-                  data-aos="fade-down"
-                  className="para font-weight-bold   "
-                >
+                <p data-aos="fade-down" className="para font-weight-bold   ">
                   {" "}
                   Hello My name is
                 </p>
@@ -48,13 +54,17 @@ class Home extends React.Component {
                 <h5 data-aos="fade-down" className="mb-3">
                   Full Stack Developer | Software Engineer
                 </h5>
-                <h6  data-aos="fade-down"className="col-9">
-                  I design and develop services for customers of all sizes,
-                  specializing in creating stylish, modern websites, web
-                  services and online stores.
+                <h6 data-aos="fade-down" className="col-9">
+                  I design and develop stylish, modern websites, web services for customers of all sizes. I have a proven
+                  track record of success in creating user-friendly and engaging
+                  websites .
                 </h6>
               </div>
-              <div  data-aos="fade-down"className=" col-sm-12 col-md-4  p-3" id="brief" >
+              <div
+                data-aos="fade-down"
+                className=" col-sm-12 col-md-4 p-3"
+                id="brief"
+              >
                 <BriefType />
               </div>
             </div>
@@ -64,14 +74,28 @@ class Home extends React.Component {
               className="mt-5 ms-5"
               data-aos="fade-down"
               data-wow-delay="0.2s"
-            >
-              Follow me :
+            >   
+            
+             <a href="https://medium.com/@kavindahgm">
+            <BsMedium
+              className=" mx-2  bg-dark rounded link text-white "
+              size={40}
+            />
+          </a>
+          <a href="https://medium.com/@kavindahgm">
+            <MdOutlineWavingHand
+              className="mx-2   bg-dark rounded link text-white "
+              size={40}
+            />
+          </a>
+              
               <a href="https://www.youtube.com/channel/UCyh9fiUradbIUVCde2N6oYg ">
                 <AiOutlineYoutube
                   className="mx-2  bg-dark rounded link text-white "
                   size={40}
                 />
               </a>
+          
               <a href="https://www.twitter.com/mirosh_kavinda/">
                 <AiOutlineTwitter
                   className="mx-2 bg-dark rounded link text-white "
@@ -98,32 +122,27 @@ class Home extends React.Component {
               >
                 Download CV
               </button>
-              
               <div className="mouse" id="mouse"></div>
             </div>
-            
           </div>
         </div>
 
         <div className="aboutme ">
-           <Aboutme />
+          <Aboutme />
+        </div>
 
-    
-          </div>
+        <div className="badges">
+          <Badges />
+        </div>
 
-          <div className="badges">
-            <Badges />
-          </div>
+        <div className="proj ">
+          <PortfolioGrid />
+        </div>
+        <hr className=" mx-5" />
 
-          <div className="proj ">
-            <PortfolioGrid />
-          </div>
-          <hr className=" mx-5" />
-
-          <div>
-            <ContactForm className="contactme" />
-          </div>
-    
+        <div>
+          <ContactForm className="contactme" />
+        </div>
       </>
     );
   }

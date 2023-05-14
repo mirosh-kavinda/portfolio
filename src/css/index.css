@@ -11,6 +11,9 @@ html {
   scroll-behavior: smooth;
 
 }
+#handellers{
+  margin-top: 50%;
+}
 ::-webkit-scrollbar {
   display: none;
   overflow: hidden;
@@ -96,7 +99,7 @@ a:hover {
 /* home page styles */
 .home {
 position: relative;
-  background: url(../images/landing.jpg) no-repeat center center fixed;
+
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -115,10 +118,12 @@ position: relative;
 
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.708);
+  background-color: rgba(0, 0, 0, 0.508);
  
 }
-
+.briefElement {
+  background-color: rgba(0, 0, 0, 0.585);
+}
 .brieftype{
   margin-top: 200px;
 }

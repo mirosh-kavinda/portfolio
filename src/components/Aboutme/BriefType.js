@@ -12,7 +12,7 @@ export default class BriefType extends Component {
 
     
     render(){
-      return <div className='bg-dark p-3 mx-5 rounded briefElement '><h5> My Superpowers : <h6 className='mt-3' id="myElement">|</h6></h5>
+      return <div className=' p-3  rounded briefElement '> <h6> My Superpowers :</h6><h5  id="myElement"> </h5>
         </div>
     }
   }
