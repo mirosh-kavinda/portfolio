@@ -8,13 +8,13 @@ const CardList = ({ projects, projcat }) => {
       <div className="row justity-content-center ">
         {projects.map((user, i) => {
           return (
-            <div
-              className="md-auto  col-sm-12 col-md-4"
-              key={Math.random()}
+            <div className="md-auto  col-sm-12 col-md-4"
+              
             
             >
               {projcat === projects[i].category ? (
-                <div>
+                <div className="md-auto  "
+                key={Math.random()}>
              
                 <ProjCard
                   projcat={projects[i].category}
@@ -26,7 +26,7 @@ const CardList = ({ projects, projcat }) => {
                 <br />
                 </div>
               ) : (
-                ""
+               ""
               )}
             </div>
           );

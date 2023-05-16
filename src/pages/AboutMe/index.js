@@ -43,7 +43,7 @@ export default function AboutMe() {
         <br />
         <br />
         <History />
-        <h3 align="center" className="mt-5 mb-4">
+        <h1 align="center" className="mt-5 pt-4 pb-5 mb-4">
           Tech Stack
           <hr />
           <span>
@@ -118,11 +118,11 @@ export default function AboutMe() {
               height={"40px"}
             />
           </span>
-        </h3>
+        </h1>
         <div className="row mt-5 " align="center">
-          <h3 className="mt-5 text-center col-md-10 col-sm-5">
+          <h1 className="mt-5 mb-5 text-center col-md-10 col-sm-5">
             My Stats On Git hub
-          </h3>
+          </h1>
           <a
             href="https://github.com/mirosh-kavinda"
             className="   download  mt-5 nav-link  col-sm-7 col-md-2 "

@@ -1,12 +1,16 @@
-# spiritualRead - Your Ultimate Reading Companion
+# Your Ultimate Reading Companion <br>
 spiritualRead is a mobile app that offers a convenient way for book lovers to explore and discover new books across a wide range of categories. With our easy-to-use interface and powerful features, you can quickly find and download your favorite books, and add them to your personal library for easy access anytime, anywhere.<br>
 <h5>UI DESIGN :  https://www.figma.com/file/u1UDfPreINPbDsbZyFt2H8/spiritualread?node-id=267%3A990&t=UOqbt8CyhNh5JNIg-1 </h5> 
 Releases : Version 1
 <br>
 
 
-![Flyer](https://github.com/mirosh-kavinda/spiritualread/assets/74175084/3b67c9bf-9c9a-4ccc-97c5-b686556ef0bc)
 
+<img class="img-fluid"src='https://github-production-user-asset-6210df.s3.amazonaws.com/74175084/237079786-3b67c9bf-9c9a-4ccc-97c5-b686556ef0bc.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230516%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230516T173520Z&X-Amz-Expires=300&X-Amz-Signature=52a9f0afeccf920423ee0e9b8d1bb083b7be59189b4b3ae4892b5ef579b740b2&X-Amz-SignedHeaders=host&actor_id=74175084&key_id=0&repo_id=606635495'style={{width="10px"}}/>
+
+<br>
+<br>
+<br>
 
 # Features
   - Explore and discover new books across a wide range of categories

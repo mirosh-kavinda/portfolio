@@ -33,12 +33,12 @@ export const ProjectData = [
       "Personalized online Tutoring Web application that helps  tutors to work with students one-on-one and can tailor their teaching methods to the student's learning style.",
   },
   {
-    id: "5",
-    projectName: "MedMap",
+    id: "11",
+    projectName: "SpiritualRead",
     category: "dev",
-    image: "../../images/projects/image1.png",
+    image: "../../images/projects/11.png",
     description:
-      "A user-friendly interface that allows consumers to search for medications, including prescription and over-the-counter drugs, by name, condition, or symptom.The ability for consumers to upload a valid prescription from their healthcare provider, or connect with an online doctor for a virtual consultation.",
+      "spiritualRead is a mobile app that offers a convenient way for book lovers to explore and discover new books across a wide range of categories.",
   },
   {
     id: "6",
@@ -57,6 +57,15 @@ export const ProjectData = [
     description:
       "This Use for develop for demonstrate variety of probabilities of done things in react application (Components)",
   },
+  {
+    id: "5",
+    projectName: "MedMap",
+    category: "dev",
+    image: "../../images/projects/image1.png",
+    description:
+      "A user-friendly interface that allows consumers to search for medications, including prescription and over-the-counter drugs, by name, condition, or symptom.",
+  },
+  
   {
     id: "8",
     projectName: " SearchEngine Optimization",
@@ -78,12 +87,5 @@ export const ProjectData = [
     image: "../../images/projects/image1.png",
     description: "",
   },
-  {
-    id: "11",
-    projectName: "SpiritualRead",
-    category: "dev",
-    image: "../../images/projects/11.png",
-    description:
-      "spiritualRead is a mobile app that offers a convenient way for book lovers to explore and discover new books across a wide range of categories.",
-  },
+
 ];

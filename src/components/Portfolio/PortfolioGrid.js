@@ -10,8 +10,10 @@ const portfolioGrid = () => {
      <h1 className=" col-md-11 col-sm-12">
         Recent Works 
       </h1>
-      <Link to="/projects" className="  col-sm-2 col-md-1 text-white nav-link  mt-3    ">
-        See more
+      <Link to="/projects" className=" btn col-sm-2 col-md-1 text-white nav-link  mt-3    ">
+      <h5>
+      See more
+        </h5> 
       </Link>
      </div>
      

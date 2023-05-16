@@ -29,8 +29,8 @@ const ProjCard = ({ projectName, projcat, id, image, projdesc }) => {
           }}
           className=" d-flex justify-content-center col-sm-6 col-md-4 col-lg-4 "
           style={{
-            border: "1px solid white",
-            padding: "2px",
+            border: " solid white",
+            padding: "1px",
             textDecoration: "none",
             color: "white",
             borderRadius: "20%",
