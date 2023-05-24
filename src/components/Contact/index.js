@@ -143,7 +143,7 @@ const ContactForm = () => {
           </form>
         </div>
         <div className="col-md-4 col-sm-12 mt-5 ">
-          <a href="mirosh.me "className="card-body link  d-flex align-items-center c-detail bg-dark rounded p-2 ">
+          <a href="https://goo.gl/maps/y414JL98TXvb6FWZ6"className="card-body link  d-flex align-items-center c-detail bg-dark rounded p-2 ">
               <CiLocationOn
                 className=" text-orange col-4 "
                 size={50}

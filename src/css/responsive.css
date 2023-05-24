@@ -89,6 +89,7 @@
   #code_src{
     display: none;
   }
+
   .dot,
   .ring {
     display: none;
@@ -165,7 +166,7 @@
     height: 500px;
   }
   .mouse {
-    margin-top: 5%;
+    margin-top: 3%;
   }
   .badges {
     margin-top: -10%;

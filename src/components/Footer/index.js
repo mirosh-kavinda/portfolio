@@ -73,7 +73,7 @@ const Footer = () => {
                   <BsArrowUpSquare className="mx-2 link" size={35} />
                 </p>
               </div>
-              <p className=" footer-head col-md-5 col-sm-3  ">
+              <p className=" footer-head  col-md-5 col-sm-3 ">
                 <AiOutlineCopyright />
                 2023 Alright reserved for @mirosh_kavinda  <a href="https://github.com/mirosh-kavinda/portfolio" id="code_src"> || Source Code </a>
               </p>

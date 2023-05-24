@@ -22,13 +22,16 @@ export default function App() {
   return (
     <>
       {loading ? (
+        <div className="App">
+
         <Spinner />
+        </div>
       ) : (
         <div>
-          f
+          
           <DotRing />
           <Navbar />
-          <div className="App ">
+          <div className="loading ">
             <Routes>
               <Route exact path="/" id="home" element={<Home />}></Route>
               <Route path="/aboutme" id="contact" element={<AboutMe />}></Route>

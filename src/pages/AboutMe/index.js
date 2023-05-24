@@ -6,14 +6,13 @@ import History from "../../components/Aboutme/History";
 export default function AboutMe() {
   return (
     <>
-      <h1 className="mt-5 d-flex justify-content-center">Who Am I ?</h1>
-
+      <h1 className="mt-5 pt-5  text-center">Who Am I ?</h1>
       <div className="  row  d-flex justify-content-center ">
         <div className=" col-md-10 col-sm-12  ">
           <div className="row">
             <br />
-            <div className="  mt-5  col-sm-12 col-md-8">
-              <h5 className="mt-4 mx-4">
+            <div className="  mt-5 text col-sm-12 col-md-8">
+              <p className="mt-4 mx-4">
                 Mirosh kavinda is a Software Engineering undergraduate at the
                 Cinec Campus . . He describes himself as outgoing, dedicated,
                 and open-minded. He is the vice president of Tech Strike Club in
@@ -25,7 +24,7 @@ export default function AboutMe() {
                 Development, DevOps, Cloud Architecture . He gets across to
                 people and adjust to changes with ease and he loves volunteering
                 and helping other people through technology.
-              </h5>
+              </p>
             </div>
             <div className=" mt-5 p-4  container col-sm-12 col-md-3">
               <img
@@ -135,8 +134,8 @@ export default function AboutMe() {
         </div>
 
         <br />
-        <div className="row mx-5">
-          <p className="col-md-6 text-end col-sm-12 ">
+        <div className="row ">
+          <p className="text-end col-md-6  col-sm-12 ">
             <a href="https://github.com/mirosh-kavinda/github-readme-streak-stats">
               <img
                 title="🔥 Get streak stats for your profile at git.io/streak-stats"
@@ -145,26 +144,25 @@ export default function AboutMe() {
               />
             </a>
           </p>  
-          <p className="col-md-6 text-start col-sm-12">
+          <div className="col-md-6 col-sm-12">
             <a href="https://github.com/mirosh-kavinda/github-readme-stats">
               <img
                 alt="mirosh-kavinda's Github Stats"
                 src="https://github-readme-stats.vercel.app/api?username=mirosh-kavinda&show_icons=true&count_private=true&theme=slateorange&background=000000"
               />
             </a>
-          </p>
+          </div>
           <iframe
-            className="text-end col-md-12 col-sm-12 graph"
+            className="col-md-12 col-sm-12 graph"
             height="300"
-            width="80%"
+        
             title="Mirosh's Activity Graph"
-            src="https://github-readme-activity-graph.cyclic.app/graph?username=mirosh-kavinda&theme=xcode"
+            src="https://github-readme-activity-graph.vercel.app/graph?username=mirosh-kavinda&theme=xcode"
             frameborder="0"
           ></iframe>
         </div>
 
-        
-        
+  
       
       </div>
       <br />

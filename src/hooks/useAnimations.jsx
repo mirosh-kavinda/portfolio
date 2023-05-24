@@ -26,7 +26,7 @@ export default function useAnimations() {
     });
     setTimeout(() => {
       setLoading(false);
-    }, 1300);
+    }, 2000);
   }, []);
 
   return { loading };
