@@ -124,7 +124,7 @@ export default function AboutMe() {
           </h1>
           <a
             href="https://github.com/mirosh-kavinda"
-            className="   download  mt-5 nav-link  col-sm-7 col-md-2 "
+            className="   download   nav-link  col-sm-7 col-md-2 "
           >
             View More
             <span>
@@ -133,42 +133,38 @@ export default function AboutMe() {
           </a>
         </div>
 
-        <br />
-        <div className="row ">
-          <p className="text-end col-md-6  col-sm-12 ">
-            <a href="https://github.com/mirosh-kavinda/github-readme-streak-stats">
-              <img
-                title="🔥 Get streak stats for your profile at git.io/streak-stats"
-                alt="Mirosh's streak"
-                src="https://streak-stats.demolab.com/?user=mirosh-kavinda&theme=slateorange"
-              />
-            </a>
-          </p>  
-          <div className="col-md-6 col-sm-12">
-            <a href="https://github.com/mirosh-kavinda/github-readme-stats">
-              <img
-                alt="mirosh-kavinda's Github Stats"
-                src="https://github-readme-stats.vercel.app/api?username=mirosh-kavinda&show_icons=true&count_private=true&theme=slateorange&background=000000"
-              />
-            </a>
-          </div>
+        <div className="row mt-5 ">
+       
           <iframe
-            className="col-md-12 col-sm-12 graph"
-            height="300"
-        
+              className="col-md-6 mt-3 col-sm-12 streaks "
+              title="Mirosh's Streaks"
+              height={"200px"}
+              src="https://streak-stats.demolab.com/?user=mirosh-kavinda&theme=slateorange"
+              frameborder="0"
+            ></iframe>
+            
+            <iframe
+      
+              className="stats col-md-6 mt-3 col-sm-12"
+              title="Mirosh's Stats"
+              height={"200px"}
+              src="https://github-readme-stats.vercel.app/api?username=mirosh-kavinda&show_icons=true&count_private=true&theme=slateorange&background=000000"
+              frameborder="0"
+            ></iframe>
+     
+          <iframe
+            className="col-md-12 col-sm-12 graph mt-4"
+            height={"300px"}
             title="Mirosh's Activity Graph"
             src="https://github-readme-activity-graph.vercel.app/graph?username=mirosh-kavinda&theme=xcode"
             frameborder="0"
           ></iframe>
         </div>
-
-  
-      
       </div>
       <br />
-        <br />
+      <br />
 
-        <br />
+      <br />
     </>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
-import c from "./ShowBlog.module.css";
-import ToText from "../../utils/ToText";
+import c from "../../css/ShowBlog.module.css";
+import ToText from "./ToText";
 import moment from "moment";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.aa6d7023.css",
-    "main.js": "/static/js/main.c64b4e28.js",
+    "main.css": "/static/css/main.a92178c3.css",
+    "main.js": "/static/js/main.e4d3df4f.js",
     "static/js/128.49cc89b6.chunk.js": "/static/js/128.49cc89b6.chunk.js",
     "static/js/995.d2498b95.chunk.js": "/static/js/995.d2498b95.chunk.js",
     "static/js/362.0766797c.chunk.js": "/static/js/362.0766797c.chunk.js",
@@ -11,10 +11,10 @@
     "static/media/18.png": "/static/media/18.e2ebc758305acdc71859.png",
     "static/media/19.png": "/static/media/19.65c6580f46eab20118b9.png",
     "static/media/17.png": "/static/media/17.9505f7b8c5e185bd4cfc.png",
-    "static/media/landing-large.jpg": "/static/media/landing-large.2c257a43ad1d821e795b.jpg",
     "static/media/2.png": "/static/media/2.57642242ae212e98e9b1.png",
     "static/media/16.png": "/static/media/16.bf743bde462b973ff33d.png",
     "static/media/Slide10.PNG": "/static/media/Slide10.4121ba94f37955d9f5f0.PNG",
+    "static/media/landing-large.jpg": "/static/media/landing-large.f9785d4ada3fc0a1d294.jpg",
     "static/media/12.png": "/static/media/12.3c2530bf1b7f51fecefc.png",
     "static/media/Slide19.PNG": "/static/media/Slide19.0422bb657abae0f05127.PNG",
     "static/media/13.png": "/static/media/13.22cb4492dd4e44291efa.png",
@@ -22,11 +22,11 @@
     "static/media/4.png": "/static/media/4.af611a43d2fef68e628a.png",
     "static/media/8.png": "/static/media/8.d832320b8ef94114d702.png",
     "static/media/6.png": "/static/media/6.e96fdd4f6ca336f33be9.png",
-    "static/media/landing.jpg": "/static/media/landing.3f3291d85f6d447af417.jpg",
     "static/media/3.png": "/static/media/3.f1f62b06ff10820cc001.png",
     "static/media/Slide13.PNG": "/static/media/Slide13.6d3aa5ceb75570d32335.PNG",
     "static/media/Slide24.PNG": "/static/media/Slide24.08652f56bd08b721ae1c.PNG",
     "static/media/Slide2.PNG": "/static/media/Slide2.1f9e63e8bbf3fe9d3eb2.PNG",
+    "static/media/landing.jpg": "/static/media/landing.1acc757ef99b4da286bc.jpg",
     "static/media/Slide21.PNG": "/static/media/Slide21.37210082e8b55515e82c.PNG",
     "static/media/Slide9.PNG": "/static/media/Slide9.a5012d875c978a009d3e.PNG",
     "static/media/10.png": "/static/media/10.e245957e7e3046d0b2b6.png",
@@ -41,9 +41,8 @@
     "static/media/Slide8.PNG": "/static/media/Slide8.e6018baf044d77ce3dba.PNG",
     "static/media/Slide7.PNG": "/static/media/Slide7.1ada90a69e09135460c1.PNG",
     "static/media/Slide16.PNG": "/static/media/Slide16.0422bb657abae0f05127.PNG",
-    "static/media/prof2.jpg": "/static/media/prof2.966b97da5628e583d536.jpg",
+    "static/media/prof2.jpg": "/static/media/prof2.ee8afe5d0ccdb4605a1a.jpg",
     "static/media/5.png": "/static/media/5.4f516c38567edfca17cc.png",
-    "static/media/prof.jpg": "/static/media/prof.b13819aa86638fe6c512.jpg",
     "static/media/Slide11.PNG": "/static/media/Slide11.69292399aa06f292d72c.PNG",
     "static/media/22.png": "/static/media/22.a221fa132a7259b8681b.png",
     "static/media/14.png": "/static/media/14.4929e353f85a728ce58b.png",
@@ -51,6 +50,7 @@
     "static/media/20.png": "/static/media/20.ac9f06453cfa5e51cefb.png",
     "static/media/Slide14.PNG": "/static/media/Slide14.6b43a4cb8e5e4f123b2b.PNG",
     "static/media/23.png": "/static/media/23.2f1d896c1c4961ffaef7.png",
+    "static/media/prof.jpg": "/static/media/prof.26d8c8fb57acda5fd44a.jpg",
     "static/media/24.png": "/static/media/24.d90a4f48435b9c67a30f.png",
     "static/media/15.png": "/static/media/15.076aca8dc5084366da9b.png",
     "static/media/Slide26.PNG": "/static/media/Slide26.96971ebc8686e248ac51.PNG",
@@ -72,11 +72,11 @@
     "static/media/MedMap.md": "/static/media/MedMap.72c2d77aeea70de72a92.md",
     "static/media/work.svg": "/static/media/work.3710b62484ed638074240e99317c6c60.svg",
     "static/media/HappyFunc.md": "/static/media/HappyFunc.474d445475ad79b9c30e.md",
-    "main.aa6d7023.css.map": "/static/css/main.aa6d7023.css.map",
-    "main.c64b4e28.js.map": "/static/js/main.c64b4e28.js.map"
+    "main.a92178c3.css.map": "/static/css/main.a92178c3.css.map",
+    "main.e4d3df4f.js.map": "/static/js/main.e4d3df4f.js.map"
   },
   "entrypoints": [
-    "static/css/main.aa6d7023.css",
-    "static/js/main.c64b4e28.js"
+    "static/css/main.a92178c3.css",
+    "static/js/main.e4d3df4f.js"
   ]
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import brandImg from "./brand.png";
+import brandImg from "../../images/brand.png";
 import { Link } from "react-router-dom";
 import "../../css/index.css";
 

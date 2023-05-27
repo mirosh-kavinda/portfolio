@@ -12,9 +12,14 @@
   #code_src{
     display: none;
   }
+
 .graph{
-  height: 100;
-  
+  height:200px;
+
+}
+
+.streaks,.stats{
+  height: 170px;
 
 }
   .header{
