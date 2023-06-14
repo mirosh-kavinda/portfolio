@@ -10,7 +10,7 @@ I am proud of the work I did on this project, and I am excited to show it off to
 Here are some additional details that you could include in your caption:
 •	The purpose of the website
 •	The features of the website
-•	The technologies that you used
+•	The technologies that you used.
 •	The challenges that you faced and how you overcame them
 •	Your overall satisfaction with the project
 By including these details, you will give potential employers a better understanding of your skills and experience. You will also show that you are passionate about your work and that you are committed to excellence.
