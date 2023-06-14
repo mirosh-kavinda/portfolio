@@ -1,7 +1,6 @@
 
 <h1 class="center"> Portfolio React Application </h1>
 
-
 •	Medium-API for fetching data from Medium articles<br>
 •	EmailJS for email services<br>
 •	Markdown for reading markdown files<br>
@@ -14,4 +13,5 @@ Here are some additional details that you could include in your caption:<br>
 •	The challenges that you faced and how you overcame them<br>
 •	Your overall satisfaction with the project<br><br>
 By including these details, I will give potential em<br><br>ployers a better understanding of your skills and experience. You will also show that you are passionate about your work and that you are committed to excellence.
+
 
