@@ -23,14 +23,14 @@ export default function App() {
     <>
       {loading ? (
         <div className="App">
-
-        <Spinner />
+         
+          <Spinner />
         </div>
       ) : (
-        <div>
-          
+        <div className="App"> 
           <DotRing />
           <Navbar />
+         
           <div className="loading ">
             <Routes>
               <Route exact path="/" id="home" element={<Home />}></Route>
@@ -48,6 +48,7 @@ export default function App() {
               ></Route>
             </Routes>
           </div>
+
           <Footer className="footer" />
         </div>
       )}

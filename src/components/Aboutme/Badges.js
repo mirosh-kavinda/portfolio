@@ -2,11 +2,11 @@
 const Badges = () => {
   return (
     <>
-      <div className="flex gap-5 d-flex justify-content-center mt-5 ">
+      <div className="flex gap-5\ d-flex justify-content-center ">
         <h3 >
           Badges That I earned :
           <hr />
-          <span className="mt-3">
+          <span className="">
             <img
               alt="badgeimg1"
               

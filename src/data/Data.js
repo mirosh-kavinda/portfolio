@@ -28,15 +28,15 @@ export const ProjectData = [
     id: "4",
     projectName: "StudyShack",
     category: "dev",
-    image: "../../images/projects/image1.png",
+
     description:
       "Personalized online Tutoring Web application that helps  tutors to work with students one-on-one and can tailor their teaching methods to the student's learning style.",
   },
   {
-    id: "11",
+    id: "9",
     projectName: "SpiritualRead",
     category: "dev",
-    image: "../../images/projects/11.png",
+
     description:
       "spiritualRead is a mobile app that offers a convenient way for book lovers to explore and discover new books across a wide range of categories.",
   },
@@ -44,7 +44,7 @@ export const ProjectData = [
     id: "6",
     projectName: "Crafira",
     category: "dev",
-    image: "../../images/projects/image1.png",
+
     description:
       "This platform for small business owners who hadn't chance to compete with global and local market",
   },
@@ -53,7 +53,7 @@ export const ProjectData = [
     id: "7",
     projectName: "HappyFunc",
     category: "dev",
-    image: "../../images/projects/image1.png",
+
     description:
       "This Use for develop for demonstrate variety of probabilities of done things in react application (Components)",
   },
@@ -61,31 +61,17 @@ export const ProjectData = [
     id: "5",
     projectName: "MedMap",
     category: "dev",
-    image: "../../images/projects/image1.png",
+
     description:
       "A user-friendly interface that allows consumers to search for medications, including prescription and over-the-counter drugs, by name, condition, or symptom.",
   },
-  
+
   {
     id: "8",
-    projectName: " SearchEngine Optimization",
-    category: "blog",
-    image: "../../images/projects/image1.png",
-    description: "",
-  },
-  {
-    id: "9",
-    projectName: "Apache J-meter",
-    category: "blog",
-    image: "../../images/projects/image1.png",
-    description: "",
-  },
-  {
-    id: "10",
-    projectName: "How to testing using selenium tool",
-    category: "blog",
-    image: "../../images/projects/image1.png",
-    description: "",
-  },
+    projectName: "GoogleMapClone",
+    category: "dev",
 
+    description:
+      "In this project I used , tailwind CSS framework, headless UI , and React Icons ",
+  },
 ];

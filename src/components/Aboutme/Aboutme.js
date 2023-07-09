@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import image from "../../images/prof.jpg";
-
+import '../../css/responsive.css'
 const Aboutme = () => {
   return (
     <div className="row">
@@ -51,12 +51,15 @@ const Aboutme = () => {
           <h5>More About me</h5>
         </Link>
       </div>
-      <p className=" col-md-4  " align="center">
+      <p className=" col-md-4 about-img flex-d  " align="center">
         <img
           alt="this is logo"
           src={image}
-          height={"260px"}
-          className="mt-4 "
+          height = "350px"
+         id="about-img"
+
+        
+          className="mt-4 flex-d  "
         />
       </p>
     </div>

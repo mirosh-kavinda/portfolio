@@ -9,16 +9,9 @@ import {
   AiOutlineTwitter,
   AiOutlineLinkedin,
   AiOutlineGithub,
-  
 } from "react-icons/ai";
-import {
-  BsMedium
-  
-} from "react-icons/bs";
-import {
-  MdOutlineWavingHand
-  
-} from "react-icons/md";
+import { BsMedium } from "react-icons/bs";
+import { MdOutlineWavingHand } from "react-icons/md";
 import ContactForm from "../../components/Contact";
 import Badges from "../../components/Aboutme/Badges";
 import BriefType from "../../components/Aboutme/BriefType";
@@ -27,15 +20,13 @@ class Home extends React.Component {
   render() {
     const saveFile = () => {
       fileSaver.saveAs(
-       
-        "https://drive.google.com/uc?export=download&id=1OciuxWz2Vgx3RSGOA-SZuQrHA3s-rW3S",
+        "https://drive.google.com/uc?export=download&id=13f8XpuT9hoJb-tbgE_4XJNXyd_OyeboO",
         "Mirosh_kavinda_resume.pdf"
       );
     };
 
-
     return (
-      <>
+      <>cnv1.style.zIndex = "2";
         <div className="home" id="home">
           <div className="header ">
             <div className="row ">
@@ -57,9 +48,9 @@ class Home extends React.Component {
                   Full Stack Developer | Software Engineer
                 </h5>
                 <h6 data-aos="fade-down" className="col-9">
-                  I design and develop stylish, modern websites, web services for customers of all sizes. I have a proven
-                  track record of success in creating user-friendly and engaging
-                  websites .
+                  I design and develop stylish, modern websites, web services
+                  for customers of all sizes. I have a proven track record of
+                  success in creating user-friendly and engaging websites .
                 </h6>
               </div>
               <div
@@ -76,28 +67,27 @@ class Home extends React.Component {
               className="mt-5 ms-5"
               data-aos="fade-down"
               data-wow-delay="0.2s"
-            >   
-            
-             <a href="https://medium.com/@kavindahgm">
-            <BsMedium
-              className=" mx-2  bg-dark rounded link text-white "
-              size={40}
-            />
-          </a>
-          <a href="https://clubhouse.com/@miroshkavinda">
-            <MdOutlineWavingHand
-              className="mx-2   bg-dark rounded link text-white "
-              size={40}
-            />
-          </a>
-              
+            >
+              <a href="https://medium.com/@kavindahgm">
+                <BsMedium
+                  className=" mx-2  bg-dark rounded link text-white "
+                  size={40}
+                />
+              </a>
+              <a href="https://clubhouse.com/@miroshkavinda">
+                <MdOutlineWavingHand
+                  className="mx-2   bg-dark rounded link text-white "
+                  size={40}
+                />
+              </a>
+
               <a href="https://www.youtube.com/channel/UCyh9fiUradbIUVCde2N6oYg ">
                 <AiOutlineYoutube
                   className="mx-2  bg-dark rounded link text-white "
                   size={40}
                 />
               </a>
-          
+
               <a href="https://www.twitter.com/mirosh_kavinda/">
                 <AiOutlineTwitter
                   className="mx-2 bg-dark rounded link text-white "
@@ -128,7 +118,9 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-
+        <div className="proj ">
+          <PortfolioGrid />
+        </div>
         <div className="aboutme ">
           <Aboutme />
         </div>
@@ -136,11 +128,6 @@ class Home extends React.Component {
         <div className="badges">
           <Badges />
         </div>
-
-        <div className="proj ">
-          <PortfolioGrid />
-        </div>
- 
 
         <div className="mt-5">
           <ContactForm className="contactme" />

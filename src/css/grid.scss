@@ -112,7 +112,7 @@ h2{display: none;}
 .five{background-image: url('../images/projects/ProjCardView/2.png');width: cover;background-size: 90%; background-position:center;background-repeat:no-repeat;background-color:#464646}
 .three{background-image: url('../images/projects/ProjCardView/3.png');width: cover;background-size: 68%; background-position:center;background-repeat:no-repeat;background-color:#716767}
 .one{background-image: url('../images/projects/ProjCardView/4.png');width: cover;background-size: 65%; background-position:center;background-repeat:no-repeat;background-color:#663399}
-.two{background-image: url('../images/projects/ProjCardView/11.png');width: cover;background-size: 100%; background-position:center;background-repeat:no-repeat;background-color:#27332E}
+.two{background-image: url('../images/projects/ProjCardView/9.png');width: cover;background-size: 100%; background-position:center;background-repeat:no-repeat;background-color:#27332E}
 .six{background-image: url('../images/projects/ProjCardView/6.png');width: cover; background-size: 40%; background-position:center;background-repeat:no-repeat;background-color:#448590    }
 .two,.one,.three,.four ,.five,.six{
   &::before {
@@ -124,6 +124,7 @@ h2{display: none;}
     top: 0;
     right: 0;
     bottom: 0;
+    border-radius: 30px;
     left: 0;
     transition: all ease-in-out 300ms;
     z-index: -1;
@@ -146,7 +147,7 @@ h2{display: none;}
     
     }
     .portfolio-item{
-      border-radius: 10px!important;
+      border-radius: 10px !important;
     }
     
   .one{

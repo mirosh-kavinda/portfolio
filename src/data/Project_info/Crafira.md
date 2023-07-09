@@ -8,7 +8,7 @@
 <br />
 
 
-<img align-center classname="img-fluid"src="https://user-images.githubusercontent.com/74175084/199441078-c35b39a0-ffdc-4571-9ec2-96ce39ada5ab.gif"/>
+<img align-center classname="img-fluid  ps-5 ms-5 w-full"  src="https://user-images.githubusercontent.com/74175084/199441078-c35b39a0-ffdc-4571-9ec2-96ce39ada5ab.gif"/>
 
 
 <br>

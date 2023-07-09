@@ -143,35 +143,35 @@ const ContactForm = () => {
           </form>
         </div>
         <div className="col-md-4 col-sm-12 mt-5 ">
-          <a href="https://goo.gl/maps/y414JL98TXvb6FWZ6"className="card-body link  d-flex align-items-center c-detail bg-dark rounded p-2 ">
-              <CiLocationOn
-                className=" text-orange col-4 "
-                size={50}
-              />
-     
-            <div className="col-8">
-              
-              <p className="" >
-               No : 81/5, 
-               5th cross Road, 
-               Weragampita,
-               Matara.
-              </p>
-            </div>
+          <div className="row">
+          <a
+            href="https://goo.gl/maps/y414JL98TXvb6FWZ6"
+            className=" link bg-dark rounded p-2 col-2 "
+          >
+            <CiLocationOn  size={40} />
+
+    
           </a>
-          <a href="https://wa.me/94713531809"className="card-body d-flex align-items-center link c-detail bg-dark rounded p-2">
-           
-              <BsFillTelephoneFill
-                className="  col-4 "
-                size={40}
-        />
-            <div className="col-8">
+          <div className="col-6 ">
               <p className="">
-               +94713531809
-               <br/>(Whatsapp )
+                No : 81/5, 5th cross Road, Weragampita, Matara.
               </p>
             </div>
-          </a>
+          </div>
+         
+          <div className="row mt-2">
+            <a
+              href="https://wa.me/94713531809"
+              className=" link bg-dark rounded p-2 pt-3 col-2"
+            >
+              <BsFillTelephoneFill size={30} />
+            </a>
+            <p className="col-6">
+              +94713531809
+              <br />
+              (Whatsapp )
+            </p>
+          </div>
         </div>
       </div>
 

@@ -10,27 +10,23 @@ html {
   scrollbar-width: none; /* Firefox */
   overflow-x: hidden;
   scroll-behavior: smooth;
-
 }
+.App {
 
-  
-
-#handellers{
+  z-index: 1000000;
+}
+#handellers {
   margin-top: 50%;
 }
 ::-webkit-scrollbar {
   display: none;
   overflow: hidden;
 }
-#heading{
+#heading {
   margin-top: 25%;
   font-size: 8px;
   letter-spacing: 0em;
 }
-
-
-
-
 
 /* cursor styles  */
 .ring {
@@ -47,12 +43,11 @@ html {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
   will-change: width, height, transform, border;
-  z-index: 10000;
+  z-index: 10000000;
   pointer-events: none;
 }
-.context{
- margin-top:10%;
-
+.context {
+  margin-top: 10%;
 }
 
 .imageav {
@@ -68,18 +63,17 @@ html {
   background-color: rgb(255, 255, 255);
   border-radius: 100%;
   transform: translate(-50%, -50%);
-  z-index: 10000;
+  z-index: 10000000;
   pointer-events: none;
 }
-.link{
-
+.link {
   text-decoration: none;
 }
-.navbar-brand:hover ,.link:hover{
+.navbar-brand:hover,
+.link:hover {
   border: 1px solid #e3874f;
   color: #e3874f;
   text-decoration: none;
-
 }
 .message {
   position: relative;
@@ -87,7 +81,8 @@ html {
   height: 30%;
   z-index: 1000000;
 }
-.nav-link ,.link{
+.nav-link,
+.link {
   color: rgb(193, 193, 193);
   font-size: larger;
   cursor: none;
@@ -102,7 +97,7 @@ a:hover {
 
 /* home page styles */
 .home {
-position: relative;
+  position: relative;
 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -112,29 +107,25 @@ position: relative;
 
   background-blend-mode: screen;
   display: flex;
-
-
 }
-.proj{
+.proj {
   position: relative;
 }
 .header {
-
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.508);
- 
 }
-.loading{}
+.loading {
+}
 .briefElement {
   background-color: rgba(0, 0, 0, 0.585);
 }
-.brieftype{
+.brieftype {
   margin-top: 200px;
 }
 
 .para {
-
   font-weight: 500;
   font-style: normal;
   font-size: 28px;
@@ -146,18 +137,25 @@ position: relative;
   color: #e48951 !important;
 }
 
+.navbar {
+  z-index: 100000;
+}
 
+.about-img {
+  width: 50px;
+  height: 50px;
+}
 .aboutme {
   position: relative;
-  height: 700px;
+  height: 650px;
   padding: 6%;
   width: cover;
 }
 
-.formInput{
+.formInput {
   background-color: black;
   color: white;
   text-decoration-color: white;
-  border:white 1px solid;
-text-decoration-color: #ffffff;
+  border: white 1px solid;
+  text-decoration-color: #ffffff;
 }

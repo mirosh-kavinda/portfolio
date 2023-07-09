@@ -5,16 +5,18 @@ import Blog from '../../components/Blog/Blog';
 const Projects = () => {
   return (
     <>
+      
+      <div class="fixed-top " >
       <br />
-      <nav className="mt-5 ">
+      <nav className="mt-5 bg-black">
         <div
-          className="nav  justify-content-center"
+          className="nav  justify-content-center "
           id="nav-tab"
           role="tablist"
         >
           <a
             href="#4"
-            className="nav-link active"
+            className="nav-link active btn"
             id="nav-home-tab"
             data-bs-toggle="tab"
             data-bs-target="#nav-home"
@@ -26,7 +28,7 @@ const Projects = () => {
           </a>
           <a
             href="#4"
-            className="nav-link"
+            className="nav-link  btn"
             id="nav-profile-tab"
             data-bs-toggle="tab"
             data-bs-target="#nav-profile"
@@ -38,7 +40,7 @@ const Projects = () => {
           </a>
           <a
             href="#4"
-            className="nav-link"
+            className="nav-link  btn"
             id="nav-contact-tab"
             data-bs-toggle="tab"
             data-bs-target="#nav-contact"
@@ -46,11 +48,17 @@ const Projects = () => {
             aria-controls="nav-contact"
             aria-selected="false"
           >
-            Blogs
+            Writings
           </a>
         </div>
       </nav>
+
+      </div>
+
       <div className="tab-content mt-5 gap-4" id="nav-tabContent">
+      <br />
+          <br />
+          <br />
         <div
           className="tab-pane fade show active"
           id="nav-home"
