@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3fec2b30.css",
-    "main.js": "/static/js/main.6528da5a.js",
+    "main.css": "/static/css/main.8d11b4c3.css",
+    "main.js": "/static/js/main.3a332399.js",
     "static/js/102.904a3fe0.chunk.js": "/static/js/102.904a3fe0.chunk.js",
     "static/js/263.469555cf.chunk.js": "/static/js/263.469555cf.chunk.js",
     "static/js/78.856a7f2a.chunk.js": "/static/js/78.856a7f2a.chunk.js",
@@ -44,7 +44,6 @@
     "static/media/Slide20.PNG": "/static/media/Slide20.2ab0efc4a74cfd8d9ac1.PNG",
     "static/media/Slide22.PNG": "/static/media/Slide22.577cec7f4bc64e49b367.PNG",
     "static/media/Slide8.PNG": "/static/media/Slide8.e6018baf044d77ce3dba.PNG",
-    "static/media/prof.jpg": "/static/media/prof.59c5f8cddb428d441a8e.jpg",
     "static/media/Slide7.PNG": "/static/media/Slide7.1ada90a69e09135460c1.PNG",
     "static/media/Slide16.PNG": "/static/media/Slide16.0422bb657abae0f05127.PNG",
     "static/media/prof2.jpg": "/static/media/prof2.ee8afe5d0ccdb4605a1a.jpg",
@@ -79,11 +78,11 @@
     "static/media/MedMap.md": "/static/media/MedMap.72c2d77aeea70de72a92.md",
     "static/media/Countmein.md": "/static/media/Countmein.8c5bc99ef82b2964307e.md",
     "static/media/work.svg": "/static/media/work.3710b62484ed638074240e99317c6c60.svg",
-    "main.3fec2b30.css.map": "/static/css/main.3fec2b30.css.map",
-    "main.6528da5a.js.map": "/static/js/main.6528da5a.js.map"
+    "main.8d11b4c3.css.map": "/static/css/main.8d11b4c3.css.map",
+    "main.3a332399.js.map": "/static/js/main.3a332399.js.map"
   },
   "entrypoints": [
-    "static/css/main.3fec2b30.css",
-    "static/js/main.6528da5a.js"
+    "static/css/main.8d11b4c3.css",
+    "static/js/main.3a332399.js"
   ]
 }
