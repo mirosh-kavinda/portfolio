@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.91f98c31.css",
-    "main.js": "/static/js/main.8f49e6af.js",
+    "main.css": "/static/css/main.3fec2b30.css",
+    "main.js": "/static/js/main.6528da5a.js",
     "static/js/102.904a3fe0.chunk.js": "/static/js/102.904a3fe0.chunk.js",
     "static/js/263.469555cf.chunk.js": "/static/js/263.469555cf.chunk.js",
     "static/js/78.856a7f2a.chunk.js": "/static/js/78.856a7f2a.chunk.js",
@@ -11,6 +11,7 @@
     "static/js/50.a781d257.chunk.js": "/static/js/50.a781d257.chunk.js",
     "static/js/70.e1990eea.chunk.js": "/static/js/70.e1990eea.chunk.js",
     "static/media/crafira.gif": "/static/media/crafira.5be794ba82d39df4c559.gif",
+    "static/media/spin-back.gif": "/static/media/spin-back.a03a3d1e9f452a7a0179.gif",
     "static/media/11.png": "/static/media/11.44481655da4d322541fe.png",
     "static/media/18.png": "/static/media/18.e2ebc758305acdc71859.png",
     "static/media/19.png": "/static/media/19.65c6580f46eab20118b9.png",
@@ -19,6 +20,7 @@
     "static/media/16.png": "/static/media/16.bf743bde462b973ff33d.png",
     "static/media/8.png": "/static/media/8.6302d06910699110d84c.png",
     "static/media/Slide10.PNG": "/static/media/Slide10.4121ba94f37955d9f5f0.PNG",
+    "static/media/5.png": "/static/media/5.4f516c38567edfca17cc.png",
     "static/media/landing-large.jpg": "/static/media/landing-large.f9785d4ada3fc0a1d294.jpg",
     "static/media/12.png": "/static/media/12.3c2530bf1b7f51fecefc.png",
     "static/media/Slide19.PNG": "/static/media/Slide19.0422bb657abae0f05127.PNG",
@@ -46,7 +48,6 @@
     "static/media/Slide7.PNG": "/static/media/Slide7.1ada90a69e09135460c1.PNG",
     "static/media/Slide16.PNG": "/static/media/Slide16.0422bb657abae0f05127.PNG",
     "static/media/prof2.jpg": "/static/media/prof2.ee8afe5d0ccdb4605a1a.jpg",
-    "static/media/5.png": "/static/media/5.4f516c38567edfca17cc.png",
     "static/media/Slide11.PNG": "/static/media/Slide11.69292399aa06f292d72c.PNG",
     "static/media/22.png": "/static/media/22.a221fa132a7259b8681b.png",
     "static/media/14.png": "/static/media/14.4929e353f85a728ce58b.png",
@@ -78,11 +79,11 @@
     "static/media/MedMap.md": "/static/media/MedMap.72c2d77aeea70de72a92.md",
     "static/media/Countmein.md": "/static/media/Countmein.8c5bc99ef82b2964307e.md",
     "static/media/work.svg": "/static/media/work.3710b62484ed638074240e99317c6c60.svg",
-    "main.91f98c31.css.map": "/static/css/main.91f98c31.css.map",
-    "main.8f49e6af.js.map": "/static/js/main.8f49e6af.js.map"
+    "main.3fec2b30.css.map": "/static/css/main.3fec2b30.css.map",
+    "main.6528da5a.js.map": "/static/js/main.6528da5a.js.map"
   },
   "entrypoints": [
-    "static/css/main.91f98c31.css",
-    "static/js/main.8f49e6af.js"
+    "static/css/main.3fec2b30.css",
+    "static/js/main.6528da5a.js"
   ]
 }
