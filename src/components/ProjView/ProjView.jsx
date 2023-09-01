@@ -34,7 +34,7 @@ const ProjView = () => {
       break;
     case "2":
       images = importAll(
-        require.context("../../images/projects/3/",true, /\.(PNG|jpe?g|png)$/)
+        require.context("../../images/projects/3/", true, /\.(PNG|jpe?g|png)$/)
       );
       break;
     case "3":
@@ -48,7 +48,7 @@ const ProjView = () => {
 
   return (
     <>
-      <div className="container mt-5 pt-4 " data-aos="fade-up">
+      <div className="container mt-5 pt-4 ">
         <div onClick={() => navigate(-1)} className=" nav-link mt-3">
           Back
         </div>
@@ -59,8 +59,6 @@ const ProjView = () => {
           images.map((image) => {
             return (
               <img
-                data-aos="fade-up"
-                
                 className=" img-fluid  mb-1 "
                 src={image}
                 width="100%"
@@ -68,18 +66,9 @@ const ProjView = () => {
               />
             );
           })}
-          
-        {projCat === "dev" && (
-         
-            <Markdown>{post}</Markdown>
-        
-        )}
-      {projCat === "blog1" && (
-         
-         <Markdown>{post}</Markdown>
-     
-     )}
-  
+
+        {projCat === "dev" && <Markdown>{post}</Markdown>}
+        {projCat === "blog1" && <Markdown>{post}</Markdown>}
       </div>
     </>
   );

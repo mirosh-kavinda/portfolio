@@ -53,11 +53,12 @@ const ContactForm = () => {
   };
 
   return (
-    <div className=" text-center container">
+    <div className=" text-center ">
       <h1> Contact Me</h1>
-      <div className=" row text-center mt-3 ">
-        <br />
-        <div className="col-md-8 col-sm-12 ">
+     <hr/>
+      <div className=" row   text-center mt-3 d-flex justify-content-center">
+        
+        <div className="col-md-6 col-sm-12 ">
           <form onSubmit={handleSubmit(onSubmit)} noValidate>
             <div className="form-row mt-5 mb-2 mx-4 ">
               <input
@@ -142,8 +143,8 @@ const ContactForm = () => {
             </div>
           </form>
         </div>
-        <div className="col-md-4 col-sm-12 mt-5 ">
-          <div className="row">
+        <div className="col-md-4 col-sm-12 mt-5  ">
+          <div className="row ms-5">
           <a
             href="https://goo.gl/maps/y414JL98TXvb6FWZ6"
             className=" link bg-dark rounded p-2 col-2 "
@@ -152,14 +153,14 @@ const ContactForm = () => {
 
     
           </a>
-          <div className="col-6 ">
+          <div className="col-6  ">
               <p className="">
                 No : 81/5, 5th cross Road, Weragampita, Matara.
               </p>
             </div>
           </div>
          
-          <div className="row mt-2">
+          <div className="row mt-2 ms-5">
             <a
               href="https://wa.me/94713531809"
               className=" link bg-dark rounded p-2 pt-3 col-2"

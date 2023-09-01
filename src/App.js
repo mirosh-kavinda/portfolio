@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/index";
 import Footer from "./components/Footer/index";
@@ -7,30 +7,23 @@ import AboutMe from "./pages/AboutMe";
 import Projects from "./pages/Projects";
 import DotRing from "./components/DotRing";
 import ProjView from "./components/ProjView/ProjView";
-import "aos/dist/aos.css";
+
 import useAnimations from "./hooks/useAnimations";
 import Spinner from "./components/Spinner/Spinner";
 
 export default function App() {
   const { loading } = useAnimations();
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }, []);
+
   return (
     <>
       {loading ? (
         <div className="App">
-         
           <Spinner />
         </div>
       ) : (
-        <div className="App"> 
+        <div className="App">
           <DotRing />
           <Navbar />
-         
           <div className="loading ">
             <Routes>
               <Route exact path="/" id="home" element={<Home />}></Route>

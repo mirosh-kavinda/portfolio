@@ -1,3 +1,18 @@
+export const BioData = [
+  {
+    name: "Mirosh Kavinda",
+    description: `  I am Mirosh Kavinda, a Full stack developing intern  with a passion for User
+    Empathized Design. Through my work I am excited to share my projects and
+    experiences with you and to collaborate on new and exciting
+    opportunities.`,
+    birth: "29th April",
+    age: "24 y/o",
+    address: "Matara, Sri Lanka.",
+    campus: "Cinec Campus, Malabe.",
+    email: "kavindahgm@gmail.com",
+  },
+];
+
 export const ProjectData = [
   {
     id: "1",

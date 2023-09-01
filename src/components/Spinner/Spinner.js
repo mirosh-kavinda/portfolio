@@ -1,13 +1,19 @@
-import React from 'react';
+import React from "react";
 
-import classes from './Spinner.module.css';
+import loading from "./spin-back.gif";
 
-const Spinner = () => (
-    <div className={classes.center}>
-    <div className={classes.Spinnerborder}></div>
-    <h2>Loading ...</h2>
-
+const Spinner = () => {
+  return (
+    <div class="container">
+      <img
+        img
+        src={loading}
+        alt="cur"
+        class="center-loading"
+       
+      />
     </div>
-);
+  );
+};
 
 export default Spinner;

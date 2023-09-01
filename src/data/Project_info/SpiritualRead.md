@@ -1,4 +1,5 @@
-# Your Ultimate Reading Companion <br>
+# SpiritualRead
+## Your Ultimate Reading Companion <br>
 spiritualRead is a mobile app that offers a convenient way for book lovers to explore and discover new books across a wide range of categories. With our easy-to-use interface and powerful features, you can quickly find and download your favorite books, and add them to your personal library for easy access anytime, anywhere.<br>
 <h5>UI DESIGN :  https://www.figma.com/file/u1UDfPreINPbDsbZyFt2H8/spiritualread?node-id=267%3A990&t=UOqbt8CyhNh5JNIg-1 </h5> 
 Releases : Version 1

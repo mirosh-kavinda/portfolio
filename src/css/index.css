@@ -10,9 +10,31 @@ html {
   scrollbar-width: none; /* Firefox */
   overflow-x: hidden;
   scroll-behavior: smooth;
+  align-items: center;
 }
-.App {
 
+hr {
+  border: none;
+  height: 30px;
+  height: 50px;
+
+  border-bottom: 2px solid #ffffff;
+  box-shadow: 0 20px 20px -18px #fefefe;
+}
+
+.center-loading {
+  text-align: center;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: auto;
+  height: 200px;
+  width: 200px;
+  margin-top: 30vh;
+}
+
+.App {
   z-index: 1000000;
 }
 #handellers {

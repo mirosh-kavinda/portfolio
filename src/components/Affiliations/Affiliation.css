@@ -1,0 +1,24 @@
+.carousel-inner img {
+    width: 100%
+}
+.carousel-item img {
+    width: 520px;
+    height: 440px !important
+}
+#myCarousel .carousel-indicators {
+    position: static;
+    margin-top: 0px
+}
+#myCarousel .carousel-indicators li {
+    width: 100px
+}
+#myCarousel .carousel-indicators li img {
+    display: block;
+    opacity: 0.5
+}
+#myCarousel .carousel-indicators li.active img {
+    opacity: 1
+}
+#myCarousel .carousel-indicators li:hover img {
+    opacity: 0.75
+}
