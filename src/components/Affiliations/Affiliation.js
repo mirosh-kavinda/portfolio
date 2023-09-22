@@ -163,17 +163,13 @@ const Affiliation = () => {
           </div>
         </div>
       </div> */}
-      <div className="flex gap-5\ d-flex justify-content-center ">
-        <h3>
-          Badges that I earned 
-        </h3>
-      </div>
-          <hr />
-      <span className=" d-flex justify-content-center">
+
+      <hr />
+      <span className=" d-flex mt-5 justify-content-center  col-12">
         <img
           alt="badgeimg1"
           src={require("../../images/badges/1.png")}
-          className="m-1 badgeimg "
+          className="mx-4 badgeimg "
         />
         <img
           alt="badgeimg1"
@@ -183,19 +179,20 @@ const Affiliation = () => {
         <img
           alt="badgeimg1"
           src={require("../../images/badges/3.png")}
-          className="m-1 badgeimg"
+          className="mx-4 badgeimg"
         />
         <img
           alt="badgeimg1"
           src={require("../../images/badges/4.png")}
-          className="m-1 badgeimg"
+          className="mx-4 badgeimg"
         />
         <img
           alt="badgeimg1"
           src={require("../../images/badges/5.png")}
-          className="m-1 badgeimg"
+          className="mx-4 badgeimg"
         />
       </span>
+      <hr /> 
       <br />
       <br />
       <br />

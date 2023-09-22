@@ -1,18 +1,45 @@
-import React from "react";
 import brandImg from "../../images/brand.png";
 import { Link } from "react-router-dom";
-import "../../css/index.css";
+import "../../css/navbar.css";
+import { motion } from "framer-motion";
 
+import { useState } from "react";
+
+import { MenuToggle, Menu } from "../ToggleMenu/index";
+import useMenuAnimation from "../../hooks/useMenuAnimation";
+
+
+
+export const MyComponent = () => (
+  <motion.div
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.5 }}
+  />
+);
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const scope = useMenuAnimation(isOpen);
   return (
     <>
       <nav className="navbar navbar-dark bg-black navbar-expand-lg fixed-top">
-        <div className="container-md">
-          <Link className="navbar-brand nav-link is-active p-2 " to="/">
-            <img src={brandImg} alt="brand logo " />
-          </Link>
-
+        <div className="container">
+          <motion.div
+            animate={{
+              scale: [0.5, 1.3, 1],
+            }}
+            transition={{
+              ease: "linear",
+              duration: 2,
+              x: { duration: 1 },
+            }}
+          >
+            <Link className="mx-2 " to="/">
+              <img src={brandImg} alt="  " />
+            </Link>
+          </motion.div>
           <div>
             <div
               className="collapse navbar-collapse "
@@ -20,51 +47,39 @@ const Navbar = () => {
             >
               <ul className="navbar-nav  ">
                 <li>
-                  {/* <Link
-                    className="nav-link is-active exact"
-                    aria-current="page"
-                    to="/"
+                  <Link className="nav-link is-active exact mx-2 " to="/">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link className="nav-link is-active exact mx-2" to="/aboutme">
+                    AboutMe
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="nav-link is-active exact mx-2"
+                    to="/projects"
                   >
-                    Home
-                  </Link> */}
-                </li>
-                <li>
-                  <Link className="nav-link is-active exact" to="/">
-                    Home
+                    Works
                   </Link>
                 </li>
                 <li>
-                  <Link className="nav-link is-active exact" to="/aboutme">
-                    About Me
+                  <Link className="nav-link is-active exact mx-2" to="/blog">
+                    Writings
                   </Link>
                 </li>
-                <li>
-                  <Link className="nav-link is-active exact" to="/projects">
-                    My Works
-                  </Link>
-                </li>
-              
               </ul>
             </div>
           </div>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+          <div ref={scope} className="navbar-toggler">
+            <Menu  toggle={() => setIsOpen(!isOpen)}/>
+            <MenuToggle toggle={() => setIsOpen(!isOpen)} />
+          </div>
         </div>
       </nav>
-     
     </>
   );
 };
 
 export default Navbar;
-
-

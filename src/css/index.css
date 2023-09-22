@@ -1,27 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+
 
 body,
-.loading,
 html {
-  font-family: "Titillium Web", sans-serif;
+  font-family: sofia-pro, sans-serif;
+
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
   background-color: black;
   color: white;
-  cursor: none;
-  scrollbar-width: none; /* Firefox */
+
   overflow-x: hidden;
   scroll-behavior: smooth;
   align-items: center;
 }
 
-hr {
-  border: none;
-  height: 30px;
-  height: 50px;
-
-  border-bottom: 2px solid #ffffff;
-  box-shadow: 0 20px 20px -18px #fefefe;
+.loading {
+  background-color: black;
 }
-
 .center-loading {
   text-align: center;
   display: block;
@@ -55,8 +50,8 @@ hr {
   position: fixed;
   top: 0;
   left: 0;
-  width: 29px;
-  height: 29px;
+  width: 39px;
+  height: 39px;
   border: 2px solid rgba(255, 255, 255, 0.808);
   border-radius: 100%;
   transform: translate(-50%, -50%);
@@ -76,27 +71,16 @@ hr {
   width: 300px;
   height: 300px;
 }
-.dot {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 8px;
-  height: 8px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 100%;
-  transform: translate(-50%, -50%);
-  z-index: 10000000;
-  pointer-events: none;
-}
-.link {
-  text-decoration: none;
-}
+
 .navbar-brand:hover,
 .link:hover {
   border: 1px solid #e3874f;
   color: #e3874f;
   text-decoration: none;
+  cursor: pointer;
+  
 }
+
 .message {
   position: relative;
   margin-top: 6%;
@@ -107,14 +91,13 @@ hr {
 .link {
   color: rgb(193, 193, 193);
   font-size: larger;
-  cursor: none;
+  cursor: pointer;
 }
 
 img:hover,
 a:hover {
   border-bottom: #e3874f;
   color: #e48951 !important;
-  cursor: none;
 }
 
 /* home page styles */
@@ -161,6 +144,10 @@ a:hover {
 
 .navbar {
   z-index: 100000;
+  margin: 0px 3px 2px 0px;
+  border-bottom-right-radius: 30%;
+  border: none;
+  box-shadow: 0px 0px 4px 1px #e3874f;
 }
 
 .about-img {
@@ -181,3 +168,5 @@ a:hover {
   border: white 1px solid;
   text-decoration-color: #ffffff;
 }
+
+

@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import { delay, motion } from "framer-motion";
+
 import c from "../../css/ShowBlog.module.css";
 import ToText from "./ToText";
 import moment from "moment";
@@ -16,44 +18,73 @@ function withRouter(Component) {
 }
 
 function ShowBlog(props, p) {
+  const [expandIndex, setExpandIndex] = useState(false);
+
+  const handleCardHover = (index) => {
+    setExpandIndex(index === expandIndex ? -1 : index);
+    delay(3000);
+  };
+
+  const cardVariants = {
+    expanded: {
+      width: "400px",
+    },
+    collapsed: {
+      width: "300px",
+    },
+  };
   return (
-    <div className={`col-md-4 col-sm-6 col-xs-12 `}>
-      <div className="card bg-dark">
-        <div
-          className={c.cardpost__image}
-          style={{ backgroundImage: `url(${props.thumbnail})` }}
-        ></div>
-
-        <div className="card-body">
-          <h5 className="card-title text-white" align="center">
+    <motion.div
+      key={props.index}
+      className={`  p-3    col-sm-12 col-md-4  cursor-pointer h-[500px] bg-cover bg-black bg-center rounded-[30px] ${
+        props.index === expandIndex ? "expanded" : ""
+      }`}
+      variants={cardVariants}
+      initial="collapsed"
+      animate={props.index === expandIndex ? "expanded" : "collapsed"}
+      transition={{ duration: 0.5 }}
+      onHoverStart={() => handleCardHover(props.index)}
+      onHoverEnd={() => handleCardHover(props.index)}
+      onTouchStart={() => handleCardHover(props.index)}
+      onTouchEnd={() => handleCardHover(props.index)}
+    >
+      <div
+        className={c.cardpost__image}
+        style={{ backgroundImage: `url(${props.thumbnail})` }}
+      ></div>
+      <div className="card-content h-full flex flex-col justify-end">
+        <div className="card-footer rounded-b-[20px bg-dark bg-opacity-75 min-h-[10px] flex flex-col items-center justify-center">
+          <h6 className="text-xl font-semibold text-white text-center ">
             {props.title}
-          </h5>
+          </h6>
           <br />
-          <p className={c.cardText}>{`${ToText(
-            props.description.substring(0, 1000)
-          )}...`}</p>
-          <span className="text-red">
-            published : {moment(props.pubDate).format("MMM DD, YYYY hh:mm")}
-          </span>
-          <hr />
+          {props.index === expandIndex && (
+            <>
+              <p className="mt-2 text-gray-300 text-center ">{`${ToText(
+                props.description.substring(0, 500)
+              )}...`}</p>
 
-          <Link
-            to={props.link}
-            style={{
-              border:"1px solid white",
-              padding:"3px",
-              textDecoration: "none",
-              color: "white",
-              borderRadius:"20%",
-              cursor: "pointer",
-            }}
-          >
-            Read More
-          </Link>
+              <Link
+                to={props.link}
+                style={{
+                  border: "1px solid white",
+                  padding: "3px",
+                  textDecoration: "none",
+                  color: "white",
+                  borderRadius: "20%",
+                  cursor: "pointer",
+                }}
+              >
+                Read More
+              </Link>
+              <span className="ms-3 text-red">
+                published : {moment(props.pubDate).format("MMM DD, YYYY hh:mm")}
+              </span>
+            </>
+          )}
         </div>
       </div>
-      <br />
-    </div>
+    </motion.div>
   );
 }
 

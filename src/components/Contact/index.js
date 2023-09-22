@@ -55,7 +55,7 @@ const ContactForm = () => {
   return (
     <div className=" text-center ">
       <h1> Contact Me</h1>
-     <hr/>
+   
       <div className=" row   text-center mt-3 d-flex justify-content-center">
         
         <div className="col-md-6 col-sm-12 ">
@@ -134,13 +134,13 @@ const ContactForm = () => {
               {errors.message && (
                 <span className="errorMessage">Please enter a message</span>
               )}
+            </div>
               <button
-                className="d-flex justify-content-center mt-4 align-items-center btn  bg-dark link p-2 col-sm-12 col-md-12"
+                className="d-flex ms-2 col-4 justify-content-center mt-4 align-items-center btn  bg-dark link  col-md-4"
                 type="submit"
               >
                 Submit
               </button>
-            </div>
           </form>
         </div>
         <div className="col-md-4 col-sm-12 mt-5  ">

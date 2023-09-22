@@ -6,17 +6,15 @@ const portfolioGrid = () => {
   return (
     <div className="main-content ">
       <div className="row text-center mt-5">
-        <h1 className=" col-md-11 col-sm-12">Recent Works</h1>
-        <Link
+        {/* <Link
           to="/projects"
           className="  col-sm-2 col-md-1 text-white nav-link  mt-3    "
         >
           <h5>See more</h5>
-        </Link>
-        <hr />
+        </Link> */}
       </div>
 
-      <div className="portfolio ">
+      <div className="portfolio mx-2  ">
         <Link
           to="/projects/projview"
           state={{

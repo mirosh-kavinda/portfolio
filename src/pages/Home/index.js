@@ -1,6 +1,6 @@
 import React from "react";
 import PortfolioGrid from "../../components/Portfolio/PortfolioGrid";
-import "../../css/mouse.scss";
+
 
 import fileSaver from "file-saver";
 
@@ -38,74 +38,72 @@ const Home = () => {
             <div className="header ">
               <div className="row ">
                 <div
-                  className="col-md-7 white-text text-start ms-5 text-start"
+                  className="col-md-8 col-sm-12 white-text text-start ms-4 text-start"
                   id="heading"
                 >
-                  <p className="para font-weight-bold   "> Hello My name is</p>
-                  <p className="display-1 font-weight-bold     ">
-                    Mirosh Kavinda
-                  </p>
-                  <h5 className="mb-3">
-                    Full Stack Developer | Software Engineer
-                  </h5>
-                  <h6 className="col-9">
-                    I design and develop stylish, modern websites, web services
+                  <p className="display-1 font-weight-bold">Mirosh Kavinda</p>
+
+                  <h4 className="col-md-7 col-sm-12">
+                       I design and develop stylish, modern websites, web services
                     for customers of all sizes. I have a proven track record of
                     success in creating user-friendly and engaging websites .
-                  </h6>
-                </div>
-                <div className=" col-sm-12 col-md-4 p-3" id="brief">
-                  <BriefType />
+                  </h4>
+            
                 </div>
               </div>
 
-              <div align="start" className="mt-5 ms-5" data-wow-delay="0.2s">
-                <a href="https://medium.com/@kavindahgm">
+              <div align="start" className="mt-5 " >
+                <a className="mx-1 ms-3" href="https://medium.com/@kavindahgm">
                   <BsMedium
-                    className=" mx-2  bg-dark rounded link text-white "
+                    className="  rounded  link bg-dark p-1 "
                     size={40}
                   />
                 </a>
-                <a href="https://clubhouse.com/@miroshkavinda">
+                <a className="mx-1" href="https://clubhouse.com/@miroshkavinda">
                   <MdOutlineWavingHand
-                    className="mx-2   bg-dark rounded link text-white "
+                    className="rounded  link bg-dark p-1 "
                     size={40}
                   />
                 </a>
 
-                <a href="https://www.youtube.com/channel/UCyh9fiUradbIUVCde2N6oYg ">
+                <a className="mx-1" href="https://www.youtube.com/channel/UCyh9fiUradbIUVCde2N6oYg ">
                   <AiOutlineYoutube
-                    className="mx-2  bg-dark rounded link text-white "
+                    className=" rounded  link bg-dark p-1 "
                     size={40}
                   />
                 </a>
 
-                <a href="https://www.twitter.com/mirosh_kavinda/">
+                <a className="mx-1" href="https://www.twitter.com/mirosh_kavinda/">
                   <AiOutlineTwitter
-                    className="mx-2 bg-dark rounded link text-white "
+                    className=" rounded  link bg-dark p-1 "
                     size={40}
                   />
                 </a>
-                <a href="https://www.linkedin.com/in/mirosh-kavinda-988042159/">
+                <a className="mx-1" href="https://www.linkedin.com/in/mirosh-kavinda-988042159/">
                   <AiOutlineLinkedin
-                    className="mx-2 bg-dark rounded link text-white "
+                    className=" rounded  link bg-dark p-1 "
                     size={40}
                   />
                 </a>
-                <a href="https://github.com/mirosh-kavinda">
+                <a className="mx-1" href="https://github.com/mirosh-kavinda">
                   <AiOutlineGithub
-                    className="mx-2 bg-dark rounded link text-white "
+                    className=" rounded  link bg-dark p-1 "
                     size={40}
                   />
                 </a>
+                <div className="row mt-4">
+
                 <button
                   to="/projects"
-                  className="  d-flex justify-content-center mt-3 btn  link bg-dark text-white col-sm-4 col-md-2"
+                  className="  link rounded bg-dark col-md-2 col-4 "
                   onClick={saveFile}
                 >
                   Download CV
                 </button>
-                <div className="mouse" id="mouse"></div>
+                </div>
+                <div className=" col-sm-12 col-md-5 ">
+                      <BriefType />
+                    </div>
               </div>
             </div>
           </div>

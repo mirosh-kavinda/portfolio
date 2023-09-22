@@ -55,13 +55,8 @@
   .badges {
     margin-top: 0%;
   }
-  .dot,
-  .ring {
-    display: none;
-  }
-  .proj {
-    margin-top: 0;
-  }
+
+ 
   .badgeimg {
     height: 80px;
     width: 80px;
@@ -102,10 +97,7 @@
     display: none;
   }
 
-  .dot,
-  .ring {
-    display: none;
-  }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -119,18 +111,12 @@
   .home {
     background: url(../images/landing-large.jpg) no-repeat center center fixed;
   }
-  .dot,
-  .ring {
-    display: none;
-  }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .dot,
-  .ring {
-    display: block;
-  }  #code_src{
+  #code_src{
     display: inline;
   }
   #brief {

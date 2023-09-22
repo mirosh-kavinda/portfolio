@@ -1,5 +1,5 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import {React ,useEffect} from "react";
+import { Route, Routes ,useLocation} from "react-router-dom";
 import Navbar from "./components/Navbar/index";
 import Footer from "./components/Footer/index";
 import Home from "./pages/Home";
@@ -7,13 +7,17 @@ import AboutMe from "./pages/AboutMe";
 import Projects from "./pages/Projects";
 import DotRing from "./components/DotRing";
 import ProjView from "./components/ProjView/ProjView";
-
 import useAnimations from "./hooks/useAnimations";
 import Spinner from "./components/Spinner/Spinner";
+import Blog from "./pages/Blog/Blog";
 
 export default function App() {
   const { loading } = useAnimations();
+  const location = useLocation();
 
+  useEffect(() => {
+    window.scroll(0,0);
+  }, [location]);
   return (
     <>
       {loading ? (
@@ -22,7 +26,7 @@ export default function App() {
         </div>
       ) : (
         <div className="App">
-          <DotRing />
+          <DotRing style={{ zIndex: '10000000'}} />
           <Navbar />
           <div className="loading ">
             <Routes>
@@ -39,6 +43,7 @@ export default function App() {
                 id="projects"
                 element={<ProjView />}
               ></Route>
+              <Route path="/blog" element={<Blog />}></Route>
             </Routes>
           </div>
 

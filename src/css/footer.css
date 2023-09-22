@@ -1,35 +1,37 @@
 .back-to-top {
   position: fixed;
+  background-color: #222;
   bottom: 0px;
   right: 1%;
   font-size: 15px;
-  cursor: none;
-  color: rgb(255, 255, 255);
+  border-radius: 20%;
 }
-
 
 .back-to-top:hover {
   color: #e3874f;
 }
 .widget-app-container {
-  top: 10px;
+  top: 15px;
 }
 .footer {
   position: fixed;
+
+  border: none;
+  box-shadow: 1px 0px 5px 3px #e3874f;
   bottom: 0px;
-  right: 0px;
   width: 100%;
-  background: #373737;
-  box-shadow: 0 5px 5px #ccc;
-  height: 60px;
+  background: #222;
+  border-top-left-radius: 30%;
+  
+  height: 66px;
+  margin: 1px 2px 0px 1px;
 }
 .footer-head {
-  margin-top: 4px;
+  margin-top: 10px;
   font-size: large;
 }
 @media only screen and (max-width: 600px) {
-  .footer-head
-  {
-    font-size:smaller;
+  .footer-head {
+    font-size: smaller;
   }
 }
