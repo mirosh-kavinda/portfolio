@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import { delay, motion } from "framer-motion";
-
-import c from "../../css/ShowBlog.module.css";
-import ToText from "./ToText";
-import moment from "moment";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
+import moment from "moment";
 
 function withRouter(Component) {
   function ComponentWithRouterProp(props) {
@@ -17,26 +14,41 @@ function withRouter(Component) {
   return ComponentWithRouterProp;
 }
 
+function ToText(node) {
+    let tag = document.createElement("div");
+    tag.innerHTML = node;
+    node = tag.innerText;
+    return node;
+}
 function ShowBlog(props, p) {
   const [expandIndex, setExpandIndex] = useState(false);
-
+  const isMobile = window.innerWidth < 768; //Add the width you want to check for here (now 768px)
   const handleCardHover = (index) => {
-    setExpandIndex(index === expandIndex ? -1 : index);
-    delay(3000);
+    if (!isMobile) {
+      setExpandIndex(index === expandIndex ? -1 : index);
+      delay(3000);
+    }else{
+      setExpandIndex(true);
+    }
   };
 
   const cardVariants = {
     expanded: {
-      width: "400px",
+      width: "cover",
+      height:'50vh'
     },
     collapsed: {
-      width: "300px",
+      width: "50%",
+      height:"40vh"
     },
+    hide:{
+    
+    }
   };
   return (
     <motion.div
       key={props.index}
-      className={`  p-3    col-sm-12 col-md-4  cursor-pointer h-[500px] bg-cover bg-black bg-center rounded-[30px] ${
+      className={` p-1 card card-s-bg  cursor-pointer col-sm-12 col-md-4 h-[500px] bg-cover bg-black bg-center rounded-[30px] ${
         props.index === expandIndex ? "expanded" : ""
       }`}
       variants={cardVariants}
@@ -44,42 +56,43 @@ function ShowBlog(props, p) {
       animate={props.index === expandIndex ? "expanded" : "collapsed"}
       transition={{ duration: 0.5 }}
       onHoverStart={() => handleCardHover(props.index)}
-      onHoverEnd={() => handleCardHover(props.index)}
-      onTouchStart={() => handleCardHover(props.index)}
-      onTouchEnd={() => handleCardHover(props.index)}
     >
-      <div
-        className={c.cardpost__image}
-        style={{ backgroundImage: `url(${props.thumbnail})` }}
-      ></div>
-      <div className="card-content h-full flex flex-col justify-end">
+      <img src={props.thumbnail} class="cardpost__image" alt="..." />
+
+      <div className="border-success card-content h-full flex flex-col justify-end">
         <div className="card-footer rounded-b-[20px bg-dark bg-opacity-75 min-h-[10px] flex flex-col items-center justify-center">
-          <h6 className="text-xl font-semibold text-white text-center ">
+          <h6 className="text-xl font-semibold text-orange text-center ">
             {props.title}
           </h6>
           <br />
-          {props.index === expandIndex && (
+          {(props.index === expandIndex ||isMobile) && (
             <>
-              <p className="mt-2 text-gray-300 text-center ">{`${ToText(
+              <p className="card-text text-center  pb-3 ">{`${ToText(
                 props.description.substring(0, 500)
               )}...`}</p>
 
-              <Link
-                to={props.link}
+              <div
+                class="card-footer bg-dark"
                 style={{
                   border: "1px solid white",
-                  padding: "3px",
-                  textDecoration: "none",
+
+                  borderRadius: "1%",
                   color: "white",
-                  borderRadius: "20%",
                   cursor: "pointer",
                 }}
               >
-                Read More
-              </Link>
-              <span className="ms-3 text-red">
-                published : {moment(props.pubDate).format("MMM DD, YYYY hh:mm")}
-              </span>
+                <Link
+                  to={props.link}
+                  className=" d-flex justify-content-center nav-link"
+                >
+                  Read More
+                </Link>
+
+                <span className=" ms-3 text-white  d-flex justify-content-center p-1">
+                  published :{" "}
+                  {moment(props.pubDate).format("MMM DD, YYYY hh:mm")}
+                </span>
+              </div>
             </>
           )}
         </div>

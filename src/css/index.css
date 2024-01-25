@@ -14,6 +14,32 @@ html {
   align-items: center;
 }
 
+
+.properties {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cacaca;
+  border-radius: 5px;
+}
+.cardpost__image {
+  position: relative;
+  min-height: 13.3125rem;
+  
+  border-top-right-radius: 0.625rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .loading {
   background-color: black;
 }

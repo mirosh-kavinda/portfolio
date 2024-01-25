@@ -5,16 +5,10 @@ import { Link } from "react-router-dom";
 const portfolioGrid = () => {
   return (
     <div className="main-content ">
-      <div className="row text-center mt-5">
-        {/* <Link
-          to="/projects"
-          className="  col-sm-2 col-md-1 text-white nav-link  mt-3    "
-        >
-          <h5>See more</h5>
-        </Link> */}
-      </div>
-
+  
       <div className="portfolio mx-2  ">
+        
+        
         <Link
           to="/projects/projview"
           state={{

@@ -10,7 +10,7 @@ export default function useAnimations() {
     });
     setTimeout(() => {
       setLoading(false);
-    }, 2900);
+    }, 1900);
     setTimeout(() => {
       setPageloading(false);
     }, 500);
