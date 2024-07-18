@@ -126,11 +126,11 @@ function Blog() {
                       setSelectedPost(post);
                       setOpen(true)}
                     }
-                    whileHover={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.05 }}
                   >
                     <div className="listing__content">
                       <div className="listing__image-container">
-                        <div className="listing__type">{post.title}</div>
+         
                         <img
                           className="listing__image"
                           alt={post.title}
@@ -143,7 +143,7 @@ function Blog() {
                         </div>
                         <div className="listing__row">
                           <span className="listing__address">{`${ToText(
-                              post.description.substring(0, 200))}...`}</span> 
+                              post.description.substring(0, 300))}...`}</span> 
                         </div>
               
                       </div>
@@ -168,9 +168,10 @@ function Blog() {
                               variants={imageVariants}
                             ></motion.img>
                             <motion.div className="modal__info bg-dark" variants={modalInfoVariants}>
-                              <motion.div className="modal__row" variants={modalRowVariants}>
+                             
                                 <span className="modal__price">{selectedPost.title}</span>
-                              </motion.div>
+                              
+                             
                               <motion.div className="modal__row" variants={modalRowVariants}>
                                 <span className="modal__address">{selectedPost.index}</span>
                               </motion.div>

@@ -10,10 +10,9 @@ import {
 import { BsMedium } from "react-icons/bs";
 import { MdOutlineWavingHand } from "react-icons/md";
 import ContactForm from "../../components/Contact";
-import Badges from "../../components/Affiliations/Affiliation";
 import BriefType from "../../components/Aboutme-Components/BriefType";
 import {motion} from 'framer-motion';
-
+import Features from "../../components/Features/Features";
 
 const Home = () => {
   const saveFile = () => {
@@ -61,7 +60,7 @@ const Home = () => {
                 size={40}
               />
             </a>
-
+            Feature
             <a className="mx-1" href="https://www.twitter.com/mirosh_kavinda/">
               <AiOutlineTwitter
                 className=" rounded  link bg-dark p-1 "
@@ -98,12 +97,13 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="proj ">
+      {/* <div className="mt-5 mb-4">
+        <Features />
+      </div> */}
+      
+      <div className="proj">
+        <h1 className="text-center mt-4 mb-4">Recent Projects</h1>
         <PortfolioGrid />
-      </div>
-
-      <div className="badges mt-5">
-        <Badges />
       </div>
 
       <div className="mt-5">

@@ -1,0 +1,17 @@
+#features {
+  background-color: black;
+  color: white;
+  height: 140%;
+  position:static;
+  width: 100%;
+  margin: 3em 0;
+  padding: 1em;
+  overflow: hidden;
+}
+
+#features .title {
+  font-weight: bold;
+  text-align: center;
+  opacity: 0.8;
+  font-size: clamp(1.3em, 2vw, 2em);
+}

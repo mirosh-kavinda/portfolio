@@ -2,7 +2,7 @@
   width: 45%;
   min-width: 300px;
   max-width: 400px;
-  height: 40%;
+  height: 10%;
   position: relative;
   margin: 20px;
   cursor: pointer;
@@ -22,6 +22,7 @@
   left: 0;
   top: 0;
   width: 100%;
+
   height: 100%;
   background-color: white;
   border-radius: 10px;
@@ -30,7 +31,7 @@
 
 .listing__image-container {
   width: 100%;
-  height: 65%;
+  height: 48%;
   overflow: hidden;
 }
 
@@ -41,7 +42,7 @@
 }
 
 .listing__details {
-  height: 35%;
+  height: 52%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

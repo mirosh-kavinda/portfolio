@@ -14,6 +14,7 @@ export default function App() {
   useEffect(() => {
     window.scroll(0, 0);
   }, [location]);
+
   return (
     <>
       {loading ? (

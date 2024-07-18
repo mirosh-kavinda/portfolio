@@ -2,12 +2,12 @@ import brandImg from "../../images/brand.png";
 import { Link } from "react-router-dom";
 import "../../css/navbar.css";
 import { motion } from "framer-motion";
-
-import { useState } from "react";
-
+import { ReactComponent as DarkIcon } from "../../images/svg/dark.svg";
+import { ReactComponent as LightIcon } from "../../images/svg/light.svg"; 
+import { useState,useContext } from "react";
 import { MenuToggle, Menu } from "../ToggleMenu/index";
 import useMenuAnimation from "../../hooks/useMenuAnimation";
-
+import { useTheme } from "../../hooks/useTheme";
 
 
 export const MyComponent = () => (
@@ -20,8 +20,9 @@ export const MyComponent = () => (
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [theme, handleChange] = useTheme('dark');
   const scope = useMenuAnimation(isOpen);
+
   return (
     <>
       <nav className="navbar navbar-dark bg-black navbar-expand-lg fixed-top">
@@ -70,11 +71,16 @@ const Navbar = () => {
                   </Link>
                 </li>
               </ul>
+              <button className="nav-link is-active mx-2" onClick={handleChange}>
+            {theme==='dark' ? <DarkIcon width="35" height="35" /> : <LightIcon width="35" height="35" />}
+          </button>
             </div>
           </div>
           <div ref={scope} className="navbar-toggler">
+            
             <Menu  toggle={() => setIsOpen(!isOpen)}/>
             <MenuToggle toggle={() => setIsOpen(!isOpen)} />
+          
           </div>
         </div>
       </nav>
