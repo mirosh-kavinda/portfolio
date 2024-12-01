@@ -14,7 +14,7 @@ const Projects = () => {
     <br />
     <br />
     <br />
-    <div className="d-flex justify-content-around row justify-center align-center items-center"> 
+    <div className="d-flex justify-content-around row justify-center align-center items-center mt-3 mb-4"> 
     {ProjectData.map((data) => (
       <Card key={data.id} data={data} />
     ))}
@@ -22,6 +22,7 @@ const Projects = () => {
     <br />
     <br />
     <br />
+    
   </motion.div>
   );
 };

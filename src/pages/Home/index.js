@@ -1,11 +1,16 @@
 import React from "react";
-import PortfolioGrid from "../../components/Portfolio/PortfolioGrid";
+// import PortfolioGrid from "../../components/Portfolio/PortfolioGrid";
 import fileSaver from "file-saver";
 import {
   AiOutlineYoutube,
   AiOutlineTwitter,
   AiOutlineLinkedin,
   AiOutlineGithub,
+  // AiOutlineCode,
+  // AiOutlineApi,
+  // AiOutlineMobile,
+  // AiOutlineCloudServer,
+  
 } from "react-icons/ai";
 import { BsMedium } from "react-icons/bs";
 import { MdOutlineWavingHand } from "react-icons/md";
@@ -17,7 +22,8 @@ import Features from "../../components/Features/Features";
 const Home = () => {
   const saveFile = () => {
     fileSaver.saveAs(
-      "https://drive.google.com/uc?export=download&id=13f8XpuT9hoJb-tbgE_4XJNXyd_OyeboO",
+      
+      "https://drive.google.com/uc?export=download&id=1OCXxGH3RCZKDMiyBwHIwkjYFDDUqS0Ce",
       "Mirosh_kavinda_resume.pdf"
     );
   };
@@ -32,7 +38,7 @@ const Home = () => {
             >
               <p className="display-1 font-weight-bold">Mirosh Kavinda</p>
 
-              <h4 className="col-md-7 col-sm-12">
+              <h4 className=" col-md-7 col-10">
                 I design and develop stylish, modern websites, web services for
                 customers of all sizes. I have a proven track record of success
                 in creating user-friendly and engaging websites .
@@ -60,7 +66,6 @@ const Home = () => {
                 size={40}
               />
             </a>
-            Feature
             <a className="mx-1" href="https://www.twitter.com/mirosh_kavinda/">
               <AiOutlineTwitter
                 className=" rounded  link bg-dark p-1 "
@@ -97,16 +102,14 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* <div className="mt-5 mb-4">
-        <Features />
-      </div> */}
-      
-      <div className="proj">
-        <h1 className="text-center mt-4 mb-4">Recent Projects</h1>
-        <PortfolioGrid />
-      </div>
 
-      <div className="mt-5">
+      <div className="mt-5 mb-4">
+        <Features />
+      </div>
+      
+  
+
+      <div className="mt-5 pt-4 mb-4">
         <ContactForm className="contactme" />
       </div>
     </motion.div>

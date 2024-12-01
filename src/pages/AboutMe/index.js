@@ -23,7 +23,7 @@ export default function AboutMe() {
     <motion.div  initial={{opacity:0}} animate={{opacity:1,transition:{duration:0.4}}} exit={{opacity:0, transition:{duration:0.4}}}>
       <br />
       <br />
-      <div className="  container mt-5  ">
+      <div className="  container mt-5  mb-4">
           <div className="row">
             <div className="text col-sm-12 col-md-7">
             <h1 className="mt-3 p-3 text-start">Who Am I ?</h1>

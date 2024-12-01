@@ -1,5 +1,7 @@
 import React from "react";
 import "./Feature.css";
+import { Link } from "react-router-dom";
+import { GrProjects } from "react-icons/gr";
 
 export default function Feature({ item, right, left }) {
   return (
@@ -13,10 +15,18 @@ export default function Feature({ item, right, left }) {
                 <li className="list_item">{item["list"][items]}</li>
               </ul>
             ))}
+           <span>
+              <hr/>
+              <Link className="nav-link is-active exact mx-2 mb-4" to="/projects">
+                <GrProjects className=" rounded  link bg-light p-1 " />
+                <t /> Projects
+              </Link>
+            </span>
           </div>
           <img
             className="feature_image img-fluid"
             src={item.image}
+            loading="lazy"
             alt="not found"
           />
         </div>
@@ -25,6 +35,7 @@ export default function Feature({ item, right, left }) {
           <img
             className="feature_image img-fluid"
             src={item.image}
+            loading="lazy"
             alt="not found"
           />
           <div className="text">
@@ -34,6 +45,13 @@ export default function Feature({ item, right, left }) {
                 <li className="list_item">{item["list"][items]}</li>
               </ul>
             ))}
+            <span>
+              <hr/>
+              <Link className="nav-link is-active exact mx-2 mb-4" to="/projects">
+                <GrProjects className=" rounded  link bg-light p-1 " />
+                <t /> Projects
+              </Link>
+            </span>
           </div>
         </div>
       )}

@@ -6,6 +6,7 @@ import {
   AiOutlineLinkedin,
   AiOutlineCopyright,
   AiOutlineGithub,
+  AiOutlineCode
   
 } from "react-icons/ai";
 
@@ -75,7 +76,10 @@ const Footer = () => {
               </div>
               <p className=" footer-head  col-md-5 col-sm-3 ">
                 <AiOutlineCopyright />
-                2023 Alright reserved for @mirosh_kavinda || <a href="https://github.com/mirosh-kavinda/portfolio" id="code_src">  code </a>
+                2024 Alright reserved for @mirosh_kavinda <a href="https://github.com/mirosh-kavinda/portfolio" id="code_src">    <AiOutlineCode
+                  className="mx-2  rounded  link bg-dark "
+                  
+                /></a>
               </p>
            
             </div>

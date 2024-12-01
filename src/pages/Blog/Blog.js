@@ -33,7 +33,7 @@ function Blog() {
   .then((response) => {
     const avatar = response.data.feed.image;
     const profileLink = response.data.feed.link;
-    const posts = response.data.items.filter((item) => item.categories.length > 0);
+    const posts = response.data.items;
     const title = response.data.feed.title;
 
     posts.forEach((post) => {
@@ -220,6 +220,9 @@ function Blog() {
               })
             )}
           </div>
+          <br/>
+      <br/>
+      <br/>
         </div>
       </>
     );

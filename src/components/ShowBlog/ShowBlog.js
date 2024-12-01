@@ -22,7 +22,7 @@ function ToText(node) {
 }
 function ShowBlog(props, p) {
   const [expandIndex, setExpandIndex] = useState(false);
-  const isMobile = window.innerWidth < 768; //Add the width you want to check for here (now 768px)
+  const isMobile = window.innerWidth < 768; 
   const handleCardHover = (index) => {
     if (!isMobile) {
       setExpandIndex(index === expandIndex ? -1 : index);
@@ -97,6 +97,7 @@ function ShowBlog(props, p) {
           )}
         </div>
       </div>
+      
     </motion.div>
   );
 }

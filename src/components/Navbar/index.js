@@ -7,10 +7,11 @@ import { ReactComponent as LightIcon } from "../../images/svg/light.svg";
 import { useState,useContext } from "react";
 import { MenuToggle, Menu } from "../ToggleMenu/index";
 import useMenuAnimation from "../../hooks/useMenuAnimation";
-import { useTheme } from "../../hooks/useTheme";
-
+import { THEME_TYPE } from "../../constants";
+import {ThemeContext} from "../../hooks/ThemeProvider";
 
 export const MyComponent = () => (
+  
   <motion.div
     initial={{ opacity: 0, scale: 0.5 }}
     animate={{ opacity: 1, scale: 1 }}
@@ -20,8 +21,20 @@ export const MyComponent = () => (
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [theme, handleChange] = useTheme('dark');
   const scope = useMenuAnimation(isOpen);
+  const [themeMode, setTheme] = useContext(ThemeContext);
+
+
+  const handleThemeChange = (e) => {
+
+    if(themeMode.theme === THEME_TYPE.LIGHT) {
+      setTheme({ theme:THEME_TYPE.DARK });
+    }
+    else {
+      setTheme({ theme:THEME_TYPE.LIGHT });
+    }
+    console.log("new Value: "+ themeMode.theme);
+  };
 
   return (
     <>
@@ -71,9 +84,9 @@ const Navbar = () => {
                   </Link>
                 </li>
               </ul>
-              <button className="nav-link is-active mx-2" onClick={handleChange}>
-            {theme==='dark' ? <DarkIcon width="35" height="35" /> : <LightIcon width="35" height="35" />}
-          </button>
+              {/* <button className="nav-link is-active mx-2" onClick={handleThemeChange}>
+            {themeMode.theme === THEME_TYPE.DARK ? <DarkIcon width="35" height="35" /> : <LightIcon width="35" height="35" />}
+          </button> */}
             </div>
           </div>
           <div ref={scope} className="navbar-toggler">
