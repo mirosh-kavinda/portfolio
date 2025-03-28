@@ -38,7 +38,7 @@ function ShowBlog(props, p) {
       height:'50vh'
     },
     collapsed: {
-      width: "50%",
+      width: "80%",
       height:"40vh"
     },
     hide:{

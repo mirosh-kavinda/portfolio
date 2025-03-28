@@ -1,5 +1,5 @@
 .feature {
-  margin: 2em 2em 0 2em;
+
   padding: 1.2em 0;
   clear: both;
   font-weight: normal;
@@ -7,8 +7,8 @@
 
 .feature .content,
 .feature .content_left {
-  width: 70% ;
-  height: auto;
+    width: 70% ;
+    height: auto;
   border-radius: 30px;
   box-shadow: 0 0 6px 0.2px darkorange;
   display: flex;

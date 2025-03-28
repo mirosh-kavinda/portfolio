@@ -76,7 +76,7 @@ const Footer = () => {
               </div>
               <p className=" footer-head  col-md-5 col-sm-3 ">
                 <AiOutlineCopyright />
-                2024 Alright reserved for @mirosh_kavinda <a href="https://github.com/mirosh-kavinda/portfolio" id="code_src">    <AiOutlineCode
+                2025 Alright reserved for @mirosh_kavinda <a href="https://github.com/mirosh-kavinda/portfolio" id="code_src">    <AiOutlineCode
                   className="mx-2  rounded  link bg-dark "
                   
                 /></a>

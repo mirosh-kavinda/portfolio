@@ -1,5 +1,4 @@
 
-import { AiOutlineGithub } from "react-icons/ai";
 import{motion} from 'framer-motion';
 import History from "../../components/Aboutme-Components/History";
 import { ImageData1 } from "../../data/imageData";
@@ -12,7 +11,6 @@ export function AddLibrary(urlOfTheLibrary) {
   document.body.appendChild(script);
 }
 export default function AboutMe() {
-  //add linkedin badge script to the page 
    
    //on page render this script should be loadde
   AddLibrary(
@@ -75,9 +73,9 @@ export default function AboutMe() {
           </span>
         </h1>
         <hr />
-        <div className="row mt-5 pt-5" align="center">
+        {/* <div className="row mt-5 pt-5" align="center">
           <h1 className="text-center col-md-10 col-sm-5">
-            My Stats On Git hub
+          For Github Archive
           </h1>
           <a
             href="https://github.com/mirosh-kavinda"
@@ -88,16 +86,10 @@ export default function AboutMe() {
               <AiOutlineGithub className="mx-2 socialmedia" size={30} />
             </span>
           </a>
-        </div>
+        </div> */}
 
-        <div className="row mt-5 ">
-          <iframe
-            className="col-md-4 mt-3 col-sm-12 streaks "
-            title="Mirosh's Streaks"
-            height={"200px"}
-            src="https://streak-stats.demolab.com/?user=mirosh-kavinda&theme=vision-friendly-dark"
-            frameBorder="0"
-          ></iframe>
+        {/* <div className="row mt-5 ">
+       
           <iframe
             className="col-md-4 mt-3 col-sm-12 streaks "
             title="Mirosh's Streaks"
@@ -114,14 +106,14 @@ export default function AboutMe() {
             frameBorder="0"
           ></iframe>
 
-          {/* <iframe
+          <iframe
             className="col-md-12 col-sm-12 graph mt-4"
             height={"300px"}
             title="Mirosh's Activity Graph"
             src="https://github-readme-activity-graph.vercel.app/graph?username=mirosh-kavinda&theme=xcode"
             frameBorder="0"
-          ></iframe> */}
-        </div>
+          ></iframe>
+        </div> */}
       </div>
       <br />
       <br />
