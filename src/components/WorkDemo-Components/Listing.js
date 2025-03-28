@@ -1,5 +1,5 @@
 import React from "react";
-import "./Listing.css";
+import "../../css/Listing.css";
 import { motion } from "framer-motion";
 
 const Listing = ({ data, open }) => {

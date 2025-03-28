@@ -2,7 +2,7 @@
 import{motion} from 'framer-motion';
 import History from "../../components/Aboutme-Components/History";
 import { ImageData1 } from "../../data/imageData";
-import Badges from "../../components/Affiliations/Affiliation";
+import Badges from "../../components/Aboutme-Components/Affiliation";
 
 export function AddLibrary(urlOfTheLibrary) {
   const script = document.createElement("script");

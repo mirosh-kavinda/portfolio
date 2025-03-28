@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
-// import { ReactComponent as DarkIcon } from "../../images/svg/dark.svg";
-// import { ReactComponent as LightIcon } from "../../images/svg/light.svg"; 
 
 export function Menu({ toggle }) {
-  // const { isDarkMode, toggleMode } = useContext();
+
 
   return (
     <>
@@ -51,20 +49,7 @@ export function Menu({ toggle }) {
             <li>
             
             </li>
-           {/*  <p className="text-center mt-5 pt-3">
-              Change the Color Mode
-              <span>
-              <button
-                    className=" link is-active  mx-2"
-                  // onClick={toggleMode}
-                >
-                  <span>
-                  {isDarkMode ? <DarkIcon width="35" height="35" /> : <LightIcon width="35" height="35" />}  
-                  </span>
-            </button>
-              </span>
-            </p>
-             */}
+          
           </ul>
         </div>
          

@@ -6,8 +6,6 @@ import Picture3 from "../../images/services/service3.webp";
 import Picture4 from "../../images/services/service4.webp";
 import Picture5 from "../../images/services/service5.webp";
 import Picture6 from "../../images/services/service6.webp";
-// import Picture7 from "../../images/services/service7.webp";
-// import Picture8 from "../../images/services/service8.webp";
 
 import Feature from "./Feature/Feature";
 
@@ -73,26 +71,7 @@ export default function Features() {
         desc_3: "Ongoing technical support and system health monitoring.",
       },
     },
-    // item_7: {
-    //   id: 7,
-    //   image: Picture6,
-    //   heading: "+ Performance Optimization",
-    //   list: {
-    //     desc_1: "Enhancing website speed and load times.",
-    //     desc_2: "Code refactoring to reduce resource usage.",
-    //     desc_3: "SEO and accessibility improvements.",
-    //   },
-    // },
-    // item_8: {
-    //   id: 8,
-    //   image: Picture5,
-    //   heading: "+ Machine Learning Projects and Services",
-    //   list: {
-    //     desc_1: "Development of custom deep learning models for tasks like classification, detection, and prediction.",
-    //     desc_2: "Integration of AI-driven solutions into mobile and web applications.",
-    //     desc_3: "Expertise in frameworks such as TensorFlow, PyTorch, and Scikit-learn.",
-    //   },
-    // },
+
   };
   
 

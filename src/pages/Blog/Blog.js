@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Axios from "axios";
 import { IoCloseCircleOutline } from "react-icons/io5";
-import Overlay from "../../components/Card/Overlay";
+import Overlay from "../../components/WorkDemo-Components/Overlay";
 import { AnimatePresence, motion } from "framer-motion";
 import Spinner from "../../components/Spinner/Spinner";
 import { Link } from "react-router-dom";

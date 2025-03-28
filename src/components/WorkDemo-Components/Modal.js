@@ -1,5 +1,5 @@
 import React from "react";
-import "./Modal.css";
+import "../../css/Modal.css";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";

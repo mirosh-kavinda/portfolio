@@ -2,13 +2,9 @@ import brandImg from "../../images/brand.png";
 import { Link } from "react-router-dom";
 import "../../css/navbar.css";
 import { motion } from "framer-motion";
-import { ReactComponent as DarkIcon } from "../../images/svg/dark.svg";
-import { ReactComponent as LightIcon } from "../../images/svg/light.svg"; 
-import { useState,useContext } from "react";
+import { useState } from "react";
 import { MenuToggle, Menu } from "../ToggleMenu/index";
 import useMenuAnimation from "../../hooks/useMenuAnimation";
-import { THEME_TYPE } from "../../constants";
-import {ThemeContext} from "../../hooks/ThemeProvider";
 
 export const MyComponent = () => (
   
@@ -22,19 +18,6 @@ export const MyComponent = () => (
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const scope = useMenuAnimation(isOpen);
-  const [themeMode, setTheme] = useContext(ThemeContext);
-
-
-  const handleThemeChange = (e) => {
-
-    if(themeMode.theme === THEME_TYPE.LIGHT) {
-      setTheme({ theme:THEME_TYPE.DARK });
-    }
-    else {
-      setTheme({ theme:THEME_TYPE.LIGHT });
-    }
-    console.log("new Value: "+ themeMode.theme);
-  };
 
   return (
     <>
@@ -84,9 +67,7 @@ const Navbar = () => {
                   </Link>
                 </li>
               </ul>
-              {/* <button className="nav-link is-active mx-2" onClick={handleThemeChange}>
-            {themeMode.theme === THEME_TYPE.DARK ? <DarkIcon width="35" height="35" /> : <LightIcon width="35" height="35" />}
-          </button> */}
+        
             </div>
           </div>
           <div ref={scope} className="navbar-toggler">

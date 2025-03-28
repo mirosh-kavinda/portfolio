@@ -1,6 +1,6 @@
 import React from "react";
 import * as FontAwesome from "react-icons/fa";
-import "./Feature.css";
+import "../../css/Feature.css";
 
 const Feature = ({ iconName, iconLabel }) => {
   const Icon = FontAwesome[iconName];

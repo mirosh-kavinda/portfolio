@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.min.css";
 import React, { useState } from "react";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
-import "./contactForm.css";
+import "../../css/contactForm.css";
 const ContactForm = () => {
   const [loading, setLoading] = useState(false);
   const {

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Overlay.css";
+import "../../css/Overlay.css";
 import { motion } from "framer-motion";
 
 const Overlay = ({ children, close }) => {

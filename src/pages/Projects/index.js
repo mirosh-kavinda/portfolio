@@ -1,6 +1,6 @@
 import { React } from "react";
 import { ProjectData } from "../../data/Data";
-import Card from "../../components/Card"
+import Card from "../../components/WorkDemo-Components/Card"
 import {motion} from 'framer-motion';
 
 const Projects = () => {

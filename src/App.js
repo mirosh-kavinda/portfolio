@@ -6,21 +6,7 @@ import DotRing from "./components/DotRing";
 import useAnimations from "./hooks/useAnimations";
 import Spinner from "./components/Spinner/Spinner";
 import AnimatedRoutes from "./components/AnimatedRoutes";
-import { ThemeProvider} from "./hooks/ThemeProvider";
-// import Styles from "./data/Styles";
-import { Helmet } from "react-helmet";
 
-
-const StyleTag = () => {
-  // const [themeMode, setTheme] = useContext(ThemeContext);
-
- 
-  return (
-    <Helmet>
-      {/* <style>{Styles(themeMode.theme)}</style> */}
-    </Helmet>
-  );
-};
 
 export default function App() {
   const { loading } = useAnimations();
@@ -30,12 +16,8 @@ export default function App() {
     window.scroll(0, 0);
   }, [location]);
 
- 
-
   return (
     <>
-    <ThemeProvider>
-    <StyleTag />
       {loading ? (
         <div className="App">
           <Spinner />
@@ -51,7 +33,6 @@ export default function App() {
           <Footer className="footer" />
         </div>
       )}
-      </ThemeProvider>
     </>
   );
 }
