@@ -145,30 +145,31 @@ const ContactForm = () => {
           </form>
         </div>
         <div className="col-md-4 col-sm-12 mt-5">
-          <div className="row ms-5">
-            <a
-              href="https://goo.gl/maps/y414JL98TXvb6FWZ6"
-              className="link bg-dark rounded p-2 col-2"
-            >
+          <a
+            className="d-flex align-items-center ms-5 bg-dark rounded p-2 link text-decoration-none"
+            href="https://goo.gl/maps/y414JL98TXvb6FWZ6"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="me-3  ">
               <CiLocationOn size={40} />
-            </a>
-            <div className="col-6">
-              <p>No : 81/5, 5th cross Road, Weragampita, Matara.</p>
             </div>
-          </div>
-          <div className="row mt-2 ms-5">
-            <a
-              href="https://wa.me/94713531809"
-              className="link bg-dark rounded p-2 pt-3 col-2"
-            >
-              <BsFillTelephoneFill size={30} />
-            </a>
-            <p className="col-6">
-              +94713531809
-              <br />
-              (Whatsapp )
+            <p className="mb-0 text-light">
+              No: 81/5, 5th Cross Road, Weragampita, Matara
             </p>
-          </div>
+          </a>
+
+          <a
+            className="d-flex align-items-center ms-5 mt-2 bg-dark rounded p-3 link text-decoration-none"
+            href="https://wa.me/94713531809"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <BsFillTelephoneFill size={30} className="me-3 text-light" />
+            <p className="mb-0 text-light">
+              +94713531809 (WhatsApp)
+              </p>
+          </a>
         </div>
       </div>
       <ToastContainer />

@@ -49,11 +49,6 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="nav-link is-active exact mx-2" to="/aboutme">
-                    AboutMe
-                  </Link>
-                </li>
-                <li>
                   <Link
                     className="nav-link is-active exact mx-2"
                     to="/projects"
@@ -64,6 +59,11 @@ const Navbar = () => {
                 <li>
                   <Link className="nav-link is-active exact mx-2" to="/blog">
                     Writings
+                  </Link>
+                </li>
+                <li className="border rounded ">
+                  <Link className="nav-link is-active exact mx-2" to="/aboutme">
+                  Get in Touch
                   </Link>
                 </li>
               </ul>

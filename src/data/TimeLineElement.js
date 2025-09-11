@@ -3,11 +3,11 @@ let timelineElements = [
 
     {
       id: 1,
-      title: "BSc (Hons) - Software Engineering Undergraduate",
+      title: "BSc (Hons) - Software Engineering",
       location: "Cinec Campus Malambe.",
-      description: "Currently reading for my Bachelors of Science Degree in Software Engineering at Cinec Campus malambe. Current GPA - 3.81  ",
-      buttonText: "Full time",
-      date: "sep 2020 - present",
+      description: "Successfully completed a Bachelor of Science (Hons) in Software Engineering at CINEC Campus, Malabe with a GPA of 3.809. 🥇 Awarded 'Best Academic Achievement'. 🏑 Represented the campus field hockey team. 🧑‍💻 Competed in multiple hackathons, tackling real-world challenges through innovation and teamwork.",
+      date: "Sep 2020 - Nov 2024",
+            buttonText: "Full time",
       
       icon: "school",
     },

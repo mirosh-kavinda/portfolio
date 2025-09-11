@@ -17,12 +17,7 @@ export const ImageData1 = [
       "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
       "height": "40px"
     },
-    {
-      "className": "m-1",
-      "alt": "#4",
-      "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg",
-      "height": "40px"
-    },
+   
     {
       "className": "m-1",
       "alt": "#6",
@@ -56,13 +51,49 @@ export const ImageData1 = [
     {
       "className": "m-1",
       "alt": "#11",
-      "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
+      "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
       "height": "40px"
     },
     {
       "className": "m-1",
       "alt": "#12",
       "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg",
+      "height": "40px"
+    },
+    {
+      "className": "m-1",
+      "alt": "#12",
+      "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+      "height": "40px"
+    },
+    {
+      "className": "m-1",
+      "alt": "#12",
+      "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+      "height": "40px"
+    },
+    {
+      "className": "m-1",
+      "alt": "#12",
+      "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+      "height": "40px"
+    },
+    {
+      "className": "m-1",
+      "alt": "#12",
+      "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
+      "height": "40px"
+    },
+    {
+      "className": "m-1",
+      "alt": "#12",
+      "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+      "height": "40px"
+    },
+    {
+      "className": "m-1",
+      "alt": "#12",
+      "src": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg",
       "height": "40px"
     },
     {

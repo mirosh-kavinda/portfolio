@@ -2,15 +2,13 @@ import { useLocation, useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import Markdown from "markdown-to-jsx";
 
-import './project.css';
+import "./project.css";
 
 function importAll(r) {
   return r.keys().map(r);
 }
 
-
 const ProjView = () => {
-  
   const location = useLocation();
   const { projId, projName, projCat } = location.state;
   const navigate = useNavigate();
@@ -53,10 +51,21 @@ const ProjView = () => {
   return (
     <>
       <div className="container mt-5 pt-4 ">
-   
-        <div onClick={() => navigate(-1)} className=" nav-link mt-3">
-          Back
+        <div className="d-flex align-items-center mt-4">
+          <span
+            onClick={() => navigate(-1)}
+            className="nav-link  p-0 me-2"
+            style={{
+              color: "#fffff",
+              cursor: "pointer",
+              textDecoration: "underline",
+            }}
+          >
+            Projects
+          </span>
+          <span style={{ color: "#adb5bd" }}> / {projName}</span>
         </div>
+
         <h1 className="d-flex justify-content-center mt-5 ">{projName}</h1>
         {projCat === "casestudy" &&
           images.map((image) => {

@@ -6,6 +6,7 @@ import AboutMe from "../pages/AboutMe";
 import Projects from "../pages/Projects";
 import ProjView from "../components/ProjView/ProjView";
 import { AnimatePresence } from "framer-motion";
+import ContactForm from "./Contact/contactForm";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -22,6 +23,7 @@ function AnimatedRoutes() {
           element={<ProjView />}
         ></Route>
         <Route path="/blog" element={<Blog />}></Route>
+        <Route path="/contact" element={<ContactForm />}></Route>
       </Routes>
     </AnimatePresence>
   );
