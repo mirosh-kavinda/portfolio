@@ -1,42 +1,50 @@
-<br>
-<br>
- ####This is a minimalistic Tutoring Web application.(3rd year First Semester Individual coursework
- <br>
+# StudyShack 📝
+#### A Minimalistic Online Tutoring Web Application  
+*3rd Year, 1st Semester Individual Coursework*
 
+---
 
-Git Hub : <a href="https://github.com/mirosh-kavinda/studyshack.git">Link </a> <br>
-userFlow : <a href="https://www.figma.com/file/L57mZAV3rmYNT9Fxv94AnK/studyshack?node-id=0%3A1&t=38YWlbR1TUDtMr3a-1">Link</a><br>
-	
+## 🔗 Project Links
+- **GitHub Repository:** [Link](https://github.com/mirosh-kavinda/studyshack.git)  
+- **User Flow (Figma):** [Link](https://www.figma.com/file/L57mZAV3rmYNT9Fxv94AnK/studyshack?node-id=0%3A1&t=38YWlbR1TUDtMr3a-1)  
 
-<img class="img-fluid"src='https://user-images.githubusercontent.com/74175084/232343268-5918e28c-429b-4b21-aaab-918814efa90e.png'style={{width="1000px"}}/>
+---
 
-<br>
-<br>
-<br>
-# To run website on your local machine , follow below mentioned steps.
-#### 1 .You need to install XAMPP controll pannel software (we are using Apache and MYSQL services )
-#### 2 .After installation,place CRAFIRA project folder inside htdocs folder on  XAMPP installed directory , 
-        "C:\xampp\htdocs"
-#### 3. Rename the root folder name as 'studyShack'
-#### 4. Start the Apache and MYSQL servers on XAMPP dashboard.
-#### 5. Click on Admin button on MySQL row.
-#### 6. After pop up the Php my admin dashboard withing webbrowser
-#### 7. create new database as "studyshack" 
-#### 8. Select newly created database and go to import tab on tool bar
-#### 8. Import our "studyshack.sql " data base sql file from Studyshack "database" folder in Studyshack project directory.
-#### 9. Open New tab on Browser and type following and enter
-        https://localhost/studyShackx/index.php
-#### I shared the database file inside the Database Directory
-        studyShack/Database_setup/studyshack.sql
-       
+## 🖼 Project Screenshot
+<img src="https://user-images.githubusercontent.com/74175084/232343268-5918e28c-429b-4b21-aaab-918814efa90e.png" alt="StudyShack Screenshot" style="width:100%; max-width:1000px;" />
 
-       
-Supported Browsers:
-- Chrome 35+
-- Firefox 31+
-- Safari 9+
-- Opera
-- Edge
-- IE 11+
+---
 
-<br><br><br><br><br><br>        
+## ⚙️ How to Run Locally
+Follow the steps below to run **StudyShack** on your local machine:
+
+1. **Install XAMPP**  
+   Ensure you install XAMPP control panel software (we use **Apache** and **MySQL** services).
+
+2. **Place Project in `htdocs`**  
+   Copy the StudyShack project folder into XAMPP’s `htdocs` directory:  
+
+3. **Rename Root Folder**  
+Rename the folder to `studyShack`.
+
+4. **Start Servers**  
+Open XAMPP and start **Apache** and **MySQL**.
+
+5. **Create Database**  
+- Click **Admin** on MySQL row → PhpMyAdmin will open in your browser.  
+- Create a new database named:  
+  ```
+  studyshack
+  ```  
+
+6. **Import Database**  
+- Select the newly created database.  
+- Go to **Import** tab → import `studyshack.sql` from:  
+  ```
+  studyShack/Database_setup/studyshack.sql
+  ```
+
+7. **Run Project**  
+Open a browser and enter:  
+
+<br/><br/><br/><br/><br/><br/>

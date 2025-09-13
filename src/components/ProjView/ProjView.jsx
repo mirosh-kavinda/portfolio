@@ -1,8 +1,8 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import Markdown from "markdown-to-jsx";
+import { Link } from "react-router-dom";
 
-import "./project.css";
 
 function importAll(r) {
   return r.keys().map(r);
@@ -10,7 +10,7 @@ function importAll(r) {
 
 const ProjView = () => {
   const location = useLocation();
-  const { projId, projName, projCat } = location.state;
+  const { projId, projName, projCat,projectLink } = location.state;
   const navigate = useNavigate();
   let images;
 
@@ -65,8 +65,8 @@ const ProjView = () => {
           </span>
           <span style={{ color: "#adb5bd" }}> / {projName}</span>
         </div>
-
-        <h1 className="d-flex justify-content-center mt-5 ">{projName}</h1>
+       
+        <div className=" mt-5 mb-5"> </div>
         {projCat === "casestudy" &&
           images.map((image) => {
             return (
@@ -78,6 +78,13 @@ const ProjView = () => {
               />
             );
           })}
+{projCat === "casestudy" && (
+  <div className="fab">
+    <Link to={projectLink} className="btn btn-dark border solid 1px">
+      View Design File
+    </Link>
+  </div>
+)}
 
         {projCat === "dev" && <Markdown>{post}</Markdown>}
         {projCat === "blog1" && <Markdown>{post}</Markdown>}

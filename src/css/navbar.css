@@ -75,7 +75,6 @@ body {
     transform-origin: -20px 50%;
     font-weight: bold;
     font-size: 48px;
-   
     will-change: transform, opacity, filter;
     border: none;
   }

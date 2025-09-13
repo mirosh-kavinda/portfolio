@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[41],{4041:(p,e,f)=>{p.exports=f.p+"static/media/HappyFunc.363fd4177674cad9fbf4.md"}}]);

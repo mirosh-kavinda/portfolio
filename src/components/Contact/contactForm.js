@@ -58,7 +58,7 @@ const ContactForm = () => {
   return (
     <div className="text-center contact-form ">
       <h1>Contact Me</h1>
-      <div className="row text-center mt-3 d-flex justify-content-center">
+      <div className="row mt-3 justify-content-center">
         <div className="col-md-6 col-sm-12">
           <form onSubmit={handleSubmit(onSubmit)} noValidate>
             <div className="form-row mt-5 mb-2 mx-4">
@@ -144,9 +144,9 @@ const ContactForm = () => {
             </button>
           </form>
         </div>
-        <div className="col-md-4 col-sm-12 mt-5">
+        <div className="col-md-3 col-sm-12 mt-5">
           <a
-            className="d-flex align-items-center ms-5 bg-dark rounded p-2 link text-decoration-none"
+            className="d-flex align-items-center bg-dark rounded p-2 link text-decoration-none"
             href="https://goo.gl/maps/y414JL98TXvb6FWZ6"
             target="_blank"
             rel="noopener noreferrer"
@@ -160,7 +160,7 @@ const ContactForm = () => {
           </a>
 
           <a
-            className="d-flex align-items-center ms-5 mt-2 bg-dark rounded p-3 link text-decoration-none"
+            className="d-flex align-items-center  mt-2 bg-dark rounded p-3 link text-decoration-none"
             href="https://wa.me/94713531809"
             target="_blank"
             rel="noopener noreferrer"

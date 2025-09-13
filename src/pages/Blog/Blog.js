@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import Axios from "axios";
 import { IoCloseCircleOutline } from "react-icons/io5";
-import Overlay from "../../components/WorkDemo-Components/Overlay";
+import Overlay from "../../components/ProjectShowModel/Overlay";
 import { AnimatePresence, motion } from "framer-motion";
 import Spinner from "../../components/Spinner/Spinner";
 import { Link } from "react-router-dom";
+
 function ToText(node) {
   let tag = document.createElement("div");
   tag.innerHTML = node;
@@ -112,7 +113,7 @@ function Blog() {
 
   return (
     <>
-      <div className="container mt-5 pt-5">
+      <div className="container mt-5 pb-5 whitespace">
         <div className="d-flex justify-content-around row justify-center align-center items-center">
           {state.isLoading ? (
             <Spinner />
@@ -220,9 +221,6 @@ function Blog() {
               })
             )}
           </div>
-          <br/>
-      <br/>
-      <br/>
         </div>
       </>
     );

@@ -1,60 +1,52 @@
+# 🛍️ Crafira: A Marketplace for Homemade Goods
 
- ### Market place for your home made items! (for small business owners who hadn't chance to compete with global and local market)
- <br>
-#####High Fidelty MockUp: <a href="https://www.figma.com/file/Nk0v6Zf5KHicFH8Z3flpjS/shoppingCart?node-id=0%3A1&t=TMG2lxGxrB2xsbOs-1">Link</a> <br>
-#####Git hub Link : <a href="https://github.com/mirosh-kavinda/crafira.git">Link</a> <br> <br>
+**Crafira** is an e-commerce platform designed to empower local small businesses and home-based entrepreneurs. This marketplace gives them a dedicated space to showcase and sell their unique, homemade products, helping them compete in a market dominated by larger corporations.
 
-# Demo
-<br />
+### Project Links
+* **High-Fidelity Mockup:** [Figma Link](https://www.figma.com/file/Nk0v6Zf5KHicFH8Z3flpjS/shoppingCart?node-id=0%3A1&t=TMG2lxGxrB2xsbOs-1)
+* **GitHub Repository:** [GitHub Link](https://github.com/mirosh-kavinda/crafira.git)
 
+---
 
-<img align-center classname="img-fluid  ps-5 ms-5 w-full"  src="https://user-images.githubusercontent.com/74175084/199441078-c35b39a0-ffdc-4571-9ec2-96ce39ada5ab.gif"/>
+## Demo
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74175084/199441078-c35b39a0-ffdc-4571-9ec2-96ce39ada5ab.gif" alt="Crafira Demo" width="600"/>
+</div>
 
+---
 
-<br>
-<br>
-<br>
-<br>
+## 🚀 Installation & Setup
 
-#To run website you need to follow below mentioned steps<br>
-<hr>
-#### 1 .You need to install XAMPP software (we are using Apache and MYSQL )
-#### 2 .After installation,place CRAFIRA project folder inside htdocs folder on  XAMPP installed directory , 
-        "C:\xampp\htdocs"
-#### 3. Rename the root folder name as 'CRAFIRA'
-#### 4. Start the Apache and MYSQL servers on XAMPP dashboard.
-#### 5. Click on Admin button on MySQL row.
-#### 6. After pop up the Php my admin dashboard withing webbrowser
-#### 7. create new database as "crafira" 
-#### 8. Select newly created database and go to import tab on tool bar
-#### 8. Import our "crafira.sql " data base file from CRAFIRA "database" folder in CRAFIRA project directory.
-#### 9. Open New tab on Browser and type following and enter:
-        localhost/CRAFIRA/index.php
-<br>
-###Note
-#####I shared the database file (which exported from MySQL) and  I added three videoes to setup database 
-        CRAFIRA/Database_setup/crafira_db.sql
+To get this project running on your local machine, you'll need to set up a local server environment and import the database.
 
+### Prerequisites
 
-###Supported Browsers:
-- Chrome 35+
-- Firefox 31+
-- Safari 9+
-- Opera
-- Edge
-- IE 11+
+* **XAMPP:** This project uses Apache and MySQL. The easiest way to get them is by installing **XAMPP**.
+* **Supported Browsers:** The application is optimized for modern web browsers, including Chrome, Firefox, Safari, Opera, and Microsoft Edge. It also supports Internet Explorer 11+.
 
+### Step-by-Step Guide
 
-## Copyright and license
-Code Copyright 2022. Code released under the MIT license.
-MSE GROUP (Academic)
+1.  **Install XAMPP:** If you don't have it already, download and install the XAMPP software.
+2.  **Place the Project Folder:** Once installed, copy the entire **CRAFIRA** project folder into the `htdocs` directory within your XAMPP installation.
+    * **Default Path:** `C:\xampp\htdocs`
+3.  **Start Servers:** Open the XAMPP Control Panel and start the **Apache** and **MySQL** services.
+4.  **Access phpMyAdmin:** Click the **Admin** button next to the MySQL service in the XAMPP Control Panel. This will open the phpMyAdmin dashboard in your browser.
+5.  **Create Database:** In phpMyAdmin, create a new database named `crafira`.
+6.  **Import Database:** Select the newly created `crafira` database, go to the **Import** tab, and then choose the `crafira.sql` file located in the `CRAFIRA/Database_setup` folder of your project. Click **Go** to import the data.
+7.  **Run the Application:** Open a new browser tab and navigate to the following URL:
+    ```
+    http://localhost/CRAFIRA/
+    ```
 
-Collabrators : <br>
-        Mirosh kavinda <br>
-        Sachith Navodya <br>
-        Eshadi Kalhara <br>
+---
 
-<br>
-<br><br>
-<br><br>
-<br>
+## 📝 About the Project
+
+This is an academic project developed by the **MSE Group**. The source code is freely available and licensed under the **MIT License**.
+
+### Collaborators
+* Mirosh Kavinda
+* Sachith Navodya
+* Eshadi Kalhara
+
+---

@@ -15,6 +15,9 @@
 #about-img{
   display: none;
 }
+.whitespace{
+  padding-top: 40px;
+} 
 .aboutme{
   height: 500px;
 }
@@ -80,7 +83,10 @@
       background: url(../images/landing.jpg) no-repeat center center fixed;
 
   }
+  .whitespace{
+    padding-top: 70px;
 
+  } 
   .mouse {
     margin-top: 8%;
   }
@@ -111,7 +117,9 @@
   .home {
     background: url(../images/landing-large.jpg) no-repeat center center fixed;
   }
-
+  .whitespace{
+    padding-top: 90px;
+  } 
 }
 
 /* Large devices (laptops/desktops, 992px and up) */

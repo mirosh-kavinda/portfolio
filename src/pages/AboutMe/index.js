@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import History from "../../components/Aboutme-Components/History";
+import History from "../../components/AboutHelpers/History";
 import { ImageData1 } from "../../data/imageData";
-import Badges from "../../components/Aboutme-Components/Affiliation";
+import Badges from "../../components/AboutHelpers/Affiliation";
 import ContactForm from "../../components/Contact/contactForm";
+import { AboutPageData } from "../../data/pageData";
 
 export function AddLibrary(urlOfTheLibrary) {
   const script = document.createElement("script");
@@ -25,21 +26,9 @@ export default function AboutMe() {
       <div className="  container mt-5  mb-4">
         <div className="row">
           <div className="text col-sm-12 col-md-7">
-            <h1 className="mt-3 p-3 text-start">Who Am I ?</h1>
-            <p className="mt-4 mx-4">
-              A Software Engineer passionate about user-centric, scalable
-              applications. Google certified in UX, with strong full-stack
-              development capabilities. Currently enhancing UI/UX and mobile app
-              security at LB Finance (PVT) LTD, applying TDD and clean code.
-              During an internship at LB Finance, contributed to an
-              award-winning web application.
-              <br />
-              <br /> Graduated with a BSc. (Hons) in Software Engineering from
-              Cinec Campus, achieving a 3.82 GPA and "Best academic
-              achievement". Formerly VP of the TechStrike club and a campus
-              field hockey team member.  A dedicated and proactive team player,
-              driven to innovate and grow in fast-paced development.
-            </p>
+            <h1 className="mt-3 p-3 text-start">{AboutPageData.title}</h1>
+            <p className="mt-4 mx-4">{AboutPageData.subtitle1}</p>
+            <p className="mt-3 mx-4">{AboutPageData.subtitle2}</p>
           </div>
           <div className=" p-3 text-center col-sm-12 col-md-4">
             <div
@@ -69,7 +58,7 @@ export default function AboutMe() {
         <History />
 
         <h1 align="center" className="mt-5  pt-5 mb-4">
-          Tech Stack
+          {AboutPageData.lowlvlsub}
           <hr />
           <span>
             <div>
@@ -86,14 +75,11 @@ export default function AboutMe() {
           </span>
         </h1>
         <hr />
-       
-        <div className="mt-5 pt-4 mb-4">
-        <ContactForm className="contactme" />
+
+        <div className="mt-5 pt-4 mb-4 pb-4">
+          <ContactForm className="contactme" />
+        </div>
       </div>
-      </div>
-      <br />
-      <br />
-      <br />
     </motion.div>
   );
 }

@@ -1,23 +1,47 @@
-# CountmeIn  
-A cross-platform mobile application that uses image processing to count steel bars. The application also integrates with a system and database for efficient management of stocks and sales.
+# 📱 CountmeIn  
+A **cross-platform mobile application** that uses image processing to count steel bars. The app integrates with a system and database for efficient management of **stocks and sales**.  
 
-## Skills:
-Python, flutter, dart language, Firebase, CNN algorithm, and
+---
 
-## Responsibility:
-Project Leader and developer
+## 🚀 Project Links  
+- 📲 **Flutter Mobile App** → [CountmeIn](https://github.com/mirosh-kavinda/countmein)  
+- 🤖 **Steel Bar Detection Model** → [Steel Detection Model](https://github.com/mirosh-kavinda/steel_detection_model)  
+- 🎨 **UI Design File** → [UI Design File](https://www.figma.com/design/VHGmwv1lV31TY8GU0xUkBj/countMeIn?node-id=1-230&t=7GIP9VRtAFthgi9t-0)  
 
-## Methodology 
+---
 
-This application used Python script that appears to be a computer vision algorithm for steel bar detection in images. It uses a convolutional neural network (CNN) for candidate center detection and performs clustering to group the candidate centers. Finally, it shows the results by visualizing the candidate centers, bounding boxes around the clustered centers, and the final clustered centers.
+## 🛠 Skills & Tech Stack  
+- **Languages/Frameworks**: Python, Flutter, Dart  
+- **Database & Backend**: Firebase  
+- **Algorithms**: Convolutional Neural Networks (CNN)  
+- **Other Tools**: Flask, Docker  
+
+---
+
+## 👨‍💻 Responsibilities  
+- **Project Leader** and **Developer**  
+- Implemented steel bar detection model with CNN  
+- Integrated backend with Firebase for real-time stock management  
+- Coordinated ERP system integration with mobile app  
+- Built a **Flask API** to connect with ERP solutions via API calls  
+- **Containerized** the entire model using **Docker** and deployed it on customers’ work computers  
+
+---
+
+## ⚙️ Methodology  
+The application leverages a **Python computer vision script** for steel bar detection in images:  
+- **CNN-based Candidate Detection** → Detects candidate steel bar centers  
+- **Clustering Algorithm** → Groups candidate centers  
+- **Visualization** → Displays bounding boxes and clustered centers  
+- **Flask API Integration** → Provides connectivity with ERP solutions  
+- **Docker Deployment** → Ensures portability and smooth deployment on customer systems  
+
+📄 **Paper Reference**: *Automated Steel Bar Counting and Center Localization with Convolutional Neural Networks*  
+- **Authors**: Zhun Fan, Jiewei Lu, Benzhang Qiu, Tao Jiang, Kang An  
+- **Date**: December 16, 2018  
+- **Version**: 1.0  
+- **Copyright(c)**: 2018, Benzhang Qiu  
+- 🔗 [Original Paper & Code](https://github.com/BenzhangQiu/Steel-bar-Detection)  
 
 
-## Methodology:
-Author: Zhun Fan, Jiewei Lu, Benzhang Qiu, Tao Jiang, Kang An<br>
-Version: 1.0<br>
-Copyright(c) 2018, Benzhang Qiu<br>
-
-
-
-
-
+<br><br><br><br><br><br><br><br>

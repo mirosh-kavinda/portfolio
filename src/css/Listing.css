@@ -45,12 +45,12 @@
 }
 
 .listing__details {
-  height: 52%;
+  height: 54%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
-  padding: 0px 25px;
+  padding: 0px 18px;
   position: relative;
 }
 
@@ -64,15 +64,28 @@
   border-radius: 15px;
   color: orange;
 }
+.fab {
+  position: fixed; /* Fixed to viewport */
+  bottom: 100px;    /* Distance from bottom */
+  right: 30px;     /* Distance from right */
+  z-index: 1000;   /* Ensure it's above other elements */
+}
+
+.fab .btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 50px; /* Rounded button */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
 
 .listing__row {
   margin: 6px 0px;
   display: flex;
-  align-items: center;
+  align-items: start;
 }
 
 .listing__price {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #737373;
 }
 
