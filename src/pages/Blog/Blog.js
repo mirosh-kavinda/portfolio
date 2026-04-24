@@ -15,7 +15,7 @@ function ToText(node) {
 
 function Blog() {
   const mediumURL = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@mirosh-kavinda";
- 
+
   const initialState = {
     profile: {
       ptitle: "",
@@ -31,39 +31,39 @@ function Blog() {
   const [state, setState] = useState(initialState);
 
   Axios.get(mediumURL)
-  .then((response) => {
-    const avatar = response.data.feed.image;
-    const profileLink = response.data.feed.link;
-    const posts = response.data.items;
-    const title = response.data.feed.title;
+    .then((response) => {
+      const avatar = response.data.feed.image;
+      const profileLink = response.data.feed.link;
+      const posts = response.data.items;
+      const title = response.data.feed.title;
 
-    posts.forEach((post) => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(post.description, "text/html");
-      const imgTags = doc.getElementsByTagName('img');
-      const imageUrl = imgTags.length > 0 ? imgTags[0].getAttribute('src') : '';
+      posts.forEach((post) => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(post.description, "text/html");
+        const imgTags = doc.getElementsByTagName('img');
+        const imageUrl = imgTags.length > 0 ? imgTags[0].getAttribute('src') : '';
 
-      // Adding imageUrl to each post object
-      post.imageUrl = imageUrl;
+        // Adding imageUrl to each post object
+        post.imageUrl = imageUrl;
+      });
+
+      setState(() => ({
+        profile: {
+          ptitle: title,
+          profileurl: profileLink,
+          avtar: avatar,
+        },
+        item: posts,
+        isLoading: false,
+      }));
+    })
+    .catch((error) => {
+      console.error(error);
+      setState(() => ({
+        error: error,
+        isLoading: false,
+      }));
     });
-
-    setState(() => ({
-      profile: {
-        ptitle: title,
-        profileurl: profileLink,
-        avtar: avatar,
-      },
-      item: posts,
-      isLoading: false,
-    }));
-  })
-  .catch((error) => {
-    console.error(error);
-    setState(() => ({
-      error: error,
-      isLoading: false,
-    }));
-  });
 
   const [selectedPost, setSelectedPost] = useState(null);
   const [open, setOpen] = useState(false);
@@ -120,18 +120,19 @@ function Blog() {
           ) : (
             state.item.map((post, index) => {
               return (
-                <>
+                <React.Fragment key={index}>
                   <motion.div
                     className="listing"
-                    onClick={() =>{
+                    onClick={() => {
                       setSelectedPost(post);
-                      setOpen(true)}
+                      setOpen(true)
+                    }
                     }
                     whileHover={{ scale: 1.05 }}
                   >
                     <div className="listing__content">
                       <div className="listing__image-container">
-         
+
                         <img
                           className="listing__image"
                           alt={post.title}
@@ -144,86 +145,86 @@ function Blog() {
                         </div>
                         <div className="listing__row">
                           <span className="listing__address">{`${ToText(
-                              post.description.substring(0, 300))}...`}</span> 
+                            post.description.substring(0, 300))}...`}</span>
                         </div>
-              
+
                       </div>
                     </div>
                   </motion.div>
                   <AnimatePresence>
                     {open && (
                       <Overlay close={() => {
-                         setOpen(false);
-                         setSelectedPost(null);
+                        setOpen(false);
+                        setSelectedPost(null);
                       }}>
-                    
-                          <motion.div
-                            className="modal bg-dark "
-                            variants={modalVariants}
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            <motion.img
-                              className="modal__image"
-                              alt="real estate mansion"
-                              src={selectedPost.imageUrl}
-                              variants={imageVariants}
-                            ></motion.img>
-                            <motion.div className="modal__info bg-dark" variants={modalInfoVariants}>
-                             
-                                <span className="modal__price">{selectedPost.title}</span>
-                              
-                             
-                              <motion.div className="modal__row" variants={modalRowVariants}>
-                                <span className="modal__address">{selectedPost.index}</span>
-                              </motion.div>
 
-                              <motion.div
-                                className="modal__description-wrapper"
-                                variants={modalRowVariants}
-                              >
-                                <p className="modal__description">{`${ToText(
-                              selectedPost.description.substring(0, 600))}...`}</p>
-                              </motion.div>
+                        <motion.div
+                          className="modal bg-dark "
+                          variants={modalVariants}
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <motion.img
+                            className="modal__image"
+                            alt="real estate mansion"
+                            src={selectedPost.imageUrl}
+                            variants={imageVariants}
+                          ></motion.img>
+                          <motion.div className="modal__info bg-dark" variants={modalInfoVariants}>
 
-                              <motion.div className="modal__row" variants={modalRowVariants}>
-                                  <Link
-                                    to= {selectedPost.link}
-                            
-                                    className=" d-flex justify-content-center p-2 button nav-link"
-                                    style={{
-                                      border: " solid white",
-                                      padding: "1px",
-                                      textDecoration: "none",
-                                      color: "white",
-                                      borderRadius: "20%",
-                                      cursor: "pointer",
-                                    }}
-                            >
-                                  Read More
-                                  </Link>
-                                  
-                                </motion.div>
-                              <motion.button
-                                  className="modal__close-wrapper"
-                                  whileHover={{ scale: 1.2 }}
-                                  onClick={() => setOpen(false)}
-                                >
-                                  <IoCloseCircleOutline className="modal__close-icon" />
-                                </motion.button>
+                            <span className="modal__price">{selectedPost.title}</span>
+
+
+                            <motion.div className="modal__row" variants={modalRowVariants}>
+                              <span className="modal__address">{selectedPost.index}</span>
                             </motion.div>
+
+                            <motion.div
+                              className="modal__description-wrapper"
+                              variants={modalRowVariants}
+                            >
+                              <p className="modal__description">{`${ToText(
+                                selectedPost.description.substring(0, 600))}...`}</p>
+                            </motion.div>
+
+                            <motion.div className="modal__row" variants={modalRowVariants}>
+                              <Link
+                                to={selectedPost.link}
+
+                                className=" d-flex justify-content-center p-2 button nav-link"
+                                style={{
+                                  border: " solid white",
+                                  padding: "1px",
+                                  textDecoration: "none",
+                                  color: "white",
+                                  borderRadius: "20%",
+                                  cursor: "pointer",
+                                }}
+                              >
+                                Read More
+                              </Link>
+
+                            </motion.div>
+                            <motion.button
+                              className="modal__close-wrapper"
+                              whileHover={{ scale: 1.2 }}
+                              onClick={() => setOpen(false)}
+                            >
+                              <IoCloseCircleOutline className="modal__close-icon" />
+                            </motion.button>
                           </motion.div>
-                    
-                        </Overlay>
-                      )}
-                    </AnimatePresence>
-                  </>
-                );
-              })
-            )}
-          </div>
+                        </motion.div>
+
+                      </Overlay>
+                    )}
+                  </AnimatePresence>
+                </React.Fragment>
+              );
+            })
+          )}
         </div>
-      </>
-    );
-  }
+      </div>
+    </>
+  );
+}
 
 export default Blog;

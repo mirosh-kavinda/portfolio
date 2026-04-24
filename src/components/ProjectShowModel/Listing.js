@@ -5,10 +5,10 @@ import { FaLaptopCode, FaPaintBrush } from "react-icons/fa";
 
 const Listing = ({ data, open }) => {
   const {  
-    id,
     projectName,
     category,
-    cardDesc
+    cardDesc,
+    id
   } = data;
   return (
     <motion.div className="listing" onClick={open} whileHover={{ scale: 1.1 }}>

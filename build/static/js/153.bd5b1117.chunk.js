@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[153],{4153:(a,e,o)=>{a.exports=o.p+"static/media/Crafira.1cd33ba0af8c99aee0b9.md"}}]);

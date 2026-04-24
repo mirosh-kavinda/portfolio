@@ -12,13 +12,25 @@ import { BsMedium } from "react-icons/bs";
 import BriefType from "../../components/AboutHelpers/BriefType";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { LandingData } from "../../data/pageData";
+import { useSiteData } from "../../context/SiteDataContext";
 
 const Home = () => {
   const navigate = useNavigate();
+  const { siteData, loading } = useSiteData();
+  const landingData = siteData?.LandingData;
+
   const saveFile = () => {
-    fileSaver.saveAs(LandingData.cvURl, LandingData.cvDownName);
+    fileSaver.saveAs(landingData?.cvURl, landingData?.cvDownName);
   };
+
+  if (loading) {
+    return (
+      <div className="text-center mt-5">
+        <p>Loading...</p>
+      </div>
+    );
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -26,66 +38,51 @@ const Home = () => {
       exit={{ opacity: 0, transition: { duration: 0.4 } }}
     >
       <div className="home" id="home">
-        <div className="header  whitespace">
-          <div className="row ">
+        <div className="header">
+          <div className="row">
             <div
               className="col-md-8 col-sm-12 white-text text-start ms-4 text-start"
               id="heading"
             >
-              <p className="display-1 font-weight-bold"> {LandingData.name}</p>
-
-              <h4 className=" col-md-7 col-sm-12 me-5 ">
-                {LandingData.description}
+              <p className="display-1 font-weight-bold">{landingData?.name}</p>
+              <h4 className="col-md-7 col-sm-12 me-5">
+                {landingData?.description}
               </h4>
             </div>
           </div>
-          <div className="row whitespace ps-1 me-5 ms-1 ">
+          <div className="row whitespace ps-1 me-5 ms-1">
             <button
-              to="/projects"
-              className="  link rounded bg-dark col-md-2 mt-2 ms-2  col-s-2 "
+              className="link rounded bg-dark col-md-2 mt-2 ms-2 col-s-2"
               onClick={saveFile}
             >
-              <AiOutlineCloudDownload /> {LandingData.cvbtn}
+              <AiOutlineCloudDownload /> {landingData?.cvbtn}
             </button>
             <button
               onClick={() => navigate("/projects")}
-              className="  link rounded bg-dark col-md-3 ms-2 mt-2 col-s-2"
+              className="link rounded bg-dark col-md-3 ms-2 mt-2 col-s-2"
             >
-              {LandingData.workbtn} <AiOutlineBuild size={30} />
+              {landingData?.workbtn} <AiOutlineBuild size={30} />
             </button>
           </div>
-          <div align="start" className="mt-5  ps-1 me-5 ms-1  ">
-            <a className="mx-1 ms-3" href={LandingData.mediumHandle}>
-              <BsMedium className="  rounded  link bg-dark p-1 " size={40} />
+          <div align="start" className="mt-5 ps-1 me-5 ms-1">
+            <a className="mx-1 ms-3" href={landingData?.mediumHandle}>
+              <BsMedium className="rounded link bg-dark p-1" size={40} />
             </a>
-
-            <a className="mx-1" href={LandingData.ytHandle}>
-              <AiOutlineYoutube
-                className=" rounded  link bg-dark p-1 "
-                size={40}
-              />
+            <a className="mx-1" href={landingData?.ytHandle}>
+              <AiOutlineYoutube className="rounded link bg-dark p-1" size={40} />
             </a>
-            <a className="mx-1" href={LandingData.twitHandle}>
-              <AiOutlineTwitter
-                className=" rounded  link bg-dark p-1 "
-                size={40}
-              />
+            <a className="mx-1" href={landingData?.twitHandle}>
+              <AiOutlineTwitter className="rounded link bg-dark p-1" size={40} />
             </a>
-            <a className="mx-1" href={LandingData.linkdHandle}>
-              <AiOutlineLinkedin
-                className=" rounded  link bg-dark p-1 "
-                size={40}
-              />
+            <a className="mx-1" href={landingData?.linkdHandle}>
+              <AiOutlineLinkedin className="rounded link bg-dark p-1" size={40} />
             </a>
-            <a className="mx-1" href={LandingData.githubHandle}>
-              <AiOutlineGithub
-                className=" rou nded  link bg-dark p-1 "
-                size={40}
-              />
+            <a className="mx-1" href={landingData?.githubHandle}>
+              <AiOutlineGithub className="rounded link bg-dark p-1" size={40} />
             </a>
           </div>
 
-          <div className=" col-sm-12 col-md-5  ps-1 me-5 ms-1  ">
+          <div className="col-sm-12 col-md-5 ps-1 me-5 ms-1">
             <BriefType />
           </div>
         </div>
@@ -93,4 +90,5 @@ const Home = () => {
     </motion.div>
   );
 };
+
 export default Home;

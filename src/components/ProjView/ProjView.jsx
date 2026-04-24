@@ -14,18 +14,20 @@ const ProjView = () => {
   const navigate = useNavigate();
   let images;
 
-  const file_name = `${projName}.md`;
+
   const [post, setPost] = useState("");
   useEffect(() => {
-    import(`../../data/Project_info/${file_name}`)
-      .then((res) => {
-        fetch(res.default)
-          .then((res) => res.text())
-          .then((res) => setPost(res))
-          .catch((err) => console.log(err));
-      })
-      .catch((err) => console.log(err));
-  });
+    const file_name = `${projName}/main/ReadMe.md`;
+  
+    // YOUR GITHUB RAW URL
+    const githubURL = `https://raw.githubusercontent.com/mirosh-kavinda/${file_name}`;
+  
+    fetch(githubURL)
+      .then((res) => res.text())
+      .then((text) => setPost(text))
+      .catch((err) => console.log("Error fetching MD:", err));
+  }, [projName]);
+  
 
   // image sorting to import all for casestudies
   switch (projId) {
