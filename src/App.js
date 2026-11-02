@@ -7,6 +7,7 @@ import useAnimations from "./hooks/useAnimations";
 import Spinner from "./components/Spinner/Spinner";
 import AnimatedRoutes from "./components/AnimatedRoutes";
 import { SiteDataProvider } from "./context/SiteDataContext";
+import { ThemeProvider } from "./context/ThemeContext";
 
 export default function App() {
   const { loading } = useAnimations();
@@ -28,6 +29,7 @@ export default function App() {
   }, [location]);
 
   return (
+    <ThemeProvider>
     <SiteDataProvider>
       {loading ? (
         <div className="App">
@@ -47,5 +49,6 @@ export default function App() {
         </div>
       )}
     </SiteDataProvider>
+    </ThemeProvider>
   );
 }

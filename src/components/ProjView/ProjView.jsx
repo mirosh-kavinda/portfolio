@@ -58,14 +58,13 @@ const ProjView = () => {
             onClick={() => navigate(-1)}
             className="nav-link  p-0 me-2"
             style={{
-              color: "#fffff",
               cursor: "pointer",
               textDecoration: "underline",
             }}
           >
             Projects
           </span>
-          <span style={{ color: "#adb5bd" }}> / {projName}</span>
+          <span style={{ color: "var(--text-muted)" }}> / {projName}</span>
         </div>
        
         <div className=" mt-5 mb-5"> </div>
@@ -82,7 +81,7 @@ const ProjView = () => {
           })}
 {projCat === "casestudy" && (
   <div className="fab">
-    <Link to={projectLink} className="btn btn-dark border solid 1px">
+    <Link to={projectLink} className="btn surface theme-text border solid 1px">
       View Design File
     </Link>
   </div>

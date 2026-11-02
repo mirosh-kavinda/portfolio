@@ -139,9 +139,9 @@ function Blog() {
                           src={post.imageUrl} // Assuming 'thumbnail' property exists in 'post' object
                         />
                       </div>
-                      <div className="listing__details bg-dark">
+                      <div className="listing__details surface">
                         <div className="listing__row">
-                          <span className=" text-white">{post.title}</span>
+                          <span className=" theme-text">{post.title}</span>
                         </div>
                         <div className="listing__row">
                           <span className="listing__address">{`${ToText(
@@ -159,7 +159,7 @@ function Blog() {
                       }}>
 
                         <motion.div
-                          className="modal bg-dark "
+                          className="modal surface "
                           variants={modalVariants}
                           onClick={(e) => e.stopPropagation()}
                         >
@@ -169,7 +169,7 @@ function Blog() {
                             src={selectedPost.imageUrl}
                             variants={imageVariants}
                           ></motion.img>
-                          <motion.div className="modal__info bg-dark" variants={modalInfoVariants}>
+                          <motion.div className="modal__info surface" variants={modalInfoVariants}>
 
                             <span className="modal__price">{selectedPost.title}</span>
 
@@ -192,10 +192,10 @@ function Blog() {
 
                                 className=" d-flex justify-content-center p-2 button nav-link"
                                 style={{
-                                  border: " solid white",
+                                  border: "solid var(--text)",
                                   padding: "1px",
                                   textDecoration: "none",
-                                  color: "white",
+                                  color: "var(--text)",
                                   borderRadius: "20%",
                                   cursor: "pointer",
                                 }}

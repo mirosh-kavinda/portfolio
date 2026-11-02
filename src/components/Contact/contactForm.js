@@ -6,7 +6,9 @@ import React, { useState } from "react";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
 import "../../css/contactForm.css";
+import { useTheme } from "../../context/ThemeContext";
 const ContactForm = () => {
+  const { theme } = useTheme();
   const [loading, setLoading] = useState(false);
   const {
     register,
@@ -136,7 +138,7 @@ const ContactForm = () => {
               )}
             </div>
             <button
-              className="d-flex ms-2 col-4 justify-content-center mt-4 align-items-center btn bg-dark link col-md-4"
+              className="d-flex ms-2 col-4 justify-content-center mt-4 align-items-center btn surface link col-md-4"
               type="submit"
               disabled={loading}
             >
@@ -146,7 +148,7 @@ const ContactForm = () => {
         </div>
         <div className="col-md-3 col-sm-12 mt-5">
           <a
-            className="d-flex align-items-center bg-dark rounded p-2 link text-decoration-none"
+            className="d-flex align-items-center surface rounded p-2 link text-decoration-none"
             href="https://goo.gl/maps/y414JL98TXvb6FWZ6"
             target="_blank"
             rel="noopener noreferrer"
@@ -154,25 +156,25 @@ const ContactForm = () => {
             <div className="me-3  ">
               <CiLocationOn size={40} />
             </div>
-            <p className="mb-0 text-light">
+            <p className="mb-0 theme-text">
               No: 81/5, 5th Cross Road, Weragampita, Matara
             </p>
           </a>
 
           <a
-            className="d-flex align-items-center  mt-2 bg-dark rounded p-3 link text-decoration-none"
+            className="d-flex align-items-center  mt-2 surface rounded p-3 link text-decoration-none"
             href="https://wa.me/94713531809"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <BsFillTelephoneFill size={30} className="me-3 text-light" />
-            <p className="mb-0 text-light">
+            <BsFillTelephoneFill size={30} className="me-3 theme-text" />
+            <p className="mb-0 theme-text">
               +94713531809 (WhatsApp)
               </p>
           </a>
         </div>
       </div>
-      <ToastContainer />
+      <ToastContainer theme={theme} />
       <br />
       <br />
       <br />

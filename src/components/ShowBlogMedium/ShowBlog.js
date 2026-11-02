@@ -48,7 +48,7 @@ function ShowBlog(props, p) {
   return (
     <motion.div
       key={props.index}
-      className={` p-1 card card-s-bg  cursor-pointer col-sm-12 col-md-4 h-[500px] bg-cover bg-black bg-center rounded-[30px] ${
+      className={` p-1 card card-s-bg  cursor-pointer col-sm-12 col-md-4 h-[500px] bg-cover page-bg bg-center rounded-[30px] ${
         props.index === expandIndex ? "expanded" : ""
       }`}
       variants={cardVariants}
@@ -60,7 +60,7 @@ function ShowBlog(props, p) {
       <img src={props.thumbnail} class="cardpost__image" alt="..." />
 
       <div className="border-success card-content h-full flex flex-col justify-end">
-        <div className="card-footer rounded-b-[20px bg-dark bg-opacity-75 min-h-[10px] flex flex-col items-center justify-center">
+        <div className="card-footer rounded-b-[20px surface bg-opacity-75 min-h-[10px] flex flex-col items-center justify-center">
           <h6 className="text-xl font-semibold text-orange text-center ">
             {props.title}
           </h6>
@@ -72,12 +72,12 @@ function ShowBlog(props, p) {
               )}...`}</p>
 
               <div
-                class="card-footer bg-dark"
+                class="card-footer surface"
                 style={{
-                  border: "1px solid white",
+                  border: "1px solid var(--text)",
 
                   borderRadius: "1%",
-                  color: "white",
+                  color: "var(--text)",
                   cursor: "pointer",
                 }}
               >
@@ -88,7 +88,7 @@ function ShowBlog(props, p) {
                   Read More
                 </Link>
 
-                <span className=" ms-3 text-white  d-flex justify-content-center p-1">
+                <span className=" ms-3 theme-text  d-flex justify-content-center p-1">
                   published :{" "}
                   {moment(props.pubDate).format("MMM DD, YYYY hh:mm")}
                 </span>

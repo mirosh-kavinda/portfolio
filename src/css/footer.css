@@ -1,6 +1,6 @@
 .back-to-top {
   position: fixed;
-  background-color: #222;
+  background-color: var(--surface-alt);
   bottom: 0px;
   right: 1%;
   font-size: 15px;
@@ -8,7 +8,7 @@
 }
 
 .back-to-top:hover {
-  color: #e3874f;
+  color: var(--brand);
 }
 .widget-app-container {
   top: 15px;
@@ -17,10 +17,10 @@
   position: fixed;
 
   border: none;
-  box-shadow: 1px 0px 5px 3px #e3874f;
+  box-shadow: 1px 0px 5px 3px var(--brand);
   bottom: 0px;
   width: 100%;
-  background: #222;
+  background: var(--surface-alt);
   border-top-left-radius: 30%;
   
   height: 66px;

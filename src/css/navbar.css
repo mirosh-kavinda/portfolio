@@ -1,32 +1,13 @@
-body {
-    --black: #000000;
-    --ash-black: #222;
-    --white: #fafafa;
-    --sky: #00ccff;
-    --green: #22dddd;
-    --blue: #1300ff;
-    --dusk: #6600ff;
-    --purple: #9900ff;
-    --pink: #ff0066;
-    --red: #e77a04;
-    --orange: #fd7702;
-    --yellow: #ffbb00;
-  
-    --background: var(--white);
-    --accent: var(--ash-black);
-  
-   
-  }
 
   ::-webkit-scrollbar {
     height: 5px;
     width: 5px;
-    background: var(--background);
+    background: var(--menu-fg);
     -webkit-border-radius: 1ex;
   }
   
   ::-webkit-scrollbar-thumb {
-    background: var(--accent);
+    background: var(--menu-bg);
     -webkit-border-radius: 1ex;
   }
   
@@ -35,14 +16,14 @@ body {
   }
 
   .refresh path {
-    fill: var(--accent);
+    fill: var(--menu-bg);
   }
   
   .box {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: var(--accent);
+    background: var(--menu-bg);
     margin: 0;
   }
   
@@ -53,7 +34,7 @@ body {
     left: 0;
     bottom: 0;
     width: 100vw;
-    background: var(--accent);
+    background: var(--menu-bg);
     padding-top: 100px;
     transform: translateX(-100%);
     will-change: transform;
@@ -70,7 +51,7 @@ body {
     border: none;
   }
   .navbar-toggler  li {
-    color: var(--background);
+    color: var(--menu-fg);
     display: block;
     transform-origin: -20px 50%;
     font-weight: bold;
@@ -98,16 +79,16 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: var(--accent);
+    background: var(--menu-bg);
     
   }
   
   button path {
-    fill: var(--background);
+    fill: var(--menu-fg);
   }
   
   input {
-    accent-color: var(--accent);
+    accent-color: var(--menu-bg);
   }
   
   .controls {
@@ -126,16 +107,16 @@ body {
   
   input[type="number"] {
     border: 0;
-    border-bottom: 1px dotted var(--accent);
-    color: var(--accent);
+    border-bottom: 1px dotted var(--menu-bg);
+    color: var(--menu-bg);
     margin-left: 10px;
-    background: var(--background);
+    background: var(--menu-fg);
     width: 50px;
   }
   
   input[type="number"]:focus {
     outline: none;
-    border-bottom: 2px solid var(--accent);
+    border-bottom: 2px solid var(--menu-bg);
   }
   
   input[type="number"]::-webkit-inner-spin-button {
@@ -155,8 +136,8 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    background: var(--accent);
-    color: var(--background);
+    background: var(--menu-bg);
+    color: var(--menu-fg);
     font-size: 40px;
     line-height: 260px;
     font-weight: 700;
