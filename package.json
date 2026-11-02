@@ -35,10 +35,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run build",
     "sitemap": " ./node_modules/.bin/babel-node src/config/sitemap.js",
     "prebuild": "react-scripts  npm run sitemap",
-    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -64,7 +62,6 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "dotenv-webpack": "^8.0.1",
-    "gh-pages": "^4.0.0",
     "raw-loader": "^4.0.2",
     "react-scripts": "^5.0.1"
   }
