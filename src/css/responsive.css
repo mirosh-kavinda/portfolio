@@ -33,7 +33,7 @@
   .header{
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.708);
+    background: var(--hero-scrim-mobile);
     
   }
   .ring {

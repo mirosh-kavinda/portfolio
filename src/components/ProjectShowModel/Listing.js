@@ -21,9 +21,9 @@ const Listing = ({ data, open }) => {
             src={require(`../../images/projects/ProjCardView/${id}.png`)}
           />
         </div>
-        <div className="listing__details bg-dark  ">
+        <div className="listing__details surface  ">
           <div className="listing__row">
-            <span className="listing__price text-white">{projectName}</span>
+            <span className="listing__price theme-text">{projectName}</span>
           </div>
           <div className="listing__row">
             <span className="listing__address">{cardDesc}</span>

@@ -32,8 +32,8 @@ function History() {
           return (
             <VerticalTimelineElement
               contentStyle={{
-                background: "rgba(0, 0, 0, 0.708)",
-                color: "#fff",
+                background: "var(--timeline-bg)",
+                color: "var(--text)",
               }}
               key={element.id}
               date={element.date}

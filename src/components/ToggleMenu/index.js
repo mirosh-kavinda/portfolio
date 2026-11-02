@@ -64,7 +64,7 @@ export const Path = (props) => (
   <path
     fill="transparent"
     strokeWidth="3"
-    stroke="var(--background)"
+    stroke="var(--menu-fg)"
     strokeLinecap="round"
     {...props}
   />

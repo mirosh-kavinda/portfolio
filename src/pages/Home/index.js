@@ -52,33 +52,33 @@ const Home = () => {
           </div>
           <div className="row whitespace ps-1 me-5 ms-1">
             <button
-              className="link rounded bg-dark col-md-2 mt-2 ms-2 col-s-2"
+              className="link rounded surface col-md-2 mt-2 ms-2 col-s-2"
               onClick={saveFile}
             >
               <AiOutlineCloudDownload /> {landingData?.cvbtn}
             </button>
             <button
               onClick={() => navigate("/projects")}
-              className="link rounded bg-dark col-md-3 ms-2 mt-2 col-s-2"
+              className="link rounded surface col-md-3 ms-2 mt-2 col-s-2"
             >
               {landingData?.workbtn} <AiOutlineBuild size={30} />
             </button>
           </div>
           <div align="start" className="mt-5 ps-1 me-5 ms-1">
             <a className="mx-1 ms-3" href={landingData?.mediumHandle}>
-              <BsMedium className="rounded link bg-dark p-1" size={40} />
+              <BsMedium className="rounded link surface p-1" size={40} />
             </a>
             <a className="mx-1" href={landingData?.ytHandle}>
-              <AiOutlineYoutube className="rounded link bg-dark p-1" size={40} />
+              <AiOutlineYoutube className="rounded link surface p-1" size={40} />
             </a>
             <a className="mx-1" href={landingData?.twitHandle}>
-              <AiOutlineTwitter className="rounded link bg-dark p-1" size={40} />
+              <AiOutlineTwitter className="rounded link surface p-1" size={40} />
             </a>
             <a className="mx-1" href={landingData?.linkdHandle}>
-              <AiOutlineLinkedin className="rounded link bg-dark p-1" size={40} />
+              <AiOutlineLinkedin className="rounded link surface p-1" size={40} />
             </a>
             <a className="mx-1" href={landingData?.githubHandle}>
-              <AiOutlineGithub className="rounded link bg-dark p-1" size={40} />
+              <AiOutlineGithub className="rounded link surface p-1" size={40} />
             </a>
           </div>
 

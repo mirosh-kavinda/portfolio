@@ -1,0 +1,128 @@
+/* Every themed colour lives here. The active theme is set as data-theme on
+   <html> by the inline script in public/index.html and by ThemeContext. */
+:root,
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #000000;
+  --bg-rgb: 0, 0, 0;
+  --surface: #212529;
+  --surface-alt: #222222;
+  --text: #ffffff;
+  --text-muted: #adb5bd;
+  --text-subtle: #808080;
+  --link: rgb(193, 193, 193);
+  --navbar-link: rgba(255, 255, 255, 0.55);
+  --brand: #e3874f;
+  --ring: rgba(255, 255, 255, 0.808);
+
+  --menu-bg: #222222;
+  --menu-fg: #fafafa;
+
+  --hero-scrim: rgba(0, 0, 0, 0.508);
+  --hero-scrim-mobile: rgba(0, 0, 0, 0.708);
+
+  --timeline-bg: rgba(0, 0, 0, 0.708);
+  --timeline-line: #ffffff;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #ffffff;
+  --bg-rgb: 255, 255, 255;
+  --surface: #f3f4f6;
+  --surface-alt: #f3f4f6;
+  --text: #1c1c1e;
+  --text-muted: #5f6368;
+  --text-subtle: #5f6368;
+  --link: rgb(60, 60, 60);
+  --navbar-link: rgb(60, 60, 60);
+  --brand: #a84f17;
+  --ring: rgba(0, 0, 0, 0.808);
+
+  --menu-bg: #f3f4f6;
+  --menu-fg: #222222;
+
+  --hero-scrim: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.9) 35%,
+    rgba(255, 255, 255, 0) 62%
+  );
+  --hero-scrim-mobile: rgba(255, 255, 255, 0.82);
+
+  --timeline-bg: #f3f4f6;
+  --timeline-line: #d0d5dd;
+}
+
+/* Themed stand-ins for Bootstrap's bg-dark, bg-black, text-white and text-light */
+.surface {
+  background-color: var(--surface) !important;
+}
+
+.page-bg {
+  background-color: var(--bg) !important;
+}
+
+.theme-text {
+  color: var(--text) !important;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: var(--navbar-link);
+}
+
+.theme-toggle {
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  margin-left: 8px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navbar-link);
+  background: transparent;
+}
+
+.theme-toggle path {
+  fill: currentColor;
+}
+
+.theme-toggle:hover {
+  color: var(--brand);
+}
+
+/* The timeline library hardcodes these for a white card on a dark page */
+body .vertical-timeline::before {
+  background: var(--timeline-line);
+}
+
+body .vertical-timeline-element-content-arrow {
+  border-right-color: var(--timeline-bg);
+}
+
+/* spin-back.gif is opaque black, so flip it to white on the white page */
+:root[data-theme="light"] .center-loading {
+  filter: invert(1);
+}
+
+/* brand.png is a white mark with a dark outline */
+:root[data-theme="light"] .navbar a img {
+  filter: invert(1);
+}
+
+/* landing-large.jpg has an opaque black backdrop; this is the same art cut out */
+@media only screen and (min-width: 768px) {
+  :root[data-theme="light"] .home {
+    background-image: url(../images/landing-large-light.webp);
+  }
+}
+
+/* Below this width the hero text overlaps the art */
+@media only screen and (max-width: 1199px) {
+  :root[data-theme="light"] .header {
+    background: var(--hero-scrim-mobile);
+  }
+}

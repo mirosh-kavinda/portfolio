@@ -17,8 +17,8 @@ const DotRing = () => {
           display:"none"
         }}
         outerStyle={{
-          border:"1px solid  #e3874f ",
-          boxShadow:"0px 0px 4px 1px #e3874f",
+          border:"1px solid  var(--brand) ",
+          boxShadow:"0px 0px 4px 1px var(--brand)",
           background:"none",
           zIndex:"1000000"
         }}

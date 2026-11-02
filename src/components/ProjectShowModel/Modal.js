@@ -38,7 +38,7 @@ const Modal = ({ data, close }) => {
 
   return (
     <motion.div
-      className="modal bg-dark "
+      className="modal surface "
       variants={modalVariants}
       onClick={(e) => e.stopPropagation()}
     >
@@ -48,7 +48,7 @@ const Modal = ({ data, close }) => {
         src={require(`../../images/projects/ProjCardView/${id}.png`)}
         variants={imageVariants}
       ></motion.img>
-      <motion.div className="modal__info bg-dark" variants={modalInfoVariants}>
+      <motion.div className="modal__info surface" variants={modalInfoVariants}>
         <motion.div className="modal__row" variants={modalRowVariants}>
           <span className="modal__price">{projectName}</span>
         </motion.div>
@@ -74,10 +74,10 @@ const Modal = ({ data, close }) => {
          }}
          className=" d-flex justify-content-center p-2 button nav-link"
          style={{
-           border: " 1px solid white",
+           border: "1px solid var(--text)",
            padding: "1px",
            textDecoration: "none",
-           color: "white",
+           color: "var(--text)",
            borderRadius: "20%",
            cursor: "pointer",
          }}

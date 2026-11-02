@@ -24,7 +24,7 @@ export default class BriefType extends Component {
   render() {
     return (
       <motion.div 
-        className="mt-5 ms-4 rounded-2xl shadow-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white"
+        className="mt-5 ms-4 rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 theme-text"
         initial={{ opacity: 0, scale: 0.9, y: 30 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}

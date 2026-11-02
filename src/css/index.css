@@ -6,8 +6,8 @@ html {
 
   font-style: normal;
   -webkit-font-smoothing: antialiased;
-  background-color: white;
-  color: black;
+  background-color: var(--bg);
+  color: var(--text);
 
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -41,7 +41,7 @@ html {
   background-repeat: no-repeat;
 }
 .loading {
-  background-color: black;
+  background-color: var(--bg);
 }
 .center-loading {
   text-align: center;
@@ -78,7 +78,7 @@ html {
   left: 0;
   width: 39px;
   height: 39px;
-  border: 2px solid rgba(255, 255, 255, 0.808);
+  border: 2px solid var(--ring);
   border-radius: 100%;
   transform: translate(-50%, -50%);
   -webkit-transition-duration: 100ms;
@@ -100,8 +100,8 @@ html {
 
 .navbar-brand:hover,
 .link:hover {
-  border: 1px solid #e3874f;
-  color: #e3874f;
+  border: 1px solid var(--brand);
+  color: var(--brand);
   text-decoration: none;
   cursor: pointer;
   
@@ -115,15 +115,15 @@ html {
 }
 .nav-link,
 .link {
-  color: rgb(193, 193, 193);
+  color: var(--link);
   font-size: larger;
   cursor: pointer;
 }
 
 img:hover,
 a:hover {
-  border-bottom: #e3874f;
-  color: #e48951 !important;
+  border-bottom: var(--brand);
+  color: var(--brand) !important;
 }
 
 /* home page styles */
@@ -145,12 +145,12 @@ a:hover {
 .header {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.508);
+  background: var(--hero-scrim);
 }
 .loading {
 }
 .briefElement {
-  background-color: rgba(0, 0, 0, 0.585);
+  background-color: rgba(var(--bg-rgb), 0.585);
 }
 .brieftype {
   margin-top: 200px;
@@ -161,11 +161,11 @@ a:hover {
   font-style: normal;
   font-size: 28px;
   background-color: transparent;
-  text-shadow: 10px solid #ffffff;
+  text-shadow: 10px solid var(--text);
 }
 
 .active {
-  color: #e48951 !important;
+  color: var(--brand) !important;
 }
 
 .navbar {
@@ -173,7 +173,7 @@ a:hover {
   margin: 0px 3px 2px 0px;
   border-bottom-right-radius: 30%;
   border: none;
-  box-shadow: 0px 0px 4px 1px #e3874f;
+  box-shadow: 0px 0px 4px 1px var(--brand);
 }
 
 .about-img {
@@ -188,11 +188,11 @@ a:hover {
 }
 
 .formInput {
-  background-color: black;
-  color: white;
-  text-decoration-color: white;
-  border: white 1px solid;
-  text-decoration-color: #ffffff;
+  background-color: var(--bg);
+  color: var(--text);
+  text-decoration-color: var(--text);
+  border: var(--text) 1px solid;
+  text-decoration-color: var(--text);
 }
 
 

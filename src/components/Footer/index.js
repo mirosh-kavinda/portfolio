@@ -27,33 +27,33 @@ const Footer = () => {
               <div className="col-md-5 col-sm-4">
                 <a href={landingData?.mediumHandle}>
                   <BsMedium
-                    className="ms-4 mx-2 rounded link bg-dark"
+                    className="ms-4 mx-2 rounded link surface"
                     size={30}
                   />
                 </a>
 
                 <a href={landingData?.ytHandle}>
                   <AiOutlineYoutube
-                    className="mx-2 rounded link bg-dark"
+                    className="mx-2 rounded link surface"
                     size={30}
                   />
                 </a>
 
                 <a href={landingData?.twitHandle}>
                   <AiOutlineTwitter
-                    className="mx-2 rounded link bg-dark"
+                    className="mx-2 rounded link surface"
                     size={30}
                   />
                 </a>
                 <a href={landingData?.linkdHandle}>
                   <AiOutlineLinkedin
-                    className="mx-2 rounded link bg-dark"
+                    className="mx-2 rounded link surface"
                     size={30}
                   />
                 </a>
                 <a href={landingData?.githubHandle}>
                   <AiOutlineGithub
-                    className="mx-2 rounded link bg-dark"
+                    className="mx-2 rounded link surface"
                     size={30}
                   />
                 </a>
@@ -69,7 +69,7 @@ const Footer = () => {
                 2025 Alright reserved for @mirosh_kavinda{" "}
                 <a href={landingData?.webCode} id="code_src">
                   {" "}
-                  <AiOutlineCode className="mx-2 rounded link bg-dark" />
+                  <AiOutlineCode className="mx-2 rounded link surface" />
                 </a>
               </p>
             </div>

@@ -2,9 +2,11 @@ import brandImg from "../../images/brand.png";
 import { Link } from "react-router-dom";
 import "../../css/navbar.css";
 import { motion } from "framer-motion";
+import { BsMoonStars, BsSun } from "react-icons/bs";
 import { useState } from "react";
 import { MenuToggle, Menu } from "../ToggleMenu/index";
 import useMenuAnimation from "../../hooks/useMenuAnimation";
+import { useTheme } from "../../context/ThemeContext";
 
 export const MyComponent = () => (
   
@@ -18,10 +20,11 @@ export const MyComponent = () => (
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const scope = useMenuAnimation(isOpen);
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <>
-      <nav className="navbar navbar-dark bg-black navbar-expand-lg fixed-top">
+      <nav className="navbar page-bg navbar-expand-lg fixed-top">
         <div className="container">
           <motion.div
             animate={{
@@ -37,6 +40,7 @@ const Navbar = () => {
               <img src={brandImg} alt="  " />
             </Link>
           </motion.div>
+          <div className="d-flex align-items-center">
           <div>
             <div
               className="collapse navbar-collapse "
@@ -70,11 +74,20 @@ const Navbar = () => {
         
             </div>
           </div>
+          <button
+            type="button"
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+          >
+            {theme === "dark" ? <BsSun size={20} /> : <BsMoonStars size={20} />}
+          </button>
           <div ref={scope} className="navbar-toggler">
             
             <Menu  toggle={() => setIsOpen(!isOpen)}/>
             <MenuToggle toggle={() => setIsOpen(!isOpen)} />
           
+          </div>
           </div>
         </div>
       </nav>
