@@ -173,14 +173,11 @@ The site is hosted on **Firebase Hosting** and deployed by GitHub Actions:
 | Push to `main` | Builds and deploys to the live site |
 | Pull request from this repository | Builds and deploys a temporary preview, with the URL posted on the PR |
 
-### Required GitHub secrets
+### Build configuration
 
-The `.env` file is excluded from the repository, so add these under **Settings → Secrets and variables → Actions**:
+Production builds read the Firebase web config from the committed `.env.production` file. These values are public by design and end up in the browser bundle; the Realtime Database rules are what protect the data.
 
-- `FIREBASE_SERVICE_ACCOUNT_MIROSHKAVINDA`
-- All 8 `REACT_APP_FIREBASE_*` variables listed in [step 3](#3-configure-environment-variables)
-
-> ⚠️ A build with the `REACT_APP_FIREBASE_*` secrets missing still passes, but the deployed site fails on load. Add them before pushing to `main`.
+The deploy needs one GitHub secret, `FIREBASE_SERVICE_ACCOUNT_MIROSHKAVINDA`, set under **Settings → Secrets and variables → Actions**. Never commit that one.
 
 To undo a bad release, roll back from **Hosting → Release history** in the Firebase console.
 
