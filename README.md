@@ -1,6 +1,8 @@
 # 🌐 Mirosh Kavinda — Portfolio
 
-A personal developer portfolio built with **React**, powered by **Firebase Realtime Database** for dynamic content management and featuring seamless page transitions, a blog feed from Medium, and an integrated contact form.
+A personal developer portfolio built with **React**, powered by **Firebase Realtime Database** for dynamic content management and featuring light and dark themes, seamless page transitions, a blog feed from Medium, and an integrated contact form.
+
+**Live site:** [mirosh.web.app](https://mirosh.web.app/)
 
 ---
 
@@ -9,8 +11,9 @@ A personal developer portfolio built with **React**, powered by **Firebase Realt
 - 🏠 **Landing Page** — Animated hero with name, bio, social links, and CV download
 - 👤 **About Me** — Background, skills, tech stack, and LinkedIn badge
 - 🗂️ **Projects** — Dynamic project cards fetched from Firebase
-- 📝 **Blog** — Medium articles fetched via Medium API
+- 📝 **Blog** — Medium articles fetched from the Medium RSS feed via rss2json
 - 📬 **Contact Form** — Email delivery powered by EmailJS
+- 🌗 **Light & Dark Themes** — Navbar toggle that remembers the visitor's choice and otherwise follows their device setting
 - 🔄 **Animated Routes** — Smooth page transitions via Framer Motion
 - 🖱️ **Dot Ring Cursor** — Custom cursor for desktop
 - ⬆️ **Back to Top** — Footer with scroll-to-top and social links
@@ -27,9 +30,11 @@ A personal developer portfolio built with **React**, powered by **Firebase Realt
 | Database | Firebase Realtime Database |
 | Data Layer | React Context API (session cache) |
 | Email | EmailJS |
-| Blog Feed | Medium RSS API |
+| Blog Feed | Medium RSS via rss2json |
 | Icons | React Icons |
 | Styling | CSS (custom + Bootstrap utilities) |
+| Hosting | Firebase Hosting |
+| CI/CD | GitHub Actions |
 
 ---
 
@@ -38,25 +43,32 @@ A personal developer portfolio built with **React**, powered by **Firebase Realt
 ```
 src/
 ├── context/
-│   └── SiteDataContext.js   # Global Firebase data provider (fetched once per session)
+│   ├── SiteDataContext.js   # Global Firebase data provider (fetched once per session)
+│   └── ThemeContext.js      # Light/dark theme state and persistence
 ├── pages/
 │   ├── Home/                # Landing page
 │   ├── AboutMe/             # About page
 │   ├── Projects/            # Projects page
 │   └── Blog/                # Blog page
 ├── components/
+│   ├── AnimatedRoutes.jsx   # Route definitions and page transitions
 │   ├── Navbar/
+│   ├── ToggleMenu/
 │   ├── Footer/
 │   ├── Spinner/
+│   ├── DotRing/             # Custom cursor
 │   ├── Contact/             # EmailJS contact form
-│   ├── ProjectShowModel/    # Project card component
+│   ├── ProjectShowModel/    # Project cards, modal, and overlay
+│   ├── ProjView/            # Single project view
 │   ├── ShowBlogMedium/      # Medium blog card
-│   └── AboutHelpers/        # History, Badges, BriefType
+│   └── AboutHelpers/        # History, Affiliation, BriefType
 ├── hooks/
-│   ├── useAnimations.js
-│   └── useBackToTop.js
-├── data/                    # Static data (images, timeline)
-├── css/                     # Global and component stylesheets
+│   ├── useAnimations.jsx
+│   ├── useBackToTop.jsx
+│   └── useMenuAnimation.jsx
+├── data/                    # Static image data
+├── images/
+├── css/                     # Global and component stylesheets (colours live in theme.css)
 └── firebaseConfig.js        # Firebase initialization (reads from .env)
 ```
 
@@ -64,7 +76,7 @@ src/
 
 ## 🔥 Firebase Data Structure
 
-Content is managed dynamically via Firebase Realtime Database under the `siteData` node:
+Content is managed dynamically via Firebase Realtime Database under the `siteData` and `projects` nodes:
 
 ```json
 {
@@ -88,7 +100,8 @@ Content is managed dynamically via Firebase Realtime Database under the `siteDat
       "subtitle1": "...",
       "subtitle2": "...",
       "lowlvlsub": "Skills & Technologies"
-    }
+    },
+    "timelineElements": {}
   },
   "projects": [
     { "id": 1, "title": "...", "description": "...", "link": "..." }
@@ -96,7 +109,7 @@ Content is managed dynamically via Firebase Realtime Database under the `siteDat
 }
 ```
 
-> All site data is fetched **once per session** via `SiteDataContext` and shared across all pages — no redundant network requests.
+> `siteData` is fetched **once per session** via `SiteDataContext` and shared across all pages — no redundant network requests. The Projects page loads `projects` itself.
 
 ---
 
@@ -153,7 +166,23 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 🚀 Deployment
 
-For platforms like **Vercel** or **Netlify**, add all `REACT_APP_*` environment variables in the platform's dashboard — the `.env` file is excluded from the repository.
+The site is hosted on **Firebase Hosting** and deployed by GitHub Actions:
+
+| Trigger | Result |
+|---|---|
+| Push to `main` | Builds and deploys to the live site |
+| Pull request from this repository | Builds and deploys a temporary preview, with the URL posted on the PR |
+
+### Required GitHub secrets
+
+The `.env` file is excluded from the repository, so add these under **Settings → Secrets and variables → Actions**:
+
+- `FIREBASE_SERVICE_ACCOUNT_MIROSHKAVINDA`
+- All 8 `REACT_APP_FIREBASE_*` variables listed in [step 3](#3-configure-environment-variables)
+
+> ⚠️ A build with the `REACT_APP_FIREBASE_*` secrets missing still passes, but the deployed site fails on load. Add them before pushing to `main`.
+
+To undo a bad release, roll back from **Hosting → Release history** in the Firebase console.
 
 ---
 
