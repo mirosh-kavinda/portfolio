@@ -224,9 +224,16 @@ The site is hosted on **Firebase Hosting** and deployed by GitHub Actions:
 
 ### Build configuration
 
-Production builds read the Firebase web config from the committed `.env.production` file. These values are public by design and end up in the browser bundle; the Realtime Database rules are what protect the data.
+CI builds read the Firebase web config from GitHub repository secrets, set under **Settings → Secrets and variables → Actions**:
 
-The deploy needs one GitHub secret, `FIREBASE_SERVICE_ACCOUNT_MIROSHKAVINDA`, set under **Settings → Secrets and variables → Actions**. Never commit that one.
+| Secret | Purpose |
+|---|---|
+| `REACT_APP_FIREBASE_API_KEY` … `REACT_APP_FIREBASE_MEASUREMENT_ID` | The eight Firebase web config values listed in step 3 above |
+| `FIREBASE_SERVICE_ACCOUNT_MIROSHKAVINDA` | Lets the workflow deploy to Firebase Hosting. Never commit this one |
+
+The workflows stop with an error naming any missing secret. For local production builds, keep the same values in `.env.production`, which is git-ignored.
+
+The web config values are not truly secret: they end up in the browser bundle of the live site. The Realtime Database rules, plus API key restrictions in Google Cloud, are what protect the data.
 
 To undo a bad release, roll back from **Hosting → Release history** in the Firebase console.
 
