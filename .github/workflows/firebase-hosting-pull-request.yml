@@ -5,10 +5,35 @@ name: Deploy to Firebase Hosting on PR
 'on': pull_request
 jobs:
   build_and_preview:
+    # Secrets are not available to pull requests from forks, so only run for this repository
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
+    # The Firebase web config comes from repository secrets instead of a
+    # committed .env file. Add them under Settings > Secrets and variables > Actions.
+    env:
+      REACT_APP_FIREBASE_API_KEY: '${{ secrets.REACT_APP_FIREBASE_API_KEY }}'
+      REACT_APP_FIREBASE_AUTH_DOMAIN: '${{ secrets.REACT_APP_FIREBASE_AUTH_DOMAIN }}'
+      REACT_APP_FIREBASE_DATABASE_URL: '${{ secrets.REACT_APP_FIREBASE_DATABASE_URL }}'
+      REACT_APP_FIREBASE_PROJECT_ID: '${{ secrets.REACT_APP_FIREBASE_PROJECT_ID }}'
+      REACT_APP_FIREBASE_STORAGE_BUCKET: '${{ secrets.REACT_APP_FIREBASE_STORAGE_BUCKET }}'
+      REACT_APP_FIREBASE_MESSAGING_SENDER_ID: '${{ secrets.REACT_APP_FIREBASE_MESSAGING_SENDER_ID }}'
+      REACT_APP_FIREBASE_APP_ID: '${{ secrets.REACT_APP_FIREBASE_APP_ID }}'
+      REACT_APP_FIREBASE_MEASUREMENT_ID: '${{ secrets.REACT_APP_FIREBASE_MEASUREMENT_ID }}'
     steps:
       - uses: actions/checkout@v4
+      - name: Check Firebase config secrets
+        run: |
+          missing=0
+          for name in REACT_APP_FIREBASE_API_KEY REACT_APP_FIREBASE_AUTH_DOMAIN \
+            REACT_APP_FIREBASE_DATABASE_URL REACT_APP_FIREBASE_PROJECT_ID \
+            REACT_APP_FIREBASE_STORAGE_BUCKET REACT_APP_FIREBASE_MESSAGING_SENDER_ID \
+            REACT_APP_FIREBASE_APP_ID REACT_APP_FIREBASE_MEASUREMENT_ID; do
+            if [ -z "${!name}" ]; then
+              echo "::error::Missing repository secret $name"
+              missing=1
+            fi
+          done
+          exit $missing
       - uses: actions/setup-node@v4
         with:
           node-version: 22
