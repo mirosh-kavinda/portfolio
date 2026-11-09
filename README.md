@@ -179,7 +179,7 @@ npm install
 
 ### 3. Configure environment variables
 
-Create a `.env` file in the project root:
+Copy `.env.example` to `.env` in the project root and fill in the values:
 
 ```env
 REACT_APP_FIREBASE_API_KEY=your_api_key
@@ -190,7 +190,13 @@ REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
 REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
 REACT_APP_FIREBASE_APP_ID=your_app_id
 REACT_APP_FIREBASE_MEASUREMENT_ID=your_measurement_id
+
+REACT_APP_EMAILJS_SERVICE_ID=your_emailjs_service_id
+REACT_APP_EMAILJS_TEMPLATE_ID=your_emailjs_template_id
+REACT_APP_EMAILJS_PUBLIC_KEY=your_emailjs_public_key
 ```
+
+`.env` and `.env.production` are git-ignored. Never commit real values.
 
 ### 4. Set Firebase Realtime Database rules
 
@@ -224,9 +230,20 @@ The site is hosted on **Firebase Hosting** and deployed by GitHub Actions:
 
 ### Build configuration
 
-Production builds read the Firebase web config from the committed `.env.production` file. These values are public by design and end up in the browser bundle; the Realtime Database rules are what protect the data.
+CI builds read their configuration from GitHub repository secrets, set under **Settings → Secrets and variables → Actions**:
 
-The deploy needs one GitHub secret, `FIREBASE_SERVICE_ACCOUNT_MIROSHKAVINDA`, set under **Settings → Secrets and variables → Actions**. Never commit that one.
+| Secret | Purpose |
+|---|---|
+| `REACT_APP_FIREBASE_API_KEY` … `REACT_APP_FIREBASE_MEASUREMENT_ID` | The eight Firebase web config values listed in step 3 above |
+| `REACT_APP_EMAILJS_SERVICE_ID`, `REACT_APP_EMAILJS_TEMPLATE_ID`, `REACT_APP_EMAILJS_PUBLIC_KEY` | EmailJS settings for the contact form |
+| `FIREBASE_SERVICE_ACCOUNT_MIROSHKAVINDA` | Lets the workflow deploy to Firebase Hosting. Never commit this one |
+
+The workflows stop with an error naming any missing secret. For local production builds, keep the same values in `.env.production`, which is git-ignored.
+
+Keeping these values in secrets keeps them out of the repository, but they are not truly secret: anything the browser uses ends up in the bundle of the live site. What protects them:
+
+- **Firebase:** Realtime Database rules, plus HTTP referrer restrictions on the API key in Google Cloud.
+- **EmailJS:** allowed domains under **Account → Security** in the EmailJS dashboard, so the public key only works from this site. Never put the EmailJS *private* key in the frontend.
 
 To undo a bad release, roll back from **Hosting → Release history** in the Firebase console.
 
