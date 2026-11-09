@@ -6,6 +6,7 @@ import { AiOutlineCloudDownload } from "react-icons/ai";
 import History from "../../components/AboutHelpers/History";
 import Badges from "../../components/AboutHelpers/Affiliation";
 import ProfileCard from "../../components/AboutHelpers/ProfileCard";
+import ProductShowcase from "../../components/Products/ProductShowcase";
 import ContactForm from "../../components/Contact/contactForm";
 import ExperienceTimeline from "../../components/Experience/ExperienceTimeline";
 import Reveal from "../../components/UI/Reveal";
@@ -17,13 +18,14 @@ import "../../css/home.css";
 
 const SECTIONS = [
   { id: "experience", label: "Experience" },
+  { id: "products", label: "Products" },
   { id: "education", label: "Education" },
   { id: "stack", label: "Tech stack" },
   { id: "contact", label: "Contact" },
 ];
 
 export default function AboutMe() {
-  const { about, landing, experience, statement } = useProfile();
+  const { about, landing, experience, statement, products } = useProfile();
   const { hash } = useLocation();
   const industryMonths = totalMonths(experience);
 
@@ -98,6 +100,18 @@ export default function AboutMe() {
             )}
           </Reveal>
           <ExperienceTimeline items={experience} />
+        </section>
+
+        {/* ---------- Shipped products ---------- */}
+        <section className="pf-section" id="products">
+          <Reveal>
+            <p className="pf-eyebrow">Shipped to production</p>
+            <h2 className="pf-h2">Products I've built</h2>
+            <p className="pf-body mb-4">
+              Live products used by real customers, and what I contributed to each.
+            </p>
+          </Reveal>
+          <ProductShowcase items={products} />
         </section>
 
         {/* ---------- Education ---------- */}

@@ -23,6 +23,7 @@ export default function useProfile() {
       roles: toList(siteData?.roles) || defaults.roles,
       contact: { ...defaults.contact, ...(siteData?.contact || {}) },
       statement: { ...defaults.about, ...(siteData?.about || {}) },
+      products: defaults.products,
     }),
     [siteData, loading]
   );
