@@ -2,7 +2,7 @@
 
 body,
 html {
-  font-family: sofia-pro, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   font-style: normal;
   -webkit-font-smoothing: antialiased;

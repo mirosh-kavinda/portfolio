@@ -1,96 +1,137 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
+import { BsArrowRight } from "react-icons/bs";
+import { AiOutlineCloudDownload } from "react-icons/ai";
 import History from "../../components/AboutHelpers/History";
-import { ImageData1 } from "../../data/imageData";
 import Badges from "../../components/AboutHelpers/Affiliation";
+import ProfileCard from "../../components/AboutHelpers/ProfileCard";
 import ContactForm from "../../components/Contact/contactForm";
-import { useSiteData } from "../../context/SiteDataContext";
+import ExperienceTimeline from "../../components/Experience/ExperienceTimeline";
+import Reveal from "../../components/UI/Reveal";
+import SocialLinks from "../../components/UI/SocialLinks";
+import { ImageData1 } from "../../data/imageData";
+import useProfile from "../../hooks/useProfile";
+import { formatDuration, totalMonths } from "../../utils/experience";
+import "../../css/home.css";
 
-export function AddLibrary(urlOfTheLibrary) {
-  const script = document.createElement("script");
-  script.src = urlOfTheLibrary;
-  script.async = true;
-  document.body.appendChild(script);
-}
+const SECTIONS = [
+  { id: "experience", label: "Experience" },
+  { id: "education", label: "Education" },
+  { id: "stack", label: "Tech stack" },
+  { id: "contact", label: "Contact" },
+];
 
 export default function AboutMe() {
-  const { siteData, loading } = useSiteData();
-  const aboutData = siteData?.AboutPageData;
+  const { about, landing, experience, statement } = useProfile();
+  const { hash } = useLocation();
+  const industryMonths = totalMonths(experience);
 
+  // Honour links like /aboutme#education once the page has rendered
   React.useEffect(() => {
-    AddLibrary("https://platform.linkedin.com/badges/js/profile.js");
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="text-center mt-5">
-        <p>Loading...</p>
-      </div>
-    );
-  }
+    if (!hash) return undefined;
+    const t = setTimeout(() => {
+      document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: "smooth" });
+    }, 400);
+    return () => clearTimeout(t);
+  }, [hash]);
 
   return (
-    <motion.div
+    <motion.main
+      className="pf-page"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.4 } }}
-      exit={{ opacity: 0, transition: { duration: 0.4 } }}
+      exit={{ opacity: 0, transition: { duration: 0.3 } }}
     >
-      <br />
-      <br />
-      <div className="container mt-5 mb-4">
-        <div className="row">
-          <div className="text col-sm-12 col-md-7">
-            <h1 className="mt-3 p-3 text-start">{aboutData?.title}</h1>
-            <p className="mt-4 mx-4">{aboutData?.subtitle1}</p>
-            <p className="mt-3 mx-4">{aboutData?.subtitle2}</p>
-          </div>
-          <div className="p-3 text-center col-sm-12 col-md-4">
-            <div
-              className="ps-5 badge-base LI-profile-badge"
-              data-locale="en_US"
-              data-size="medium"
-              data-theme="light"
-              data-type="HORIZONTAL"
-              data-vanity="mirosh-kavinda"
-              data-version="v1"
-            >
-              <p className="badge-base__link LI-simple-link"></p>
+      <div className="pf-container">
+        {/* ---------- Intro ---------- */}
+        <section className="about-intro">
+          <Reveal className="about-text">
+            <p className="pf-eyebrow">About me</p>
+            <h1 className="pf-h1">{statement.title}</h1>
+            {statement.lead && <p className="about-lead">{statement.lead}</p>}
+            {(statement.paragraphs || []).map((p) => (
+              <p key={p.slice(0, 24)} className="pf-body">
+                {p}
+              </p>
+            ))}
+            <div className="pf-actions">
+              {landing.cvURl && (
+                <a href={landing.cvURl} download={landing.cvDownName} className="pf-btn pf-btn-primary">
+                  <AiOutlineCloudDownload size={18} /> {landing.cvbtn || "Resume"}
+                </a>
+              )}
+              <Link to="/projects" className="pf-btn">
+                See my works <BsArrowRight />
+              </Link>
             </div>
-          </div>
-        </div>
-      </div>
-      <br />
-      <div className="mx-2 vh-4">
-        <br />
-        <div className="badges mt-5">
-          <Badges />
-        </div>
-        <br />
-        <History />
+            <SocialLinks landing={landing} className="mt-4" />
+          </Reveal>
+          <Reveal className="about-badge" delay={0.15}>
+            <ProfileCard
+              statement={statement}
+              linkedinUrl={landing.linkdHandle}
+              experience={experience}
+            />
+          </Reveal>
+        </section>
 
-        <h1 align="center" className="mt-5 pt-5 mb-4">
-          {aboutData?.lowlvlsub}
-          <hr />
-          <span>
+        <nav className="section-nav" aria-label="On this page">
+          {SECTIONS.map((s) => (
+            <a key={s.id} href={`#${s.id}`} className="pf-chip">
+              {s.label}
+            </a>
+          ))}
+        </nav>
+
+        {/* ---------- Experience ---------- */}
+        <section className="pf-section" id="experience">
+          <Reveal className="pf-section-head">
             <div>
-              {ImageData1.map((image, index) => (
-                <img
-                  key={index}
-                  className={image.className}
-                  alt={image.alt}
-                  src={image.src}
-                  height={image.height}
-                />
-              ))}
+              <p className="pf-eyebrow">Career</p>
+              <h2 className="pf-h2">Industry experience</h2>
             </div>
-          </span>
-        </h1>
-        <hr />
+            {industryMonths > 0 && (
+              <span className="pf-badge xp-total">
+                {formatDuration(industryMonths)} in industry
+              </span>
+            )}
+          </Reveal>
+          <ExperienceTimeline items={experience} />
+        </section>
 
-        <div className="mt-5 pt-4 mb-4 pb-4">
-          <ContactForm className="contactme" />
-        </div>
+        {/* ---------- Education ---------- */}
+        <section className="pf-section" id="education">
+          <Reveal>
+            <p className="pf-eyebrow">Learning</p>
+            <h2 className="pf-h2">Education & certifications</h2>
+          </Reveal>
+          <div className="badges">
+            <Badges />
+          </div>
+          <History />
+        </section>
+
+        {/* ---------- Stack ---------- */}
+        <section className="pf-section" id="stack">
+          <Reveal>
+            <p className="pf-eyebrow">Toolbox</p>
+            <h2 className="pf-h2">{about.lowlvlsub || "Tech stack"}</h2>
+          </Reveal>
+          <Reveal className="stack-grid" delay={0.1}>
+            {ImageData1.map((image, index) => (
+              <span key={index} className="stack-item">
+                <img alt={image.src.split("/").slice(-2, -1)[0]} src={image.src} loading="lazy" />
+              </span>
+            ))}
+          </Reveal>
+        </section>
+
+        {/* ---------- Contact ---------- */}
+        <section className="pf-section" id="contact">
+          <ContactForm />
+        </section>
       </div>
-    </motion.div>
+    </motion.main>
   );
 }

@@ -1,93 +1,252 @@
 import React from "react";
-import fileSaver from "file-saver";
-import {
-  AiOutlineYoutube,
-  AiOutlineTwitter,
-  AiOutlineLinkedin,
-  AiOutlineGithub,
-  AiOutlineCloudDownload,
-  AiOutlineBuild,
-} from "react-icons/ai";
-import { BsMedium } from "react-icons/bs";
-import BriefType from "../../components/AboutHelpers/BriefType";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import { useSiteData } from "../../context/SiteDataContext";
+import {
+  BsArrowRight,
+  BsArrowDown,
+  BsBriefcase,
+  BsPencilSquare,
+  BsChatDots,
+  BsGrid1X2,
+  BsAward,
+  BsMortarboard,
+  BsPalette,
+  BsRocketTakeoff,
+  BsStars,
+  BsCodeSlash,
+  BsPhone,
+  BsShieldLock,
+} from "react-icons/bs";
+import { AiOutlineCloudDownload } from "react-icons/ai";
+import useProfile from "../../hooks/useProfile";
+import useTypewriter from "../../hooks/useTypewriter";
+import Reveal from "../../components/UI/Reveal";
+import SocialLinks from "../../components/UI/SocialLinks";
+import ExperienceTimeline from "../../components/Experience/ExperienceTimeline";
+import { ImageData1 } from "../../data/imageData";
+import "../../css/home.css";
+
+const HIGHLIGHT_ICONS = {
+  code: BsCodeSlash,
+  mobile: BsPhone,
+  shield: BsShieldLock,
+  grad: BsMortarboard,
+  award: BsAward,
+  design: BsPalette,
+  rocket: BsRocketTakeoff,
+  star: BsStars,
+  work: BsBriefcase,
+};
+
+const EXPLORE = [
+  {
+    to: "/projects",
+    Icon: BsGrid1X2,
+    title: "Works",
+    text: "Case studies and side projects across web, mobile and UX.",
+  },
+  {
+    to: "/blog",
+    Icon: BsPencilSquare,
+    title: "Writings",
+    text: "Articles on Medium about engineering, design and what I learn.",
+  },
+  {
+    to: "/contact",
+    Icon: BsChatDots,
+    title: "Get in touch",
+    text: "Have a role, a project or a question? Send me a message.",
+  },
+];
 
 const Home = () => {
-  const navigate = useNavigate();
-  const { siteData, loading } = useSiteData();
-  const landingData = siteData?.LandingData;
-
-  const saveFile = () => {
-    fileSaver.saveAs(landingData?.cvURl, landingData?.cvDownName);
-  };
-
-  if (loading) {
-    return (
-      <div className="text-center mt-5">
-        <p>Loading...</p>
-      </div>
-    );
-  }
+  const { landing, about, experience, highlights, roles, statement } = useProfile();
+  const typed = useTypewriter(roles);
+  const current = experience.find((x) => x.current);
+  const name = landing.name || "Mirosh Kavinda";
 
   return (
-    <motion.div
+    <motion.main
+      className="pf-home"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.4 } }}
-      exit={{ opacity: 0, transition: { duration: 0.4 } }}
+      exit={{ opacity: 0, transition: { duration: 0.3 } }}
     >
-      <div className="home" id="home">
-        <div className="header">
-          <div className="row">
-            <div
-              className="col-md-8 col-sm-12 white-text text-start ms-4 text-start"
-              id="heading"
-            >
-              <p className="display-1 font-weight-bold">{landingData?.name}</p>
-              <h4 className="col-md-7 col-sm-12 me-5">
-                {landingData?.description}
-              </h4>
-            </div>
-          </div>
-          <div className="row whitespace ps-1 me-5 ms-1">
-            <button
-              className="link rounded surface col-md-2 mt-2 ms-2 col-s-2"
-              onClick={saveFile}
-            >
-              <AiOutlineCloudDownload /> {landingData?.cvbtn}
-            </button>
-            <button
-              onClick={() => navigate("/projects")}
-              className="link rounded surface col-md-3 ms-2 mt-2 col-s-2"
-            >
-              {landingData?.workbtn} <AiOutlineBuild size={30} />
-            </button>
-          </div>
-          <div align="start" className="mt-5 ps-1 me-5 ms-1">
-            <a className="mx-1 ms-3" href={landingData?.mediumHandle}>
-              <BsMedium className="rounded link surface p-1" size={40} />
-            </a>
-            <a className="mx-1" href={landingData?.ytHandle}>
-              <AiOutlineYoutube className="rounded link surface p-1" size={40} />
-            </a>
-            <a className="mx-1" href={landingData?.twitHandle}>
-              <AiOutlineTwitter className="rounded link surface p-1" size={40} />
-            </a>
-            <a className="mx-1" href={landingData?.linkdHandle}>
-              <AiOutlineLinkedin className="rounded link surface p-1" size={40} />
-            </a>
-            <a className="mx-1" href={landingData?.githubHandle}>
-              <AiOutlineGithub className="rounded link surface p-1" size={40} />
-            </a>
-          </div>
+      {/* ---------- Hero ---------- */}
+      <section className="hero" id="home">
+        <div className="hero-art" aria-hidden="true" />
+        <div className="pf-container hero-inner">
+          <motion.div
+            className="hero-copy"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          >
+            {current && (
+              <Link to="/aboutme#experience" className="hero-status">
+                <span className="pulse-dot" aria-hidden="true" />
+                {current.role} @ {current.company.replace(/\s*\(.*?\)\s*/g, " ").trim()}
+              </Link>
+            )}
 
-          <div className="col-sm-12 col-md-5 ps-1 me-5 ms-1">
-            <BriefType />
+            <h1 className="hero-title">
+              <span className="hero-hi">Hi, I'm</span>
+              <span className="hero-name">{name}</span>
+            </h1>
+
+            <p className="hero-role">
+              Software Engineer <span className="hero-sep">/</span>{" "}
+              <span className="hero-typed" aria-hidden="true">
+                {typed}
+                <span className="caret" />
+              </span>
+              <span className="visually-hidden">{roles.join(", ")}</span>
+            </p>
+
+            {landing.description && <p className="hero-lede">{landing.description}</p>}
+
+            <div className="pf-actions">
+              <Link to="/aboutme" className="pf-btn pf-btn-primary">
+                More about me <BsArrowRight />
+              </Link>
+              {landing.cvURl && (
+                <a
+                  href={landing.cvURl}
+                  download={landing.cvDownName}
+                  className="pf-btn"
+                >
+                  <AiOutlineCloudDownload size={18} /> {landing.cvbtn || "Resume"}
+                </a>
+              )}
+            </div>
+
+            <SocialLinks landing={landing} className="mt-4" />
+          </motion.div>
+        </div>
+
+        <a href="#glance" className="hero-scroll" aria-label="Scroll to content">
+          <BsArrowDown />
+        </a>
+      </section>
+
+      {/* ---------- At a glance ---------- */}
+      <section className="pf-section" id="glance">
+        <div className="pf-container">
+          <div className="glance-grid">
+            {highlights.map((h, i) => {
+              const Icon = HIGHLIGHT_ICONS[h.icon] || BsStars;
+              return (
+                <Reveal key={h.title} className="glance-card" delay={i * 0.07}>
+                  <Icon className="glance-icon" size={22} />
+                  <h3>{h.title}</h3>
+                  <p>{h.text}</p>
+                  {h.tags?.length > 0 && (
+                    <div className="glance-tags">
+                      {h.tags.map((t) => (
+                        <span key={t}>{t}</span>
+                      ))}
+                    </div>
+                  )}
+                </Reveal>
+              );
+            })}
           </div>
         </div>
-      </div>
-    </motion.div>
+      </section>
+
+      {/* ---------- About teaser ---------- */}
+      <section className="pf-section">
+        <div className="pf-container about-teaser">
+          <Reveal>
+            <p className="pf-eyebrow">About</p>
+            <h2 className="pf-h2">{statement.title}</h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            {statement.summary && <p className="pf-body">{statement.summary}</p>}
+            <Link to="/aboutme" className="pf-link">
+              Read my full story <BsArrowRight />
+            </Link>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ---------- Experience preview ---------- */}
+      <section className="pf-section">
+        <div className="pf-container">
+          <Reveal className="pf-section-head">
+            <div>
+              <p className="pf-eyebrow">Industry experience</p>
+              <h2 className="pf-h2">Where I've worked</h2>
+            </div>
+            <Link to="/aboutme#experience" className="pf-link">
+              Full experience <BsArrowRight />
+            </Link>
+          </Reveal>
+          <ExperienceTimeline items={experience} compact limit={3} />
+        </div>
+      </section>
+
+      {/* ---------- Explore ---------- */}
+      <section className="pf-section">
+        <div className="pf-container">
+          <Reveal>
+            <p className="pf-eyebrow">Explore</p>
+            <h2 className="pf-h2">See more of my work</h2>
+          </Reveal>
+          <div className="explore-grid">
+            {EXPLORE.map(({ to, Icon, title, text }, i) => (
+              <Reveal key={to} delay={i * 0.08}>
+                <Link to={to} className="explore-card">
+                  <Icon size={26} className="explore-icon" />
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                  <span className="explore-go">
+                    Open <BsArrowRight />
+                  </span>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- Stack marquee ---------- */}
+      <section className="pf-section stack-section" aria-label="Tech stack">
+        <div className="pf-container">
+          <p className="pf-eyebrow text-center">{about.lowlvlsub || "Tech stack"}</p>
+        </div>
+        <div className="marquee">
+          <div className="marquee-track">
+            {[...ImageData1, ...ImageData1].map((img, i) => (
+              <img
+                key={i}
+                src={img.src}
+                alt={i < ImageData1.length ? img.src.split("/").slice(-2, -1)[0] : ""}
+                aria-hidden={i >= ImageData1.length}
+                loading="lazy"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- CTA ---------- */}
+      <section className="pf-section">
+        <div className="pf-container">
+        <Reveal className="cta-band">
+          <div>
+            <h2 className="pf-h2">Let's build something great.</h2>
+            <p className="pf-body mb-0">
+              I'm open to conversations about engineering and UX roles, collaborations and freelance work.
+            </p>
+          </div>
+          <Link to="/contact" className="pf-btn pf-btn-primary">
+            Contact me <BsArrowRight />
+          </Link>
+        </Reveal>
+        </div>
+      </section>
+    </motion.main>
   );
 };
 

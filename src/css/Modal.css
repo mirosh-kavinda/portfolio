@@ -2,25 +2,26 @@
   margin-top:50px;
   min-height: 600px;
   border-radius: 20px;
+  border: 1px solid var(--border);
   position: relative;
-  background-color: var(--surface);
+  background-color: var(--card) !important;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   display: flex;
 }
 
 .modal__image {
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 14px;
   height: 35%;
 }
 
 .modal__info {
-
+  background: transparent !important;
   display: flex;
 }
 
 .modal__row {
-  margin: 20px 0px;
+  margin: 10px 0px;
   display: flex;
   align-items: center;
   text-align: left;
@@ -36,6 +37,8 @@
 }
 
 .modal__price {
+  font-family: var(--font-display);
+  font-weight: 700;
   font-size: 2rem;
   color: var(--text);
 }
@@ -49,7 +52,8 @@
   color: var(--text-subtle);
   margin: 0px;
   padding: 0px;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
 .modal__close-wrapper {

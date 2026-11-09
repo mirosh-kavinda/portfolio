@@ -109,6 +109,55 @@ Content is managed dynamically via Firebase Realtime Database under the `siteDat
 }
 ```
 
+### Industry experience, highlights, headline roles and contact details
+
+The landing page (summary), the About page (full experience) and the contact section read these from
+`src/data/profile.js`. If the matching node exists in Firebase it is used instead, so you
+can update them without a redeploy:
+
+```json
+{
+  "siteData": {
+    "experience": [
+      {
+        "id": "lbf-software-engineer",
+        "company": "LB Finance (PVT) LTD",
+        "companyUrl": "https://www.lbfinance.com/",
+        "logo": "",
+        "role": "Software Engineer",
+        "type": "Full-time",
+        "location": "Colombo, Sri Lanka",
+        "start": "2024-12",
+        "end": null,
+        "current": true,
+        "summary": "One or two sentences about the role.",
+        "highlights": ["Achievement or responsibility", "..."],
+        "tech": ["React", "Flutter"]
+      }
+    ],
+    "highlights": [
+      { "icon": "code", "title": "Full-stack development", "text": "...", "tags": ["Angular", ".NET"] }
+    ],
+    "roles": ["Web & App Builder", "UX Focused"],
+    "contact": {
+      "email": "you@example.com",
+      "phone": "+94 ...",
+      "whatsapp": "https://wa.me/94...",
+      "location": "Matara, Sri Lanka",
+      "mapUrl": "https://goo.gl/maps/...",
+      "availability": "Open to collaborations & conversations",
+      "intro": "Short invitation shown above the contact details."
+    }
+  }
+}
+```
+
+Projects can also have an optional `displayName` (e.g. `"CountMeIn"`) to show instead of the repo-style `projectName`, which is still used to fetch the README from GitHub.
+
+- List experience **newest first**. Consecutive entries with the same `company` are shown together as one company with several roles.
+- Dates are `"YYYY-MM"`; leave `start` empty to hide dates. Durations and the "time in industry" stat are calculated automatically.
+- `highlights[].icon` is one of `code`, `mobile`, `shield`, `design`, `grad`, `award`, `rocket`, `star`, `work`; `tags` is optional.
+
 > `siteData` is fetched **once per session** via `SiteDataContext` and shared across all pages — no redundant network requests. The Projects page loads `projects` itself.
 
 ---
