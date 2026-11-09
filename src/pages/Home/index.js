@@ -23,6 +23,7 @@ import useTypewriter from "../../hooks/useTypewriter";
 import Reveal from "../../components/UI/Reveal";
 import SocialLinks from "../../components/UI/SocialLinks";
 import ExperienceTimeline from "../../components/Experience/ExperienceTimeline";
+import ProductShowcase from "../../components/Products/ProductShowcase";
 import { ImageData1 } from "../../data/imageData";
 import "../../css/home.css";
 
@@ -60,7 +61,7 @@ const EXPLORE = [
 ];
 
 const Home = () => {
-  const { landing, about, experience, highlights, roles, statement } = useProfile();
+  const { landing, about, experience, highlights, roles, statement, products } = useProfile();
   const typed = useTypewriter(roles);
   const current = experience.find((x) => x.current);
   const name = landing.name || "Mirosh Kavinda";
@@ -183,6 +184,22 @@ const Home = () => {
             </Link>
           </Reveal>
           <ExperienceTimeline items={experience} compact limit={3} />
+        </div>
+      </section>
+
+      {/* ---------- Shipped products ---------- */}
+      <section className="pf-section">
+        <div className="pf-container">
+          <Reveal className="pf-section-head">
+            <div>
+              <p className="pf-eyebrow">Shipped to production</p>
+              <h2 className="pf-h2">Products I've built</h2>
+            </div>
+            <Link to="/aboutme#products" className="pf-link">
+              What I did on each <BsArrowRight />
+            </Link>
+          </Reveal>
+          <ProductShowcase items={products} compact />
         </div>
       </section>
 

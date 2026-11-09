@@ -86,8 +86,29 @@
 
 .navbar .navbar-nav .nav-link {
   color: var(--navbar-link);
+}
+
+/* Desktop bar */
+.navbar .navbar-collapse .nav-link {
   font-size: 1rem;
   font-weight: 500;
+}
+
+/* Mobile slide-out menu: large, bold, full-contrast links */
+.navbar .menu .navbar-nav {
+  gap: 18px;
+}
+
+.navbar .menu .nav-link {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 10vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--menu-fg);
+}
+
+.navbar .menu .nav-link.active {
+  color: var(--brand) !important;
 }
 
 .navbar .navbar-nav .nav-link.nav-cta {

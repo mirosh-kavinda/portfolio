@@ -1,3 +1,7 @@
+import lbCimLogo from "../images/products/lb-cim.webp";
+import lbEclipseLogo from "../images/products/lb-eclipse.png";
+import dreamwayLogo from "../images/products/dreamway.jpg";
+
 // Profile content that the site renders from code.
 //
 // Each export here is a local default. If the matching node exists under
@@ -100,6 +104,63 @@ export const highlights = [
     title: "UI/UX design",
     text: "Google UX certified, designing user-focused interfaces before building them.",
     tags: ["Figma", "Adobe XD", "Prototyping"],
+  },
+];
+
+/**
+ * Live products I've worked on, shown in "Shipped to production" on Home and About.
+ *
+ * Fields: id, name, logo (imported image), logoScale (optional zoom), org, kind, summary,
+ * contribution (what I did), award (optional), tech, links [{ label, url }].
+ * Products without public links show an "Internal" tag instead.
+ */
+export const products = [
+  {
+    id: "lb-cim",
+    name: "LB CIM",
+    logo: lbCimLogo,
+    logoScale: 2.2, // the image has wide white margins
+    org: "LB Finance PLC",
+    kind: "Mobile banking app",
+    summary:
+      "LB Finance's customer app for digital payments, virtual cards and account services, live on the App Store and Google Play.",
+    contribution:
+      "Building features on the Stacked architecture, improving app stability and user experience, and implementing hybrid RSA–AES encryption to meet Central Bank security guidelines.",
+    tech: ["Flutter", "Dart", "Stacked", "Firebase"],
+    links: [
+      { label: "App Store", url: "https://apps.apple.com/lk/app/lb-cim/id1459216386" },
+      {
+        label: "Google Play",
+        url: "https://play.google.com/store/apps/details?id=com.cashinmobile.lb.customer",
+      },
+    ],
+  },
+  {
+    id: "lb-eclipse",
+    name: "LB Eclipse",
+    logo: lbEclipseLogo,
+    org: "LB Finance PLC",
+    kind: "Enterprise web platform",
+    summary:
+      "LB Finance's main internal platform, used across the company in production.",
+    contribution:
+      "Delivered five production features across .NET, Angular and SQL, applied MVVM patterns to reduce redundancy, and improved database performance.",
+    award: "National ICT Award 2024",
+    tech: ["ASP.NET Core", "Angular", "SQL"],
+    links: [],
+  },
+  {
+    id: "dreamway",
+    name: "DreamWay Luxury",
+    logo: dreamwayLogo,
+    org: "Client project",
+    kind: "Luxury travel website",
+    summary:
+      "Production website for DreamWay Luxury, a luxury travel brand, delivered end to end for the client.",
+    contribution:
+      "Built the site on WordPress, customising the theme to the client's requirements. Ran the full Agile cycle directly with the client, from gathering requirements through iterative reviews to launch, and delivered a product the client was satisfied with.",
+    tech: ["WordPress", "Theme customisation", "Agile delivery"],
+    links: [{ label: "Visit site", url: "https://dreamwayluxury.com/" }],
   },
 ];
 
