@@ -107,7 +107,22 @@ const ContactForm = () => {
       await emailjs.send(
         EMAILJS.service,
         EMAILJS.template,
-        { name, email, subject, message },
+        {
+          name,
+          email,
+          subject,
+          message,
+          topic,
+          // e.g. "Mon, 9 Nov 2026, 10:42 (Asia/Colombo)": shown as {{time}} in the email
+          time: `${new Date().toLocaleString("en-GB", {
+            weekday: "short",
+            day: "numeric",
+            month: "short",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+          })} (${Intl.DateTimeFormat().resolvedOptions().timeZone})`,
+        },
         EMAILJS.publicKey
       );
       reset({ subject: topic });
