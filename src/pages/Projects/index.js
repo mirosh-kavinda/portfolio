@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { ref, get } from "firebase/database";
 import { AnimatePresence, motion } from "framer-motion";
-import { db } from "../../firebaseConfig.js";
+import { getCached } from "../../utils/firebaseCache";
 import Card from "../../components/ProjectShowModel/Card";
 import Reveal from "../../components/UI/Reveal";
 import "../../css/works.css";
@@ -19,11 +18,10 @@ const Projects = () => {
 
   useEffect(() => {
     let alive = true;
-    get(ref(db, "projects"))
-      .then((snapshot) => {
+    getCached("projects")
+      .then((value) => {
         if (!alive) return;
-        const value = snapshot.exists() ? snapshot.val() : [];
-        const list = (Array.isArray(value) ? value : Object.values(value)).filter(Boolean);
+        const list = (Array.isArray(value) ? value : Object.values(value || {})).filter(Boolean);
         setProjects(list);
         setStatus("ready");
       })

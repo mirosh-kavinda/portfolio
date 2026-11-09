@@ -120,6 +120,14 @@ button.pf-tab {
   cursor: pointer;
 }
 
+/* navbar.css also fills every button icon with the menu colour; icons follow the label instead */
+.pf-btn svg,
+.pf-btn path,
+.pf-tab svg,
+.pf-tab path {
+  fill: currentColor;
+}
+
 .pf-tab {
   display: inline-flex;
   align-items: center;

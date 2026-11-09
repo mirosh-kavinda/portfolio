@@ -24,7 +24,6 @@ import Reveal from "../../components/UI/Reveal";
 import SocialLinks from "../../components/UI/SocialLinks";
 import ExperienceTimeline from "../../components/Experience/ExperienceTimeline";
 import ProductShowcase from "../../components/Products/ProductShowcase";
-import { ImageData1 } from "../../data/imageData";
 import "../../css/home.css";
 
 const HIGHLIGHT_ICONS = {
@@ -61,7 +60,7 @@ const EXPLORE = [
 ];
 
 const Home = () => {
-  const { landing, about, experience, highlights, roles, statement, products } = useProfile();
+  const { landing, about, experience, highlights, roles, statement, products, techStack } = useProfile();
   const typed = useTypewriter(roles);
   const current = experience.find((x) => x.current);
   const name = landing.name || "Mirosh Kavinda";
@@ -199,7 +198,7 @@ const Home = () => {
               What I did on each <BsArrowRight />
             </Link>
           </Reveal>
-          <ProductShowcase items={products} compact />
+          <ProductShowcase items={products} minimal />
         </div>
       </section>
 
@@ -234,12 +233,12 @@ const Home = () => {
         </div>
         <div className="marquee">
           <div className="marquee-track">
-            {[...ImageData1, ...ImageData1].map((img, i) => (
+            {[...techStack, ...techStack].map((t, i) => (
               <img
                 key={i}
-                src={img.src}
-                alt={i < ImageData1.length ? img.src.split("/").slice(-2, -1)[0] : ""}
-                aria-hidden={i >= ImageData1.length}
+                src={t.icon}
+                alt={i < techStack.length ? t.name : ""}
+                aria-hidden={i >= techStack.length}
                 loading="lazy"
               />
             ))}

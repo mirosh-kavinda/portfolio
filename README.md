@@ -9,7 +9,7 @@ A personal developer portfolio built with **React**, powered by **Firebase Realt
 ## ✨ Features
 
 - 🏠 **Landing Page** — Animated hero with name, bio, social links, and CV download
-- 👤 **About Me** — Background, skills, tech stack, and LinkedIn badge
+- 👤 **About Me** — Background, skills, tech stack, profile card, products and certifications
 - 🗂️ **Projects** — Dynamic project cards fetched from Firebase
 - 📝 **Blog** — Medium articles fetched from the Medium RSS feed via rss2json
 - 📬 **Contact Form** — Email delivery powered by EmailJS
@@ -61,12 +61,11 @@ src/
 │   ├── ProjectShowModel/    # Project cards, modal, and overlay
 │   ├── ProjView/            # Single project view
 │   ├── ShowBlogMedium/      # Medium blog card
-│   └── AboutHelpers/        # History, Affiliation, BriefType
+│   └── AboutHelpers/        # History, Certifications, ProfileCard
 ├── hooks/
-│   ├── useAnimations.jsx
 │   ├── useBackToTop.jsx
 │   └── useMenuAnimation.jsx
-├── data/                    # Static image data
+├── utils/                   # Firebase cache, experience date helpers
 ├── images/
 ├── css/                     # Global and component stylesheets (colours live in theme.css)
 └── firebaseConfig.js        # Firebase initialization (reads from .env)
@@ -109,11 +108,21 @@ Content is managed dynamically via Firebase Realtime Database under the `siteDat
 }
 ```
 
-### Industry experience, highlights, headline roles and contact details
+### Profile content
 
-The landing page (summary), the About page (full experience) and the contact section read these from
-`src/data/profile.js`. If the matching node exists in Firebase it is used instead, so you
-can update them without a redeploy:
+All site content is read from `siteData` in Firebase; nothing is hard-coded. Besides the nodes above,
+`siteData` holds `about` (the "Who am I" statement and profile card), `experience`, `highlights`,
+`roles`, `contact`, `products`, `certifications` and `techStack`. Edit them in the Firebase console;
+no redeploy is needed.
+
+Images referenced from the database (product logos, certificate badges) live in `public/images/`
+and are stored as paths such as `/images/products/lb-cim.webp`. Any full image URL works too.
+
+The site caches `siteData` and `projects` in the visitor's browser for an hour
+(`src/utils/firebaseCache.js`), so console edits reach returning visitors within that time.
+The loading screen stays up until `siteData` has loaded.
+
+The shape of the main nodes:
 
 ```json
 {

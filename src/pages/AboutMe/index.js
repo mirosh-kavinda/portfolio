@@ -4,14 +4,13 @@ import { motion } from "framer-motion";
 import { BsArrowRight } from "react-icons/bs";
 import { AiOutlineCloudDownload } from "react-icons/ai";
 import History from "../../components/AboutHelpers/History";
-import Badges from "../../components/AboutHelpers/Affiliation";
+import Certifications from "../../components/AboutHelpers/Certifications";
 import ProfileCard from "../../components/AboutHelpers/ProfileCard";
 import ProductShowcase from "../../components/Products/ProductShowcase";
 import ContactForm from "../../components/Contact/contactForm";
 import ExperienceTimeline from "../../components/Experience/ExperienceTimeline";
 import Reveal from "../../components/UI/Reveal";
 import SocialLinks from "../../components/UI/SocialLinks";
-import { ImageData1 } from "../../data/imageData";
 import useProfile from "../../hooks/useProfile";
 import { formatDuration, totalMonths } from "../../utils/experience";
 import "../../css/home.css";
@@ -25,7 +24,7 @@ const SECTIONS = [
 ];
 
 export default function AboutMe() {
-  const { about, landing, experience, statement, products } = useProfile();
+  const { about, landing, experience, statement, products, certifications, techStack } = useProfile();
   const { hash } = useLocation();
   const industryMonths = totalMonths(experience);
 
@@ -120,10 +119,9 @@ export default function AboutMe() {
             <p className="pf-eyebrow">Learning</p>
             <h2 className="pf-h2">Education & certifications</h2>
           </Reveal>
-          <div className="badges">
-            <Badges />
-          </div>
           <History />
+          <h3 className="cert-subhead" id="certifications">Certifications</h3>
+          <Certifications items={certifications} />
         </section>
 
         {/* ---------- Stack ---------- */}
@@ -133,9 +131,9 @@ export default function AboutMe() {
             <h2 className="pf-h2">{about.lowlvlsub || "Tech stack"}</h2>
           </Reveal>
           <Reveal className="stack-grid" delay={0.1}>
-            {ImageData1.map((image, index) => (
-              <span key={index} className="stack-item">
-                <img alt={image.src.split("/").slice(-2, -1)[0]} src={image.src} loading="lazy" />
+            {techStack.map((t) => (
+              <span key={t.name} className="stack-item" title={t.name}>
+                <img alt={t.name} src={t.icon} loading="lazy" />
               </span>
             ))}
           </Reveal>
