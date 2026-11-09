@@ -18,9 +18,6 @@ function History() {
 
   return (
     <div>
-      <h1 className="title mb-5" align="center">
-        Timeline
-      </h1>
       <VerticalTimeline>
         {timelineElements.map((element) => {
           let isWorkIcon = element.icon === "work";

@@ -1,62 +1,28 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+const MENU_LINKS = [
+  { to: "/", label: "Home", end: true },
+  { to: "/aboutme", label: "About" },
+  { to: "/projects", label: "Works" },
+  { to: "/blog", label: "Writings" },
+  { to: "/contact", label: "Contact" },
+];
 
 export function Menu({ toggle }) {
-
-
   return (
-    <>
-      <nav className="menu">
-        <div className="mt-4">
-          <ul className="navbar-nav  ">
-            <li>
-              <Link
-              
-                onClick={toggle}
-                className="nav-link is-active exact mx-2 "
-                to="/"
-            
-              >
-                Home
-              </Link>
+    <nav className="menu">
+      <div className="mt-4">
+        <ul className="navbar-nav">
+          {MENU_LINKS.map((l) => (
+            <li key={l.to}>
+              <NavLink onClick={toggle} className="nav-link mx-2" to={l.to} end={l.end}>
+                {l.label}
+              </NavLink>
             </li>
-            <li>
-              <Link
-                onClick={toggle}
-                className="nav-link is-active exact mx-2"
-                to="/aboutme"
-              >
-                AboutMe
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={toggle}
-                className="nav-link is-active exact mx-2"
-                to="/projects"
-              >
-                Works
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={toggle}
-                className="nav-link is-active exact mx-2"
-                to="/blog"
-              >
-                Writings
-              </Link>
-            </li>
-            <li>
-            
-            </li>
-          
-          </ul>
-        </div>
-         
-        
-      </nav>
-       
-    </>
+          ))}
+        </ul>
+      </div>
+    </nav>
   );
 }
 
@@ -71,25 +37,11 @@ export const Path = (props) => (
 );
 
 export const MenuToggle = ({ toggle }) => (
-  <button onClick={toggle}>
+  <button onClick={toggle} aria-label="Toggle menu">
     <svg width="23" height="18" viewBox="0 0 23 18">
-      <Path
-        d="M 2 2.5 L 20 2.5"
-        className="top"
-        variants={{
-          closed: { d: "M 2 2.5 L 20 2.5" },
-          open: { d: "M 3 16.5 L 17 2.5" },
-        }}
-      />
+      <Path d="M 2 2.5 L 20 2.5" className="top" />
       <Path d="M 2 9.423 L 20 9.423" opacity="1" className="middle" />
-      <Path
-        d="M 2 16.346 L 20 16.346"
-        className="bottom"
-        variants={{
-          closed: { d: "M 2 16.346 L 20 16.346" },
-          open: { d: "M 3 2.5 L 17 16.346" },
-        }}
-      />
+      <Path d="M 2 16.346 L 20 16.346" className="bottom" />
     </svg>
   </button>
 );

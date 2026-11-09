@@ -1,5 +1,5 @@
 import brandImg from "../../images/brand.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "../../css/navbar.css";
 import { motion } from "framer-motion";
 import { BsMoonStars, BsSun } from "react-icons/bs";
@@ -8,14 +8,12 @@ import { MenuToggle, Menu } from "../ToggleMenu/index";
 import useMenuAnimation from "../../hooks/useMenuAnimation";
 import { useTheme } from "../../context/ThemeContext";
 
-export const MyComponent = () => (
-  
-  <motion.div
-    initial={{ opacity: 0, scale: 0.5 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.5 }}
-  />
-);
+export const NAV_LINKS = [
+  { to: "/", label: "Home", end: true },
+  { to: "/aboutme", label: "About" },
+  { to: "/projects", label: "Works" },
+  { to: "/blog", label: "Writings" },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,56 +21,32 @@ const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <>
-      <nav className="navbar page-bg navbar-expand-lg fixed-top">
-        <div className="container">
-          <motion.div
-            animate={{
-              scale: [0.5, 1.3, 1],
-            }}
-            transition={{
-              ease: "linear",
-              duration: 2,
-              x: { duration: 1 },
-            }}
-          >
-            <Link className="mx-2 " to="/">
-              <img src={brandImg} alt="  " />
-            </Link>
-          </motion.div>
-          <div className="d-flex align-items-center">
-          <div>
-            <div
-              className="collapse navbar-collapse "
-              id="navbarSupportedContent"
-            >
-              <ul className="navbar-nav  ">
-                <li>
-                  <Link className="nav-link is-active exact mx-2 " to="/">
-                    Home
-                  </Link>
+    <nav className="navbar page-bg navbar-expand-lg fixed-top">
+      <div className="container">
+        <motion.div
+          animate={{ scale: [0.5, 1.3, 1] }}
+          transition={{ ease: "linear", duration: 2 }}
+        >
+          <Link className="mx-2" to="/" aria-label="Home">
+            <img src={brandImg} alt="" />
+          </Link>
+        </motion.div>
+        <div className="d-flex align-items-center">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav nav-row">
+              {NAV_LINKS.map((l) => (
+                <li key={l.to}>
+                  <NavLink className="nav-link mx-2" to={l.to} end={l.end}>
+                    {l.label}
+                  </NavLink>
                 </li>
-                <li>
-                  <Link
-                    className="nav-link is-active exact mx-2"
-                    to="/projects"
-                  >
-                    Works
-                  </Link>
-                </li>
-                <li>
-                  <Link className="nav-link is-active exact mx-2" to="/blog">
-                    Writings
-                  </Link>
-                </li>
-                <li className="border rounded ">
-                  <Link className="nav-link is-active exact mx-2" to="/aboutme">
+              ))}
+              <li>
+                <NavLink className="nav-link nav-cta mx-2" to="/contact">
                   Get in Touch
-                  </Link>
-                </li>
-              </ul>
-        
-            </div>
+                </NavLink>
+              </li>
+            </ul>
           </div>
           <button
             type="button"
@@ -83,15 +57,12 @@ const Navbar = () => {
             {theme === "dark" ? <BsSun size={20} /> : <BsMoonStars size={20} />}
           </button>
           <div ref={scope} className="navbar-toggler">
-            
-            <Menu  toggle={() => setIsOpen(!isOpen)}/>
+            <Menu toggle={() => setIsOpen(!isOpen)} />
             <MenuToggle toggle={() => setIsOpen(!isOpen)} />
-          
-          </div>
           </div>
         </div>
-      </nav>
-    </>
+      </div>
+    </nav>
   );
 };
 

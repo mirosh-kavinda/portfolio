@@ -1,0 +1,326 @@
+/* Works (projects) and Writings (blog) card grids. Colours come from theme.css. */
+
+.pf-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ---------- Project cards ---------- */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 22px;
+}
+
+@media (max-width: 400px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  overflow: hidden;
+  transition: transform 0.3s var(--ease), border-color 0.3s, box-shadow 0.3s;
+}
+
+.work-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  box-shadow: 0 18px 40px -20px var(--brand);
+}
+
+/* navbar.css styles every <button> as a round icon; these are plain triggers */
+.work-card button {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.work-card button:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+.work-card .work-media {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.work-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+
+.work-card:hover .work-media img {
+  transform: scale(1.05);
+}
+
+.work-media-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--brand);
+  background: var(--brand-soft);
+}
+
+.work-type {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.work-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 18px 20px 20px;
+}
+
+.work-body h3 {
+  margin: 0 0 6px;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.work-card .work-title {
+  color: var(--text);
+}
+
+.work-card .work-title:hover {
+  color: var(--brand);
+}
+
+.work-body p {
+  flex: 1;
+  margin: 0 0 16px;
+  color: var(--text-muted);
+  font-size: 0.93rem;
+  line-height: 1.6;
+}
+
+.work-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.work-card .work-details {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--brand);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.work-card .work-details svg {
+  transition: transform 0.2s var(--ease);
+}
+
+.work-card .work-details:hover svg {
+  transform: translateX(4px);
+}
+
+.work-ext {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  color: var(--text-muted) !important;
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.work-ext:hover {
+  border-color: var(--brand);
+  color: var(--brand) !important;
+}
+
+/* ---------- Writing cards ---------- */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 22px;
+}
+
+.post-featured-wrap,
+.post-grid > .post-card.is-featured {
+  grid-column: 1 / -1;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s var(--ease), border-color 0.3s, box-shadow 0.3s;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  box-shadow: 0 18px 40px -20px var(--brand);
+}
+
+.post-media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.post-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+
+.post-card:hover .post-media img {
+  transform: scale(1.05);
+}
+
+.post-media-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--brand);
+  background: var(--brand-soft);
+}
+
+.post-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 10px;
+  padding: 18px 20px 20px;
+}
+
+.post-meta {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-subtle);
+}
+
+.post-body h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text);
+}
+
+.post-card:hover h3 {
+  color: var(--brand);
+}
+
+.post-excerpt {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.93rem;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.post-read {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 4px;
+  color: var(--brand);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 860px) {
+  .post-card.is-featured {
+    flex-direction: row;
+  }
+  .post-card.is-featured .post-media {
+    flex: 0 0 55%;
+    aspect-ratio: auto;
+    min-height: 320px;
+  }
+  .post-card.is-featured .post-body {
+    padding: 32px;
+    justify-content: center;
+  }
+  .post-card.is-featured h3 {
+    font-size: 1.75rem;
+  }
+  .post-card.is-featured .post-excerpt {
+    -webkit-line-clamp: 5;
+  }
+  .post-card.is-featured .post-read {
+    margin-top: 6px;
+  }
+}
+
+/* ---------- Loading skeletons ---------- */
+.is-skeleton {
+  min-height: 340px;
+  background: linear-gradient(100deg, var(--card) 30%, var(--card-hover) 50%, var(--card) 70%);
+  background-size: 300% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+.post-card.is-featured.is-skeleton {
+  min-height: 320px;
+}
+
+@keyframes shimmer {
+  from { background-position: 100% 0; }
+  to { background-position: 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .is-skeleton {
+    animation: none;
+  }
+}

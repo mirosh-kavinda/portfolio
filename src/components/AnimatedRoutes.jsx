@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes, useLocation } from "react-router";
+import { Navigate, Route, Routes, useLocation } from "react-router";
 import Blog from "../pages/Blog/Blog";
 import Home from "../pages/Home";
 import AboutMe from "../pages/AboutMe";
@@ -13,17 +13,22 @@ function AnimatedRoutes() {
   return (
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
-        <Route exact path="/" id="home" element={<Home />}></Route>
-        <Route path="/aboutme" id="contact" element={<AboutMe />}></Route>
-        <Route path="/projects" id="projects" element={<Projects />}></Route>
-
+        <Route exact path="/" element={<Home />} />
+        <Route path="/aboutme" element={<AboutMe />} />
+        <Route path="/experience" element={<Navigate to="/aboutme#experience" replace />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/projview" element={<ProjView />} />
+        <Route path="/blog" element={<Blog />} />
         <Route
-          path="/projects/projview"
-          id="projects"
-          element={<ProjView />}
-        ></Route>
-        <Route path="/blog" element={<Blog />}></Route>
-        <Route path="/contact" element={<ContactForm />}></Route>
+          path="/contact"
+          element={
+            <main className="pf-page">
+              <div className="pf-container">
+                <ContactForm />
+              </div>
+            </main>
+          }
+        />
       </Routes>
     </AnimatePresence>
   );

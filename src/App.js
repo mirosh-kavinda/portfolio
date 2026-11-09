@@ -1,5 +1,6 @@
 import { React, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { MotionConfig } from "framer-motion";
 import Navbar from "./components/Navbar/index";
 import Footer from "./components/Footer/index";
 import DotRing from "./components/DotRing";
@@ -29,6 +30,7 @@ export default function App() {
   }, [location]);
 
   return (
+    <MotionConfig reducedMotion="user">
     <ThemeProvider>
     <SiteDataProvider>
       {loading ? (
@@ -50,5 +52,6 @@ export default function App() {
       )}
     </SiteDataProvider>
     </ThemeProvider>
+    </MotionConfig>
   );
 }

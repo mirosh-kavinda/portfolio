@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./css/index.css";
 import "./css/responsive.css";
 import "./css/theme.css";
+import "./css/home.css";
 import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 

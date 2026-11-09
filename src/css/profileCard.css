@@ -1,0 +1,142 @@
+/* LinkedIn-style profile card on the About page. */
+
+.profile-card {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  overflow: hidden;
+}
+
+.profile-banner {
+  height: 96px;
+  background:
+    radial-gradient(circle at 20% 120%, rgba(255, 255, 255, 0.25), transparent 50%),
+    linear-gradient(120deg, var(--brand), #6b3a1c 70%, #1c1c1e);
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 24px 24px;
+}
+
+.profile-avatar-wrap {
+  position: relative;
+  margin-top: -52px;
+}
+
+.profile-online {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 3px solid var(--card);
+  background: var(--live);
+}
+
+.profile-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  border: 4px solid var(--card);
+  background: linear-gradient(135deg, #2a2a2e, #111);
+  color: var(--brand);
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  object-fit: cover;
+}
+
+.profile-name {
+  margin: 14px 0 4px;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.profile-headline {
+  margin: 0 0 16px;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  width: 100%;
+  margin: 0 0 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.profile-stats > * {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 10px 6px;
+  text-decoration: none;
+  color: var(--text) !important;
+}
+
+.profile-stats > * + * {
+  border-left: 1px solid var(--border);
+}
+
+.profile-stats a:hover {
+  background: var(--card-hover);
+}
+
+.profile-stats dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.profile-stats dt {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+ul.profile-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 16px 0 0;
+  border-top: 1px solid var(--border);
+}
+
+.profile-rows li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.profile-rows svg {
+  flex: none;
+  margin-top: 3px;
+  color: var(--brand);
+}
+
+.profile-card .profile-cta {
+  width: 100%;
+  justify-content: center;
+}

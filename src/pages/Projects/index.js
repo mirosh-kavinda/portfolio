@@ -1,52 +1,114 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { ref, get } from "firebase/database";
+import { AnimatePresence, motion } from "framer-motion";
 import { db } from "../../firebaseConfig.js";
 import Card from "../../components/ProjectShowModel/Card";
-import { motion } from "framer-motion";
+import Reveal from "../../components/UI/Reveal";
+import "../../css/works.css";
+
+const FILTERS = [
+  { key: "all", label: "All" },
+  { key: "dev", label: "Development" },
+  { key: "casestudy", label: "UX case studies" },
+];
 
 const Projects = () => {
-  const [projectData, setProjectData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState([]);
+  const [status, setStatus] = useState("loading"); // loading | ready | error
+  const [filter, setFilter] = useState("all");
 
   useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const snapshot = await get(ref(db, "projects"));
-        if (snapshot.exists()) {
-          setProjectData(snapshot.val());
-        } else {
-          console.warn("No project data found in Firebase.");
-        }
-      } catch (error) {
+    let alive = true;
+    get(ref(db, "projects"))
+      .then((snapshot) => {
+        if (!alive) return;
+        const value = snapshot.exists() ? snapshot.val() : [];
+        const list = (Array.isArray(value) ? value : Object.values(value)).filter(Boolean);
+        setProjects(list);
+        setStatus("ready");
+      })
+      .catch((error) => {
         console.error("Error fetching project data:", error);
-      } finally {
-        setLoading(false);
-      }
+        if (alive) setStatus("error");
+      });
+    return () => {
+      alive = false;
     };
-
-    fetchProjects();
   }, []);
 
-  if (loading) {
-    return (
-      <div className="text-center mt-5">
-        <p>Loading projects...</p>
-      </div>
-    );
-  }
+  const counts = useMemo(() => {
+    const c = { all: projects.length };
+    projects.forEach((p) => {
+      c[p.category] = (c[p.category] || 0) + 1;
+    });
+    return c;
+  }, [projects]);
+
+  const visible = filter === "all" ? projects : projects.filter((p) => p.category === filter);
 
   return (
-    <motion.div
+    <motion.main
+      className="pf-page"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.4 } }}
-      exit={{ opacity: 0, transition: { duration: 0.4 } }}
+      exit={{ opacity: 0, transition: { duration: 0.3 } }}
     >
-      <div className="d-flex justify-content-around row justify-center align-center items-center mt-5 whitespace pb-5 mb-5">
-        {projectData.map((data) => (
-          <Card key={data.id} data={data} />
-        ))}
+      <div className="pf-container">
+        <Reveal as="header" className="page-head">
+          <p className="pf-eyebrow">Portfolio</p>
+          <h1 className="pf-h1">Selected works</h1>
+          <p className="pf-body page-lede">
+            Apps I've built and UX case studies I've designed. Open a project for the story
+            behind it.
+          </p>
+          <div className="pf-tabs" role="group" aria-label="Filter projects">
+            {FILTERS.map((f) => (
+              <button
+                key={f.key}
+                type="button"
+                className={`pf-tab ${filter === f.key ? "is-active" : ""}`}
+                aria-pressed={filter === f.key}
+                onClick={() => setFilter(f.key)}
+              >
+                {f.label}
+                {status === "ready" && <span className="pf-tab-count">{counts[f.key] || 0}</span>}
+              </button>
+            ))}
+          </div>
+        </Reveal>
+
+        {status === "loading" && (
+          <div className="work-grid" aria-busy="true">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <div key={i} className="work-card is-skeleton" />
+            ))}
+          </div>
+        )}
+
+        {status === "error" && (
+          <p className="pf-body">Projects couldn't be loaded right now. Please try again later.</p>
+        )}
+
+        {status === "ready" && (
+          <motion.div layout className="work-grid">
+            <AnimatePresence initial={false}>
+              {visible.map((data) => (
+                <motion.div
+                  layout
+                  key={data.id}
+                  initial={{ opacity: 0, scale: 0.96 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.96 }}
+                  transition={{ duration: 0.25 }}
+                >
+                  <Card data={data} />
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </motion.div>
+        )}
       </div>
-    </motion.div>
+    </motion.main>
   );
 };
 

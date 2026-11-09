@@ -1,9 +1,306 @@
-.contact-form {
-margin-left: 10px;
-padding: 10px;
-margin-right: 10px;
-    border-radius: 10;
-    box-shadow: 0 0 6px 0.2px gray;
+/* Contact section: details on the left, form card on the right. */
 
+.contact {
+  display: grid;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (min-width: 992px) {
+  .contact {
+    grid-template-columns: 5fr 7fr;
+    gap: 56px;
   }
-  
+}
+
+.contact-title .accent {
+  color: var(--brand);
+}
+
+.contact-availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0.5rem 0 1.5rem;
+  padding: 6px 14px 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  font-size: 0.88rem;
+}
+
+ul.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-row {
+  display: flex;
+  gap: 8px;
+}
+
+.contact-row .contact-item {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text) !important;
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s var(--ease);
+}
+
+.contact-item:hover {
+  border-color: var(--brand);
+  background: var(--card-hover);
+  transform: translateX(3px);
+}
+
+.contact-icon {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--brand-soft);
+  color: var(--brand);
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.contact-text small {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.contact-text strong {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--text);
+}
+
+.contact-go {
+  margin-left: auto;
+  color: var(--text-subtle);
+}
+
+/* navbar.css styles every <button> as a round menu icon; reset that here */
+.contact button.contact-copy {
+  position: static;
+  top: auto;
+  left: auto;
+  flex: none;
+  width: 52px;
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text-muted);
+}
+
+.contact button.contact-copy:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+/* ---------- Form card ---------- */
+.contact-card {
+  padding: 28px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background:
+    radial-gradient(circle at 100% 0%, var(--brand-soft), transparent 55%),
+    var(--card);
+}
+
+@media (max-width: 600px) {
+  .contact-card {
+    padding: 20px;
+  }
+}
+
+.cf-topics {
+  margin: 0 0 20px;
+  padding: 0;
+  border: 0;
+}
+
+.cf-topics legend {
+  float: none;
+  width: auto;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.cf-topic-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cf-grid {
+  display: grid;
+  gap: 0 16px;
+}
+
+@media (min-width: 600px) {
+  .cf-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.cf-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+/* navbar.css sets a flex layout and margins on every <label> */
+.cf-field label {
+  display: block;
+  margin: 0 0 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.cf-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.cf-count {
+  font-size: 0.78rem;
+  color: var(--text-subtle);
+}
+
+.cf-count.is-over {
+  color: #e5484d;
+}
+
+.cf-field input,
+.cf-field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border-strong);
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.cf-field textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.cf-field input::placeholder,
+.cf-field textarea::placeholder {
+  color: var(--text-subtle);
+}
+
+.cf-field input:focus,
+.cf-field textarea:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px var(--brand-soft);
+}
+
+.cf-field [aria-invalid="true"] {
+  border-color: #e5484d;
+}
+
+.cf-error {
+  margin-top: 6px;
+  font-size: 0.82rem;
+  color: #e5484d;
+}
+
+.cf-alert {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(229, 72, 77, 0.4);
+  background: rgba(229, 72, 77, 0.08);
+  font-size: 0.9rem;
+}
+
+.cf-alert a {
+  color: var(--brand);
+}
+
+.contact .cf-submit {
+  width: 100%;
+  justify-content: center;
+  padding: 14px 20px;
+}
+
+.contact .cf-submit:disabled {
+  opacity: 0.7;
+  cursor: progress;
+  transform: none;
+}
+
+.cf-spinner {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  animation: cf-spin 0.7s linear infinite;
+}
+
+@keyframes cf-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---------- Success ---------- */
+.cf-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 10px;
+}
+
+.cf-success-icon {
+  color: var(--live);
+  margin-bottom: 16px;
+}
+
+.cf-success h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.cf-success p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}

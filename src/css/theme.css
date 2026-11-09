@@ -24,6 +24,14 @@
 
   --timeline-bg: rgba(0, 0, 0, 0.708);
   --timeline-line: #ffffff;
+
+  --card: #0e0e10;
+  --card-hover: #151518;
+  --border: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.2);
+  --brand-soft: rgba(227, 135, 79, 0.14);
+  --on-brand: #111111;
+  --live: #3ddc97;
 }
 
 :root[data-theme="light"] {
@@ -53,6 +61,14 @@
 
   --timeline-bg: #f3f4f6;
   --timeline-line: #d0d5dd;
+
+  --card: #f7f7f8;
+  --card-hover: #efeff1;
+  --border: rgba(0, 0, 0, 0.1);
+  --border-strong: rgba(0, 0, 0, 0.2);
+  --brand-soft: rgba(168, 79, 23, 0.1);
+  --on-brand: #ffffff;
+  --live: #14804a;
 }
 
 /* Themed stand-ins for Bootstrap's bg-dark, bg-black, text-white and text-light */
@@ -70,6 +86,23 @@
 
 .navbar .navbar-nav .nav-link {
   color: var(--navbar-link);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.navbar .navbar-nav .nav-link.nav-cta {
+  padding: 6px 16px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+}
+
+.navbar .navbar-nav .nav-link.nav-cta:hover,
+.navbar .navbar-nav .nav-link.nav-cta.active {
+  border-color: var(--brand);
+}
+
+.navbar-expand-lg ul.nav-row {
+  align-items: center;
 }
 
 .theme-toggle {
@@ -115,14 +148,7 @@ body .vertical-timeline-element-content-arrow {
 
 /* landing-large.jpg has an opaque black backdrop; this is the same art cut out */
 @media only screen and (min-width: 768px) {
-  :root[data-theme="light"] .home {
+  :root[data-theme="light"] .hero-art {
     background-image: url(../images/landing-large-light.webp);
-  }
-}
-
-/* Below this width the hero text overlaps the art */
-@media only screen and (max-width: 1199px) {
-  :root[data-theme="light"] .header {
-    background: var(--hero-scrim-mobile);
   }
 }
