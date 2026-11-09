@@ -196,7 +196,7 @@ REACT_APP_EMAILJS_TEMPLATE_ID=your_emailjs_template_id
 REACT_APP_EMAILJS_PUBLIC_KEY=your_emailjs_public_key
 ```
 
-`.env` and `.env.production` are git-ignored. Never commit real values.
+`.env` is used by both `npm start` and `npm run build`, and is git-ignored. Never commit real values.
 
 ### 4. Set Firebase Realtime Database rules
 
@@ -238,7 +238,7 @@ CI builds read their configuration from GitHub repository secrets, set under **S
 | `REACT_APP_EMAILJS_SERVICE_ID`, `REACT_APP_EMAILJS_TEMPLATE_ID`, `REACT_APP_EMAILJS_PUBLIC_KEY` | EmailJS settings for the contact form |
 | `FIREBASE_SERVICE_ACCOUNT_MIROSHKAVINDA` | Lets the workflow deploy to Firebase Hosting. Never commit this one |
 
-The workflows stop with an error naming any missing secret. For local production builds, keep the same values in `.env.production`, which is git-ignored.
+The workflows stop with an error naming any missing secret. To upload every value from your local `.env` at once, run `gh secret set -f .env --repo mirosh-kavinda/portfolio`.
 
 Keeping these values in secrets keeps them out of the repository, but they are not truly secret: anything the browser uses ends up in the bundle of the live site. What protects them:
 
