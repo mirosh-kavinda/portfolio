@@ -1,10 +1,41 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { BsArrowUpRight, BsAward, BsLock } from "react-icons/bs";
 import Reveal from "../UI/Reveal";
 import "../../css/products.css";
 
-/** Live products. `compact` hides the contribution and tech for the Home page. */
-export default function ProductShowcase({ items = [], compact = false }) {
+/**
+ * Live products. `minimal` shows only logo, name and type (Home page), with each
+ * tile linking to the full write-up; `compact` hides the contribution and tech.
+ */
+export default function ProductShowcase({ items = [], compact = false, minimal = false }) {
+  if (minimal) {
+    return (
+      <div className="product-strip">
+        {items.map((p, i) => (
+          <Reveal key={p.id} delay={Math.min(i * 0.08, 0.24)}>
+            <Link to="/aboutme#products" className="product-tile" aria-label={`${p.name}: read more`}>
+              <span className="product-tile-logo">
+                <img
+                  src={p.logo}
+                  alt=""
+                  loading="lazy"
+                  style={p.logoScale ? { transform: `scale(${p.logoScale})` } : undefined}
+                />
+              </span>
+              <span className="product-tile-text">
+                <strong>{p.name}</strong>
+                <small>
+                  <span className="product-tile-dot" aria-hidden="true" /> {p.kind}
+                </small>
+              </span>
+            </Link>
+          </Reveal>
+        ))}
+      </div>
+    );
+  }
+
   return (
     <div className={`product-grid ${compact ? "is-compact" : ""}`}>
       {items.map((p, i) => (

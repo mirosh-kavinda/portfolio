@@ -120,6 +120,10 @@ ul.contact-list {
   color: var(--text-muted);
 }
 
+.contact button.contact-copy path {
+  fill: currentColor;
+}
+
 .contact button.contact-copy:hover {
   border-color: var(--brand);
   color: var(--brand);

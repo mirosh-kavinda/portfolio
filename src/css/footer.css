@@ -34,4 +34,29 @@
   .footer-head {
     font-size: smaller;
   }
+
+  /* A 30% curve eats into the first icon on narrow screens; use a fixed corner
+     and keep the content clear of it */
+  .footer {
+    height: auto;
+    margin: 0;
+    padding: 8px 16px 6px 28px;
+    border-top-left-radius: 24px;
+  }
+
+  .footer .row {
+    margin: 0;
+  }
+
+  .footer .row > * {
+    padding-left: 0;
+  }
+
+  .footer .ms-4 {
+    margin-left: 0 !important;
+  }
+
+  .footer-head {
+    margin: 6px 0 0;
+  }
 }
