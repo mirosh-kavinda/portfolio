@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[92],{92:(e,p,t)=>{e.exports=t.p+"static/media/SpiritualRead.d85c4fb2ab3b5de44139.md"}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[705],{1705:(e,a,f)=>{e.exports=f.p+"static/media/crafira.5be794ba82d39df4c559.gif"}}]);

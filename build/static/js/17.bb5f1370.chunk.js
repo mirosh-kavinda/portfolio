@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[17],{6017:(e,p,a)=>{e.exports=a.p+"static/media/MedMap.2a9bc179ad57fb7e1c81.md"}}]);

@@ -8,7 +8,9 @@
 # testing
 /coverage
 
-# production
+# production (CI builds this; never commit it)
+/build
+.firebase/
 
 # misc
 .DS_Store
