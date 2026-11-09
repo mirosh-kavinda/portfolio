@@ -8,8 +8,8 @@ jobs:
     # Secrets are not available to pull requests from forks, so only run for this repository
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
-    # The Firebase web config comes from repository secrets instead of a
-    # committed .env file. Add them under Settings > Secrets and variables > Actions.
+    # The Firebase web config and EmailJS keys come from repository secrets instead
+    # of a committed .env file. Add them under Settings > Secrets and variables > Actions.
     env:
       REACT_APP_FIREBASE_API_KEY: '${{ secrets.REACT_APP_FIREBASE_API_KEY }}'
       REACT_APP_FIREBASE_AUTH_DOMAIN: '${{ secrets.REACT_APP_FIREBASE_AUTH_DOMAIN }}'
@@ -19,15 +19,19 @@ jobs:
       REACT_APP_FIREBASE_MESSAGING_SENDER_ID: '${{ secrets.REACT_APP_FIREBASE_MESSAGING_SENDER_ID }}'
       REACT_APP_FIREBASE_APP_ID: '${{ secrets.REACT_APP_FIREBASE_APP_ID }}'
       REACT_APP_FIREBASE_MEASUREMENT_ID: '${{ secrets.REACT_APP_FIREBASE_MEASUREMENT_ID }}'
+      REACT_APP_EMAILJS_SERVICE_ID: '${{ secrets.REACT_APP_EMAILJS_SERVICE_ID }}'
+      REACT_APP_EMAILJS_TEMPLATE_ID: '${{ secrets.REACT_APP_EMAILJS_TEMPLATE_ID }}'
+      REACT_APP_EMAILJS_PUBLIC_KEY: '${{ secrets.REACT_APP_EMAILJS_PUBLIC_KEY }}'
     steps:
       - uses: actions/checkout@v4
-      - name: Check Firebase config secrets
+      - name: Check build secrets
         run: |
           missing=0
           for name in REACT_APP_FIREBASE_API_KEY REACT_APP_FIREBASE_AUTH_DOMAIN \
             REACT_APP_FIREBASE_DATABASE_URL REACT_APP_FIREBASE_PROJECT_ID \
             REACT_APP_FIREBASE_STORAGE_BUCKET REACT_APP_FIREBASE_MESSAGING_SENDER_ID \
-            REACT_APP_FIREBASE_APP_ID REACT_APP_FIREBASE_MEASUREMENT_ID; do
+            REACT_APP_FIREBASE_APP_ID REACT_APP_FIREBASE_MEASUREMENT_ID \
+            REACT_APP_EMAILJS_SERVICE_ID REACT_APP_EMAILJS_TEMPLATE_ID REACT_APP_EMAILJS_PUBLIC_KEY; do
             if [ -z "${!name}" ]; then
               echo "::error::Missing repository secret $name"
               missing=1

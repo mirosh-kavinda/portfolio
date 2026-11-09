@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import {
   BsArrowRight,
   BsArrowUpRight,
@@ -16,13 +16,27 @@ import useProfile from "../../hooks/useProfile";
 import Reveal from "../UI/Reveal";
 import "../../css/contactForm.css";
 
+// Set in .env locally and as GitHub repository secrets in CI (see README).
 const EMAILJS = {
-  service: "service_tgualb7",
-  template: "template_ujgeo95",
-  publicKey: "nkNY1hE2EnJTUx7-X",
+  service: process.env.REACT_APP_EMAILJS_SERVICE_ID,
+  template: process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+  publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
 };
+const EMAILJS_CONFIGURED = Object.values(EMAILJS).every(Boolean);
 
 const TOPICS = ["Job opportunity", "Freelance project", "Collaboration", "Just saying hi"];
+
+/** Starter message for each topic; [brackets] are for the visitor to fill in. */
+const TEMPLATES = {
+  "Job opportunity": (n) =>
+    `Hi ${n},\n\nI came across your portfolio and would like to talk to you about a [position] role at [company].\n\n[A few details about the team, the role and next steps]\n\nBest regards,`,
+  "Freelance project": (n) =>
+    `Hi ${n},\n\nI'm looking for help with a [web / mobile] project. In short, it's about [what you'd like to build].\n\nTimeline: [when you need it]\nBudget: [rough range]\n\nThanks,`,
+  Collaboration: (n) =>
+    `Hi ${n},\n\nI'd love to collaborate with you on [project or idea]. I think we'd work well together because [reason].\n\nLet me know if you're interested!\n\nCheers,`,
+  "Just saying hi": (n) =>
+    `Hi ${n},\n\nJust wanted to say hi! I enjoyed [your portfolio / an article / a project] and wanted to reach out.\n\nAll the best,`,
+};
 const MESSAGE_MAX = 1000;
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -46,7 +60,7 @@ function ContactItem({ href, Icon, label, value, external }) {
 }
 
 const ContactForm = () => {
-  const { contact, landing } = useProfile();
+  const { contact, landing, statement } = useProfile();
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
   const [topic, setTopic] = useState(TOPICS[0]);
   const [copied, setCopied] = useState(false);
@@ -56,18 +70,38 @@ const ContactForm = () => {
     handleSubmit,
     reset,
     setValue,
+    getValues,
+    setFocus,
     watch,
     formState: { errors },
   } = useForm({ defaultValues: { subject: TOPICS[0] } });
 
   const messageLength = (watch("message") || "").length;
 
+  const firstName = (statement.name || "Mirosh").split(" ")[0];
+
   const pickTopic = (t) => {
     setTopic(t);
     setValue("subject", t, { shouldValidate: true });
+
+    // Fill the starter only if the visitor hasn't written their own message yet
+    const current = (getValues("message") || "").trim();
+    const untouched =
+      !current || Object.values(TEMPLATES).some((fn) => fn(firstName).trim() === current);
+    if (untouched && TEMPLATES[t]) {
+      setValue("message", TEMPLATES[t](firstName), { shouldValidate: true });
+      setFocus("message");
+    }
   };
 
   const onSubmit = async ({ name, email, subject, message }) => {
+    if (!EMAILJS_CONFIGURED) {
+      console.error(
+        "EmailJS is not configured: set REACT_APP_EMAILJS_SERVICE_ID, REACT_APP_EMAILJS_TEMPLATE_ID and REACT_APP_EMAILJS_PUBLIC_KEY"
+      );
+      setStatus("error");
+      return;
+    }
     setStatus("sending");
     try {
       await emailjs.send(
@@ -79,7 +113,8 @@ const ContactForm = () => {
       reset({ subject: topic });
       setStatus("sent");
     } catch (e) {
-      console.error(e);
+      // EmailJS rejects with { status, text }, e.g. 412 "Gmail_API: Invalid grant"
+      console.error(`EmailJS send failed: ${e?.status ?? "network"} ${e?.text ?? e}`);
       setStatus("error");
     }
   };
@@ -254,7 +289,7 @@ const ContactForm = () => {
               </div>
               <textarea
                 id="cf-message"
-                rows={5}
+                rows={7}
                 placeholder="Tell me a little about what you have in mind…"
                 aria-invalid={!!errors.message}
                 {...register("message", {
